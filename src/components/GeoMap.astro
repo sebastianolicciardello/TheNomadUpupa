@@ -1,9 +1,14 @@
 ---
+import { GeoMap as LeafletGeoMap } from 'astro-geo-map';
 const { coords } = Astro.props;
 ---
-<div class="geomap">
-  <p>Map: {coords.lat}, {coords.lon}</p>
-</div>
+{coords && coords.lat && coords.lon ? (
+  <LeafletGeoMap
+    address={`${coords.lat},${coords.lon}`}
+    height={"300px"}
+    width={"100%"}
+  />
+) : null}
 <style>
 .geomap { background: #eef; padding: 1rem; border-radius: 8px; text-align: center; }
 </style>

@@ -1,5 +1,6 @@
 ---
 import type { APIContext } from 'astro';
+import GeoMap from '../components/GeoMap.astro';
 const { title, date, coords, cover } = Astro.props;
 const hasCoords = coords && coords.lat && coords.lon;
 ---
@@ -15,9 +16,7 @@ const hasCoords = coords && coords.lat && coords.lon;
   </main>
   {hasCoords && (
     <section class="post-geomap">
-      <!-- GeoMap component will be rendered here if exists -->
-      <!-- <GeoMap coords={coords} /> -->
-      <p>GeoMap placeholder: {coords.lat}, {coords.lon}</p>
+      <GeoMap coords={coords} />
     </section>
   )}
 </article>
