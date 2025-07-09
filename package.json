@@ -9,6 +9,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.11.0"
+    "@astrojs/mdx": "^4.3.0",
+    "astro": "^5.11.0",
+    "astro-geo-map": "^2.0.0",
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/node": "^24.0.12",
+    "typescript": "^5.8.3"
   }
 }
