@@ -1,0 +1,9 @@
+---
+const { coords } = Astro.props;
+---
+<div class="geomap">
+  <p>Map: {coords.lat}, {coords.lon}</p>
+</div>
+<style>
+.geomap { background: #eef; padding: 1rem; border-radius: 8px; text-align: center; }
+</style>
