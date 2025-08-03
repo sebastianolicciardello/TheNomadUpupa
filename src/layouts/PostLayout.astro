@@ -1,28 +1,71 @@
 ---
-import type { APIContext } from 'astro';
+import Layout from './Layout.astro';
 import GeoMap from '../components/GeoMap.astro';
-const { title, date, coords, cover } = Astro.props;
+
+const { title, date, coords, cover, tags } = Astro.props;
 const hasCoords = coords && coords.lat && coords.lon;
 ---
 
-<article class="post-layout">
-  <header>
-    <h1>{title}</h1>
-    <time datetime={date.toISOString()}>{date.toLocaleDateString()}</time>
-    {cover && <img src={cover} alt={title + ' cover'} class="post-cover" />}
-  </header>
-  <main>
-    <slot />
-  </main>
-  {hasCoords && (
-    <section class="post-geomap">
-      <GeoMap coords={coords} />
-    </section>
-  )}
-</article>
-
-<style>
-.post-layout { max-width: 700px; margin: 0 auto; padding: 2rem; }
-.post-cover { width: 100%; max-height: 350px; object-fit: cover; margin-bottom: 1rem; }
-.post-geomap { margin-top: 2rem; }
-</style>
+<Layout title={title}>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <header class="mb-8">
+      <div class="mb-4">
+        <a href={`${import.meta.env.BASE_URL}/blog/`} class="inline-flex items-center text-sm text-warm-600 dark:text-warm-400 hover:text-warm-700 dark:hover:text-warm-300 transition-colors">
+          ← Back to archive
+        </a>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-gray-100 mb-4 leading-tight">
+        {title}
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+        <time datetime={date.toISOString()} class="font-medium">
+          {date.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          })}
+        </time>
+        {tags && tags.length > 0 && (
+          <div class="flex flex-wrap gap-2">
+            {tags.map((tag: string) => (
+              <span class="px-2 py-1 bg-warm-100 dark:bg-warm-800 text-warm-700 dark:text-warm-300 rounded-full text-xs font-medium">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+      {cover && (
+        <div class="mt-6">
+          <img 
+            src={cover} 
+            alt={`Immagine di copertina per ${title}`} 
+            class="w-full max-h-96 object-cover rounded-lg shadow-md"
+          />
+        </div>
+      )}
+    </header>
+    
+    <main class="prose prose-lg prose-gray dark:prose-invert max-w-none 
+                 prose-headings:font-serif prose-headings:text-gray-900 dark:prose-headings:text-gray-100
+                 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed
+                 prose-a:text-warm-600 dark:prose-a:text-warm-400 prose-a:no-underline hover:prose-a:underline
+                 prose-blockquote:border-warm-300 dark:prose-blockquote:border-warm-600 
+                 prose-blockquote:bg-warm-50 dark:prose-blockquote:bg-warm-900/20 
+                 prose-blockquote:rounded-r-lg prose-blockquote:py-2 prose-blockquote:px-4
+                 prose-img:rounded-lg prose-img:shadow-md">
+      <slot />
+    </main>
+    
+    {hasCoords && (
+      <section class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 font-serif">
+          📍 Where I've Been
+        </h3>
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <GeoMap coords={coords} />
+        </div>
+      </section>
+    )}
+  </article>
+</Layout>

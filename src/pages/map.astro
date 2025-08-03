@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('posts');
+const postsWithCoords = posts
+  .filter(post => post.data.coords && post.data.coords.lat && post.data.coords.lon)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+
+<Layout title="Mappa dei Luoghi - The Nomad Upupa">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-12">
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-gray-100 mb-4">
+        Mappa dei Luoghi
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+        Una geografia emotiva dei luoghi che hanno segnato il mio cammino.
+      </p>
+    </div>
+
+    {postsWithCoords.length > 0 ? (
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Mappa -->
+        <div class="lg:col-span-2">
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <div id="global-map" class="h-96 lg:h-[600px]"></div>
+          </div>
+        </div>
+
+        <!-- Lista dei luoghi -->
+        <div class="space-y-4">
+          <h2 class="text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-4">
+            Luoghi delle Riflessioni
+          </h2>
+          <div class="space-y-3 max-h-[600px] overflow-y-auto">
+            {postsWithCoords.map((post, index) => (
+              <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
+                <h3 class="font-serif font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                  <a 
+                    href={`${import.meta.env.BASE_URL}/posts/${post.slug}/`}
+                    class="hover:text-warm-600 dark:hover:text-warm-400 transition-colors"
+                  >
+                    {post.data.title}
+                  </a>
+                </h3>
+                <time class="text-sm text-gray-500 dark:text-gray-400 mb-2 block">
+                  {new Date(post.data.date).toLocaleDateString('it-IT', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
+                </time>
+                {post.data.tags && post.data.tags.length > 0 && (
+                  <div class="flex flex-wrap gap-1 mb-2">
+                    {post.data.tags.slice(0, 2).map((tag: string) => (
+                      <span class="px-2 py-1 bg-warm-100 dark:bg-warm-800 text-warm-700 dark:text-warm-300 rounded-full text-xs font-medium">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <button 
+                  onclick={`focusMarker(${index})`}
+                  class="text-sm text-warm-600 dark:text-warm-400 hover:text-warm-700 dark:hover:text-warm-300 transition-colors font-medium"
+                >
+                  📍 Vai al marker
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div class="text-center py-12">
+        <div class="text-6xl mb-4">🗺️</div>
+        <p class="text-gray-500 dark:text-gray-400 text-lg">
+          Nessun luogo georeferenziato ancora. I primi viaggi arriveranno presto.
+        </p>
+      </div>
+    )}
+  </div>
+
+  {postsWithCoords.length > 0 && (
+    <script define:vars={{ postsWithCoords }}>
+      // Carica Leaflet CSS
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+      document.head.appendChild(link);
+
+      // Carica Leaflet JS
+      const script = document.createElement('script');
+      script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+      script.onload = () => {
+        const posts = postsWithCoords.map(post => ({
+          title: post.data.title,
+          slug: post.slug,
+          coords: post.data.coords,
+          date: post.data.date,
+          cover: post.data.cover
+        }));
+
+        // Inizializza la mappa
+        const map = L.map('global-map').setView([45.4642, 9.1900], 6);
+
+        // Aggiungi tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Array per tenere traccia dei marker
+        const markers = [];
+
+        // Aggiungi marker per ogni post
+        posts.forEach((post, index) => {
+          const marker = L.marker([post.coords.lat, post.coords.lon]).addTo(map);
+          
+          const popupContent = `
+            <div class="p-2 max-w-xs">
+              ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-24 object-cover rounded mb-2">` : ''}
+              <h3 class="font-semibold text-sm mb-1">${post.title}</h3>
+              <p class="text-xs text-gray-600 mb-2">${new Date(post.date).toLocaleDateString('en-US')}</p>
+              <a href="${import.meta.env.BASE_URL}/posts/${post.slug}/" class="text-xs text-blue-600 hover:text-blue-800">Read more →</a>
+            </div>
+          `;
+          
+          marker.bindPopup(popupContent);
+          markers.push(marker);
+        });
+
+        // Funzione globale per focalizzare su un marker
+        window.focusMarker = (index) => {
+          const post = posts[index];
+          const marker = markers[index];
+          
+          map.setView([post.coords.lat, post.coords.lon], 12);
+          marker.openPopup();
+        };
+
+        // Adatta la vista per mostrare tutti i marker
+        if (markers.length > 1) {
+          const group = new L.featureGroup(markers);
+          map.fitBounds(group.getBounds().pad(0.1));
+        }
+      };
+      document.head.appendChild(script);
+    </script>
+  )}
+</Layout>

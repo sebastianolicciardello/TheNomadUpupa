@@ -1,12 +1,94 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const posts = await getCollection('posts');
+const recentPosts = posts
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 3);
 ---
 
 <Layout>
-	<Welcome />
-	<a href="/blog">Vai all'archivio blog</a>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Hero Section -->
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 dark:text-gray-100 mb-6">
+        The Nomad Upupa
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        A timeless reflective journal. Thoughts, places, and moments that interweave 
+        through time, creating an emotional map of my inner and outer journeys.
+      </p>
+    </div>
+
+    <!-- Recent Posts -->
+    {recentPosts.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-8">
+          Recent Reflections
+        </h2>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {recentPosts.map((post) => (
+            <article class="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
+              {post.data.cover && (
+                <div class="aspect-video overflow-hidden">
+                  <img 
+                    src={post.data.cover} 
+                    alt={`Copertina per ${post.data.title}`}
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
+                  />
+                </div>
+              )}
+              <div class="p-6">
+                <h3 class="text-lg font-serif font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                  <a href={`${import.meta.env.BASE_URL}/posts/${post.slug}/`} class="hover:text-warm-600 dark:hover:text-warm-400 transition-colors">
+                    {post.data.title}
+                  </a>
+                </h3>
+                <time class="text-sm text-gray-500 dark:text-gray-400 mb-3 block">
+                  {new Date(post.data.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
+                </time>
+                {post.data.tags && post.data.tags.length > 0 && (
+                  <div class="flex flex-wrap gap-2">
+                    {post.data.tags.slice(0, 3).map((tag: string) => (
+                      <span class="px-2 py-1 bg-warm-100 dark:bg-warm-800 text-warm-700 dark:text-warm-300 rounded-full text-xs font-medium">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+        <div class="text-center mt-8">
+          <a 
+            href={`${import.meta.env.BASE_URL}/blog/`} 
+            class="inline-flex items-center px-6 py-3 bg-warm-600 dark:bg-warm-700 text-white rounded-lg hover:bg-warm-700 dark:hover:bg-warm-600 transition-colors duration-200"
+          >
+            View all posts
+            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+    )}
+
+    <!-- About Section -->
+    <section class="text-center bg-warm-50 dark:bg-gray-800 rounded-lg p-8">
+      <h2 class="text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-4">
+        About Me
+      </h2>
+      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        Traveler, observer, collector of moments. This space was born from the need 
+        to stop time and give shape to the thoughts that arise from the places and people 
+        I encounter along the way.
+      </p>
+    </section>
+  </div>
 </Layout>
