@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="it" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.12.8"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet"><title>Mappa dei Luoghi - The Nomad Upupa</title><link rel="stylesheet" href="/TheNomadUpupa/_astro/blog.B5d1Lrhe.css"></head> <body class="bg-warm-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans antialiased min-h-screen transition-colors duration-200"> <nav class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <a href="/" class="text-xl font-semibold text-gray-900 dark:text-gray-100 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">
+The Nomad Upupa
+</a> <div class="flex items-center space-x-6"> <a href="/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">Home</a> <a href="/blog" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">Archivio</a> <a href="/mappa" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">Mappa</a> <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Toggle theme"> <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path> </svg> <svg id="theme-toggle-dark-icon" class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20"> <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path> </svg> </button> </div> </div> </div> </nav> <main class="flex-1">  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div class="mb-12"> <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-gray-100 mb-4">
+Mappa dei Luoghi
+</h1> <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+Una geografia emotiva dei luoghi che hanno segnato il mio cammino.
+</p> </div> <div class="grid lg:grid-cols-3 gap-8"> <!-- Mappa --> <div class="lg:col-span-2"> <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <div id="global-map" class="h-96 lg:h-[600px]"></div> </div> </div> <!-- Lista dei luoghi --> <div class="space-y-4"> <h2 class="text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-4">
+Luoghi delle Riflessioni
+</h2> <div class="space-y-3 max-h-[600px] overflow-y-auto"> <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200"> <h3 class="font-serif font-semibold text-gray-900 dark:text-gray-100 mb-2"> <a href="/posts/2025-07-09-esempio-media" class="hover:text-warm-600 dark:hover:text-warm-400 transition-colors"> Esempio inserimento immagini e video in Markdown </a> </h3> <time class="text-sm text-gray-500 dark:text-gray-400 mb-2 block"> 9 luglio 2025 </time> <div class="flex flex-wrap gap-1 mb-2"> <span class="px-2 py-1 bg-warm-100 dark:bg-warm-800 text-warm-700 dark:text-warm-300 rounded-full text-xs font-medium"> esempio </span><span class="px-2 py-1 bg-warm-100 dark:bg-warm-800 text-warm-700 dark:text-warm-300 rounded-full text-xs font-medium"> media </span> </div> <button onclick="focusMarker(0)" class="text-sm text-warm-600 dark:text-warm-400 hover:text-warm-700 dark:hover:text-warm-300 transition-colors font-medium">
+📍 Vai al marker
+</button> </div> </div> </div> </div> </div> <script>(function(){const postsWithCoords = [{"id":"2025-07-09-esempio-media.md","data":{"title":"Esempio inserimento immagini e video in Markdown","date":"2025-07-09T00:00:00.000Z","coords":{"lat":45.4642,"lon":9.19},"tags":["esempio","media","markdown"]},"body":"# Esempio di inserimento immagini e video in Markdown\n\n## Immagine remota\n\n![Logo Astro](https://astro.build/assets/press/astro-icon-dark.svg)\n\n## Video YouTube\n\n[![Thumbnail](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)\n\n\n\n## Riferimenti di posizione (GeoMap)\n\nPer inserire una mappa con una posizione specifica, puoi aggiungere i dati di latitudine e longitudine nei metadati del post (frontmatter) oppure, se il sistema lo supporta, direttamente nel contenuto. Ad esempio:\n\n```\ncoords:\n  lat: 45.4642\n  lon: 9.19\n```\n\nEsempio di utilizzo nel frontmatter:\n\ntitle: \"Esempio inserimento immagini e video in Markdown\"\ndate: 2025-07-09\ndescription: \"Come inserire immagini remote e video YouTube nei post Markdown.\"\ncoords:\n  lat: 45.4642\n  lon: 9.19\ntags:\n  - esempio\n  - media\n  - markdown\n\nSe il componente `GeoMap` è configurato, la mappa verrà visualizzata automaticamente nel post.\n\nSostituisci le coordinate con quelle desiderate.","filePath":"src/content/posts/2025-07-09-esempio-media.md","digest":"f890c9d30dd59a43","rendered":{"html":"<h1 id=\"esempio-di-inserimento-immagini-e-video-in-markdown\">Esempio di inserimento immagini e video in Markdown</h1>\n<h2 id=\"immagine-remota\">Immagine remota</h2>\n<p><img src=\"https://astro.build/assets/press/astro-icon-dark.svg\" alt=\"Logo Astro\"></p>\n<h2 id=\"video-youtube\">Video YouTube</h2>\n<p><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\"><img src=\"https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg\" alt=\"Thumbnail\"></a></p>\n<h2 id=\"riferimenti-di-posizione-geomap\">Riferimenti di posizione (GeoMap)</h2>\n<p>Per inserire una mappa con una posizione specifica, puoi aggiungere i dati di latitudine e longitudine nei metadati del post (frontmatter) oppure, se il sistema lo supporta, direttamente nel contenuto. Ad esempio:</p>\n<pre class=\"astro-code github-dark\" style=\"background-color:#24292e;color:#e1e4e8; overflow-x: auto;\" tabindex=\"0\" data-language=\"plaintext\"><code><span class=\"line\"><span>coords:</span></span>\n<span class=\"line\"><span>  lat: 45.4642</span></span>\n<span class=\"line\"><span>  lon: 9.19</span></span></code></pre>\n<p>Esempio di utilizzo nel frontmatter:</p>\n<p>title: “Esempio inserimento immagini e video in Markdown”\ndate: 2025-07-09\ndescription: “Come inserire immagini remote e video YouTube nei post Markdown.”\ncoords:\nlat: 45.4642\nlon: 9.19\ntags:</p>\n<ul>\n<li>esempio</li>\n<li>media</li>\n<li>markdown</li>\n</ul>\n<p>Se il componente <code>GeoMap</code> è configurato, la mappa verrà visualizzata automaticamente nel post.</p>\n<p>Sostituisci le coordinate con quelle desiderate.</p>","metadata":{"headings":[{"depth":1,"slug":"esempio-di-inserimento-immagini-e-video-in-markdown","text":"Esempio di inserimento immagini e video in Markdown"},{"depth":2,"slug":"immagine-remota","text":"Immagine remota"},{"depth":2,"slug":"video-youtube","text":"Video YouTube"},{"depth":2,"slug":"riferimenti-di-posizione-geomap","text":"Riferimenti di posizione (GeoMap)"}],"localImagePaths":[],"remoteImagePaths":[],"frontmatter":{"title":"Esempio inserimento immagini e video in Markdown","date":"2025-07-09T00:00:00.000Z","description":"Come inserire immagini remote e video YouTube nei post Markdown.","coords":{"lat":45.4642,"lon":9.19},"tags":["esempio","media","markdown"]},"imagePaths":[]}},"collection":"posts","slug":"2025-07-09-esempio-media"}];
+
+      // Carica Leaflet CSS
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+      document.head.appendChild(link);
+
+      // Carica Leaflet JS
+      const script = document.createElement('script');
+      script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+      script.onload = () => {
+        const posts = postsWithCoords.map(post => ({
+          title: post.data.title,
+          slug: post.slug,
+          coords: post.data.coords,
+          date: post.data.date,
+          cover: post.data.cover
+        }));
+
+        // Inizializza la mappa
+        const map = L.map('global-map').setView([45.4642, 9.1900], 6);
+
+        // Aggiungi tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Array per tenere traccia dei marker
+        const markers = [];
+
+        // Aggiungi marker per ogni post
+        posts.forEach((post, index) => {
+          const marker = L.marker([post.coords.lat, post.coords.lon]).addTo(map);
+          
+          const popupContent = `
+            <div class="p-2 max-w-xs">
+              ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-24 object-cover rounded mb-2">` : ''}
+              <h3 class="font-semibold text-sm mb-1">${post.title}</h3>
+              <p class="text-xs text-gray-600 mb-2">${new Date(post.date).toLocaleDateString('it-IT')}</p>
+              <a href="/posts/${post.slug}" class="text-xs text-blue-600 hover:text-blue-800">Leggi di più →</a>
+            </div>
+          `;
+          
+          marker.bindPopup(popupContent);
+          markers.push(marker);
+        });
+
+        // Funzione globale per focalizzare su un marker
+        window.focusMarker = (index) => {
+          const post = posts[index];
+          const marker = markers[index];
+          
+          map.setView([post.coords.lat, post.coords.lon], 12);
+          marker.openPopup();
+        };
+
+        // Adatta la vista per mostrare tutti i marker
+        if (markers.length > 1) {
+          const group = new L.featureGroup(markers);
+          map.fitBounds(group.getBounds().pad(0.1));
+        }
+      };
+      document.head.appendChild(script);
+    })();</script> </main> <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-16"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> <div class="text-center text-gray-500 dark:text-gray-400 text-sm"> <p>&copy; 2025 The Nomad Upupa. Un diario riflessivo atemporale.</p> </div> </div> </footer> <script type="module">const s=document.getElementById("theme-toggle"),e=document.documentElement,t=localStorage.getItem("theme");t?e.classList.toggle("dark",t==="dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&e.classList.add("dark");s?.addEventListener("click",()=>{e.classList.toggle("dark"),localStorage.setItem("theme",e.classList.contains("dark")?"dark":"light")});</script></body></html>
