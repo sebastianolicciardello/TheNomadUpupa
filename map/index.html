@@ -1,75 +1,304 @@
-<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.12.8"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet"><title>Mappa dei Luoghi - The Nomad Upupa</title><link rel="stylesheet" href="/TheNomadUpupa/assets/blog.Bq6CIUyB.css"></head> <body class="bg-warm-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans antialiased min-h-screen transition-colors duration-200"> <nav class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <a href="/TheNomadUpupa/" class="text-xl font-semibold text-gray-900 dark:text-gray-100 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.12.8"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet"><title>Places Map - The Nomad Upupa</title><link rel="stylesheet" href="/TheNomadUpupa/assets/blog.B-iy8dO4.css"></head> <body class="bg-warm-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans antialiased min-h-screen transition-colors duration-200"> <nav class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <a href="/TheNomadUpupa/" class="text-xl font-semibold text-gray-900 dark:text-gray-100 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">
 The Nomad Upupa
-</a> <div class="flex items-center space-x-6"> <a href="/TheNomadUpupa/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">Home</a> <a href="/TheNomadUpupa/blog/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">Archive</a> <a href="/TheNomadUpupa/map/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">Map</a> <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Toggle theme"> <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path> </svg> <svg id="theme-toggle-dark-icon" class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20"> <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path> </svg> </button> </div> </div> </div> </nav> <main class="flex-1">  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div class="mb-12"> <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-gray-100 mb-4">
-Mappa dei Luoghi
-</h1> <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
-Una geografia emotiva dei luoghi che hanno segnato il mio cammino.
-</p> </div> <div class="grid lg:grid-cols-3 gap-8"> <!-- Mappa --> <div class="lg:col-span-2"> <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <div id="global-map" class="h-96 lg:h-[600px]"></div> </div> </div> <!-- Lista dei luoghi --> <div class="space-y-4"> <h2 class="text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-4">
-Luoghi delle Riflessioni
-</h2> <div class="space-y-3 max-h-[600px] overflow-y-auto"> <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200"> <h3 class="font-serif font-semibold text-gray-900 dark:text-gray-100 mb-2"> <a href="/TheNomadUpupa/posts/2025-07-09-esempio-media/" class="hover:text-warm-600 dark:hover:text-warm-400 transition-colors"> Esempio inserimento immagini e video in Markdown </a> </h3> <time class="text-sm text-gray-500 dark:text-gray-400 mb-2 block"> 9 luglio 2025 </time> <button onclick="focusMarker(0)" class="text-sm text-warm-600 dark:text-warm-400 hover:text-warm-700 dark:hover:text-warm-300 transition-colors font-medium">
-📍 Vai al marker
-</button> </div> </div> </div> </div> </div> <script>(function(){const postsWithCoords = [{"id":"2025-07-09-esempio-media.md","data":{"title":"Esempio inserimento immagini e video in Markdown","date":"2025-07-09T00:00:00.000Z","coords":{"lat":45.4642,"lon":9.19},"description":"Come inserire immagini remote e video YouTube nei post Markdown."},"body":"## Immagine remota\n\n![Logo Astro](https://astro.build/assets/press/astro-icon-dark.svg)\n\n## Video YouTube\n\nimport YouTubeEmbed from '../../components/YouTubeEmbed.astro';\n\n<YouTubeEmbed videoId=\"dQw4w9WgXcQ\" title=\"Rick Astley - Never Gonna Give You Up\" />\n\n\n\n## Come Usare i Media\n\n### Immagini\nPer inserire immagini usa la sintassi Markdown standard:\n```markdown\n![Descrizione](https://url-immagine.jpg)\n```\n\n### Video YouTube Embedded\nPer inserire video YouTube embedded, usa il componente dedicato:\n\n```markdown\nimport YouTubeEmbed from '../../components/YouTubeEmbed.astro';\n\n<YouTubeEmbed videoId=\"VIDEO_ID\" title=\"Titolo del video\" />\n```\n\nSostituisci `VIDEO_ID` con l'ID del video YouTube (la parte dopo `watch?v=` nell'URL).\n\n## Riferimenti di posizione (GeoMap)\n\nPer inserire una mappa con una posizione specifica, aggiungi le coordinate nel frontmatter:\n\n```yaml\ncoords:\n  lat: 45.4642\n  lon: 9.19\n```\n\nLa mappa verrà visualizzata automaticamente alla fine del post.","filePath":"src/content/posts/2025-07-09-esempio-media.md","digest":"9b4375ca625676a0","rendered":{"html":"<h2 id=\"immagine-remota\">Immagine remota</h2>\n<p><img src=\"https://astro.build/assets/press/astro-icon-dark.svg\" alt=\"Logo Astro\"></p>\n<h2 id=\"video-youtube\">Video YouTube</h2>\n<p>import YouTubeEmbed from ’../../components/YouTubeEmbed.astro’;</p>\n<youtubeembed videoid=\"dQw4w9WgXcQ\" title=\"Rick Astley - Never Gonna Give You Up\">\n<h2 id=\"come-usare-i-media\">Come Usare i Media</h2>\n<h3 id=\"immagini\">Immagini</h3>\n<p>Per inserire immagini usa la sintassi Markdown standard:</p>\n<pre class=\"astro-code github-dark\" style=\"background-color:#24292e;color:#e1e4e8; overflow-x: auto;\" tabindex=\"0\" data-language=\"markdown\"><code><span class=\"line\"><span style=\"color:#E1E4E8\">![</span><span style=\"color:#DBEDFF;text-decoration:underline\">Descrizione</span><span style=\"color:#E1E4E8\">](</span><span style=\"color:#E1E4E8;text-decoration:underline\">https://url-immagine.jpg</span><span style=\"color:#E1E4E8\">)</span></span></code></pre>\n<h3 id=\"video-youtube-embedded\">Video YouTube Embedded</h3>\n<p>Per inserire video YouTube embedded, usa il componente dedicato:</p>\n<pre class=\"astro-code github-dark\" style=\"background-color:#24292e;color:#e1e4e8; overflow-x: auto;\" tabindex=\"0\" data-language=\"markdown\"><code><span class=\"line\"><span style=\"color:#E1E4E8\">import YouTubeEmbed from '../../components/YouTubeEmbed.astro';</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#E1E4E8\">&#x3C;YouTubeEmbed videoId=\"VIDEO_ID\" title=\"Titolo del video\" /></span></span></code></pre>\n<p>Sostituisci <code>VIDEO_ID</code> con l’ID del video YouTube (la parte dopo <code>watch?v=</code> nell’URL).</p>\n<h2 id=\"riferimenti-di-posizione-geomap\">Riferimenti di posizione (GeoMap)</h2>\n<p>Per inserire una mappa con una posizione specifica, aggiungi le coordinate nel frontmatter:</p>\n<pre class=\"astro-code github-dark\" style=\"background-color:#24292e;color:#e1e4e8; overflow-x: auto;\" tabindex=\"0\" data-language=\"yaml\"><code><span class=\"line\"><span style=\"color:#85E89D\">coords</span><span style=\"color:#E1E4E8\">:</span></span>\n<span class=\"line\"><span style=\"color:#85E89D\">  lat</span><span style=\"color:#E1E4E8\">: </span><span style=\"color:#79B8FF\">45.4642</span></span>\n<span class=\"line\"><span style=\"color:#85E89D\">  lon</span><span style=\"color:#E1E4E8\">: </span><span style=\"color:#79B8FF\">9.19</span></span></code></pre>\n<p>La mappa verrà visualizzata automaticamente alla fine del post.</p></youtubeembed>","metadata":{"headings":[{"depth":2,"slug":"immagine-remota","text":"Immagine remota"},{"depth":2,"slug":"video-youtube","text":"Video YouTube"},{"depth":2,"slug":"come-usare-i-media","text":"Come Usare i Media"},{"depth":3,"slug":"immagini","text":"Immagini"},{"depth":3,"slug":"video-youtube-embedded","text":"Video YouTube Embedded"},{"depth":2,"slug":"riferimenti-di-posizione-geomap","text":"Riferimenti di posizione (GeoMap)"}],"localImagePaths":[],"remoteImagePaths":[],"frontmatter":{"title":"Esempio inserimento immagini e video in Markdown","date":"2025-07-09T00:00:00.000Z","description":"Come inserire immagini remote e video YouTube nei post Markdown.","coords":{"lat":45.4642,"lon":9.19}},"imagePaths":[]}},"collection":"posts","slug":"2025-07-09-esempio-media"}];
-
-      // Carica Leaflet CSS
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-      document.head.appendChild(link);
-
-      // Carica Leaflet JS
-      const script = document.createElement('script');
-      script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-      script.onload = () => {
-        const posts = postsWithCoords.map(post => ({
-          title: post.data.title,
-          slug: post.slug,
-          coords: post.data.coords,
-          date: post.data.date,
-          cover: post.data.cover
-        }));
-
-        // Inizializza la mappa
-        const map = L.map('global-map').setView([45.4642, 9.1900], 6);
-
-        // Aggiungi tile layer
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        // Array per tenere traccia dei marker
-        const markers = [];
-
-        // Aggiungi marker per ogni post
-        posts.forEach((post, index) => {
-          const marker = L.marker([post.coords.lat, post.coords.lon]).addTo(map);
-          
-          const popupContent = `
-            <div class="p-2 max-w-xs">
-              ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-24 object-cover rounded mb-2">` : ''}
-              <h3 class="font-semibold text-sm mb-1">${post.title}</h3>
-              <p class="text-xs text-gray-600 mb-2">${new Date(post.date).toLocaleDateString('en-US')}</p>
-              <a href="${import.meta.env.BASE_URL}/posts/${post.slug}/" class="text-xs text-blue-600 hover:text-blue-800">Read more →</a>
-            </div>
-          `;
-          
-          marker.bindPopup(popupContent);
-          markers.push(marker);
-        });
-
-        // Funzione globale per focalizzare su un marker
-        window.focusMarker = (index) => {
-          const post = posts[index];
-          const marker = markers[index];
-          
-          map.setView([post.coords.lat, post.coords.lon], 12);
-          marker.openPopup();
-        };
-
-        // Adatta la vista per mostrare tutti i marker
-        if (markers.length > 1) {
-          const group = new L.featureGroup(markers);
-          map.fitBounds(group.getBounds().pad(0.1));
+</a> <!-- Desktop Navigation --> <div class="hidden md:flex items-center space-x-6"> <a href="/TheNomadUpupa/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">Home</a> <a href="/TheNomadUpupa/blog/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">Archive</a> <a href="/TheNomadUpupa/map/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">Map</a> <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Toggle theme"> <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path> </svg> <svg id="theme-toggle-dark-icon" class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20"> <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path> </svg> </button> </div> <!-- Mobile Navigation --> <div class="md:hidden flex items-center space-x-2"> <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Toggle theme"> <svg id="theme-toggle-light-icon-mobile" class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path> </svg> <svg id="theme-toggle-dark-icon-mobile" class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20"> <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path> </svg> </button> <button id="mobile-menu-button" class="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" aria-label="Open menu"> <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> </div> </div> <!-- Mobile Menu --> <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-700 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm"> <div class="px-2 pt-2 pb-3 space-y-1"> <a href="/TheNomadUpupa/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">Home</a> <a href="/TheNomadUpupa/blog/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">Archive</a> <a href="/TheNomadUpupa/map/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">Map</a> </div> </div> </div> </nav> <main class="flex-1">  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12"> <div class="mb-6 sm:mb-8 lg:mb-12"> <h1 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-gray-100 mb-4">
+Places Map
+</h1> <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-4 sm:mb-8">
+An emotional geography of the places that have marked my journey.
+</p> </div> <div class="grid lg:grid-cols-3 gap-6 lg:gap-8"> <!-- Mappa --> <div class="lg:col-span-2"> <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"> <div id="global-map" class="h-64 sm:h-80 md:h-96 lg:h-[600px] relative"> <div id="map-loading" class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-700"> <div class="text-gray-500 dark:text-gray-400">Loading map...</div> </div> </div> </div> </div> <!-- Lista dei luoghi --> <div class="space-y-4 lg:order-last order-first"> <h2 class="text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-4">
+Reflection Places
+</h2> <div class="space-y-3 max-h-64 lg:max-h-[600px] overflow-y-auto"> <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200"> <h3 class="font-serif font-semibold text-gray-900 dark:text-gray-100 mb-2"> <a href="/TheNomadUpupa/posts/2024-09-22-santorini-contemplation/" class="hover:text-warm-600 dark:hover:text-warm-400 transition-colors"> Blue Domes and Endless Horizons </a> </h3> <time class="text-sm text-gray-500 dark:text-gray-400 mb-2 block"> September 22, 2024 </time> <button onclick="focusMarker(0)" class="text-sm text-warm-600 dark:text-warm-400 hover:text-warm-700 dark:hover:text-warm-300 transition-colors font-medium" id="location-0">
+📍 Loading location...
+</button> </div><div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200"> <h3 class="font-serif font-semibold text-gray-900 dark:text-gray-100 mb-2"> <a href="/TheNomadUpupa/posts/2024-03-15-firenze-rinascimento/" class="hover:text-warm-600 dark:hover:text-warm-400 transition-colors"> Wandering Through Renaissance Florence </a> </h3> <time class="text-sm text-gray-500 dark:text-gray-400 mb-2 block"> March 15, 2024 </time> <button onclick="focusMarker(1)" class="text-sm text-warm-600 dark:text-warm-400 hover:text-warm-700 dark:hover:text-warm-300 transition-colors font-medium" id="location-1">
+📍 Loading location...
+</button> </div> </div> </div> </div> </div>  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"> <script type="module" src="/TheNomadUpupa/_astro/map.astro_astro_type_script_index_0_lang.BdpDw26L.js"></script> <style>
+        /* Light theme popup styles */
+        .leaflet-popup-content-wrapper {
+          background: white;
+          color: #1f2937;
+          border-radius: 8px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
-      };
-      document.head.appendChild(script);
-    })();</script> </main> <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-16"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> <div class="text-center text-gray-500 dark:text-gray-400 text-sm"> <p>&copy; 2025 The Nomad Upupa. A timeless reflective journal.</p> </div> </div> </footer> <script type="module">const s=document.getElementById("theme-toggle"),e=document.documentElement,t=localStorage.getItem("theme");t?e.classList.toggle("dark",t==="dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&e.classList.add("dark");s?.addEventListener("click",()=>{e.classList.toggle("dark"),localStorage.setItem("theme",e.classList.contains("dark")?"dark":"light")});</script></body></html>
+        
+        .leaflet-popup-tip {
+          background: white;
+        }
+        
+        /* Dark theme popup styles */
+        .dark .leaflet-popup-content-wrapper {
+          background: #374151 !important;
+          color: #f3f4f6 !important;
+        }
+        
+        .dark .leaflet-popup-tip {
+          background: #374151 !important;
+        }
+        
+        .dark .leaflet-popup-close-button {
+          color: #f3f4f6 !important;
+        }
+        
+        .dark .leaflet-popup-close-button:hover {
+          color: #d1d5db !important;
+        }
+        
+        /* Dark theme for popup links */
+        .dark .leaflet-popup-content a {
+          color: #60a5fa !important;
+        }
+        
+        .dark .leaflet-popup-content a:hover {
+          color: #93c5fd !important;
+        }
+        
+        /* Improve text contrast in popups */
+        .leaflet-popup-content .text-gray-600 {
+          color: #4b5563 !important;
+        }
+        
+        .dark .leaflet-popup-content .text-gray-600 {
+          color: #d1d5db !important;
+        }
+        
+        /* Modern zoom controls styling */
+        .leaflet-control-zoom {
+          border: none !important;
+          box-shadow: none !important;
+        }
+        
+        .leaflet-control-zoom a {
+          background: white !important;
+          color: #374151 !important;
+          border: none !important;
+          border-radius: 8px !important;
+          margin: 2px !important;
+          width: 32px !important;
+          height: 32px !important;
+          line-height: 30px !important;
+          font-size: 18px !important;
+          font-weight: 500 !important;
+          transition: all 0.2s ease !important;
+        }
+        
+        .leaflet-control-zoom a:hover {
+          background: #f3f4f6 !important;
+          color: #1f2937 !important;
+          transform: scale(1.05) !important;
+        }
+        
+        .leaflet-control-zoom a.leaflet-disabled {
+          background: #f9fafb !important;
+          color: #d1d5db !important;
+        }
+        
+        /* Dark theme zoom controls */
+        .dark .leaflet-control-zoom {
+          box-shadow: none !important;
+        }
+        
+        .dark .leaflet-control-zoom a {
+          background: #374151 !important;
+          color: #f3f4f6 !important;
+        }
+        
+        .dark .leaflet-control-zoom a:hover {
+          background: #4b5563 !important;
+          color: #ffffff !important;
+        }
+        
+        .dark .leaflet-control-zoom a.leaflet-disabled {
+          background: #1f2937 !important;
+          color: #6b7280 !important;
+        }
+        
+        /* Hide attribution */
+        .leaflet-control-attribution {
+          display: none !important;
+        }
+        
+        /* Fix z-index to not overlap navbar */
+        .leaflet-container {
+          z-index: 0 !important;
+        }
+        
+        .leaflet-control-container {
+          z-index: 10 !important;
+        }
+        
+        #global-map {
+          z-index: 0 !important;
+          position: relative !important;
+        }
+        
+        /* Mobile-specific zoom controls */
+        @media (max-width: 640px) {
+          .leaflet-control-zoom a {
+            width: 28px !important;
+            height: 28px !important;
+            line-height: 26px !important;
+            font-size: 16px !important;
+          }
+        }
+      </style> <script>(function(){const postsWithCoords = [{"id":"2024-09-22-santorini-contemplation.md","data":{"title":"Blue Domes and Endless Horizons","date":"2024-09-22T00:00:00.000Z","coords":{"lat":36.3932,"lon":25.4615},"description":"Finding solitude and meaning in the iconic landscapes of Santorini, where the Aegean Sea meets ancient volcanic history."},"body":"The ferry approached Santorini just as the sun began its descent toward the horizon. From the deck, the island emerged like a mirage—white buildings cascading down dark volcanic cliffs, creating a striking contrast against the deep blue of the Aegean Sea.\n\n## Morning in Oia\n\nI woke before dawn to walk the empty streets of Oia. Without the crowds, the village reveals its true character—narrow pathways worn smooth by centuries of footsteps, blue-domed churches that seem to float against the sky, and the constant whisper of wind carrying stories from across the sea.\n\nThe famous sunset viewing spot was mine alone at sunrise. Standing there, I understood why ancient Greeks believed the gods lived among these islands. There's something divine about the way light behaves here, transforming ordinary white walls into canvas for an ever-changing masterpiece.\n\n## The Caldera's Whisper\n\nLater, I hiked down to the old port of Ammoudi Bay. The path carved into the cliff face reminded me of how humans have always adapted to the dramatic landscapes that nature provides. Each step down was a step back in time—past terraced gardens, past old cave houses carved directly into the rock.\n\nAt the water's edge, fishermen were mending their nets with the same patience their fathers and grandfathers had shown. One elderly man shared his morning coffee with me, and though we spoke different languages, we understood each other perfectly. The sea, it seems, is a universal language.\n\n## Volcanic Reflections\n\nThe afternoon found me on the volcanic island of Nea Kameni, reached by a small boat from the main port. Walking on the warm volcanic rock, I was reminded of the powerful forces that created this landscape. The island exists because of destruction—a violent eruption that, thousands of years later, created one of the world's most beautiful places.\n\nThis paradox stayed with me as I returned to the main island. Sometimes the most profound beauty emerges from the most challenging circumstances. The villages of Santorini exist precisely because people chose to build on the edge of the unknown, embracing uncertainty as the price of extraordinary views.\n\n## Evening Contemplation\n\nAs the famous Santorini sunset approached, I deliberately avoided the crowded viewing areas. Instead, I found a quiet spot near the lighthouse in Akrotiri, where I could watch the sun sink into the endless blue while listening only to the sound of waves against the volcanic shore.\n\nTravel often teaches us about contrast—the way beauty becomes more precious when framed by harshness, how solitude feels more profound after experiencing crowds, and how home becomes more meaningful when viewed from a distance.\n\nTonight, as I write these words on my small terrace overlooking the caldera, I'm reminded that the best journeys are not just about the places we visit, but about the perspectives we gain along the way.","filePath":"src/content/posts/2024-09-22-santorini-contemplation.md","digest":"a74c584683719663","rendered":{"html":"<p>The ferry approached Santorini just as the sun began its descent toward the horizon. From the deck, the island emerged like a mirage—white buildings cascading down dark volcanic cliffs, creating a striking contrast against the deep blue of the Aegean Sea.</p>\n<h2 id=\"morning-in-oia\">Morning in Oia</h2>\n<p>I woke before dawn to walk the empty streets of Oia. Without the crowds, the village reveals its true character—narrow pathways worn smooth by centuries of footsteps, blue-domed churches that seem to float against the sky, and the constant whisper of wind carrying stories from across the sea.</p>\n<p>The famous sunset viewing spot was mine alone at sunrise. Standing there, I understood why ancient Greeks believed the gods lived among these islands. There’s something divine about the way light behaves here, transforming ordinary white walls into canvas for an ever-changing masterpiece.</p>\n<h2 id=\"the-calderas-whisper\">The Caldera’s Whisper</h2>\n<p>Later, I hiked down to the old port of Ammoudi Bay. The path carved into the cliff face reminded me of how humans have always adapted to the dramatic landscapes that nature provides. Each step down was a step back in time—past terraced gardens, past old cave houses carved directly into the rock.</p>\n<p>At the water’s edge, fishermen were mending their nets with the same patience their fathers and grandfathers had shown. One elderly man shared his morning coffee with me, and though we spoke different languages, we understood each other perfectly. The sea, it seems, is a universal language.</p>\n<h2 id=\"volcanic-reflections\">Volcanic Reflections</h2>\n<p>The afternoon found me on the volcanic island of Nea Kameni, reached by a small boat from the main port. Walking on the warm volcanic rock, I was reminded of the powerful forces that created this landscape. The island exists because of destruction—a violent eruption that, thousands of years later, created one of the world’s most beautiful places.</p>\n<p>This paradox stayed with me as I returned to the main island. Sometimes the most profound beauty emerges from the most challenging circumstances. The villages of Santorini exist precisely because people chose to build on the edge of the unknown, embracing uncertainty as the price of extraordinary views.</p>\n<h2 id=\"evening-contemplation\">Evening Contemplation</h2>\n<p>As the famous Santorini sunset approached, I deliberately avoided the crowded viewing areas. Instead, I found a quiet spot near the lighthouse in Akrotiri, where I could watch the sun sink into the endless blue while listening only to the sound of waves against the volcanic shore.</p>\n<p>Travel often teaches us about contrast—the way beauty becomes more precious when framed by harshness, how solitude feels more profound after experiencing crowds, and how home becomes more meaningful when viewed from a distance.</p>\n<p>Tonight, as I write these words on my small terrace overlooking the caldera, I’m reminded that the best journeys are not just about the places we visit, but about the perspectives we gain along the way.</p>","metadata":{"headings":[{"depth":2,"slug":"morning-in-oia","text":"Morning in Oia"},{"depth":2,"slug":"the-calderas-whisper","text":"The Caldera’s Whisper"},{"depth":2,"slug":"volcanic-reflections","text":"Volcanic Reflections"},{"depth":2,"slug":"evening-contemplation","text":"Evening Contemplation"}],"localImagePaths":[],"remoteImagePaths":[],"frontmatter":{"title":"Blue Domes and Endless Horizons","date":"2024-09-22T00:00:00.000Z","description":"Finding solitude and meaning in the iconic landscapes of Santorini, where the Aegean Sea meets ancient volcanic history.","coords":{"lat":36.3932,"lon":25.4615}},"imagePaths":[]}},"collection":"posts","slug":"2024-09-22-santorini-contemplation"},{"id":"2024-03-15-firenze-rinascimento.md","data":{"title":"Wandering Through Renaissance Florence","date":"2024-03-15T00:00:00.000Z","coords":{"lat":43.7696,"lon":11.2558},"description":"A contemplative walk through the cradle of the Renaissance, where art and history whisper from every stone."},"body":"The morning light filtered through the narrow streets of Florence as I made my way toward the Ponte Vecchio. There's something about this city that makes time feel elastic—centuries collapse into moments, and suddenly you're walking alongside Michelangelo and Leonardo.\n\n## The Weight of Beauty\n\nStanding before Brunelleschi's dome at the Duomo, I was struck not just by its architectural perfection, but by the audacity of human ambition it represents. How many generations of craftsmen poured their lives into these stones? Each marble vein tells a story of dedication that stretches far beyond individual lifespans.\n\nThe crowds of tourists seemed to fade as I climbed to the top. From that height, Florence spreads out like a Renaissance painting come to life—terra cotta roofs flowing like waves toward the Tuscan hills.\n\n## Solitude in the Oltrarno\n\nCrossing the Arno, I found myself in the quieter Oltrarno district. Here, artisan workshops still echo with the sounds of traditional crafts. I spent an hour watching a leather worker shape a bag with the same techniques used centuries ago. His hands moved with the certainty of inherited knowledge.\n\nIn a small trattoria tucked away from the main streets, I shared a simple meal of ribollita with an elderly Florentine who spoke of his city with the deep affection of a lifetime resident. \"Firenze,\" he said, \"è come una persona cara—you must know her slowly, with patience.\"\n\n## Reflections by the River\n\nAs evening approached, I found myself sitting by the Arno, watching the light dance on the water. The river has witnessed so much—the Medici's rise to power, the floods that threatened the city's treasures, the daily lives of countless ordinary people whose stories are written in no history books.\n\nTravel, I realized, is not just about seeing new places. It's about allowing yourself to be changed by them. Florence didn't just show me its beauty—it reminded me that human creativity, when touched by vision and perseverance, can create something eternal.\n\nTomorrow I continue north, but part of me will always remain here, in this city where the past and present dance together in perfect harmony.","filePath":"src/content/posts/2024-03-15-firenze-rinascimento.md","digest":"f7b291edd33bf569","rendered":{"html":"<p>The morning light filtered through the narrow streets of Florence as I made my way toward the Ponte Vecchio. There’s something about this city that makes time feel elastic—centuries collapse into moments, and suddenly you’re walking alongside Michelangelo and Leonardo.</p>\n<h2 id=\"the-weight-of-beauty\">The Weight of Beauty</h2>\n<p>Standing before Brunelleschi’s dome at the Duomo, I was struck not just by its architectural perfection, but by the audacity of human ambition it represents. How many generations of craftsmen poured their lives into these stones? Each marble vein tells a story of dedication that stretches far beyond individual lifespans.</p>\n<p>The crowds of tourists seemed to fade as I climbed to the top. From that height, Florence spreads out like a Renaissance painting come to life—terra cotta roofs flowing like waves toward the Tuscan hills.</p>\n<h2 id=\"solitude-in-the-oltrarno\">Solitude in the Oltrarno</h2>\n<p>Crossing the Arno, I found myself in the quieter Oltrarno district. Here, artisan workshops still echo with the sounds of traditional crafts. I spent an hour watching a leather worker shape a bag with the same techniques used centuries ago. His hands moved with the certainty of inherited knowledge.</p>\n<p>In a small trattoria tucked away from the main streets, I shared a simple meal of ribollita with an elderly Florentine who spoke of his city with the deep affection of a lifetime resident. “Firenze,” he said, “è come una persona cara—you must know her slowly, with patience.”</p>\n<h2 id=\"reflections-by-the-river\">Reflections by the River</h2>\n<p>As evening approached, I found myself sitting by the Arno, watching the light dance on the water. The river has witnessed so much—the Medici’s rise to power, the floods that threatened the city’s treasures, the daily lives of countless ordinary people whose stories are written in no history books.</p>\n<p>Travel, I realized, is not just about seeing new places. It’s about allowing yourself to be changed by them. Florence didn’t just show me its beauty—it reminded me that human creativity, when touched by vision and perseverance, can create something eternal.</p>\n<p>Tomorrow I continue north, but part of me will always remain here, in this city where the past and present dance together in perfect harmony.</p>","metadata":{"headings":[{"depth":2,"slug":"the-weight-of-beauty","text":"The Weight of Beauty"},{"depth":2,"slug":"solitude-in-the-oltrarno","text":"Solitude in the Oltrarno"},{"depth":2,"slug":"reflections-by-the-river","text":"Reflections by the River"}],"localImagePaths":[],"remoteImagePaths":[],"frontmatter":{"title":"Wandering Through Renaissance Florence","date":"2024-03-15T00:00:00.000Z","description":"A contemplative walk through the cradle of the Renaissance, where art and history whisper from every stone.","coords":{"lat":43.7696,"lon":11.2558}},"imagePaths":[]}},"collection":"posts","slug":"2024-03-15-firenze-rinascimento"}];
+
+        document.addEventListener('DOMContentLoaded', function() {
+          const posts = postsWithCoords.map(post => ({
+            title: post.data.title,
+            slug: post.slug,
+            coords: post.data.coords,
+            date: post.data.date,
+            cover: post.data.cover
+          }));
+
+          // Remove loading indicator
+          const loadingEl = document.getElementById('map-loading');
+          if (loadingEl) loadingEl.remove();
+
+          // Initialize the map with center based on first post or default to Italy
+          const firstPost = posts[0];
+          const initialCenter = firstPost ? [firstPost.coords.lat, firstPost.coords.lon] : [41.9028, 12.4964];
+          const map = L.map('global-map').setView(initialCenter, 6);
+
+          // Light and dark tile layers
+          const lightTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+            attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          });
+          
+          const darkTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+            attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          });
+          
+          // Function to update map theme
+          function updateMapTheme() {
+            const isDark = document.documentElement.classList.contains('dark');
+            if (isDark) {
+              map.removeLayer(lightTiles);
+              darkTiles.addTo(map);
+            } else {
+              map.removeLayer(darkTiles);
+              lightTiles.addTo(map);
+            }
+          }
+          
+          // Set initial theme
+          updateMapTheme();
+          
+          // Listen for theme changes
+          const observer = new MutationObserver(updateMapTheme);
+          observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['class']
+          });
+
+          // Create custom marker icons
+          const lightIcon = L.divIcon({
+            className: 'custom-marker light-marker',
+            html: `
+              <div style="
+                width: 18px; 
+                height: 18px; 
+                background: #dc2626; 
+                border: 2px solid white; 
+                border-radius: 50%; 
+                box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+              ">
+              </div>
+            `,
+            iconSize: [18, 18],
+            iconAnchor: [9, 9]
+          });
+
+          const darkIcon = L.divIcon({
+            className: 'custom-marker dark-marker',
+            html: `
+              <div style="
+                width: 18px; 
+                height: 18px; 
+                background: #e5e7eb; 
+                border: 2px solid #374151; 
+                border-radius: 50%; 
+                box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+              ">
+              </div>
+            `,
+            iconSize: [18, 18],
+            iconAnchor: [9, 9]
+          });
+
+          // Array to track markers
+          const markers = [];
+
+          // Add marker for each post
+          posts.forEach((post, index) => {
+            const isDark = document.documentElement.classList.contains('dark');
+            const icon = isDark ? darkIcon : lightIcon;
+            const marker = L.marker([post.coords.lat, post.coords.lon], { icon: icon }).addTo(map);
+            
+            const popupContent = `
+              <div class="p-2 max-w-xs">
+                ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-24 object-cover rounded mb-2">` : ''}
+                <h3 class="font-semibold text-sm mb-1">${post.title}</h3>
+                <p class="text-xs text-gray-600 mb-2">${new Date(post.date).toLocaleDateString('en-US')}</p>
+                <a href="/TheNomadUpupa/posts/${post.slug}/" class="text-xs text-blue-600 hover:text-blue-800">Read more →</a>
+              </div>
+            `;
+            
+            marker.bindPopup(popupContent);
+            markers.push(marker);
+            
+            // Reverse geocoding to get location name
+            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${post.coords.lat}&lon=${post.coords.lon}&zoom=10&addressdetails=1`)
+              .then(response => response.json())
+              .then(data => {
+                const locationButton = document.getElementById(`location-${index}`);
+                if (locationButton && data.address) {
+                  // Try to get city, town, village, or municipality
+                  const location = data.address.city || 
+                                 data.address.town || 
+                                 data.address.village || 
+                                 data.address.municipality || 
+                                 data.address.county ||
+                                 'Unknown location';
+                  locationButton.textContent = `📍 ${location}`;
+                }
+              })
+              .catch(() => {
+                const locationButton = document.getElementById(`location-${index}`);
+                if (locationButton) {
+                  locationButton.textContent = `📍 View on map`;
+                }
+              });
+          });
+
+          // Global function to focus on a marker
+          window.focusMarker = (index) => {
+            const post = posts[index];
+            const marker = markers[index];
+            
+            map.setView([post.coords.lat, post.coords.lon], 15);
+            marker.openPopup();
+          };
+
+          // Function to update all markers
+          function updateAllMarkers() {
+            const isDark = document.documentElement.classList.contains('dark');
+            const icon = isDark ? darkIcon : lightIcon;
+            
+            markers.forEach(marker => {
+              marker.setIcon(icon);
+            });
+          }
+
+          // Update markers when theme changes (extend existing function)
+          const originalUpdateMapTheme = updateMapTheme;
+          updateMapTheme = function() {
+            originalUpdateMapTheme();
+            updateAllMarkers();
+          };
+
+          // Fit bounds to show all markers
+          if (markers.length > 1) {
+            const group = new L.featureGroup(markers);
+            map.fitBounds(group.getBounds().pad(0.1));
+          }
+        });
+      })();</script>  </main> <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-16"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> <div class="text-center text-gray-500 dark:text-gray-400 text-sm"> <p>&copy; 2025 The Nomad Upupa. A timeless reflective journal.</p> </div> </div> </footer> <script type="module">const o=document.getElementById("theme-toggle"),i=document.getElementById("theme-toggle-mobile"),e=document.documentElement,c=localStorage.getItem("theme");c?e.classList.toggle("dark",c==="dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&e.classList.add("dark");o?.addEventListener("click",()=>{e.classList.toggle("dark"),localStorage.setItem("theme",e.classList.contains("dark")?"dark":"light")});i?.addEventListener("click",()=>{e.classList.toggle("dark"),localStorage.setItem("theme",e.classList.contains("dark")?"dark":"light")});const l=document.getElementById("mobile-menu-button"),t=document.getElementById("mobile-menu"),s=document.getElementById("menu-open-icon"),d=document.getElementById("menu-close-icon");l?.addEventListener("click",()=>{t?.classList.contains("hidden")?(t?.classList.remove("hidden"),s?.classList.add("hidden"),d?.classList.remove("hidden")):(t?.classList.add("hidden"),s?.classList.remove("hidden"),d?.classList.add("hidden"))});const a=t?.querySelectorAll("a");a?.forEach(n=>{n.addEventListener("click",()=>{t?.classList.add("hidden"),s?.classList.remove("hidden"),d?.classList.add("hidden")})});</script></body></html>
