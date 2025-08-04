@@ -8,7 +8,7 @@ const mapId = coords ? `map-${coords.lat}-${coords.lon}`.replace(/\./g, '_') : '
   </div>
   
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
   
   <style>
     /* Light theme popup styles */
@@ -118,8 +118,11 @@ const mapId = coords ? `map-${coords.lat}-${coords.lon}`.replace(/\./g, '_') : '
   </style>
   
   <script define:vars={{ coords, mapId }}>
-    // Wait for DOM to be ready
-    document.addEventListener('DOMContentLoaded', function() {
+    function initializeGeoMap() {
+      if (typeof L === 'undefined') {
+        setTimeout(initializeGeoMap, 100);
+        return;
+      }
       // Initialize the map
       const map = L.map(mapId).setView([coords.lat, coords.lon], 15);
       
@@ -213,6 +216,8 @@ const mapId = coords ? `map-${coords.lat}-${coords.lon}`.replace(/\./g, '_') : '
         originalUpdateMapTheme();
         updateMarker();
       };
-    });
+    }
+    
+    document.addEventListener('DOMContentLoaded', initializeGeoMap);
   </script>
 ) : null}

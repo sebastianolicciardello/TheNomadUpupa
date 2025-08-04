@@ -80,7 +80,7 @@ const postsWithCoords = posts
   {postsWithCoords.length > 0 && (
     <>
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
       
       <style>
         /* Light theme popup styles */
@@ -218,7 +218,11 @@ const postsWithCoords = posts
       </style>
       
       <script define:vars={{ postsWithCoords }}>
-        document.addEventListener('DOMContentLoaded', function() {
+        function initializeMap() {
+          if (typeof L === 'undefined') {
+            setTimeout(initializeMap, 100);
+            return;
+          }
           const posts = postsWithCoords.map(post => ({
             title: post.data.title,
             slug: post.slug,
@@ -378,7 +382,9 @@ const postsWithCoords = posts
             const group = new L.featureGroup(markers);
             map.fitBounds(group.getBounds().pad(0.1));
           }
-        });
+        }
+        
+        document.addEventListener('DOMContentLoaded', initializeMap);
       </script>
     </>
   )}
