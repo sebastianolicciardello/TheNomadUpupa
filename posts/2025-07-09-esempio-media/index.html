@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.12.8"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet"><title>Esempio inserimento immagini e video in Markdown</title><link rel="stylesheet" href="/TheNomadUpupa/assets/blog.fwW74j_n.css">
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.12.8"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet"><title>Esempio inserimento immagini e video in Markdown</title><link rel="stylesheet" href="/TheNomadUpupa/assets/blog.Bq6CIUyB.css">
 <style>.geomap[data-astro-cid-kmpw7y7r]{background:#eef;padding:1rem;border-radius:8px;text-align:center}
 </style></head> <body class="bg-warm-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans antialiased min-h-screen transition-colors duration-200"> <nav class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <a href="/TheNomadUpupa/" class="text-xl font-semibold text-gray-900 dark:text-gray-100 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">
 The Nomad Upupa
@@ -11,30 +11,26 @@ The Nomad Upupa
                  prose-blockquote:border-warm-300 dark:prose-blockquote:border-warm-600 
                  prose-blockquote:bg-warm-50 dark:prose-blockquote:bg-warm-900/20 
                  prose-blockquote:rounded-r-lg prose-blockquote:py-2 prose-blockquote:px-4
-                 prose-img:rounded-lg prose-img:shadow-md">  <h1 id="esempio-di-inserimento-immagini-e-video-in-markdown">Esempio di inserimento immagini e video in Markdown</h1>
-<h2 id="immagine-remota">Immagine remota</h2>
+                 prose-img:rounded-lg prose-img:shadow-md">  <h2 id="immagine-remota">Immagine remota</h2>
 <p><img src="https://astro.build/assets/press/astro-icon-dark.svg" alt="Logo Astro"></p>
 <h2 id="video-youtube">Video YouTube</h2>
-<p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" alt="Thumbnail"></a></p>
+<p>import YouTubeEmbed from ’../../components/YouTubeEmbed.astro’;</p>
+<youtubeembed videoid="dQw4w9WgXcQ" title="Rick Astley - Never Gonna Give You Up">
+<h2 id="come-usare-i-media">Come Usare i Media</h2>
+<h3 id="immagini">Immagini</h3>
+<p>Per inserire immagini usa la sintassi Markdown standard:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">![</span><span style="color:#DBEDFF;text-decoration:underline">Descrizione</span><span style="color:#E1E4E8">](</span><span style="color:#E1E4E8;text-decoration:underline">https://url-immagine.jpg</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<h3 id="video-youtube-embedded">Video YouTube Embedded</h3>
+<p>Per inserire video YouTube embedded, usa il componente dedicato:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">import YouTubeEmbed from '../../components/YouTubeEmbed.astro';</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;YouTubeEmbed videoId="VIDEO_ID" title="Titolo del video" /></span></span></code></pre>
+<p>Sostituisci <code>VIDEO_ID</code> con l’ID del video YouTube (la parte dopo <code>watch?v=</code> nell’URL).</p>
 <h2 id="riferimenti-di-posizione-geomap">Riferimenti di posizione (GeoMap)</h2>
-<p>Per inserire una mappa con una posizione specifica, puoi aggiungere i dati di latitudine e longitudine nei metadati del post (frontmatter) oppure, se il sistema lo supporta, direttamente nel contenuto. Ad esempio:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>coords:</span></span>
-<span class="line"><span>  lat: 45.4642</span></span>
-<span class="line"><span>  lon: 9.19</span></span></code></pre>
-<p>Esempio di utilizzo nel frontmatter:</p>
-<p>title: “Esempio inserimento immagini e video in Markdown”
-date: 2025-07-09
-description: “Come inserire immagini remote e video YouTube nei post Markdown.”
-coords:
-lat: 45.4642
-lon: 9.19
-tags:</p>
-<ul>
-<li>esempio</li>
-<li>media</li>
-<li>markdown</li>
-</ul>
-<p>Se il componente <code>GeoMap</code> è configurato, la mappa verrà visualizzata automaticamente nel post.</p>
-<p>Sostituisci le coordinate con quelle desiderate.</p>  </main> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700"> <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 font-serif">
+<p>Per inserire una mappa con una posizione specifica, aggiungi le coordinate nel frontmatter:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">coords</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">  lat</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">45.4642</span></span>
+<span class="line"><span style="color:#85E89D">  lon</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">9.19</span></span></code></pre>
+<p>La mappa verrà visualizzata automaticamente alla fine del post.</p></youtubeembed>  </main> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700"> <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 font-serif">
 📍 Where I've Been
 </h3> <div class="rounded-lg overflow-hidden shadow-lg"> <astro-geo-map data-settings="{&#34;address&#34;:&#34;45.4642,9.19&#34;,&#34;width&#34;:&#34;100%&#34;,&#34;height&#34;:&#34;300px&#34;,&#34;leafletOptions&#34;:{&#34;center&#34;:[45.4638878,9.1897562],&#34;data-astro-cid-kmpw7y7r&#34;:true}}" data-styles-href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.min.css" style="width:100%;height:300px;display:block"> <img src="/assets/maps/@45-4642-9-19-@w-100-@h-300px-@c-45-4638878-9-1897562-data-astro-cid-kmpw7y7r-true.png" alt="Geographical map" style="position:absolute;width:100%;height:300px"> </astro-geo-map> <script type="module" src="/TheNomadUpupa/_astro/GeoMap.astro_astro_type_script_index_0_lang.CBvipP-P.js"></script> </div> </section> </article>  </main> <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-16"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> <div class="text-center text-gray-500 dark:text-gray-400 text-sm"> <p>&copy; 2025 The Nomad Upupa. A timeless reflective journal.</p> </div> </div> </footer> <script type="module">const s=document.getElementById("theme-toggle"),e=document.documentElement,t=localStorage.getItem("theme");t?e.classList.toggle("dark",t==="dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&e.classList.add("dark");s?.addEventListener("click",()=>{e.classList.toggle("dark"),localStorage.setItem("theme",e.classList.contains("dark")?"dark":"light")});</script></body></html>
