@@ -7,8 +7,8 @@ const mapId = coords ? `map-${coords.lat}-${coords.lon}`.replace(/\./g, '_') : '
     <div id={mapId} class="w-full h-full"></div>
   </div>
   
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <link rel="stylesheet" href={`${import.meta.env.BASE_URL}/libs/leaflet/leaflet.css`} />
+  <script src={`${import.meta.env.BASE_URL}/libs/leaflet/leaflet.js`}></script>
   
   <style>
     /* Light theme popup styles */
@@ -119,10 +119,13 @@ const mapId = coords ? `map-${coords.lat}-${coords.lon}`.replace(/\./g, '_') : '
   
   <script define:vars={{ coords, mapId }}>
     function initializeGeoMap() {
+      console.log('Attempting to initialize GeoMap...', typeof L);
       if (typeof L === 'undefined') {
+        console.log('Leaflet not ready for GeoMap, retrying...');
         setTimeout(initializeGeoMap, 100);
         return;
       }
+      console.log('Leaflet loaded, initializing GeoMap...');
       // Initialize the map
       const map = L.map(mapId).setView([coords.lat, coords.lon], 15);
       
@@ -218,6 +221,14 @@ const mapId = coords ? `map-${coords.lat}-${coords.lon}`.replace(/\./g, '_') : '
       };
     }
     
-    document.addEventListener('DOMContentLoaded', initializeGeoMap);
+    // Try multiple loading strategies
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializeGeoMap);
+    } else {
+      initializeGeoMap();
+    }
+    
+    // Fallback
+    window.addEventListener('load', initializeGeoMap);
   </script>
 ) : null}

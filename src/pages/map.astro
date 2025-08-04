@@ -79,8 +79,8 @@ const postsWithCoords = posts
 
   {postsWithCoords.length > 0 && (
     <>
-      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+      <link rel="stylesheet" href={`${import.meta.env.BASE_URL}/libs/leaflet/leaflet.css`} />
+      <script src={`${import.meta.env.BASE_URL}/libs/leaflet/leaflet.js`}></script>
       
       <style>
         /* Light theme popup styles */
@@ -384,7 +384,15 @@ const postsWithCoords = posts
           }
         }
         
-        document.addEventListener('DOMContentLoaded', initializeMap);
+        // Try multiple loading strategies
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initializeMap);
+        } else {
+          initializeMap();
+        }
+        
+        // Fallback
+        window.addEventListener('load', initializeMap);
       </script>
     </>
   )}
