@@ -129,6 +129,11 @@ The Nomad Upupa
     .leaflet-container {
       z-index: 1 !important;
     }
+    
+    /* Lighten dark theme tiles */
+    .dark .leaflet-tile {
+      filter: brightness(1.3) contrast(0.9) !important;
+    }
   </style>
   
   <script>(function(){const coords = {"lat":36.3932,"lon":25.4615};
@@ -140,12 +145,12 @@ const mapId = "map-36_3932-25_4615";
       const map = L.map(mapId).setView([coords.lat, coords.lon], 15);
       
       // Light and dark tile layers
-      const lightTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
-        attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      const lightTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
       });
       
-      const darkTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-        attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      const darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
       });
       
       // Function to update map theme
