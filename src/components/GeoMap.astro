@@ -1,14 +1,213 @@
 ---
-import { GeoMap as LeafletGeoMap } from 'astro-geo-map';
 const { coords } = Astro.props;
+const mapId = coords ? `map-${coords.lat}-${coords.lon}`.replace(/\./g, '_') : '';
 ---
 {coords && coords.lat && coords.lon ? (
-  <LeafletGeoMap
-    address={`${coords.lat},${coords.lon}`}
-    height={"300px"}
-    width={"100%"}
-  />
+  <div class="relative w-full h-80 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+    <div id={mapId} class="w-full h-full"></div>
+  </div>
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <style>
+    /* Light theme popup styles */
+    .leaflet-popup-content-wrapper {
+      background: white;
+      color: #1f2937;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .leaflet-popup-tip {
+      background: white;
+    }
+    
+    /* Dark theme popup styles */
+    .dark .leaflet-popup-content-wrapper {
+      background: #374151 !important;
+      color: #f3f4f6 !important;
+    }
+    
+    .dark .leaflet-popup-tip {
+      background: #374151 !important;
+    }
+    
+    .dark .leaflet-popup-close-button {
+      color: #f3f4f6 !important;
+    }
+    
+    .dark .leaflet-popup-close-button:hover {
+      color: #d1d5db !important;
+    }
+    
+    /* Improve text contrast in popups */
+    .leaflet-popup-content .text-gray-600 {
+      color: #4b5563 !important;
+    }
+    
+    .dark .leaflet-popup-content .text-gray-600 {
+      color: #d1d5db !important;
+    }
+    
+    /* Modern zoom controls styling */
+    .leaflet-control-zoom {
+      border: none !important;
+      box-shadow: none !important;
+    }
+    
+    .leaflet-control-zoom a {
+      background: white !important;
+      color: #374151 !important;
+      border: none !important;
+      border-radius: 8px !important;
+      margin: 2px !important;
+      width: 32px !important;
+      height: 32px !important;
+      line-height: 30px !important;
+      font-size: 18px !important;
+      font-weight: 500 !important;
+      transition: all 0.2s ease !important;
+    }
+    
+    .leaflet-control-zoom a:hover {
+      background: #f3f4f6 !important;
+      color: #1f2937 !important;
+      transform: scale(1.05) !important;
+    }
+    
+    .leaflet-control-zoom a.leaflet-disabled {
+      background: #f9fafb !important;
+      color: #d1d5db !important;
+    }
+    
+    /* Dark theme zoom controls */
+    .dark .leaflet-control-zoom {
+      box-shadow: none !important;
+    }
+    
+    .dark .leaflet-control-zoom a {
+      background: #374151 !important;
+      color: #f3f4f6 !important;
+    }
+    
+    .dark .leaflet-control-zoom a:hover {
+      background: #4b5563 !important;
+      color: #ffffff !important;
+    }
+    
+    .dark .leaflet-control-zoom a.leaflet-disabled {
+      background: #1f2937 !important;
+      color: #6b7280 !important;
+    }
+    
+    /* Hide attribution */
+    .leaflet-control-attribution {
+      display: none !important;
+    }
+    
+    /* Fix z-index to not overlap navbar */
+    .leaflet-container {
+      z-index: 1 !important;
+    }
+  </style>
+  
+  <script define:vars={{ coords, mapId }}>
+    // Wait for DOM to be ready
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize the map
+      const map = L.map(mapId).setView([coords.lat, coords.lon], 15);
+      
+      // Light and dark tile layers
+      const lightTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+        attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      });
+      
+      const darkTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+        attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      });
+      
+      // Function to update map theme
+      function updateMapTheme() {
+        const isDark = document.documentElement.classList.contains('dark');
+        if (isDark) {
+          map.removeLayer(lightTiles);
+          darkTiles.addTo(map);
+        } else {
+          map.removeLayer(darkTiles);
+          lightTiles.addTo(map);
+        }
+      }
+      
+      // Set initial theme
+      updateMapTheme();
+      
+      // Listen for theme changes
+      const observer = new MutationObserver(updateMapTheme);
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['class']
+      });
+      
+      // Create custom marker icons
+      const lightIcon = L.divIcon({
+        className: 'custom-marker light-marker',
+        html: `
+          <div style="
+            width: 18px; 
+            height: 18px; 
+            background: #dc2626; 
+            border: 2px solid white; 
+            border-radius: 50%; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+          ">
+          </div>
+        `,
+        iconSize: [18, 18],
+        iconAnchor: [9, 9]
+      });
+
+      const darkIcon = L.divIcon({
+        className: 'custom-marker dark-marker',
+        html: `
+          <div style="
+            width: 18px; 
+            height: 18px; 
+            background: #e5e7eb; 
+            border: 2px solid #374151; 
+            border-radius: 50%; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+          ">
+          </div>
+        `,
+        iconSize: [18, 18],
+        iconAnchor: [9, 9]
+      });
+
+      // Add a marker with theme-appropriate icon
+      let marker;
+      
+      function updateMarker() {
+        const isDark = document.documentElement.classList.contains('dark');
+        const icon = isDark ? darkIcon : lightIcon;
+        
+        if (marker) {
+          map.removeLayer(marker);
+        }
+        
+        marker = L.marker([coords.lat, coords.lon], { icon: icon }).addTo(map);
+        marker.bindPopup(`Location: ${coords.lat}, ${coords.lon}`);
+      }
+
+      // Set initial marker
+      updateMarker();
+      
+      // Update marker when theme changes (reuse the existing observer)
+      const originalUpdateMapTheme = updateMapTheme;
+      updateMapTheme = function() {
+        originalUpdateMapTheme();
+        updateMarker();
+      };
+    });
+  </script>
 ) : null}
-<style>
-.geomap { background: #eef; padding: 1rem; border-radius: 8px; text-align: center; }
-</style>

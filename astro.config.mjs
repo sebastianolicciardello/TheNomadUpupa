@@ -3,14 +3,16 @@ import mdx from '@astrojs/mdx';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  integrations: [mdx(), tailwind()],
+  integrations: [mdx(), tailwind({ applyBaseStyles: true })],
   vite: { 
-    optimizeDeps: { include: ['leaflet'] },
-    base: '/TheNomadUpupa/',
+    build: {
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[name].[hash][extname]'
+        }
+      }
+    }
   },
   site: 'https://sebastianolicciardello.github.io',
-  base: '/TheNomadUpupa',
-  build: {
-    assets: 'assets'
-  }
+  base: '/TheNomadUpupa'
 });

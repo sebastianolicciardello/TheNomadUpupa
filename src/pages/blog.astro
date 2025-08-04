@@ -40,14 +40,6 @@ const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.get
                       day: 'numeric'
                     })}
                   </time>
-                  {post.data.coords && (
-                    <span class="inline-flex items-center text-warm-600 dark:text-warm-400">
-                      <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                      </svg>
-                      Georeferenced
-                    </span>
-                  )}
                 </div>
                 
                 <h2 class="text-xl md:text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-3">
@@ -58,16 +50,6 @@ const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.get
                     {post.data.title}
                   </a>
                 </h2>
-                
-                {post.data.tags && post.data.tags.length > 0 && (
-                  <div class="flex flex-wrap gap-2 mb-4">
-                    {post.data.tags.map((tag: string) => (
-                      <span class="px-2 py-1 bg-warm-100 dark:bg-warm-800 text-warm-700 dark:text-warm-300 rounded-full text-xs font-medium">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
                 
                 <div class="flex items-center justify-between">
                   <a 

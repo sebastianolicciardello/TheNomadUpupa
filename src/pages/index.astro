@@ -52,15 +52,6 @@ const recentPosts = posts
                     day: 'numeric'
                   })}
                 </time>
-                {post.data.tags && post.data.tags.length > 0 && (
-                  <div class="flex flex-wrap gap-2">
-                    {post.data.tags.slice(0, 3).map((tag: string) => (
-                      <span class="px-2 py-1 bg-warm-100 dark:bg-warm-800 text-warm-700 dark:text-warm-300 rounded-full text-xs font-medium">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
               </div>
             </article>
           ))}

@@ -2,7 +2,7 @@
 import Layout from './Layout.astro';
 import GeoMap from '../components/GeoMap.astro';
 
-const { title, date, coords, cover, tags } = Astro.props;
+const { title, date, coords, cover } = Astro.props;
 const hasCoords = coords && coords.lat && coords.lon;
 ---
 
@@ -25,15 +25,6 @@ const hasCoords = coords && coords.lat && coords.lon;
             day: 'numeric' 
           })}
         </time>
-        {tags && tags.length > 0 && (
-          <div class="flex flex-wrap gap-2">
-            {tags.map((tag: string) => (
-              <span class="px-2 py-1 bg-warm-100 dark:bg-warm-800 text-warm-700 dark:text-warm-300 rounded-full text-xs font-medium">
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
       </div>
       {cover && (
         <div class="mt-6">

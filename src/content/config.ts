@@ -5,9 +5,9 @@ export const collections = {
     schema: z.object({
       title: z.string(),
       date: z.date(),
-      coords: z.object({ lat: z.number(), lon: z.number() }),
+      coords: z.object({ lat: z.number(), lon: z.number() }).optional(),
       cover: z.string().optional(),
-      tags: z.string().array(),
+      description: z.string().optional(),
     }),
   }),
 };
