@@ -4,7 +4,23 @@ import { getCollection } from 'astro:content';
 
 const posts = await getCollection('posts');
 const postsWithCoords = posts
-  .filter(post => post.data.coords && post.data.coords.lat && post.data.coords.lon)
+  .filter(post => {
+    // Check if post has coords or has locations
+    const hasCoords = post.data.coords && post.data.coords.lat && post.data.coords.lon;
+    const hasLocations = post.data.locations && post.data.locations.length > 0;
+    return hasCoords || hasLocations;
+  })
+  .map(post => {
+    // Get main location coordinates for map display
+    let mainCoords = null;
+    if (post.data.locations && post.data.locations.length > 0) {
+      const mainLocation = post.data.locations.find(loc => loc.isMain) || post.data.locations[0];
+      mainCoords = mainLocation.coords;
+    } else if (post.data.coords) {
+      mainCoords = post.data.coords;
+    }
+    return { ...post, mainCoords };
+  })
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 ---
 
@@ -226,7 +242,7 @@ const postsWithCoords = posts
           const posts = postsWithCoords.map(post => ({
             title: post.data.title,
             slug: post.slug,
-            coords: post.data.coords,
+            coords: post.mainCoords, // Use main coordinates only
             date: post.data.date,
             cover: post.data.cover
           }));
@@ -327,7 +343,7 @@ const postsWithCoords = posts
             marker.bindPopup(popupContent);
             markers.push(marker);
             
-            // Reverse geocoding to get location name
+            // Reverse geocoding to get location name for main coordinates
             fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${post.coords.lat}&lon=${post.coords.lon}&zoom=10&addressdetails=1`)
               .then(response => response.json())
               .then(data => {

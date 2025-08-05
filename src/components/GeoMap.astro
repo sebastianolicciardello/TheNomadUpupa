@@ -1,8 +1,9 @@
 ---
-const { coords } = Astro.props;
-const mapId = coords ? `map-${coords.lat}-${coords.lon}`.replace(/\./g, '_') : '';
+const { coords, locations } = Astro.props;
+const hasLocations = (locations && locations.length > 0) || coords;
+const mapId = hasLocations ? `map-${Date.now()}` : '';
 ---
-{coords && coords.lat && coords.lon ? (
+{hasLocations ? (
   <div class="relative w-full h-80 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
     <div id={mapId} class="w-full h-full"></div>
   </div>
@@ -117,7 +118,7 @@ const mapId = coords ? `map-${coords.lat}-${coords.lon}`.replace(/\./g, '_') : '
     }
   </style>
   
-  <script define:vars={{ coords, mapId }}>
+  <script define:vars={{ coords, locations, mapId }} is:inline>
     function initializeGeoMap() {
       console.log('Attempting to initialize GeoMap...', typeof L);
       if (typeof L === 'undefined') {
@@ -126,8 +127,16 @@ const mapId = coords ? `map-${coords.lat}-${coords.lon}`.replace(/\./g, '_') : '
         return;
       }
       console.log('Leaflet loaded, initializing GeoMap...');
-      // Initialize the map
-      const map = L.map(mapId).setView([coords.lat, coords.lon], 15);
+      
+      // Determine locations to display
+      const locationsToShow = locations && locations.length > 0 ? locations : 
+                              coords ? [{name: 'Location', coords: coords, isMain: true}] : [];
+      
+      if (locationsToShow.length === 0) return;
+      
+      // Initialize the map centered on the main location or first location
+      const mainLocation = locationsToShow.find(loc => loc.isMain) || locationsToShow[0];
+      const map = L.map(mapId).setView([mainLocation.coords.lat, mainLocation.coords.lon], 15);
       
       // Light and dark tile layers
       const lightTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -195,29 +204,39 @@ const mapId = coords ? `map-${coords.lat}-${coords.lon}`.replace(/\./g, '_') : '
         iconAnchor: [9, 9]
       });
 
-      // Add a marker with theme-appropriate icon
-      let marker;
+      // Add markers for all locations
+      const markers = [];
       
-      function updateMarker() {
+      function updateMarkers() {
         const isDark = document.documentElement.classList.contains('dark');
         const icon = isDark ? darkIcon : lightIcon;
         
-        if (marker) {
-          map.removeLayer(marker);
-        }
+        // Clear existing markers
+        markers.forEach(marker => map.removeLayer(marker));
+        markers.length = 0;
         
-        marker = L.marker([coords.lat, coords.lon], { icon: icon }).addTo(map);
-        marker.bindPopup(`Location: ${coords.lat}, ${coords.lon}`);
+        // Add markers for all locations
+        locationsToShow.forEach(location => {
+          const marker = L.marker([location.coords.lat, location.coords.lon], { icon: icon }).addTo(map);
+          marker.bindPopup(`<strong>${location.name}</strong><br>Coordinates: ${location.coords.lat}, ${location.coords.lon}`);
+          markers.push(marker);
+        });
+        
+        // Adjust map view if multiple locations
+        if (markers.length > 1) {
+          const group = new L.featureGroup(markers);
+          map.fitBounds(group.getBounds().pad(0.1));
+        }
       }
 
-      // Set initial marker
-      updateMarker();
+      // Set initial markers
+      updateMarkers();
       
-      // Update marker when theme changes (reuse the existing observer)
+      // Update markers when theme changes (reuse the existing observer)
       const originalUpdateMapTheme = updateMapTheme;
       updateMapTheme = function() {
         originalUpdateMapTheme();
-        updateMarker();
+        updateMarkers();
       };
     }
     
