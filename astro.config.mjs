@@ -13,6 +13,5 @@ export default defineConfig({
       }
     }
   },
-  site: 'https://sebastianolicciardello.github.io',
-  base: '/TheNomadUpupa'
+  site: 'https://thenomadupupa.eu'
 });
