@@ -79,8 +79,8 @@ const postsWithCoords = posts
 
   {postsWithCoords.length > 0 && (
     <>
-      <link rel="stylesheet" href="/libs/leaflet/leaflet.css" />
-      <script src="/libs/leaflet/leaflet.js"></script>
+      <link rel="stylesheet" href="/libs/leaflet/leaflet.css" is:inline />
+      <script src="/libs/leaflet/leaflet.js" is:inline></script>
       
       <style>
         /* Light theme popup styles */
@@ -320,7 +320,7 @@ const postsWithCoords = posts
                 ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-24 object-cover rounded mb-2">` : ''}
                 <h3 class="font-semibold text-sm mb-1">${post.title}</h3>
                 <p class="text-xs text-gray-600 mb-2">${new Date(post.date).toLocaleDateString('en-US')}</p>
-                <a href="/TheNomadUpupa/posts/${post.slug}/" class="text-xs text-blue-600 hover:text-blue-800">Read more →</a>
+                <a href="/posts/${post.slug}/" class="text-xs text-blue-600 hover:text-blue-800">Read more →</a>
               </div>
             `;
             
