@@ -4,7 +4,8 @@ export const collections = {
   posts: defineCollection({
     schema: z.object({
       title: z.string(),
-      date: z.date(),
+      eventTime: z.date(),
+      publishTime: z.date(),
       coords: z.object({ lat: z.number(), lon: z.number() }).optional(),
       locations: z.array(z.object({
         name: z.string(),

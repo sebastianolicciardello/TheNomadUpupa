@@ -1,6 +1,7 @@
 ---
 title: "Andalusian Echoes: From Seville to Granada"
-date: 2024-12-20
+eventTime: 2024-12-20
+publishTime: 2024-12-25
 description: "A journey through southern Spain's most captivating cities, where Moorish heritage meets flamenco passion."
 coords:
   lat: 37.3886

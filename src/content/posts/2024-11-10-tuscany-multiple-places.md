@@ -1,6 +1,7 @@
 ---
 title: "A Journey Through Tuscany's Hidden Gems"
-date: 2024-11-10
+eventTime: 2024-11-10
+publishTime: 2024-11-15
 description: "From the medieval streets of Siena to the vineyards of Chianti, exploring multiple enchanting locations in one unforgettable day."
 coords:
   lat: 43.3188
