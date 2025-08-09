@@ -70,16 +70,35 @@ const recentPosts = posts
       </section>
     )}
 
-    <!-- About Section -->
+    <!-- Discover More Section -->
     <section class="text-center bg-warm-50 dark:bg-gray-800 rounded-lg p-8">
       <h2 class="text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-4">
-        About Me
+        Discover More
       </h2>
-      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-        Traveler, observer, collector of moments. This space was born from the need 
-        to stop time and give shape to the thoughts that arise from the places and people 
-        I encounter along the way.
+      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-6">
+        Explore the complete collection of reflections, discover the places I've visited, 
+        or learn more about the journey behind these words.
       </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a 
+          href="/blog/" 
+          class="inline-flex items-center px-6 py-3 bg-warm-600 dark:bg-warm-700 text-white rounded-lg hover:bg-warm-700 dark:hover:bg-warm-600 transition-colors duration-200"
+        >
+          All Reflections
+        </a>
+        <a 
+          href="/map/" 
+          class="inline-flex items-center px-6 py-3 bg-gray-600 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors duration-200"
+        >
+          Journey Map
+        </a>
+        <a 
+          href="/about/" 
+          class="inline-flex items-center px-6 py-3 bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-white rounded-lg hover:bg-gray-200 dark:hover:bg-gray-500 transition-colors duration-200"
+        >
+          About Me
+        </a>
+      </div>
     </section>
   </div>
 </Layout>
