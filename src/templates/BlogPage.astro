@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import PostsList from '../components/PostsList.astro';
+import { getCollection } from 'astro:content';
+import { t, type Language } from '../utils/translations';
+
+export interface Props {
+  lang?: Language;
+}
+
+const { lang = 'en' } = Astro.props;
+
+// Get posts based on language
+const allPosts = await getCollection('posts');
+const languagePosts = allPosts.filter(post => 
+  post.slug.startsWith(lang === 'it' ? 'it/' : 'en/')
+);
+const sortedPosts = languagePosts.sort((a, b) => 
+  b.data.eventTime.getTime() - a.data.eventTime.getTime()
+);
+
+// Page title for Layout
+const pageTitle = `${t('blog.title', lang)} - The Nomad Upupa`;
+---
+
+<Layout title={pageTitle} lang={lang}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <PageHeader 
+      title={t('blog.title', lang)}
+      description={t('blog.description', lang)}
+    />
+
+    <PostsList 
+      posts={sortedPosts}
+      lang={lang}
+      emptyMessage={t('blog.empty', lang)}
+    />
+  </div>
+</Layout>

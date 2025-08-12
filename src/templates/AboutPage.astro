@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ConnectLinks from '../components/ConnectLinks.astro';
+import { t, type Language } from '../utils/translations';
+
+export interface Props {
+  lang?: Language;
+}
+
+const { lang = 'en' } = Astro.props;
+
+// Page title for Layout
+const pageTitle = `${t('about.title', lang)} - The Nomad Upupa`;
+
+// About page content (could be moved to a content collection in the future)
+const aboutContent = {
+  en: {
+    intro1: "Traveler, observer, collector of moments. This space was born from the need to stop time and give shape to the thoughts that arise from the places and people I encounter along the way.",
+    intro2: "Through these pages, I weave together reflections on inner and outer journeys, creating an emotional map that transcends geographical boundaries. Each post is a moment frozen in time, a glimpse into the intersection of place and feeling.",
+    whereTitle: "Where to Find Me",
+    nextMonthsTitle: "📍 Next Months",
+    trekTitle: "🥾 Trekking & Meetups",
+    august: "August - September 2025",
+    augustDesc: "Acireale, Sicily (family, friends & personal matters)",
+    october: "October 2025 🤔",
+    octoberDesc: "Sicily: Egadi Islands? Aeolian Islands?",
+    trekDesc1: "If you'd like to join me for a trek or simply meet up during my travels, I'd be happy to share the experience. My plans are flexible and open to travel companions.",
+    trekDesc2: "Reach out through the channels below to arrange a meetup or for more details about upcoming planned treks."
+  },
+  it: {
+    intro1: "Viaggiatore, osservatore, collezionista di momenti. Questo spazio è nato dal bisogno di fermare il tempo e dare forma ai pensieri che nascono dai luoghi e dalle persone che incontro lungo il cammino.",
+    intro2: "Attraverso queste pagine, intrecciare riflessioni sui viaggi interiori ed esteriori, creando una mappa emotiva che trascende i confini geografici. Ogni post è un momento congelato nel tempo, uno sguardo nell'intersezione tra luogo e sentimento.",
+    whereTitle: "Dove Trovarmi",
+    nextMonthsTitle: "📍 Prossimi Mesi",
+    trekTitle: "🥾 Trekking & Incontri",
+    august: "Agosto - Settembre 2025",
+    augustDesc: "Acireale, Sicilia (famiglia, amici e questioni personali)",
+    october: "Ottobre 2025 🤔",
+    octoberDesc: "Sicilia: Isole Egadi? Isole Eolie?",
+    trekDesc1: "Se ti piacerebbe unirti a me per un trekking o semplicemente incontrarci durante i miei viaggi, sarei felice di condividere l'esperienza. I miei piani sono flessibili e aperti a compagni di viaggio.",
+    trekDesc2: "Contattami attraverso i canali qui sotto per organizzare un incontro o per maggiori dettagli sui prossimi trekking pianificati."
+  }
+};
+
+const content = aboutContent[lang];
+---
+
+<Layout title={pageTitle} lang={lang}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-3xl mx-auto">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 dark:text-gray-100 mb-6">
+          {t('about.title', lang)}
+        </h1>
+      </div>
+
+      <!-- Main Content -->
+      <div class="prose prose-lg dark:prose-invert max-w-none mb-12">
+        <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8 mb-8">
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg mb-6">
+            {content.intro1}
+          </p>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+            {content.intro2}
+          </p>
+        </div>
+      </div>
+
+      <!-- Travel Plans & Meetings -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-8 text-center">
+          {content.whereTitle}
+        </h2>
+        
+        <!-- Upcoming Locations -->
+        <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8 mb-8">
+          <h3 class="text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-6">
+            {content.nextMonthsTitle}
+          </h3>
+          <div class="space-y-4">
+            <div class="border-l-4 border-blue-500 pl-4">
+              <p class="text-gray-700 dark:text-gray-300 font-medium">{content.august}</p>
+              <p class="text-gray-600 dark:text-gray-400">{content.augustDesc}</p>
+            </div>
+            <div class="border-l-4 border-green-500 pl-4">
+              <p class="text-gray-700 dark:text-gray-300 font-medium">{content.october}</p>
+              <p class="text-gray-600 dark:text-gray-400">{content.octoberDesc}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trekking & Meetings -->
+        <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8">
+          <h3 class="text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-6">
+            {content.trekTitle}
+          </h3>
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+              {content.trekDesc1}
+            </p>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+              {content.trekDesc2}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <ConnectLinks 
+        connectTitle={t('connect.title', lang)}
+        telegramLabel={t('connect.telegram', lang)}
+        channelLabel={t('connect.channel', lang)}
+        instagramLabel={t('connect.instagram', lang)}
+      />
+    </div>
+  </div>
+</Layout>

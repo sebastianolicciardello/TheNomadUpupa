@@ -1,0 +1,47 @@
+---
+import PostCard from './PostCard.astro';
+
+export interface Props {
+  posts: any[];
+  lang?: 'en' | 'it';
+  title?: string;
+  showViewAll?: boolean;
+  viewAllUrl?: string;
+  viewAllText?: string;
+}
+
+const { 
+  posts, 
+  lang = 'en', 
+  title = 'Recent Reflections',
+  showViewAll = false,
+  viewAllUrl = '/blog/',
+  viewAllText = 'View all posts'
+} = Astro.props;
+---
+
+{posts.length > 0 && (
+  <section class="mb-16">
+    <h2 class="text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-8">
+      {title}
+    </h2>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {posts.map((post) => (
+        <PostCard post={post} lang={lang} compact={true} />
+      ))}
+    </div>
+    {showViewAll && (
+      <div class="text-center mt-8">
+        <a 
+          href={viewAllUrl} 
+          class="inline-flex items-center px-6 py-3 bg-warm-600 dark:bg-warm-700 text-white rounded-lg hover:bg-warm-700 dark:hover:bg-warm-600 transition-colors duration-200"
+        >
+          {viewAllText}
+          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    )}
+  </section>
+)}

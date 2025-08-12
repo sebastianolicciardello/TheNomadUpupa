@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import PostsGrid from '../components/PostsGrid.astro';
+import DiscoverSection from '../components/DiscoverSection.astro';
+import { getCollection } from 'astro:content';
+import { t, type Language } from '../utils/translations';
+
+export interface Props {
+  lang?: Language;
+}
+
+const { lang = 'en' } = Astro.props;
+
+// Get posts based on language
+const allPosts = await getCollection('posts');
+const languagePosts = allPosts.filter(post => 
+  post.slug.startsWith(lang === 'it' ? 'it/' : 'en/')
+);
+const recentPosts = languagePosts
+  .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime())
+  .slice(0, 3);
+
+// Generate URLs based on language
+const baseUrl = lang === 'it' ? '/it' : '';
+const blogUrl = `${baseUrl}/blog/`;
+const mapUrl = `${baseUrl}/map/`;
+const aboutUrl = `${baseUrl}/about/`;
+---
+
+<Layout lang={lang}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Hero Section -->
+    <HeroSection 
+      title={t('hero.title', lang)}
+      description={t('hero.description', lang)}
+    />
+
+    <!-- Recent Posts -->
+    <PostsGrid 
+      posts={recentPosts}
+      lang={lang}
+      title={t('posts.recent', lang)}
+      showViewAll={true}
+      viewAllUrl={blogUrl}
+      viewAllText={t('posts.viewAll', lang)}
+    />
+
+    <!-- Discover More Section -->
+    <DiscoverSection 
+      title={t('discover.title', lang)}
+      description={t('discover.description', lang)}
+      blogUrl={blogUrl}
+      blogText={t('discover.blog', lang)}
+      mapUrl={mapUrl}
+      mapText={t('discover.map', lang)}
+      aboutUrl={aboutUrl}
+      aboutText={t('discover.about', lang)}
+    />
+  </div>
+</Layout>
