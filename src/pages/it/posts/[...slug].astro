@@ -1,12 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
-import PostLayout from '../../layouts/PostLayout.astro';
+import PostLayout from '../../../layouts/PostLayout.astro';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts');
-  const englishPosts = allPosts.filter(post => post.slug.startsWith('en/'));
-  return englishPosts.map((post) => ({
-    params: { slug: post.slug.replace('en/', '') },
+  const italianPosts = allPosts.filter(post => post.slug.startsWith('it/'));
+  return italianPosts.map((post) => ({
+    params: { slug: post.slug.replace('it/', '') },
     props: post,
   }));
 }
@@ -15,6 +15,6 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<PostLayout {...post.data} lang="en">
+<PostLayout {...post.data} lang="it">
   <Content />
 </PostLayout>

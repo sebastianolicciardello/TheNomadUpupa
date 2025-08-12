@@ -1,15 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('posts');
-const englishPosts = allPosts.filter(post => post.slug.startsWith('en/'));
-const recentPosts = englishPosts
+const italianPosts = allPosts.filter(post => post.slug.startsWith('it/'));
+const recentPosts = italianPosts
   .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime())
   .slice(0, 3);
 ---
 
-<Layout>
+<Layout lang="it">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Hero Section -->
     <div class="text-center mb-16">
@@ -17,8 +17,8 @@ const recentPosts = englishPosts
         The Nomad Upupa
       </h1>
       <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-        A timeless reflective journal. Thoughts, places, and moments that interweave 
-        through time, creating an emotional map of my inner and outer journeys.
+        Un diario riflessivo senza tempo. Pensieri, luoghi e momenti che si intrecciano
+        nel tempo, creando una mappa emotiva dei miei viaggi interiori ed esteriori.
       </p>
     </div>
 
@@ -26,7 +26,7 @@ const recentPosts = englishPosts
     {recentPosts.length > 0 && (
       <section class="mb-16">
         <h2 class="text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-8">
-          Recent Reflections
+          Riflessioni Recenti
         </h2>
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {recentPosts.map((post) => (
@@ -42,12 +42,12 @@ const recentPosts = englishPosts
               )}
               <div class="p-6">
                 <h3 class="text-lg font-serif font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                  <a href={`/posts/${post.slug.replace('en/', '')}/`} class="hover:text-warm-600 dark:hover:text-warm-400 transition-colors">
+                  <a href={`/it/posts/${post.slug.replace('it/', '')}/`} class="hover:text-warm-600 dark:hover:text-warm-400 transition-colors">
                     {post.data.title}
                   </a>
                 </h3>
                 <time class="text-sm text-gray-500 dark:text-gray-400 mb-3 block">
-                  {new Date(post.data.eventTime).toLocaleDateString('en-US', {
+                  {new Date(post.data.eventTime).toLocaleDateString('it-IT', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
@@ -59,10 +59,10 @@ const recentPosts = englishPosts
         </div>
         <div class="text-center mt-8">
           <a 
-            href="/blog/" 
+            href="/it/blog/" 
             class="inline-flex items-center px-6 py-3 bg-warm-600 dark:bg-warm-700 text-white rounded-lg hover:bg-warm-700 dark:hover:bg-warm-600 transition-colors duration-200"
           >
-            View all posts
+            Visualizza tutti i post
             <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
@@ -74,30 +74,30 @@ const recentPosts = englishPosts
     <!-- Discover More Section -->
     <section class="text-center bg-warm-50 dark:bg-gray-800 rounded-lg p-8">
       <h2 class="text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-4">
-        Discover More
+        Scopri di Più
       </h2>
       <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-6">
-        Explore the complete collection of reflections, discover the places I've visited, 
-        or learn more about the journey behind these words.
+        Esplora la collezione completa di riflessioni, scopri i luoghi che ho visitato,
+        o impara di più sul viaggio dietro queste parole.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a 
-          href="/blog/" 
+          href="/it/blog/" 
           class="inline-flex items-center px-6 py-3 bg-warm-600 dark:bg-warm-700 text-white rounded-lg hover:bg-warm-700 dark:hover:bg-warm-600 transition-colors duration-200"
         >
-          All Reflections
+          Tutte le Riflessioni
         </a>
         <a 
-          href="/map/" 
+          href="/it/map/" 
           class="inline-flex items-center px-6 py-3 bg-gray-600 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors duration-200"
         >
-          Journey Map
+          Mappa del Viaggio
         </a>
         <a 
-          href="/about/" 
+          href="/it/about/" 
           class="inline-flex items-center px-6 py-3 bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-white rounded-lg hover:bg-gray-200 dark:hover:bg-gray-500 transition-colors duration-200"
         >
-          About Me
+          Chi Sono
         </a>
       </div>
     </section>

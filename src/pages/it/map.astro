@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('posts');
-const englishPosts = allPosts.filter(post => post.slug.startsWith('en/'));
-const postsWithCoords = englishPosts
+const italianPosts = allPosts.filter(post => post.slug.startsWith('it/'));
+const postsWithCoords = italianPosts
   .filter(post => {
     // Check if post has coords or has locations
     const hasCoords = post.data.coords && post.data.coords.lat && post.data.coords.lon;
@@ -25,14 +25,14 @@ const postsWithCoords = englishPosts
   .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime());
 ---
 
-<Layout title="Places Map - The Nomad Upupa">
+<Layout title="Mappa dei Luoghi - The Nomad Upupa" lang="it">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
     <div class="mb-6 sm:mb-8 lg:mb-12">
       <h1 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-gray-100 mb-4">
-        Places Map
+        Mappa dei Luoghi
       </h1>
       <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-4 sm:mb-8">
-        An emotional geography of the places that have marked my journey.
+        Una geografia emotiva dei luoghi che hanno segnato il mio viaggio.
       </p>
     </div>
 
@@ -43,7 +43,7 @@ const postsWithCoords = englishPosts
           <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
             <div id="global-map" class="h-64 sm:h-80 md:h-96 lg:h-[600px] relative">
               <div id="map-loading" class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-700">
-                <div class="text-gray-500 dark:text-gray-400">Loading map...</div>
+                <div class="text-gray-500 dark:text-gray-400">Caricamento mappa...</div>
               </div>
             </div>
           </div>
@@ -52,21 +52,21 @@ const postsWithCoords = englishPosts
         <!-- Lista dei luoghi -->
         <div class="space-y-4 lg:order-last order-first">
           <h2 class="text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-4">
-            Reflection Places
+            Luoghi di Riflessione
           </h2>
           <div class="space-y-3 max-h-64 lg:max-h-[600px] overflow-y-auto">
             {postsWithCoords.map((post, index) => (
               <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
                 <h3 class="font-serif font-semibold text-gray-900 dark:text-gray-100 mb-2">
                   <a 
-                    href={`/posts/${post.slug.replace('en/', '')}/`}
+                    href={`/it/posts/${post.slug.replace('it/', '')}/`}
                     class="hover:text-warm-600 dark:hover:text-warm-400 transition-colors"
                   >
                     {post.data.title}
                   </a>
                 </h3>
                 <time class="text-sm text-gray-500 dark:text-gray-400 mb-2 block">
-                  {new Date(post.data.eventTime).toLocaleDateString('en-US', {
+                  {new Date(post.data.eventTime).toLocaleDateString('it-IT', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
@@ -77,7 +77,7 @@ const postsWithCoords = englishPosts
                   class="text-sm text-warm-600 dark:text-warm-400 hover:text-warm-700 dark:hover:text-warm-300 transition-colors font-medium"
                   id={`location-${index}`}
                 >
-                  📍 Loading location...
+                  📍 Caricamento posizione...
                 </button>
               </div>
             ))}
@@ -88,7 +88,7 @@ const postsWithCoords = englishPosts
       <div class="text-center py-12">
         <div class="text-6xl mb-4">🗺️</div>
         <p class="text-gray-500 dark:text-gray-400 text-lg">
-          No georeferenced places yet. The first journeys will arrive soon.
+          Ancora nessun luogo georeferenziato. I primi viaggi arriveranno presto.
         </p>
       </div>
     )}
@@ -242,8 +242,8 @@ const postsWithCoords = englishPosts
           }
           const posts = postsWithCoords.map(post => ({
             title: post.data.title,
-            slug: post.slug.replace('en/', ''),
-            coords: post.mainCoords, // Use main coordinates only
+            slug: post.slug.replace('it/', ''),
+            coords: post.mainCoords,
             date: post.data.eventTime,
             cover: post.data.cover
           }));
@@ -336,8 +336,8 @@ const postsWithCoords = englishPosts
               <div class="p-2 max-w-xs">
                 ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-24 object-cover rounded mb-2">` : ''}
                 <h3 class="font-semibold text-sm mb-1">${post.title}</h3>
-                <p class="text-xs text-gray-600 mb-2">${new Date(post.date).toLocaleDateString('en-US')}</p>
-                <a href="/posts/${post.slug}/" class="text-xs text-blue-600 hover:text-blue-800">Read more →</a>
+                <p class="text-xs text-gray-600 mb-2">${new Date(post.date).toLocaleDateString('it-IT')}</p>
+                <a href="/it/posts/${post.slug}/" class="text-xs text-blue-600 hover:text-blue-800">Leggi di più →</a>
               </div>
             `;
             
@@ -356,14 +356,14 @@ const postsWithCoords = englishPosts
                                  data.address.village || 
                                  data.address.municipality || 
                                  data.address.county ||
-                                 'Unknown location';
+                                 'Posizione sconosciuta';
                   locationButton.textContent = `📍 ${location}`;
                 }
               })
               .catch(() => {
                 const locationButton = document.getElementById(`location-${index}`);
                 if (locationButton) {
-                  locationButton.textContent = `📍 View on map`;
+                  locationButton.textContent = `📍 Visualizza sulla mappa`;
                 }
               });
           });
