@@ -315,12 +315,10 @@ const postsWithCoords = englishPosts
           const loadingEl = document.getElementById('map-loading');
           if (loadingEl) loadingEl.remove();
 
-          // Initialize the map with center based on first post or default to Italy
-          const firstPost = posts[0];
-          const initialCenter = firstPost ? [firstPost.coords.lat, firstPost.coords.lon] : [41.9028, 12.4964];
+          // Initialize the map with default center (will be adjusted by fitBounds)
           const map = L.map('global-map', {
             zoomControl: false
-          }).setView(initialCenter, 6);
+          }).setView([41.9028, 12.4964], 6);
           
           // Add zoom control in top left for desktop, bottom left for mobile
           const isMobile = window.innerWidth <= 640;
@@ -377,7 +375,7 @@ const postsWithCoords = englishPosts
           };
 
           // Fit bounds to show all markers
-          if (markers.length > 1) {
+          if (markers.length > 0) {
             const group = new L.featureGroup(markers);
             map.fitBounds(group.getBounds().pad(0.1));
           }
