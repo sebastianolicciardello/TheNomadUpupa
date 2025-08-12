@@ -130,15 +130,6 @@ const postsWithCoords = italianPosts
           color: #d1d5db !important;
         }
         
-        /* Dark theme for popup links */
-        .dark .leaflet-popup-content a {
-          color: #60a5fa !important;
-        }
-        
-        .dark .leaflet-popup-content a:hover {
-          color: #93c5fd !important;
-        }
-        
         /* Improve text contrast in popups */
         .leaflet-popup-content .text-gray-600 {
           color: #4b5563 !important;
@@ -152,6 +143,31 @@ const postsWithCoords = italianPosts
         .leaflet-control-zoom {
           border: none !important;
           box-shadow: none !important;
+        }
+        
+        .leaflet-top.leaflet-left {
+          top: 20px !important;
+          left: 20px !important;
+        }
+        
+        @media (max-width: 640px) {
+          .leaflet-top.leaflet-left {
+            display: none !important;
+          }
+          
+          .leaflet-bottom.leaflet-left {
+            bottom: 10px !important;
+            left: 10px !important;
+          }
+          
+          .leaflet-control-zoom {
+            display: flex !important;
+            flex-direction: row !important;
+          }
+          
+          .leaflet-control-zoom a {
+            margin: 0 1px !important;
+          }
         }
         
         .leaflet-control-zoom a {
@@ -206,26 +222,7 @@ const postsWithCoords = italianPosts
         
         /* Fix z-index to not overlap navbar */
         .leaflet-container {
-          z-index: 0 !important;
-        }
-        
-        .leaflet-control-container {
-          z-index: 10 !important;
-        }
-        
-        #global-map {
-          z-index: 0 !important;
-          position: relative !important;
-        }
-        
-        /* Mobile-specific zoom controls */
-        @media (max-width: 640px) {
-          .leaflet-control-zoom a {
-            width: 28px !important;
-            height: 28px !important;
-            line-height: 26px !important;
-            font-size: 16px !important;
-          }
+          z-index: 1 !important;
         }
         
         /* Lighten dark theme tiles */
@@ -255,7 +252,15 @@ const postsWithCoords = italianPosts
           // Initialize the map with center based on first post or default to Italy
           const firstPost = posts[0];
           const initialCenter = firstPost ? [firstPost.coords.lat, firstPost.coords.lon] : [41.9028, 12.4964];
-          const map = L.map('global-map').setView(initialCenter, 6);
+          const map = L.map('global-map', {
+            zoomControl: false
+          }).setView(initialCenter, 6);
+          
+          // Add zoom control in top left for desktop, bottom left for mobile
+          const isMobile = window.innerWidth <= 640;
+          L.control.zoom({
+            position: isMobile ? 'bottomleft' : 'topleft'
+          }).addTo(map);
 
           // Light and dark tile layers
           const lightTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -332,12 +337,27 @@ const postsWithCoords = italianPosts
             const icon = isDark ? darkIcon : lightIcon;
             const marker = L.marker([post.coords.lat, post.coords.lon], { icon: icon }).addTo(map);
             
+            // Create popup content using shared function
+            function createPopupContent(post, lang = 'en') {
+              const readMoreText = lang === 'it' ? 'Leggi di più →' : 'Read more →';
+              const postUrl = lang === 'it' ? `/it/posts/${post.slug}/` : `/posts/${post.slug}/`;
+              
+              return `
+                <div class="p-1 sm:p-2 w-full">
+                  ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-16 sm:h-20 object-cover rounded mb-1 sm:mb-2">` : ''}
+                  <h3 class="font-semibold text-xs sm:text-sm mb-1 leading-tight">${post.title}</h3>
+                  <p class="text-xs text-gray-600 mb-1 sm:mb-2">${new Date(post.date).toLocaleDateString(lang === 'it' ? 'it-IT' : 'en-US')}</p>
+                  <a href="${postUrl}" class="inline-block text-xs text-blue-600 hover:text-blue-800 font-medium">${readMoreText}</a>
+                </div>
+              `;
+            }
+
             const popupContent = `
-              <div class="p-2 max-w-xs">
-                ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-24 object-cover rounded mb-2">` : ''}
-                <h3 class="font-semibold text-sm mb-1">${post.title}</h3>
-                <p class="text-xs text-gray-600 mb-2">${new Date(post.date).toLocaleDateString('it-IT')}</p>
-                <a href="/it/posts/${post.slug}/" class="text-xs text-blue-600 hover:text-blue-800">Leggi di più →</a>
+              <div class="p-1 sm:p-2 w-full">
+                ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-16 sm:h-20 object-cover rounded mb-1 sm:mb-2">` : ''}
+                <h3 class="font-semibold text-xs sm:text-sm mb-1 leading-tight">${post.title}</h3>
+                <p class="text-xs text-gray-600 mb-1 sm:mb-2">${new Date(post.date).toLocaleDateString('it-IT')}</p>
+                <a href="/it/posts/${post.slug}/" class="inline-block text-xs text-blue-600 hover:text-blue-800 font-medium">Leggi di più →</a>
               </div>
             `;
             

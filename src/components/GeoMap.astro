@@ -57,6 +57,31 @@ const mapId = hasLocations ? `map-${Date.now()}` : '';
       box-shadow: none !important;
     }
     
+    .leaflet-top.leaflet-left {
+      top: 20px !important;
+      left: 20px !important;
+    }
+    
+    @media (max-width: 640px) {
+      .leaflet-top.leaflet-left {
+        display: none !important;
+      }
+      
+      .leaflet-bottom.leaflet-left {
+        bottom: 10px !important;
+        left: 10px !important;
+      }
+      
+      .leaflet-control-zoom {
+        display: flex !important;
+        flex-direction: row !important;
+      }
+      
+      .leaflet-control-zoom a {
+        margin: 0 1px !important;
+      }
+    }
+    
     .leaflet-control-zoom a {
       background: white !important;
       color: #374151 !important;
@@ -136,7 +161,15 @@ const mapId = hasLocations ? `map-${Date.now()}` : '';
       
       // Initialize the map centered on the main location or first location
       const mainLocation = locationsToShow.find(loc => loc.isMain) || locationsToShow[0];
-      const map = L.map(mapId).setView([mainLocation.coords.lat, mainLocation.coords.lon], 15);
+      const map = L.map(mapId, {
+        zoomControl: false
+      }).setView([mainLocation.coords.lat, mainLocation.coords.lon], 15);
+      
+      // Add zoom control in top left for desktop, bottom left for mobile
+      const isMobile = window.innerWidth <= 640;
+      L.control.zoom({
+        position: isMobile ? 'bottomleft' : 'topleft'
+      }).addTo(map);
       
       // Light and dark tile layers
       const lightTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
