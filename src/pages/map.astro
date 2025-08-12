@@ -63,7 +63,7 @@ const postsWithCoords = englishPosts
   .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime());
 ---
 
-<Layout title="Places Map - The Nomad Upupa">
+<Layout title="Places Map - The Nomad Upupa" lang="en">
   {postsWithCoords.length > 0 ? (
     <div class="w-full h-screen">
       <!-- Mappa a schermo intero -->
@@ -223,20 +223,6 @@ const postsWithCoords = englishPosts
       
       <script define:vars={{ postsWithCoords }}>
         // Shared helper functions (inlined for Astro compatibility)
-        function createPopupContent(post, lang = 'en') {
-          const readMoreText = lang === 'it' ? 'Leggi di più →' : 'Read more →';
-          const postUrl = lang === 'it' ? `/it/posts/${post.slug}/` : `/posts/${post.slug}/`;
-          
-          return `
-            <div class="p-1 sm:p-2 w-full">
-              ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-16 sm:h-20 object-cover rounded mb-1 sm:mb-2">` : ''}
-              <h3 class="font-semibold text-xs sm:text-sm mb-1 leading-tight">${post.title}</h3>
-              <p class="text-xs text-gray-600 mb-1 sm:mb-2">${new Date(post.date).toLocaleDateString(lang === 'it' ? 'it-IT' : 'en-US')}</p>
-              <a href="${postUrl}" class="inline-block text-xs text-blue-600 hover:text-blue-800 font-medium">${readMoreText}</a>
-            </div>
-          `;
-        }
-
         function createMapIcons() {
           const lightIcon = L.divIcon({
             className: 'custom-marker light-marker',

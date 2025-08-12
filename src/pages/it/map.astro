@@ -36,11 +36,14 @@ const italianPosts = allPosts.flatMap(post => {
   if (post.slug.startsWith('it/')) {
     return [post]; // Old format
   } else if (!post.slug.startsWith('en/')) {
-    // New format - multilingual posts only
+    // New format - multilingual or single language
     if (post.body.includes('<!-- en -->') || post.body.includes('<!-- it -->')) {
       // Multilingual post
       const resolvedData = resolveMultilingualData(post.data);
       return [{ ...post, data: resolvedData }];
+    } else {
+      // Single language post (defaults to Italian)
+      return [post];
     }
   }
   return [];
@@ -225,68 +228,8 @@ const postsWithCoords = italianPosts
       </style>
       
       <script define:vars={{ postsWithCoords }}>
-        function initializeMap() {
-          if (typeof L === 'undefined') {
-            setTimeout(initializeMap, 100);
-            return;
-          }
-          const posts = postsWithCoords.map(post => ({
-            title: post.data.title,
-            slug: post.slug.replace('it/', ''),
-            coords: post.mainCoords,
-            date: post.data.eventTime,
-            cover: post.data.cover
-          }));
-
-          // Remove loading indicator
-          const loadingEl = document.getElementById('map-loading');
-          if (loadingEl) loadingEl.remove();
-
-          // Initialize the map with center based on first post or default to Italy
-          const firstPost = posts[0];
-          const initialCenter = firstPost ? [firstPost.coords.lat, firstPost.coords.lon] : [41.9028, 12.4964];
-          const map = L.map('global-map', {
-            zoomControl: false
-          }).setView(initialCenter, 6);
-          
-          // Add zoom control in top left for desktop, bottom left for mobile
-          const isMobile = window.innerWidth <= 640;
-          L.control.zoom({
-            position: isMobile ? 'bottomleft' : 'topleft'
-          }).addTo(map);
-
-          // Light and dark tile layers
-          const lightTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
-          });
-          
-          const darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
-          });
-          
-          // Function to update map theme
-          function updateMapTheme() {
-            const isDark = document.documentElement.classList.contains('dark');
-            if (isDark) {
-              map.removeLayer(lightTiles);
-              darkTiles.addTo(map);
-            } else {
-              map.removeLayer(darkTiles);
-              lightTiles.addTo(map);
-            }
-          }
-          
-          // Set initial theme
-          updateMapTheme();
-          
-          // Listen for theme changes
-          const observer = new MutationObserver(updateMapTheme);
-          observer.observe(document.documentElement, {
-            attributes: true,
-            attributeFilter: ['class']
-          });
-
-          // Create custom marker icons
+        // Shared helper functions (inlined for Astro compatibility)
+        function createMapIcons() {
           const lightIcon = L.divIcon({
             className: 'custom-marker light-marker',
             html: `
@@ -321,6 +264,83 @@ const postsWithCoords = italianPosts
             iconAnchor: [9, 9]
           });
 
+          return { lightIcon, darkIcon };
+        }
+
+        function createTileLayers() {
+          const lightTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
+          });
+          
+          const darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
+          });
+          
+          return { lightTiles, darkTiles };
+        }
+
+        function setupMapTheme(map, lightTiles, darkTiles) {
+          function updateMapTheme() {
+            const isDark = document.documentElement.classList.contains('dark');
+            if (isDark) {
+              map.removeLayer(lightTiles);
+              darkTiles.addTo(map);
+            } else {
+              map.removeLayer(darkTiles);
+              lightTiles.addTo(map);
+            }
+          }
+          
+          // Set initial theme
+          updateMapTheme();
+          
+          // Listen for theme changes
+          const observer = new MutationObserver(updateMapTheme);
+          observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['class']
+          });
+          
+          return updateMapTheme;
+        }
+
+        function initializeMap() {
+          if (typeof L === 'undefined') {
+            setTimeout(initializeMap, 100);
+            return;
+          }
+          const posts = postsWithCoords.map(post => ({
+            title: post.data.title,
+            slug: post.slug.replace('it/', ''),
+            coords: post.mainCoords,
+            date: post.data.eventTime,
+            cover: post.data.cover
+          }));
+
+          // Remove loading indicator
+          const loadingEl = document.getElementById('map-loading');
+          if (loadingEl) loadingEl.remove();
+
+          // Initialize the map with center based on first post or default to Italy
+          const firstPost = posts[0];
+          const initialCenter = firstPost ? [firstPost.coords.lat, firstPost.coords.lon] : [41.9028, 12.4964];
+          const map = L.map('global-map', {
+            zoomControl: false
+          }).setView(initialCenter, 6);
+          
+          // Add zoom control in top left for desktop, bottom left for mobile
+          const isMobile = window.innerWidth <= 640;
+          L.control.zoom({
+            position: isMobile ? 'bottomleft' : 'topleft'
+          }).addTo(map);
+
+          // Create tile layers and setup theme
+          const { lightTiles, darkTiles } = createTileLayers();
+          const updateMapTheme = setupMapTheme(map, lightTiles, darkTiles);
+
+          // Create marker icons
+          const { lightIcon, darkIcon } = createMapIcons();
+
           // Array to track markers
           const markers = [];
 
@@ -330,21 +350,6 @@ const postsWithCoords = italianPosts
             const icon = isDark ? darkIcon : lightIcon;
             const marker = L.marker([post.coords.lat, post.coords.lon], { icon: icon }).addTo(map);
             
-            // Create popup content using shared function
-            function createPopupContent(post, lang = 'en') {
-              const readMoreText = lang === 'it' ? 'Leggi di più →' : 'Read more →';
-              const postUrl = lang === 'it' ? `/it/posts/${post.slug}/` : `/posts/${post.slug}/`;
-              
-              return `
-                <div class="p-1 sm:p-2 w-full">
-                  ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-16 sm:h-20 object-cover rounded mb-1 sm:mb-2">` : ''}
-                  <h3 class="font-semibold text-xs sm:text-sm mb-1 leading-tight">${post.title}</h3>
-                  <p class="text-xs text-gray-600 mb-1 sm:mb-2">${new Date(post.date).toLocaleDateString(lang === 'it' ? 'it-IT' : 'en-US')}</p>
-                  <a href="${postUrl}" class="inline-block text-xs text-blue-600 hover:text-blue-800 font-medium">${readMoreText}</a>
-                </div>
-              `;
-            }
-
             const popupContent = `
               <div class="p-1 sm:p-2 w-full">
                 ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-16 sm:h-20 object-cover rounded mb-1 sm:mb-2">` : ''}
@@ -356,9 +361,7 @@ const postsWithCoords = italianPosts
             
             marker.bindPopup(popupContent);
             markers.push(marker);
-            
           });
-
 
           // Function to update all markers
           function updateAllMarkers() {
