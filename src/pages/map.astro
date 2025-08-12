@@ -353,9 +353,18 @@ const postsWithCoords = englishPosts
             
             marker.bindPopup(popupContent);
             markers.push(marker);
-            
           });
 
+          // Fit bounds to show all markers - do this after all markers are added
+          if (markers.length > 0) {
+            const group = new L.featureGroup(markers);
+            map.fitBounds(group.getBounds().pad(0.1));
+            
+            // Force a small delay to ensure map is fully rendered
+            setTimeout(() => {
+              map.fitBounds(group.getBounds().pad(0.1));
+            }, 100);
+          }
 
           // Function to update all markers
           function updateAllMarkers() {
@@ -373,12 +382,6 @@ const postsWithCoords = englishPosts
             originalUpdateMapTheme();
             updateAllMarkers();
           };
-
-          // Fit bounds to show all markers
-          if (markers.length > 0) {
-            const group = new L.featureGroup(markers);
-            map.fitBounds(group.getBounds().pad(0.1));
-          }
         }
         
         // Try multiple loading strategies
