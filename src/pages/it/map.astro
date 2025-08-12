@@ -3,7 +3,48 @@ import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('posts');
-const italianPosts = allPosts.filter(post => post.slug.startsWith('it/'));
+
+// Helper function to resolve multilingual frontmatter for Italian
+function resolveMultilingualData(data: any) {
+  const resolved = { ...data };
+  Object.keys(resolved).forEach(key => {
+    const value = resolved[key];
+    if (typeof value === 'object' && value !== null && !Array.isArray(value) && !value.lat) {
+      if (value.it) {
+        resolved[key] = value.it;
+      } else if (value.en) {
+        resolved[key] = value.en; // Fallback to English
+      }
+    } else if (Array.isArray(value)) {
+      resolved[key] = value.map((item: any) => {
+        if (item.name && typeof item.name === 'object') {
+          if (item.name.it) {
+            return { ...item, name: item.name.it };
+          } else if (item.name.en) {
+            return { ...item, name: item.name.en };
+          }
+        }
+        return item;
+      });
+    }
+  });
+  return resolved;
+}
+
+// Process posts: old format (it/) + new format (multilingual)
+const italianPosts = allPosts.flatMap(post => {
+  if (post.slug.startsWith('it/')) {
+    return [post]; // Old format
+  } else if (!post.slug.startsWith('en/')) {
+    // New format - multilingual posts only
+    if (post.body.includes('<!-- en -->') || post.body.includes('<!-- it -->')) {
+      // Multilingual post
+      const resolvedData = resolveMultilingualData(post.data);
+      return [{ ...post, data: resolvedData }];
+    }
+  }
+  return [];
+});
 const postsWithCoords = italianPosts
   .filter(post => {
     // Check if post has coords or has locations

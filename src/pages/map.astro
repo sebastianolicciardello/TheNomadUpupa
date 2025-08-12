@@ -3,7 +3,45 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('posts');
-const englishPosts = allPosts.filter(post => post.slug.startsWith('en/'));
+
+// Helper function to resolve multilingual frontmatter for English
+function resolveMultilingualData(data: any) {
+  const resolved = { ...data };
+  Object.keys(resolved).forEach(key => {
+    const value = resolved[key];
+    if (typeof value === 'object' && value !== null && !Array.isArray(value) && !value.lat) {
+      if (value.en) {
+        resolved[key] = value.en;
+      }
+    } else if (Array.isArray(value)) {
+      resolved[key] = value.map((item: any) => {
+        if (item.name && typeof item.name === 'object' && item.name.en) {
+          return { ...item, name: item.name.en };
+        }
+        return item;
+      });
+    }
+  });
+  return resolved;
+}
+
+// Process posts: old format (en/) + new format (multilingual)
+const englishPosts = allPosts.flatMap(post => {
+  if (post.slug.startsWith('en/')) {
+    return [post]; // Old format
+  } else if (!post.slug.startsWith('it/')) {
+    // New format - multilingual or single language
+    if (post.body.includes('<!-- en -->') || post.body.includes('<!-- it -->')) {
+      // Multilingual post
+      const resolvedData = resolveMultilingualData(post.data);
+      return [{ ...post, data: resolvedData }];
+    } else {
+      // Single language post (defaults to English)
+      return [post];
+    }
+  }
+  return [];
+});
 const postsWithCoords = englishPosts
   .filter(post => {
     // Check if post has coords or has locations

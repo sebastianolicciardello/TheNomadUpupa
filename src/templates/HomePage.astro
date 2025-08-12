@@ -14,10 +14,70 @@ const { lang = 'en' } = Astro.props;
 
 // Get posts based on language
 const allPosts = await getCollection('posts');
-const languagePosts = allPosts.filter(post => 
-  post.slug.startsWith(lang === 'it' ? 'it/' : 'en/')
-);
-const recentPosts = languagePosts
+
+// Helper function to resolve multilingual frontmatter
+function resolveMultilingualData(data: any, targetLang: Language) {
+  const resolved = { ...data };
+  Object.keys(resolved).forEach(key => {
+    const value = resolved[key];
+    if (typeof value === 'object' && value !== null && !Array.isArray(value) && !value.lat) {
+      if (value[targetLang]) {
+        resolved[key] = value[targetLang];
+      } else if (value.en) {
+        resolved[key] = value.en; // Fallback to English
+      }
+    } else if (Array.isArray(value)) {
+      resolved[key] = value.map((item: any) => {
+        if (item.name && typeof item.name === 'object') {
+          if (item.name[targetLang]) {
+            return { ...item, name: item.name[targetLang] };
+          } else if (item.name.en) {
+            return { ...item, name: item.name.en };
+          }
+        }
+        return item;
+      });
+    }
+  });
+  return resolved;
+}
+
+// Process posts: old format (with lang prefix) + new format (multilingual)
+const processedPosts = allPosts.flatMap(post => {
+  // Old format with language prefix
+  if (post.slug.startsWith('en/') && lang === 'en') {
+    return [{
+      ...post,
+      data: { ...post.data, lang: 'en' as Language }
+    }];
+  } else if (post.slug.startsWith('it/') && lang === 'it') {
+    return [{
+      ...post,
+      data: { ...post.data, lang: 'it' as Language }
+    }];
+  }
+  // New format (multilingual files without prefix)
+  else if (!post.slug.startsWith('en/') && !post.slug.startsWith('it/')) {
+    // Check if it's a multilingual post
+    if (post.body.includes('<!-- en -->') || post.body.includes('<!-- it -->')) {
+      const resolvedData = resolveMultilingualData(post.data, lang);
+      resolvedData.lang = lang;
+      return [{
+        ...post,
+        data: resolvedData
+      }];
+    } else if (lang === 'en') {
+      // Single language posts default to English
+      return [{
+        ...post,
+        data: { ...post.data, lang: 'en' as Language }
+      }];
+    }
+  }
+  return [];
+});
+
+const recentPosts = processedPosts
   .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime())
   .slice(0, 3);
 

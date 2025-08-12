@@ -1,20 +1,121 @@
 ---
 import { getCollection } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
+import { parseMultilingualMarkdown, extractLanguageContent } from '../../utils/multilingualMarkdown';
+import type { Language } from '../../utils/translations';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts');
-  const englishPosts = allPosts.filter(post => post.slug.startsWith('en/'));
-  return englishPosts.map((post) => ({
-    params: { slug: post.slug.replace('en/', '') },
-    props: post,
-  }));
+  
+  // Handle both old format (en/ prefix) and new format (multilingual files)
+  const paths: any[] = [];
+  
+  for (const post of allPosts) {
+    if (post.slug.startsWith('en/')) {
+      // Old format - English posts with en/ prefix
+      paths.push({
+        params: { slug: post.slug.replace('en/', '') },
+        props: { ...post, lang: 'en' as Language },
+      });
+    } else if (!post.slug.startsWith('it/')) {
+      // New format - multilingual files without language prefix
+      try {
+        // Try to parse as multilingual content
+        const rawContent = post.body;
+        if (rawContent.includes('<!-- en -->') || rawContent.includes('<!-- it -->')) {
+          // This is a multilingual file - extract English content
+          const sections = rawContent.split(/<!--\s*en\s*-->/);
+          let enContent = '';
+          if (sections.length > 1) {
+            const afterEnMarker = sections[1];
+            const beforeItMarker = afterEnMarker.split(/<!--\s*it\s*-->/)[0];
+            enContent = beforeItMarker.trim();
+          }
+          
+          // Resolve multilingual frontmatter fields for English
+          const resolvedData = { ...post.data };
+          Object.keys(resolvedData).forEach(key => {
+            const value = resolvedData[key];
+            if (typeof value === 'object' && value !== null && !Array.isArray(value) && !value.lat && value.en) {
+              resolvedData[key] = value.en;
+            } else if (Array.isArray(value)) {
+              resolvedData[key] = value.map(item => {
+                if (item.name && typeof item.name === 'object' && item.name.en) {
+                  return { ...item, name: item.name.en };
+                }
+                return item;
+              });
+            }
+          });
+          resolvedData.lang = 'en';
+          
+          paths.push({
+            params: { slug: post.slug },
+            props: { 
+              ...post, 
+              data: resolvedData,
+              content: enContent,
+              lang: 'en' as Language 
+            },
+          });
+        } else {
+          // Regular single-language file
+          paths.push({
+            params: { slug: post.slug },
+            props: { ...post, lang: 'en' as Language },
+          });
+        }
+      } catch (error) {
+        // Fallback to regular processing if parsing fails
+        paths.push({
+          params: { slug: post.slug },
+          props: { ...post, lang: 'en' as Language },
+        });
+      }
+    }
+  }
+  
+  return paths;
 }
 
 const post = Astro.props;
-const { Content } = await post.render();
+let Content, processedData;
+
+if (post.content) {
+  // Multilingual content - create a virtual content component
+  processedData = post.data;
+  Content = () => post.content;
+} else {
+  // Regular content
+  const rendered = await post.render();
+  Content = rendered.Content;
+  processedData = post.data;
+}
+
+// Resolve multilingual fields
+const resolvedData = { ...processedData };
+Object.keys(resolvedData).forEach(key => {
+  const value = resolvedData[key];
+  if (typeof value === 'object' && value !== null && !Array.isArray(value) && !value.lat) {
+    if (value.en) {
+      resolvedData[key] = value.en;
+    }
+  } else if (Array.isArray(value)) {
+    // Handle locations array
+    resolvedData[key] = value.map(item => {
+      if (item.name && typeof item.name === 'object' && item.name.en) {
+        return { ...item, name: item.name.en };
+      }
+      return item;
+    });
+  }
+});
 ---
 
-<PostLayout {...post.data} lang="en">
-  <Content />
+<PostLayout {...resolvedData} lang="en">
+  {post.content ? (
+    <div set:html={post.content} />
+  ) : (
+    <Content />
+  )}
 </PostLayout>
