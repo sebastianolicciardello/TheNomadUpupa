@@ -10,7 +10,15 @@ export const translations: Translations = {
   en: {
     // Homepage
     'hero.title': 'The Nomad Upupa',
-    'hero.description': 'A timeless reflective journal. Thoughts, places, and moments that interweave through time, creating an emotional map of my inner and outer journeys.',
+    'hero.description': `Moments don't ask to be shared while they're happening.
+
+They ask to be lived — fully, quietly, truthfully.
+
+This journal exists to hold the echoes of those moments, once they've settled into meaning.
+
+It is a space for reflections that surface not in real-time, but in real depth.
+
+Here, I share stories, places, and thoughts — after time has allowed them to take root.`,
     'posts.recent': 'Recent Reflections',
     'posts.viewAll': 'View all posts',
     'discover.title': 'Discover More',
@@ -42,7 +50,13 @@ export const translations: Translations = {
   it: {
     // Homepage
     'hero.title': 'The Nomad Upupa',
-    'hero.description': 'Un diario riflessivo senza tempo. Pensieri, luoghi e momenti che si intrecciano nel tempo, creando una mappa emotiva dei miei viaggi interiori ed esteriori.',
+    'hero.description': `I momenti non chiedono di essere condivisi subito.
+
+Chiedono di essere vissuti — davvero, fino in fondo, senza fretta.
+
+Questo diario nasce per raccogliere le esperienze quando si sono sedimentate, quando diventano storie, comprensioni, emozioni che restano.
+
+È un luogo per riflessioni lente, nate dal viaggio, ma condivise solo quando hanno trovato la loro forma.`,
     'posts.recent': 'Riflessioni Recenti',
     'posts.viewAll': 'Visualizza tutti i post',
     'discover.title': 'Scopri di Più',

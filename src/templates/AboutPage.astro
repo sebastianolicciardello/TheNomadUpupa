@@ -15,8 +15,12 @@ const pageTitle = `${t('about.title', lang)} - The Nomad Upupa`;
 // About page content (could be moved to a content collection in the future)
 const aboutContent = {
   en: {
-    intro1: "Traveler, observer, collector of moments. This space was born from the need to stop time and give shape to the thoughts that arise from the places and people I encounter along the way.",
-    intro2: "Through these pages, I weave together reflections on inner and outer journeys, creating an emotional map that transcends geographical boundaries. Each post is a moment frozen in time, a glimpse into the intersection of place and feeling.",
+    intro1: `Traveler, observer, explorer of the unexpected.
+I love to wander slowly, get lost in new places, and let what I encounter transform me.
+This space was born from a personal need: to resist the rush of social media and give space, instead, to reflection.
+I write only when the experience has had time to breathe — when it reveals something beyond the surface.
+Each post is a thread in a personal map of inner and outer worlds — shaped by the people I meet, the landscapes I cross, and the quiet thoughts that last longer than the journey itself.`,
+    intro2: ``,
     whereTitle: "Where to Find Me",
     nextMonthsTitle: "📍 Next Months",
     trekTitle: "🥾 Trekking & Meetups",
@@ -28,13 +32,17 @@ const aboutContent = {
     trekDesc2: "Reach out through the channels below to arrange a meetup or for more details about upcoming planned treks."
   },
   it: {
-    intro1: "Viaggiatore, osservatore, collezionista di momenti. Questo spazio è nato dal bisogno di fermare il tempo e dare forma ai pensieri che nascono dai luoghi e dalle persone che incontro lungo il cammino.",
-    intro2: "Attraverso queste pagine, intrecciare riflessioni sui viaggi interiori ed esteriori, creando una mappa emotiva che trascende i confini geografici. Ogni post è un momento congelato nel tempo, uno sguardo nell'intersezione tra luogo e sentimento.",
+    intro1: `Viaggiatore, osservatore, esploratore dell'inatteso.
+Amo vagare lentamente, perdermi in luoghi nuovi e lasciarmi cambiare da ciò che incontro.
+Questo spazio nasce da un bisogno personale: resistere alla fretta dei social e dare spazio, invece, alla riflessione.
+Scrivo solo quando l'esperienza ha avuto tempo di respirare — quando rivela qualcosa oltre la superficie.
+Ogni post è un filo in una mappa personale di mondi interiori ed esteriori — plasmata dalle persone che incontro, dai paesaggi che attraverso, e dai pensieri silenziosi che durano più del viaggio stesso.`,
+    intro2: ``,
     whereTitle: "Dove Trovarmi",
     nextMonthsTitle: "📍 Prossimi Mesi",
     trekTitle: "🥾 Trekking & Incontri",
     august: "Agosto - Settembre 2025",
-    augustDesc: "Acireale, Sicilia (famiglia, amici e questioni personali)",
+    augustDesc: "Acireale, Sicilia (famiglia, amici e faccende personali)",
     october: "Ottobre 2025 🤔",
     octoberDesc: "Sicilia: Isole Egadi? Isole Eolie?",
     trekDesc1: "Se ti piacerebbe unirti a me per un trekking o semplicemente incontrarci durante i miei viaggi, sarei felice di condividere l'esperienza. I miei piani sono flessibili e aperti a compagni di viaggio.",
@@ -49,7 +57,7 @@ const content = aboutContent[lang];
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="max-w-3xl mx-auto">
       <!-- Header -->
-      <div class="text-center mb-12">
+      <div class="text-center mb-8">
         <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 dark:text-gray-100 mb-6">
           {t('about.title', lang)}
         </h1>
@@ -58,11 +66,8 @@ const content = aboutContent[lang];
       <!-- Main Content -->
       <div class="prose prose-lg dark:prose-invert max-w-none mb-12">
         <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8 mb-8">
-          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg mb-6">
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg whitespace-pre-line text-center">
             {content.intro1}
-          </p>
-          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-            {content.intro2}
           </p>
         </div>
       </div>
