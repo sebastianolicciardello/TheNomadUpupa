@@ -1,5 +1,5 @@
 ---
-import { detectLanguageFromUrl, t, getAlternateLanguage, switchLanguageInUrl, type Language } from '../utils/i18n';
+import { getCurrentLanguage, t, getAlternateLanguage, type Language } from '../utils/i18n';
 
 export interface Props {
 	title?: string;
@@ -7,16 +7,17 @@ export interface Props {
 }
 
 const { title, lang } = Astro.props;
-const currentLang = lang || detectLanguageFromUrl(Astro.url.href);
+// Use default English, language will be set dynamically on client
+const currentLang: Language = 'en';
 const pageTitle = title || t('page.title', currentLang);
 const alternateLang = getAlternateLanguage(currentLang);
-const alternateUrl = switchLanguageInUrl(Astro.url.href, alternateLang);
 ---
 
 <!doctype html>
 <html lang={currentLang} class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
@@ -29,18 +30,25 @@ const alternateUrl = switchLanguageInUrl(Astro.url.href, alternateLang);
 		<nav class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
 			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="flex justify-between items-center h-16">
-					<a href={currentLang === 'it' ? '/it/' : '/'} class="text-xl font-semibold text-gray-900 dark:text-gray-100 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">
+					<a href="/" class="text-xl font-semibold text-gray-900 dark:text-gray-100 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">
 						The Nomad Upupa
 					</a>
 					
 					<!-- Desktop Navigation -->
 					<div class="hidden md:flex items-center space-x-6">
-						<a href={currentLang === 'it' ? '/it/blog/' : '/blog/'} class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">{t('nav.archive', currentLang)}</a>
-						<a href={currentLang === 'it' ? '/it/map/' : '/map/'} class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">{t('nav.map', currentLang)}</a>
-						<a href={currentLang === 'it' ? '/it/about/' : '/about/'} class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">{t('nav.about', currentLang)}</a>
-						<button id="lang-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Switch language" data-alternate-url={alternateUrl}>
-							<span class="text-sm font-medium">
-								{alternateLang.toUpperCase()}
+						<span data-lang="en">
+							<a href="/blog/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">{t('nav.archive', 'en')}</a>
+							<a href="/map/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors ml-6">{t('nav.map', 'en')}</a>
+							<a href="/about/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors ml-6">{t('nav.about', 'en')}</a>
+						</span>
+						<span data-lang="it" style="display: none;">
+							<a href="/blog/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">{t('nav.archive', 'it')}</a>
+							<a href="/map/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors ml-6">{t('nav.map', 'it')}</a>
+							<a href="/about/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors ml-6">{t('nav.about', 'it')}</a>
+						</span>
+						<button id="lang-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Switch language">
+							<span class="text-sm font-medium" id="lang-button-text">
+								EN
 							</span>
 						</button>
 						<button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Toggle theme">
@@ -69,9 +77,16 @@ const alternateUrl = switchLanguageInUrl(Astro.url.href, alternateLang);
 				<!-- Mobile Menu -->
 				<div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-700 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm">
 					<div class="px-2 pt-2 pb-3 space-y-1">
-						<a href={currentLang === 'it' ? '/it/blog/' : '/blog/'} class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.archive', currentLang)}</a>
-						<a href={currentLang === 'it' ? '/it/map/' : '/map/'} class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.map', currentLang)}</a>
-						<a href={currentLang === 'it' ? '/it/about/' : '/about/'} class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.about', currentLang)}</a>
+						<span data-lang="en">
+							<a href="/blog/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.archive', 'en')}</a>
+							<a href="/map/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.map', 'en')}</a>
+							<a href="/about/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.about', 'en')}</a>
+						</span>
+						<span data-lang="it" style="display: none;">
+							<a href="/blog/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.archive', 'it')}</a>
+							<a href="/map/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.map', 'it')}</a>
+							<a href="/about/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.about', 'it')}</a>
+						</span>
 						
 						<!-- Settings separator -->
 						<div class="border-t border-gray-200 dark:border-gray-700 my-2"></div>
@@ -80,9 +95,9 @@ const alternateUrl = switchLanguageInUrl(Astro.url.href, alternateLang);
 						<div class="px-3 py-2 space-y-3">
 							<div class="flex items-center justify-between">
 								<span class="text-sm text-gray-600 dark:text-gray-400">Language</span>
-								<button id="lang-toggle-mobile" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Switch language" data-alternate-url={alternateUrl}>
-									<span class="text-sm font-medium">
-										{alternateLang.toUpperCase()}
+								<button id="lang-toggle-mobile" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Switch language">
+									<span class="text-sm font-medium" id="lang-button-text-mobile">
+										EN
 									</span>
 								</button>
 							</div>
@@ -108,7 +123,8 @@ const alternateUrl = switchLanguageInUrl(Astro.url.href, alternateLang);
 		<footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-16">
 			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 				<div class="text-center text-gray-500 dark:text-gray-400 text-sm">
-					<p>&copy; {t('footer.copyright', currentLang)}</p>
+					<p data-lang="en">&copy; {t('footer.copyright', 'en')}</p>
+					<p data-lang="it" style="display: none;">&copy; {t('footer.copyright', 'it')}</p>
 				</div>
 			</div>
 		</footer>
@@ -116,53 +132,90 @@ const alternateUrl = switchLanguageInUrl(Astro.url.href, alternateLang);
 </html>
 
 <script>
-	// Browser language detection and redirect
-	function detectAndRedirectLanguage() {
-		// Only run on the root path to avoid interfering with manual language selection
-		if (window.location.pathname === '/') {
-			// Check if user has a saved language preference
-			const savedLangPreference = localStorage.getItem('language-preference');
-			if (!savedLangPreference) {
-				// Get browser language
-				const browserLang = navigator.language || navigator.languages?.[0] || 'en';
-				
-				// Check if it's Italian
-				if (browserLang.toLowerCase().startsWith('it')) {
-					// Set preference to avoid future automatic redirects
-					localStorage.setItem('language-preference', 'auto-detected');
-					// Redirect to Italian version
-					window.location.href = '/it/';
-					return;
-				}
-			}
+	// Language system initialization
+	function getCurrentLanguage() {
+		const saved = localStorage.getItem('language-preference');
+		if (saved && (saved === 'it' || saved === 'en')) {
+			return saved;
 		}
+		
+		// Check browser language for first visit
+		const browserLang = navigator.language.toLowerCase();
+		if (browserLang.startsWith('it')) {
+			return 'it';
+		}
+		
+		return 'en';
 	}
 	
-	// Run language detection on page load
-	detectAndRedirectLanguage();
-
+	function updateLanguageContent(lang) {
+		// Hide all language-specific content
+		document.querySelectorAll('[data-lang]').forEach(el => {
+			el.style.display = 'none';
+		});
+		
+		// Show content for current language
+		document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+			el.style.display = '';
+		});
+		
+		// Update page title for multilingual posts
+		if (window.postTitles && window.postTitles[lang]) {
+			document.title = window.postTitles[lang];
+		}
+		
+		// Fix map rendering when switching languages
+		setTimeout(() => {
+			if (window.mapEn && lang === 'en') {
+				window.mapEn.invalidateSize();
+			}
+			if (window.mapIt && lang === 'it') {
+				window.mapIt.invalidateSize();
+			}
+		}, 100);
+		
+		// Update language buttons
+		const langButtonText = document.getElementById('lang-button-text');
+		const langButtonTextMobile = document.getElementById('lang-button-text-mobile');
+		const newLang = lang === 'en' ? 'IT' : 'EN';
+		
+		if (langButtonText) {
+			langButtonText.textContent = newLang;
+		}
+		if (langButtonTextMobile) {
+			langButtonTextMobile.textContent = newLang;
+		}
+		
+		// Update document attributes
+		document.documentElement.setAttribute('lang', lang);
+		document.documentElement.setAttribute('data-language', lang);
+	}
+	
+	function setLanguage(lang) {
+		localStorage.setItem('language-preference', lang);
+		updateLanguageContent(lang);
+	}
+	
+	// Initialize language system when DOM is ready
+	document.addEventListener('DOMContentLoaded', () => {
+		const currentLang = getCurrentLanguage();
+		updateLanguageContent(currentLang);
+	});
+	
 	// Language toggle functionality
 	const langToggle = document.getElementById('lang-toggle');
 	const langToggleMobile = document.getElementById('lang-toggle-mobile');
 	
-	// Language toggle for desktop
 	langToggle?.addEventListener('click', () => {
-		const alternateUrl = langToggle.getAttribute('data-alternate-url');
-		if (alternateUrl) {
-			// Save manual language preference to prevent auto-detection
-			localStorage.setItem('language-preference', 'manual');
-			window.location.href = alternateUrl;
-		}
+		const currentLang = getCurrentLanguage();
+		const newLang = currentLang === 'en' ? 'it' : 'en';
+		setLanguage(newLang);
 	});
 	
-	// Language toggle for mobile
 	langToggleMobile?.addEventListener('click', () => {
-		const alternateUrl = langToggleMobile.getAttribute('data-alternate-url');
-		if (alternateUrl) {
-			// Save manual language preference to prevent auto-detection
-			localStorage.setItem('language-preference', 'manual');
-			window.location.href = alternateUrl;
-		}
+		const currentLang = getCurrentLanguage();
+		const newLang = currentLang === 'en' ? 'it' : 'en';
+		setLanguage(newLang);
 	});
 
 	// Theme toggle functionality

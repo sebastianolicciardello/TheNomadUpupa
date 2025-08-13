@@ -1,5 +1,5 @@
 ---
-import { getAlternateLanguage, switchLanguageInUrl, type Language } from '../utils/i18n';
+import { getAlternateLanguage, type Language } from '../utils/i18n';
 
 interface Props {
   currentLang: Language;
@@ -9,12 +9,11 @@ interface Props {
 
 const { currentLang, currentUrl, className = '' } = Astro.props;
 const alternateLang = getAlternateLanguage(currentLang);
-const alternateUrl = switchLanguageInUrl(currentUrl, alternateLang);
 ---
 
 <button 
   class={`language-toggle inline-flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 transition-colors ${className}`}
-  data-alternate-url={alternateUrl}
+  data-new-lang={alternateLang}
   aria-label={`Switch to ${alternateLang === 'it' ? 'Italian' : 'English'}`}
 >
   <span class="text-xs opacity-75">
@@ -29,11 +28,12 @@ const alternateUrl = switchLanguageInUrl(currentUrl, alternateLang);
     
     toggleButtons.forEach(button => {
       button.addEventListener('click', () => {
-        const alternateUrl = button.getAttribute('data-alternate-url');
-        if (alternateUrl) {
-          // Save manual language preference to prevent auto-detection
-          localStorage.setItem('language-preference', 'manual');
-          window.location.href = alternateUrl;
+        const newLang = button.getAttribute('data-new-lang');
+        if (newLang) {
+          // Save language preference
+          localStorage.setItem('language-preference', newLang);
+          // Reload page to apply new language
+          window.location.reload();
         }
       });
     });

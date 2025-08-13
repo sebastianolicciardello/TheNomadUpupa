@@ -8,8 +8,22 @@ export const languages: Record<Language, { name: string; flag: string }> = {
 export const defaultLanguage: Language = 'en';
 
 export function detectLanguageFromUrl(url: string): Language {
-  const pathname = new URL(url).pathname;
-  if (pathname.startsWith('/it/')) return 'it';
+  // Check localStorage first for saved preference
+  if (typeof localStorage !== 'undefined') {
+    const saved = localStorage.getItem('language-preference');
+    if (saved && saved !== 'manual' && (saved === 'it' || saved === 'en')) {
+      return saved as Language;
+    }
+  }
+  
+  // Check browser language for first visit
+  if (typeof navigator !== 'undefined') {
+    const browserLang = navigator.language.toLowerCase();
+    if (browserLang.startsWith('it')) {
+      return 'it';
+    }
+  }
+  
   return 'en';
 }
 
@@ -39,9 +53,23 @@ export const translations = {
     'page.title': 'The Nomad Upupa - Reflective Journal',
     'footer.copyright': '2025 The Nomad Upupa. A diary of thoughts waiting for their time.',
     'blog.title': 'Travel Archive',
-    'blog.subtitle': 'Chronicles of wandering and discovery',
+    'blog.subtitle': 'All thoughts, travels, and moments collected through time.',
+    'blog.description': 'All thoughts, travels, and moments collected through time.',
+    'blog.empty': 'No posts found',
     'about.title': 'About',
     'map.title': 'Journey Map',
+    'hero.title': 'The Nomad Upupa',
+    'hero.description': 'Moments don\'t ask to be shared while they\'re happening.\n\nThey ask to be lived — fully, quietly, truthfully.\n\nThis journal exists to hold the echoes of those moments, once they\'ve settled into meaning.\n\nIt is a space for reflections that surface not in real-time, but in real depth.\n\nHere, I share stories, places, and thoughts — after time has allowed them to take root.',
+    'posts.recent': 'Recent Posts',
+    'posts.viewAll': 'View All Posts',
+    'discover.title': 'Discover More',
+    'discover.description': 'Explore the journey through stories and maps',
+    'discover.map': 'View Map',
+    'discover.about': 'About Me',
+    'connect.title': 'Connect',
+    'connect.telegram': 'Telegram',
+    'connect.channel': 'Channel',
+    'connect.instagram': 'Instagram',
   },
   it: {
     'nav.home': 'Casa',
@@ -51,9 +79,23 @@ export const translations = {
     'page.title': 'The Nomad Upupa - Diario Riflessivo',
     'footer.copyright': '2025 The Nomad Upupa. Un diario di pensieri che aspettano il loro tempo.',
     'blog.title': 'Archivio di Viaggio',
-    'blog.subtitle': 'Cronache di vagabondaggio e scoperta',
+    'blog.subtitle': 'Tutti i pensieri, viaggi e momenti raccolti nel tempo.',
+    'blog.description': 'Tutti i pensieri, viaggi e momenti raccolti nel tempo.',
+    'blog.empty': 'Nessun post trovato',
     'about.title': 'Chi Sono',
     'map.title': 'Mappa del Viaggio',
+    'hero.title': 'The Nomad Upupa',
+    'hero.description': 'I momenti non chiedono di essere condivisi subito.\n\nChiedono di essere vissuti — davvero, fino in fondo, senza fretta.\n\nQuesto diario nasce per raccogliere le esperienze quando si sono sedimentate, quando diventano storie, comprensioni, emozioni che restano.\n\nÈ un luogo per riflessioni lente, nate dal viaggio, ma condivise solo quando hanno trovato la loro forma.',
+    'posts.recent': 'Post Recenti',
+    'posts.viewAll': 'Vedi Tutti i Post',
+    'discover.title': 'Scopri di Più',
+    'discover.description': 'Esplora il viaggio attraverso storie e mappe',
+    'discover.map': 'Vedi Mappa',
+    'discover.about': 'Chi Sono',
+    'connect.title': 'Connessioni',
+    'connect.telegram': 'Telegram',
+    'connect.channel': 'Canale',
+    'connect.instagram': 'Instagram',
   }
 } as const;
 
@@ -66,16 +108,30 @@ export function getAlternateLanguage(currentLang: Language): Language {
 }
 
 export function switchLanguageInUrl(url: string, newLang: Language): string {
-  const urlObj = new URL(url);
-  const currentLang = detectLanguageFromUrl(url);
-  
-  if (currentLang === 'it' && newLang === 'en') {
-    // Remove /it/ prefix
-    urlObj.pathname = urlObj.pathname.replace(/^\/it\//, '/');
-  } else if (currentLang === 'en' && newLang === 'it') {
-    // Add /it/ prefix
-    urlObj.pathname = `/it${urlObj.pathname}`;
+  // Return same URL since we handle language switching dynamically
+  return url;
+}
+
+export function getCurrentLanguage(): Language {
+  if (typeof localStorage !== 'undefined') {
+    const saved = localStorage.getItem('language-preference');
+    if (saved && (saved === 'it' || saved === 'en')) {
+      return saved as Language;
+    }
   }
   
-  return urlObj.pathname;
+  if (typeof navigator !== 'undefined') {
+    const browserLang = navigator.language.toLowerCase();
+    if (browserLang.startsWith('it')) {
+      return 'it';
+    }
+  }
+  
+  return 'en';
+}
+
+export function setLanguage(lang: Language): void {
+  if (typeof localStorage !== 'undefined') {
+    localStorage.setItem('language-preference', lang);
+  }
 }

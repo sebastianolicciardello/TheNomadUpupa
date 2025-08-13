@@ -1,22 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import { t } from '../utils/i18n';
 
 const allPosts = await getCollection('posts');
 
-// Helper function to resolve multilingual frontmatter for English
-function resolveMultilingualData(data: any) {
+// Helper function to resolve multilingual frontmatter
+function resolveMultilingualData(data: any, lang: 'en' | 'it') {
   const resolved = { ...data };
   Object.keys(resolved).forEach(key => {
     const value = resolved[key];
     if (typeof value === 'object' && value !== null && !Array.isArray(value) && !value.lat) {
-      if (value.en) {
-        resolved[key] = value.en;
+      if (value[lang]) {
+        resolved[key] = value[lang];
+      } else if (value.en) {
+        resolved[key] = value.en; // Fallback to English
       }
     } else if (Array.isArray(value)) {
       resolved[key] = value.map((item: any) => {
-        if (item.name && typeof item.name === 'object' && item.name.en) {
-          return { ...item, name: item.name.en };
+        if (item.name && typeof item.name === 'object') {
+          if (item.name[lang]) {
+            return { ...item, name: item.name[lang] };
+          } else if (item.name.en) {
+            return { ...item, name: item.name.en };
+          }
         }
         return item;
       });
@@ -25,24 +32,55 @@ function resolveMultilingualData(data: any) {
   return resolved;
 }
 
-// Process posts: old format (en/) + new format (multilingual)
-const englishPosts = allPosts.flatMap(post => {
-  if (post.slug.startsWith('en/')) {
-    return [post]; // Old format
-  } else if (!post.slug.startsWith('it/')) {
-    // New format - multilingual or single language
-    if (post.body.includes('<!-- en -->') || post.body.includes('<!-- it -->')) {
-      // Multilingual post
-      const resolvedData = resolveMultilingualData(post.data);
-      return [{ ...post, data: resolvedData }];
-    } else {
-      // Single language post (defaults to English)
-      return [post];
-    }
-  }
-  return [];
+// Process posts for both languages
+const processedPostsEn = allPosts.map(post => {
+  const resolvedData = resolveMultilingualData(post.data, 'en');
+  return { ...post, data: resolvedData, lang: 'en' };
 });
-const postsWithCoords = englishPosts
+
+const processedPostsIt = allPosts.map(post => {
+  const resolvedData = resolveMultilingualData(post.data, 'it');
+  return { ...post, data: resolvedData, lang: 'it' };
+});
+
+// Filter posts with coordinates for both languages
+const postsWithCoordsEn = processedPostsEn
+  .filter(post => {
+    const hasCoords = post.data.coords && post.data.coords.lat && post.data.coords.lon;
+    const hasLocations = post.data.locations && post.data.locations.length > 0;
+    return hasCoords || hasLocations;
+  })
+  .map(post => {
+    let mainCoords = null;
+    if (post.data.locations && post.data.locations.length > 0) {
+      const mainLocation = post.data.locations.find(loc => loc.isMain) || post.data.locations[0];
+      mainCoords = mainLocation.coords;
+    } else if (post.data.coords) {
+      mainCoords = post.data.coords;
+    }
+    return { ...post, mainCoords };
+  })
+  .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime());
+
+const postsWithCoordsIt = processedPostsIt
+  .filter(post => {
+    const hasCoords = post.data.coords && post.data.coords.lat && post.data.coords.lon;
+    const hasLocations = post.data.locations && post.data.locations.length > 0;
+    return hasCoords || hasLocations;
+  })
+  .map(post => {
+    let mainCoords = null;
+    if (post.data.locations && post.data.locations.length > 0) {
+      const mainLocation = post.data.locations.find(loc => loc.isMain) || post.data.locations[0];
+      mainCoords = mainLocation.coords;
+    } else if (post.data.coords) {
+      mainCoords = post.data.coords;
+    }
+    return { ...post, mainCoords };
+  })
+  .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime());
+
+const postsWithCoords = postsWithCoordsEn
   .filter(post => {
     // Check if post has coords or has locations
     const hasCoords = post.data.coords && post.data.coords.lat && post.data.coords.lon;
@@ -63,28 +101,52 @@ const postsWithCoords = englishPosts
   .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime());
 ---
 
-<Layout title="Places Map - The Nomad Upupa" lang="en">
-  {postsWithCoords.length > 0 ? (
-    <div class="w-full h-screen">
-      <!-- Mappa a schermo intero -->
-      <div id="global-map" class="w-full h-full relative">
-        <div id="map-loading" class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-700">
-          <div class="text-gray-500 dark:text-gray-400">Loading map...</div>
+<Layout>
+  <!-- English Version -->
+  <div data-lang="en">
+    {postsWithCoordsEn.length > 0 ? (
+      <div class="w-full h-screen">
+        <div id="global-map-en" class="w-full h-full relative">
+          <div class="map-loading absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-700">
+            <div class="text-gray-500 dark:text-gray-400">Loading map...</div>
+          </div>
         </div>
       </div>
-    </div>
-  ) : (
-    <div class="w-full h-screen flex items-center justify-center">
-      <div class="text-center">
-        <div class="text-6xl mb-4">🗺️</div>
-        <p class="text-gray-500 dark:text-gray-400 text-lg">
-          No georeferenced places yet. The first journeys will arrive soon.
-        </p>
+    ) : (
+      <div class="w-full h-screen flex items-center justify-center">
+        <div class="text-center">
+          <div class="text-6xl mb-4">🗺️</div>
+          <p class="text-gray-500 dark:text-gray-400 text-lg">
+            No georeferenced places yet. The first journeys will arrive soon.
+          </p>
+        </div>
       </div>
-    </div>
-  )}
+    )}
+  </div>
 
-  {postsWithCoords.length > 0 && (
+  <!-- Italian Version -->
+  <div data-lang="it" style="display: none;">
+    {postsWithCoordsIt.length > 0 ? (
+      <div class="w-full h-screen">
+        <div id="global-map-it" class="w-full h-full relative">
+          <div class="map-loading absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-700">
+            <div class="text-gray-500 dark:text-gray-400">Caricamento mappa...</div>
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div class="w-full h-screen flex items-center justify-center">
+        <div class="text-center">
+          <div class="text-6xl mb-4">🗺️</div>
+          <p class="text-gray-500 dark:text-gray-400 text-lg">
+            Nessun luogo geolocalizzato ancora. I primi viaggi arriveranno presto.
+          </p>
+        </div>
+      </div>
+    )}
+  </div>
+
+  {(postsWithCoordsEn.length > 0 || postsWithCoordsIt.length > 0) && (
     <>
       <link rel="stylesheet" href="/libs/leaflet/leaflet.css" is:inline />
       <script src="/libs/leaflet/leaflet.js" is:inline></script>
@@ -242,7 +304,7 @@ const postsWithCoords = englishPosts
         }
       </style>
       
-      <script define:vars={{ postsWithCoords }}>
+      <script define:vars={{ postsWithCoordsEn, postsWithCoordsIt }}>
         // Shared helper functions (inlined for Astro compatibility)
         function createMapIcons() {
           const lightIcon = L.divIcon({
@@ -319,29 +381,68 @@ const postsWithCoords = englishPosts
           return updateMapTheme;
         }
 
+        let mapEn, mapIt;
+        
+        // Expose maps globally so Layout.astro can access them
+        window.mapEn = null;
+        window.mapIt = null;
+
         function initializeMap() {
           if (typeof L === 'undefined') {
             setTimeout(initializeMap, 100);
             return;
           }
-          const posts = postsWithCoords.map(post => ({
+
+          // Process posts for both languages
+          const postsEn = postsWithCoordsEn.map(post => ({
             title: post.data.title,
-            slug: post.slug.replace('en/', ''),
+            slug: post.slug.replace('en/', '').replace('it/', ''),
             coords: post.mainCoords,
             date: post.data.eventTime,
             cover: post.data.cover
           }));
 
-          // Remove loading indicator
-          const loadingEl = document.getElementById('map-loading');
-          if (loadingEl) loadingEl.remove();
+          const postsIt = postsWithCoordsIt.map(post => ({
+            title: post.data.title,
+            slug: post.slug.replace('en/', '').replace('it/', ''),
+            coords: post.mainCoords,
+            date: post.data.eventTime,
+            cover: post.data.cover
+          }));
 
-          // Initialize the map with default center (will be adjusted by fitBounds)
-          const map = L.map('global-map', {
-            zoomControl: false
-          }).setView([41.9028, 12.4964], 6);
-          
-          // Add zoom control in top left for desktop, bottom left for mobile
+          // Initialize English map
+          if (postsEn.length > 0) {
+            const loadingElEn = document.querySelector('#global-map-en .map-loading');
+            if (loadingElEn) loadingElEn.remove();
+
+            mapEn = L.map('global-map-en', {
+              zoomControl: false
+            }).setView([41.9028, 12.4964], 6);
+            
+            // Expose to global scope for language switching
+            window.mapEn = mapEn;
+            
+            setupMapContent(mapEn, postsEn, 'en');
+          }
+
+          // Initialize Italian map  
+          if (postsIt.length > 0) {
+            const loadingElIt = document.querySelector('#global-map-it .map-loading');
+            if (loadingElIt) loadingElIt.remove();
+
+            mapIt = L.map('global-map-it', {
+              zoomControl: false
+            }).setView([41.9028, 12.4964], 6);
+            
+            // Expose to global scope for language switching
+            window.mapIt = mapIt;
+            
+            setupMapContent(mapIt, postsIt, 'it');
+          }
+        }
+
+        function setupMapContent(map, posts, lang) {
+          // Add zoom control
           const isMobile = window.innerWidth <= 640;
           L.control.zoom({
             position: isMobile ? 'bottomleft' : 'topleft'
@@ -349,26 +450,27 @@ const postsWithCoords = englishPosts
 
           // Create tile layers and setup theme
           const { lightTiles, darkTiles } = createTileLayers();
-          const updateMapTheme = setupMapTheme(map, lightTiles, darkTiles);
+          setupMapTheme(map, lightTiles, darkTiles);
 
           // Create marker icons
           const { lightIcon, darkIcon } = createMapIcons();
-
-          // Array to track markers
           const markers = [];
 
-          // Add marker for each post
-          posts.forEach((post, index) => {
+          // Add markers
+          posts.forEach((post) => {
             const isDark = document.documentElement.classList.contains('dark');
             const icon = isDark ? darkIcon : lightIcon;
             const marker = L.marker([post.coords.lat, post.coords.lon], { icon: icon }).addTo(map);
+            
+            const dateLocale = lang === 'it' ? 'it-IT' : 'en-US';
+            const readMoreText = lang === 'it' ? 'Leggi di più →' : 'Read more →';
             
             const popupContent = `
               <div class="p-1 sm:p-2 w-full">
                 ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-16 sm:h-20 object-cover rounded mb-1 sm:mb-2">` : ''}
                 <h3 class="font-semibold text-xs sm:text-sm mb-1 leading-tight">${post.title}</h3>
-                <p class="text-xs text-gray-600 mb-1 sm:mb-2">${new Date(post.date).toLocaleDateString('en-US')}</p>
-                <a href="/posts/${post.slug}/" class="inline-block text-xs text-blue-600 hover:text-blue-800 font-medium">Read more →</a>
+                <p class="text-xs text-gray-600 mb-1 sm:mb-2">${new Date(post.date).toLocaleDateString(dateLocale)}</p>
+                <a href="/posts/${post.slug}/" class="inline-block text-xs text-blue-600 hover:text-blue-800 font-medium">${readMoreText}</a>
               </div>
             `;
             
@@ -376,33 +478,13 @@ const postsWithCoords = englishPosts
             markers.push(marker);
           });
 
-          // Fit bounds to show all markers - do this after all markers are added
+          // Fit bounds
           if (markers.length > 0) {
             const group = new L.featureGroup(markers);
-            map.fitBounds(group.getBounds().pad(0.1));
-            
-            // Force a small delay to ensure map is fully rendered
             setTimeout(() => {
               map.fitBounds(group.getBounds().pad(0.1));
             }, 100);
           }
-
-          // Function to update all markers
-          function updateAllMarkers() {
-            const isDark = document.documentElement.classList.contains('dark');
-            const icon = isDark ? darkIcon : lightIcon;
-            
-            markers.forEach(marker => {
-              marker.setIcon(icon);
-            });
-          }
-
-          // Update markers when theme changes (extend existing function)
-          const originalUpdateMapTheme = updateMapTheme;
-          updateMapTheme = function() {
-            originalUpdateMapTheme();
-            updateAllMarkers();
-          };
         }
         
         // Try multiple loading strategies

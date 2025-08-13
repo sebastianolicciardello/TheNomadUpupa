@@ -4,13 +4,11 @@ import HeroSection from '../components/HeroSection.astro';
 import PostsGrid from '../components/PostsGrid.astro';
 import DiscoverSection from '../components/DiscoverSection.astro';
 import { getCollection } from 'astro:content';
-import { t, type Language } from '../utils/translations';
+import { t, type Language } from '../utils/i18n';
 
 export interface Props {
   lang?: Language;
 }
-
-const { lang = 'en' } = Astro.props;
 
 // Get posts based on language
 const allPosts = await getCollection('posts');
@@ -42,78 +40,99 @@ function resolveMultilingualData(data: any, targetLang: Language) {
   return resolved;
 }
 
-// Process posts: old format (with lang prefix) + new format (multilingual)
-const processedPosts = allPosts.flatMap(post => {
-  // Old format with language prefix
-  if (post.slug.startsWith('en/') && lang === 'en') {
-    return [{
-      ...post,
-      data: { ...post.data, lang: 'en' as Language }
-    }];
-  } else if (post.slug.startsWith('it/') && lang === 'it') {
-    return [{
-      ...post,
-      data: { ...post.data, lang: 'it' as Language }
-    }];
-  }
-  // New format (multilingual files without prefix)
-  else if (!post.slug.startsWith('en/') && !post.slug.startsWith('it/')) {
-    // Check if it's a multilingual post
-    if (post.body.includes('<!-- en -->') || post.body.includes('<!-- it -->')) {
-      const resolvedData = resolveMultilingualData(post.data, lang);
-      resolvedData.lang = lang;
-      return [{
-        ...post,
-        data: resolvedData
-      }];
-    } else if (lang === 'en') {
-      // Single language posts default to English
-      return [{
-        ...post,
-        data: { ...post.data, lang: 'en' as Language }
-      }];
-    }
-  }
-  return [];
+// Process posts for both languages - simplified approach
+const processedPostsEn = allPosts.map(post => {
+  let processedData = { ...post.data };
+  
+  // Resolve multilingual frontmatter for English
+  processedData = resolveMultilingualData(processedData, 'en');
+  processedData.lang = 'en';
+  
+  return {
+    ...post,
+    data: processedData
+  };
 });
 
-const recentPosts = processedPosts
+const processedPostsIt = allPosts.map(post => {
+  let processedData = { ...post.data };
+  
+  // Resolve multilingual frontmatter for Italian
+  processedData = resolveMultilingualData(processedData, 'it');
+  processedData.lang = 'it';
+  
+  return {
+    ...post,
+    data: processedData
+  };
+});
+
+const recentPostsEn = processedPostsEn
   .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime())
   .slice(0, 3);
 
-// Generate URLs based on language
-const baseUrl = lang === 'it' ? '/it' : '';
-const blogUrl = `${baseUrl}/blog/`;
-const mapUrl = `${baseUrl}/map/`;
-const aboutUrl = `${baseUrl}/about/`;
+const recentPostsIt = processedPostsIt
+  .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime())
+  .slice(0, 3);
 ---
 
-<Layout lang={lang}>
+<Layout>
+  
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <!-- Hero Section -->
-    <HeroSection 
-      title={t('hero.title', lang)}
-      description={t('hero.description', lang)}
-    />
+    <!-- Hero Section - English -->
+    <div data-lang="en">
+      <HeroSection 
+        title={t('hero.title', 'en')}
+        description={t('hero.description', 'en')}
+      />
 
-    <!-- Recent Posts -->
-    <PostsGrid 
-      posts={recentPosts}
-      lang={lang}
-      title={t('posts.recent', lang)}
-      showViewAll={true}
-      viewAllUrl={blogUrl}
-      viewAllText={t('posts.viewAll', lang)}
-    />
+      <!-- Recent Posts -->
+      <PostsGrid 
+        posts={recentPostsEn}
+        lang="en"
+        title={t('posts.recent', 'en')}
+        showViewAll={true}
+        viewAllUrl="/blog/"
+        viewAllText={t('posts.viewAll', 'en')}
+      />
 
-    <!-- Discover More Section -->
-    <DiscoverSection 
-      title={t('discover.title', lang)}
-      description={t('discover.description', lang)}
-      mapUrl={mapUrl}
-      mapText={t('discover.map', lang)}
-      aboutUrl={aboutUrl}
-      aboutText={t('discover.about', lang)}
-    />
+      <!-- Discover More Section -->
+      <DiscoverSection 
+        title={t('discover.title', 'en')}
+        description={t('discover.description', 'en')}
+        mapUrl="/map/"
+        mapText={t('discover.map', 'en')}
+        aboutUrl="/about/"
+        aboutText={t('discover.about', 'en')}
+      />
+    </div>
+
+    <!-- Hero Section - Italian -->
+    <div data-lang="it" style="display: none;">
+      <HeroSection 
+        title={t('hero.title', 'it')}
+        description={t('hero.description', 'it')}
+      />
+
+      <!-- Recent Posts -->
+      <PostsGrid 
+        posts={recentPostsIt}
+        lang="it"
+        title={t('posts.recent', 'it')}
+        showViewAll={true}
+        viewAllUrl="/blog/"
+        viewAllText={t('posts.viewAll', 'it')}
+      />
+
+      <!-- Discover More Section -->
+      <DiscoverSection 
+        title={t('discover.title', 'it')}
+        description={t('discover.description', 'it')}
+        mapUrl="/map/"
+        mapText={t('discover.map', 'it')}
+        aboutUrl="/about/"
+        aboutText={t('discover.about', 'it')}
+      />
+    </div>
   </div>
 </Layout>

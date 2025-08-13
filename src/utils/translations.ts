@@ -90,8 +90,8 @@ export function t(key: string, lang: Language = 'en'): string {
 }
 
 export function getPostUrl(slug: string, lang: Language = 'en'): string {
-  const cleanSlug = slug.replace(lang === 'it' ? 'it/' : 'en/', '');
-  return lang === 'it' ? `/it/posts/${cleanSlug}/` : `/posts/${cleanSlug}/`;
+  const cleanSlug = slug.replace(/^(it|en)//, '');
+  return `/posts/${cleanSlug}/`;
 }
 
 export function getLocaleString(lang: Language = 'en'): string {

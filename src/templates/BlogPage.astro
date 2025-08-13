@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import PostsList from '../components/PostsList.astro';
 import { getCollection } from 'astro:content';
-import { t, type Language } from '../utils/translations';
+import { t, type Language } from '../utils/i18n';
 
 export interface Props {
   lang?: Language;
@@ -41,32 +41,22 @@ function resolveMultilingualData(data: any, targetLang: Language) {
   return resolved;
 }
 
-// Process posts: old format (with lang prefix) + new format (multilingual)
-const processedPosts = allPosts.flatMap(post => {
-  // Old format with language prefix
-  if (post.slug.startsWith('en/') && lang === 'en') {
+// Process posts for both languages
+const processedPostsEn = allPosts.flatMap(post => {
+  if (post.slug.startsWith('en/')) {
     return [{
       ...post,
       data: { ...post.data, lang: 'en' as Language }
     }];
-  } else if (post.slug.startsWith('it/') && lang === 'it') {
-    return [{
-      ...post,
-      data: { ...post.data, lang: 'it' as Language }
-    }];
-  }
-  // New format (multilingual files without prefix)
-  else if (!post.slug.startsWith('en/') && !post.slug.startsWith('it/')) {
-    // Check if it's a multilingual post
+  } else if (!post.slug.startsWith('en/') && !post.slug.startsWith('it/')) {
     if (post.body.includes('<!-- en -->') || post.body.includes('<!-- it -->')) {
-      const resolvedData = resolveMultilingualData(post.data, lang);
-      resolvedData.lang = lang;
+      const resolvedData = resolveMultilingualData(post.data, 'en');
+      resolvedData.lang = 'en';
       return [{
         ...post,
         data: resolvedData
       }];
-    } else if (lang === 'en') {
-      // Single language posts default to English
+    } else {
       return [{
         ...post,
         data: { ...post.data, lang: 'en' as Language }
@@ -76,25 +66,62 @@ const processedPosts = allPosts.flatMap(post => {
   return [];
 });
 
-const sortedPosts = processedPosts.sort((a, b) => 
+const processedPostsIt = allPosts.flatMap(post => {
+  if (post.slug.startsWith('it/')) {
+    return [{
+      ...post,
+      data: { ...post.data, lang: 'it' as Language }
+    }];
+  } else if (!post.slug.startsWith('en/') && !post.slug.startsWith('it/')) {
+    if (post.body.includes('<!-- en -->') || post.body.includes('<!-- it -->')) {
+      const resolvedData = resolveMultilingualData(post.data, 'it');
+      resolvedData.lang = 'it';
+      return [{
+        ...post,
+        data: resolvedData
+      }];
+    }
+  }
+  return [];
+});
+
+const sortedPostsEn = processedPostsEn.sort((a, b) => 
   b.data.eventTime.getTime() - a.data.eventTime.getTime()
 );
 
-// Page title for Layout
-const pageTitle = `${t('blog.title', lang)} - The Nomad Upupa`;
+const sortedPostsIt = processedPostsIt.sort((a, b) => 
+  b.data.eventTime.getTime() - a.data.eventTime.getTime()
+);
 ---
 
-<Layout title={pageTitle} lang={lang}>
+<Layout>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <PageHeader 
-      title={t('blog.title', lang)}
-      description={t('blog.description', lang)}
-    />
+    <!-- English Version -->
+    <div data-lang="en">
+      <PageHeader 
+        title={t('blog.title', 'en')}
+        description={t('blog.description', 'en')}
+      />
 
-    <PostsList 
-      posts={sortedPosts}
-      lang={lang}
-      emptyMessage={t('blog.empty', lang)}
-    />
+      <PostsList 
+        posts={sortedPostsEn}
+        lang="en"
+        emptyMessage={t('blog.empty', 'en')}
+      />
+    </div>
+
+    <!-- Italian Version -->
+    <div data-lang="it" style="display: none;">
+      <PageHeader 
+        title={t('blog.title', 'it')}
+        description={t('blog.description', 'it')}
+      />
+
+      <PostsList 
+        posts={sortedPostsIt}
+        lang="it"
+        emptyMessage={t('blog.empty', 'it')}
+      />
+    </div>
   </div>
 </Layout>

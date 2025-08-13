@@ -1,16 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ConnectLinks from '../components/ConnectLinks.astro';
-import { t, type Language } from '../utils/translations';
+import { t, type Language } from '../utils/i18n';
 
 export interface Props {
   lang?: Language;
 }
 
 const { lang = 'en' } = Astro.props;
-
-// Page title for Layout
-const pageTitle = `${t('about.title', lang)} - The Nomad Upupa`;
 
 // About page content (could be moved to a content collection in the future)
 const aboutContent = {
@@ -50,74 +47,144 @@ Ogni post è un filo in una mappa personale di mondi interiori ed esteriori — 
   }
 };
 
-const content = aboutContent[lang];
+const contentEn = aboutContent.en;
+const contentIt = aboutContent.it;
 ---
 
-<Layout title={pageTitle} lang={lang}>
+<Layout>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="max-w-3xl mx-auto">
-      <!-- Header -->
-      <div class="text-center mb-8">
-        <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 dark:text-gray-100 mb-6">
-          {t('about.title', lang)}
-        </h1>
-      </div>
-
-      <!-- Main Content -->
-      <div class="prose prose-lg dark:prose-invert max-w-none mb-12">
-        <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8 mb-8">
-          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg whitespace-pre-line text-center">
-            {content.intro1}
-          </p>
+      <!-- English Version -->
+      <div data-lang="en">
+        <!-- Header -->
+        <div class="text-center mb-8">
+          <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 dark:text-gray-100 mb-6">
+            {t('about.title', 'en')}
+          </h1>
         </div>
-      </div>
 
-      <!-- Travel Plans & Meetings -->
-      <div class="mb-12">
-        <h2 class="text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-8 text-center">
-          {content.whereTitle}
-        </h2>
-        
-        <!-- Upcoming Locations -->
-        <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8 mb-8">
-          <h3 class="text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-6">
-            {content.nextMonthsTitle}
-          </h3>
-          <div class="space-y-4">
-            <div class="border-l-4 border-blue-500 pl-4">
-              <p class="text-gray-700 dark:text-gray-300 font-medium">{content.august}</p>
-              <p class="text-gray-600 dark:text-gray-400">{content.augustDesc}</p>
+        <!-- Main Content -->
+        <div class="prose prose-lg dark:prose-invert max-w-none mb-12">
+          <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8 mb-8">
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg whitespace-pre-line text-center">
+              {contentEn.intro1}
+            </p>
+          </div>
+        </div>
+
+        <!-- Travel Plans & Meetings -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-8 text-center">
+            {contentEn.whereTitle}
+          </h2>
+          
+          <!-- Upcoming Locations -->
+          <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8 mb-8">
+            <h3 class="text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-6">
+              {contentEn.nextMonthsTitle}
+            </h3>
+            <div class="space-y-4">
+              <div class="border-l-4 border-blue-500 pl-4">
+                <p class="text-gray-700 dark:text-gray-300 font-medium">{contentEn.august}</p>
+                <p class="text-gray-600 dark:text-gray-400">{contentEn.augustDesc}</p>
+              </div>
+              <div class="border-l-4 border-green-500 pl-4">
+                <p class="text-gray-700 dark:text-gray-300 font-medium">{contentEn.october}</p>
+                <p class="text-gray-600 dark:text-gray-400">{contentEn.octoberDesc}</p>
+              </div>
             </div>
-            <div class="border-l-4 border-green-500 pl-4">
-              <p class="text-gray-700 dark:text-gray-300 font-medium">{content.october}</p>
-              <p class="text-gray-600 dark:text-gray-400">{content.octoberDesc}</p>
+          </div>
+
+          <!-- Trekking & Meetings -->
+          <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8">
+            <h3 class="text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-6">
+              {contentEn.trekTitle}
+            </h3>
+            <div class="prose prose-lg dark:prose-invert max-w-none">
+              <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                {contentEn.trekDesc1}
+              </p>
+              <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                {contentEn.trekDesc2}
+              </p>
             </div>
           </div>
         </div>
 
-        <!-- Trekking & Meetings -->
-        <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8">
-          <h3 class="text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-6">
-            {content.trekTitle}
-          </h3>
-          <div class="prose prose-lg dark:prose-invert max-w-none">
-            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              {content.trekDesc1}
-            </p>
-            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
-              {content.trekDesc2}
+        <!-- Social Links -->
+        <ConnectLinks 
+          connectTitle={t('connect.title', 'en')}
+          telegramLabel={t('connect.telegram', 'en')}
+          channelLabel={t('connect.channel', 'en')}
+          instagramLabel={t('connect.instagram', 'en')}
+        />
+      </div>
+
+      <!-- Italian Version -->
+      <div data-lang="it" style="display: none;">
+        <!-- Header -->
+        <div class="text-center mb-8">
+          <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 dark:text-gray-100 mb-6">
+            {t('about.title', 'it')}
+          </h1>
+        </div>
+
+        <!-- Main Content -->
+        <div class="prose prose-lg dark:prose-invert max-w-none mb-12">
+          <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8 mb-8">
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg whitespace-pre-line text-center">
+              {contentIt.intro1}
             </p>
           </div>
         </div>
-      </div>
 
-      <!-- Social Links -->
-      <ConnectLinks 
-        connectTitle={t('connect.title', lang)}
-        telegramLabel={t('connect.telegram', lang)}
-        channelLabel={t('connect.channel', lang)}
-        instagramLabel={t('connect.instagram', lang)}
-      />
+        <!-- Travel Plans & Meetings -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-8 text-center">
+            {contentIt.whereTitle}
+          </h2>
+          
+          <!-- Upcoming Locations -->
+          <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8 mb-8">
+            <h3 class="text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-6">
+              {contentIt.nextMonthsTitle}
+            </h3>
+            <div class="space-y-4">
+              <div class="border-l-4 border-blue-500 pl-4">
+                <p class="text-gray-700 dark:text-gray-300 font-medium">{contentIt.august}</p>
+                <p class="text-gray-600 dark:text-gray-400">{contentIt.augustDesc}</p>
+              </div>
+              <div class="border-l-4 border-green-500 pl-4">
+                <p class="text-gray-700 dark:text-gray-300 font-medium">{contentIt.october}</p>
+                <p class="text-gray-600 dark:text-gray-400">{contentIt.octoberDesc}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trekking & Meetings -->
+          <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8">
+            <h3 class="text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-6">
+              {contentIt.trekTitle}
+            </h3>
+            <div class="prose prose-lg dark:prose-invert max-w-none">
+              <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                {contentIt.trekDesc1}
+              </p>
+              <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                {contentIt.trekDesc2}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <ConnectLinks 
+          connectTitle={t('connect.title', 'it')}
+          telegramLabel={t('connect.telegram', 'it')}
+          channelLabel={t('connect.channel', 'it')}
+          instagramLabel={t('connect.instagram', 'it')}
+        />
+      </div>
     </div>
   </div>
 </Layout>

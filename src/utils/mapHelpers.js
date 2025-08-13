@@ -2,7 +2,7 @@
 
 export function createPopupContent(post, lang = 'en') {
   const readMoreText = lang === 'it' ? 'Leggi di più →' : 'Read more →';
-  const postUrl = lang === 'it' ? `/it/posts/${post.slug}/` : `/posts/${post.slug}/`;
+  const postUrl = `/posts/${post.slug}/`;
   
   return `
     <div class="p-1 sm:p-2 w-full">

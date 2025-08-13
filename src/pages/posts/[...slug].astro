@@ -1,14 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
-import PostLayout from '../../layouts/PostLayout.astro';
-import { parseMultilingualMarkdown, extractLanguageContent } from '../../utils/multilingualMarkdown';
-import type { Language } from '../../utils/translations';
+import Layout from '../../layouts/Layout.astro';
+import GeoMap from '../../components/GeoMap.astro';
+import type { Language } from '../../utils/i18n';
 import { marked } from 'marked';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts');
-  
-  // Handle both old format (en/ prefix) and new format (multilingual files)
   const paths: any[] = [];
   
   for (const post of allPosts) {
@@ -18,61 +16,22 @@ export async function getStaticPaths() {
         params: { slug: post.slug.replace('en/', '') },
         props: { ...post, lang: 'en' as Language },
       });
-    } else if (!post.slug.startsWith('it/')) {
-      // New format - multilingual files without language prefix
-      try {
-        // Try to parse as multilingual content
-        const rawContent = post.body;
-        if (rawContent.includes('<!-- en -->') || rawContent.includes('<!-- it -->')) {
-          // This is a multilingual file - extract English content
-          const sections = rawContent.split(/<!--\s*en\s*-->/);
-          let enContent = '';
-          if (sections.length > 1) {
-            const afterEnMarker = sections[1];
-            const beforeItMarker = afterEnMarker.split(/<!--\s*it\s*-->/)[0];
-            enContent = beforeItMarker.trim();
-          }
-          
-          // Resolve multilingual frontmatter fields for English
-          const resolvedData = { ...post.data };
-          Object.keys(resolvedData).forEach(key => {
-            const value = resolvedData[key];
-            if (typeof value === 'object' && value !== null && !Array.isArray(value) && !value.lat && value.en) {
-              resolvedData[key] = value.en;
-            } else if (Array.isArray(value)) {
-              resolvedData[key] = value.map(item => {
-                if (item.name && typeof item.name === 'object' && item.name.en) {
-                  return { ...item, name: item.name.en };
-                }
-                return item;
-              });
-            }
-          });
-          resolvedData.lang = 'en';
-          
-          paths.push({
-            params: { slug: post.slug },
-            props: { 
-              ...post, 
-              data: resolvedData,
-              content: enContent,
-              lang: 'en' as Language 
-            },
-          });
-        } else {
-          // Regular single-language file
-          paths.push({
-            params: { slug: post.slug },
-            props: { ...post, lang: 'en' as Language },
-          });
-        }
-      } catch (error) {
-        // Fallback to regular processing if parsing fails
-        paths.push({
-          params: { slug: post.slug },
-          props: { ...post, lang: 'en' as Language },
-        });
-      }
+    } else if (post.slug.startsWith('it/')) {
+      // Old format - Italian posts with it/ prefix
+      paths.push({
+        params: { slug: post.slug.replace('it/', '') },
+        props: { ...post, lang: 'it' as Language },
+      });
+    } else {
+      // New format - multilingual files, create one route that handles both languages
+      paths.push({
+        params: { slug: post.slug },
+        props: { 
+          ...post, 
+          isMultilingual: true,
+          lang: 'en' as Language // Default, will be handled dynamically
+        },
+      });
     }
   }
   
@@ -80,45 +39,231 @@ export async function getStaticPaths() {
 }
 
 const post = Astro.props;
-let Content, processedData, processedMarkdown;
 
-if (post.content) {
-  // Multilingual content - process markdown to HTML
-  processedData = post.data;
-  processedMarkdown = marked(post.content);
-  Content = null;
-} else {
-  // Regular content
-  const rendered = await post.render();
-  Content = rendered.Content;
-  processedData = post.data;
-  processedMarkdown = null;
+// Helper function to resolve multilingual frontmatter
+function resolveMultilingualData(data: any, targetLang: Language) {
+  const resolved = { ...data };
+  Object.keys(resolved).forEach(key => {
+    const value = resolved[key];
+    if (typeof value === 'object' && value !== null && !Array.isArray(value) && !value.lat) {
+      if (value[targetLang]) {
+        resolved[key] = value[targetLang];
+      } else if (value.en) {
+        resolved[key] = value.en; // Fallback to English
+      }
+    } else if (Array.isArray(value)) {
+      resolved[key] = value.map((item: any) => {
+        if (item.name && typeof item.name === 'object') {
+          if (item.name[targetLang]) {
+            return { ...item, name: item.name[targetLang] };
+          } else if (item.name.en) {
+            return { ...item, name: item.name.en };
+          }
+        }
+        return item;
+      });
+    }
+  });
+  return resolved;
 }
 
-// Resolve multilingual fields
-const resolvedData = { ...processedData };
-Object.keys(resolvedData).forEach(key => {
-  const value = resolvedData[key];
-  if (typeof value === 'object' && value !== null && !Array.isArray(value) && !value.lat) {
-    if (value.en) {
-      resolvedData[key] = value.en;
-    }
-  } else if (Array.isArray(value)) {
-    // Handle locations array
-    resolvedData[key] = value.map(item => {
-      if (item.name && typeof item.name === 'object' && item.name.en) {
-        return { ...item, name: item.name.en };
-      }
-      return item;
-    });
+// Helper function to extract content for specific language
+function extractLanguageContent(content: string, lang: Language) {
+  if (!content.includes('<!-- en -->') && !content.includes('<!-- it -->')) {
+    return content; // Single language content
   }
-});
+  
+  const sections = content.split(new RegExp(`<!--\\s*${lang}\\s*-->`));
+  if (sections.length > 1) {
+    const afterLangMarker = sections[1];
+    const nextLangMarker = lang === 'en' ? '<!-- it -->' : '<!-- en -->';
+    const beforeNextMarker = afterLangMarker.split(new RegExp(`<!--\\s*${lang === 'en' ? 'it' : 'en'}\\s*-->`));
+    return beforeNextMarker[0].trim();
+  }
+  
+  return '';
+}
+
+let processedDataEn, processedDataIt;
+let processedMarkdownEn, processedMarkdownIt;
+
+if (post.isMultilingual) {
+  // Multilingual content - process for both languages
+  const rawContent = post.body;
+  
+  // Process for English
+  processedDataEn = resolveMultilingualData(post.data, 'en');
+  processedDataEn.lang = 'en';
+  processedMarkdownEn = marked(extractLanguageContent(rawContent, 'en'));
+  
+  // Process for Italian  
+  processedDataIt = resolveMultilingualData(post.data, 'it');
+  processedDataIt.lang = 'it';
+  processedMarkdownIt = marked(extractLanguageContent(rawContent, 'it'));
+} else {
+  // Regular single-language content
+  const rendered = await post.render();
+  
+  if (post.lang === 'it') {
+    processedDataIt = resolveMultilingualData(post.data, 'it');
+    processedDataIt.lang = 'it';
+    processedMarkdownIt = marked(post.body);
+    processedDataEn = null;
+    processedMarkdownEn = null;
+  } else {
+    processedDataEn = resolveMultilingualData(post.data, 'en');
+    processedDataEn.lang = 'en';
+    processedMarkdownEn = marked(post.body);
+    processedDataIt = null;
+    processedMarkdownIt = null;
+  }
+}
 ---
 
-<PostLayout {...resolvedData} lang="en">
-  {processedMarkdown ? (
-    <div set:html={processedMarkdown} />
-  ) : (
-    <Content />
-  )}
-</PostLayout>
+<Layout title={processedDataEn?.title || processedDataIt?.title}>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- English Version -->
+    {processedDataEn && (
+      <div data-lang="en">
+        <header class="mb-8">
+          <div class="mb-4">
+            <a href="/blog/" class="inline-flex items-center text-sm text-warm-600 dark:text-warm-400 hover:text-warm-700 dark:hover:text-warm-300 transition-colors">
+              ← Back to archive
+            </a>
+          </div>
+          <div class="mb-4">
+            <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-gray-100 leading-tight">
+              {processedDataEn.title}
+            </h1>
+          </div>
+          <div class="flex flex-col gap-2 text-sm text-gray-600 dark:text-gray-400">
+            <div class="flex items-center gap-2">
+              <span class="text-gray-900 dark:text-gray-100 font-medium">Event:</span>
+              <time datetime={processedDataEn.eventTime.toISOString()} class="font-medium">
+                {processedDataEn.eventTime.toLocaleDateString('en-US', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </time>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-gray-900 dark:text-gray-100 font-medium">Published:</span>
+              <time datetime={processedDataEn.publishTime.toISOString()}>
+                {processedDataEn.publishTime.toLocaleDateString('en-US', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </time>
+            </div>
+          </div>
+          {processedDataEn.cover && (
+            <div class="mt-6">
+              <img 
+                src={processedDataEn.cover} 
+                alt={`Cover image for ${processedDataEn.title}`} 
+                class="w-full max-h-96 object-cover rounded-lg shadow-md"
+              />
+            </div>
+          )}
+        </header>
+        
+        <main class="prose prose-lg prose-gray dark:prose-invert max-w-none 
+                     prose-headings:font-serif prose-headings:text-gray-900 dark:prose-headings:text-gray-100
+                     prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed
+                     prose-a:text-warm-600 dark:prose-a:text-warm-400 prose-a:no-underline hover:prose-a:underline
+                     prose-blockquote:border-warm-300 dark:prose-blockquote:border-warm-600 
+                     prose-blockquote:bg-warm-50 dark:prose-blockquote:bg-warm-900/20 
+                     prose-blockquote:rounded-r-lg prose-blockquote:py-2 prose-blockquote:px-4
+                     prose-img:rounded-lg prose-img:shadow-md">
+          <div set:html={processedMarkdownEn} />
+        </main>
+      </div>
+    )}
+    
+    <!-- Italian Version -->
+    {processedDataIt && (
+      <div data-lang="it" style="display: none;">
+        <header class="mb-8">
+          <div class="mb-4">
+            <a href="/blog/" class="inline-flex items-center text-sm text-warm-600 dark:text-warm-400 hover:text-warm-700 dark:hover:text-warm-300 transition-colors">
+              ← Torna all'archivio
+            </a>
+          </div>
+          <div class="mb-4">
+            <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-gray-100 leading-tight">
+              {processedDataIt.title}
+            </h1>
+          </div>
+          <div class="flex flex-col gap-2 text-sm text-gray-600 dark:text-gray-400">
+            <div class="flex items-center gap-2">
+              <span class="text-gray-900 dark:text-gray-100 font-medium">Evento:</span>
+              <time datetime={processedDataIt.eventTime.toISOString()} class="font-medium">
+                {processedDataIt.eventTime.toLocaleDateString('it-IT', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </time>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-gray-900 dark:text-gray-100 font-medium">Pubblicato:</span>
+              <time datetime={processedDataIt.publishTime.toISOString()}>
+                {processedDataIt.publishTime.toLocaleDateString('it-IT', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </time>
+            </div>
+          </div>
+          {processedDataIt.cover && (
+            <div class="mt-6">
+              <img 
+                src={processedDataIt.cover} 
+                alt={`Immagine di copertina per ${processedDataIt.title}`} 
+                class="w-full max-h-96 object-cover rounded-lg shadow-md"
+              />
+            </div>
+          )}
+        </header>
+        
+        <main class="prose prose-lg prose-gray dark:prose-invert max-w-none 
+                     prose-headings:font-serif prose-headings:text-gray-900 dark:prose-headings:text-gray-100
+                     prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed
+                     prose-a:text-warm-600 dark:prose-a:text-warm-400 prose-a:no-underline hover:prose-a:underline
+                     prose-blockquote:border-warm-300 dark:prose-blockquote:border-warm-600 
+                     prose-blockquote:bg-warm-50 dark:prose-blockquote:bg-warm-900/20 
+                     prose-blockquote:rounded-r-lg prose-blockquote:py-2 prose-blockquote:px-4
+                     prose-img:rounded-lg prose-img:shadow-md">
+          <div set:html={processedMarkdownIt} />
+        </main>
+      </div>
+    )}
+
+    {/* GeoMap section */}
+    {((processedDataEn?.coords || processedDataEn?.locations) || (processedDataIt?.coords || processedDataIt?.locations)) && (
+      <section class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 font-serif" data-lang="en">
+          📍 Places I've Been
+        </h3>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 font-serif" data-lang="it" style="display: none;">
+          📍 Luoghi Visitati
+        </h3>
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <GeoMap coords={processedDataEn?.coords || processedDataIt?.coords} locations={processedDataEn?.locations || processedDataIt?.locations} />
+        </div>
+      </section>
+    )}
+  </article>
+</Layout>
+
+{post.isMultilingual && (
+  <script define:vars={{ enTitle: processedDataEn?.title, itTitle: processedDataIt?.title }}>
+    window.postTitles = {
+      'en': enTitle,
+      'it': itTitle
+    };
+  </script>
+)}
