@@ -13,9 +13,13 @@ const { lang = 'en' } = Astro.props;
 const aboutContent = {
   en: {
     intro1: `Traveler, observer, explorer of the unexpected.
+
 I love to wander slowly, get lost in new places, and let what I encounter transform me.
+
 This space was born from a personal need: to resist the rush of social media and give space, instead, to reflection.
+
 I write only when the experience has had time to breathe — when it reveals something beyond the surface.
+
 Each post is a thread in a personal map of inner and outer worlds — shaped by the people I meet, the landscapes I cross, and the quiet thoughts that last longer than the journey itself.`,
     intro2: ``,
     whereTitle: "Where to Find Me",
@@ -30,9 +34,13 @@ Each post is a thread in a personal map of inner and outer worlds — shaped by 
   },
   it: {
     intro1: `Viaggiatore, osservatore, esploratore dell'inatteso.
+
 Amo vagare lentamente, perdermi in luoghi nuovi e lasciarmi cambiare da ciò che incontro.
+
 Questo spazio nasce da un bisogno personale: resistere alla fretta dei social e dare spazio, invece, alla riflessione.
+
 Scrivo solo quando l'esperienza ha avuto tempo di respirare — quando rivela qualcosa oltre la superficie.
+
 Ogni post è un filo in una mappa personale di mondi interiori ed esteriori — plasmata dalle persone che incontro, dai paesaggi che attraverso, e dai pensieri silenziosi che durano più del viaggio stesso.`,
     intro2: ``,
     whereTitle: "Dove Trovarmi",
@@ -52,7 +60,7 @@ const contentIt = aboutContent.it;
 ---
 
 <Layout>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="max-w-4xl mx-auto px-2 sm:px-6 lg:px-8 py-12">
     <div class="max-w-3xl mx-auto">
       <!-- English Version -->
       <div data-lang="en">
@@ -66,7 +74,7 @@ const contentIt = aboutContent.it;
         <!-- Main Content -->
         <div class="prose prose-lg dark:prose-invert max-w-none mb-12">
           <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8 mb-8">
-            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg whitespace-pre-line text-center">
+            <p class="text-gray-800 dark:text-gray-200 leading-relaxed text-lg whitespace-pre-line text-left max-w-prose mx-auto">
               {contentEn.intro1}
             </p>
           </div>
@@ -132,7 +140,7 @@ const contentIt = aboutContent.it;
         <!-- Main Content -->
         <div class="prose prose-lg dark:prose-invert max-w-none mb-12">
           <div class="bg-warm-50 dark:bg-gray-800 rounded-lg p-8 mb-8">
-            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg whitespace-pre-line text-center">
+            <p class="text-gray-800 dark:text-gray-200 leading-relaxed text-lg whitespace-pre-line text-left max-w-prose mx-auto">
               {contentIt.intro1}
             </p>
           </div>
