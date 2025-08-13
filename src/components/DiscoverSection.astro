@@ -2,8 +2,6 @@
 export interface Props {
   title?: string;
   description?: string;
-  blogUrl?: string;
-  blogText?: string;
   mapUrl?: string;
   mapText?: string;
   aboutUrl?: string;
@@ -12,9 +10,7 @@ export interface Props {
 
 const { 
   title = "Discover More",
-  description = "Explore the complete collection of reflections, discover the places I've visited, or learn more about the journey behind these words.",
-  blogUrl = "/blog/",
-  blogText = "All Reflections",
+  description = "Discover the places I've visited, or learn more about the journey behind these words.",
   mapUrl = "/map/",
   mapText = "Journey Map",
   aboutUrl = "/about/",
@@ -30,12 +26,6 @@ const {
     {description}
   </p>
   <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-    <a 
-      href={blogUrl} 
-      class="inline-flex items-center px-6 py-3 bg-warm-600 dark:bg-warm-700 text-white rounded-lg hover:bg-warm-700 dark:hover:bg-warm-600 transition-colors duration-200"
-    >
-      {blogText}
-    </a>
     <a 
       href={mapUrl} 
       class="inline-flex items-center px-6 py-3 bg-gray-600 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors duration-200"

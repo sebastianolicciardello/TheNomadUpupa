@@ -22,8 +22,7 @@ Here, I share stories, places, and thoughts — after time has allowed them to t
     'posts.recent': 'Recent Reflections',
     'posts.viewAll': 'View all posts',
     'discover.title': 'Discover More',
-    'discover.description': 'Explore the complete collection of reflections, discover the places I\'ve visited, or learn more about the journey behind these words.',
-    'discover.blog': 'All Reflections',
+    'discover.description': 'Discover the places I\'ve visited, or learn more about the journey behind these words.',
     'discover.map': 'Journey Map',
     'discover.about': 'About Me',
     
@@ -60,8 +59,7 @@ Questo diario nasce per raccogliere le esperienze quando si sono sedimentate, qu
     'posts.recent': 'Riflessioni Recenti',
     'posts.viewAll': 'Visualizza tutti i post',
     'discover.title': 'Scopri di Più',
-    'discover.description': 'Esplora la collezione completa di riflessioni, scopri i luoghi che ho visitato, o impara di più sul viaggio dietro queste parole.',
-    'discover.blog': 'Tutte le Riflessioni',
+    'discover.description': 'Esplora i luoghi che ho visitato, o impara di più sul viaggio dietro queste parole.',
     'discover.map': 'Mappa del Viaggio',
     'discover.about': 'Chi Sono',
     
