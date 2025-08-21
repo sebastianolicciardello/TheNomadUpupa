@@ -107,9 +107,6 @@ const postsWithCoords = postsWithCoordsEn
     {postsWithCoordsEn.length > 0 ? (
       <div class="w-full h-screen">
         <div id="global-map-en" class="w-full h-full relative">
-          <div class="map-loading absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-700">
-            <div class="text-gray-500 dark:text-gray-400">Loading map...</div>
-          </div>
         </div>
       </div>
     ) : (
@@ -129,9 +126,6 @@ const postsWithCoords = postsWithCoordsEn
     {postsWithCoordsIt.length > 0 ? (
       <div class="w-full h-screen">
         <div id="global-map-it" class="w-full h-full relative">
-          <div class="map-loading absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-700">
-            <div class="text-gray-500 dark:text-gray-400">Caricamento mappa...</div>
-          </div>
         </div>
       </div>
     ) : (
@@ -302,6 +296,19 @@ const postsWithCoords = postsWithCoordsEn
         .dark #global-map {
           filter: brightness(1.1) !important;
         }
+        
+        /* Hide entire map div initially to prevent flash of wrong position */
+        #global-map-en,
+        #global-map-it {
+          opacity: 0;
+          transition: opacity 0.5s ease-in;
+        }
+        
+        /* Show map after positioning is complete */
+        #global-map-en.map-ready,
+        #global-map-it.map-ready {
+          opacity: 1;
+        }
       </style>
       
       <script define:vars={{ postsWithCoordsEn, postsWithCoordsIt }}>
@@ -412,36 +419,46 @@ const postsWithCoords = postsWithCoordsEn
 
           // Initialize English map
           if (postsEn.length > 0) {
-            const loadingElEn = document.querySelector('#global-map-en .map-loading');
-            if (loadingElEn) loadingElEn.remove();
-
-            mapEn = L.map('global-map-en', {
-              zoomControl: false
-            }).setView([41.9028, 12.4964], 6);
-            
-            // Expose to global scope for language switching
-            window.mapEn = mapEn;
-            
-            setupMapContent(mapEn, postsEn, 'en');
+            // Delay map creation slightly to ensure DOM is ready
+            setTimeout(() => {
+              // Calculate bounds and center
+              const bounds = L.latLngBounds(postsEn.map(post => [post.coords.lat, post.coords.lon]));
+              const center = bounds.getCenter();
+              
+              mapEn = L.map('global-map-en', {
+                zoomControl: false
+              }).setView([center.lat, center.lng], 10);
+              
+              // Expose to global scope for language switching
+              window.mapEn = mapEn;
+              
+              setupMapContent(mapEn, postsEn, 'en');
+            }, 100);
           }
 
           // Initialize Italian map  
           if (postsIt.length > 0) {
-            const loadingElIt = document.querySelector('#global-map-it .map-loading');
-            if (loadingElIt) loadingElIt.remove();
+            // Delay map creation slightly to ensure DOM is ready
+            setTimeout(() => {
+              // Calculate bounds and center
+              const bounds = L.latLngBounds(postsIt.map(post => [post.coords.lat, post.coords.lon]));
+              const center = bounds.getCenter();
 
-            mapIt = L.map('global-map-it', {
-              zoomControl: false
-            }).setView([41.9028, 12.4964], 6);
-            
-            // Expose to global scope for language switching
-            window.mapIt = mapIt;
-            
-            setupMapContent(mapIt, postsIt, 'it');
+              mapIt = L.map('global-map-it', {
+                zoomControl: false
+              }).setView([center.lat, center.lng], 10);
+              
+              // Expose to global scope for language switching
+              window.mapIt = mapIt;
+              
+              setupMapContent(mapIt, postsIt, 'it');
+            }, 100);
           }
         }
 
         function setupMapContent(map, posts, lang) {
+          // Get the correct map container ID
+          const mapContainerId = lang === 'en' ? 'global-map-en' : 'global-map-it';
           // Add zoom control
           const isMobile = window.innerWidth <= 640;
           L.control.zoom({
@@ -478,13 +495,28 @@ const postsWithCoords = postsWithCoordsEn
             markers.push(marker);
           });
 
-          // Fit bounds
+          // Adjust map view for all locations (like in GeoMap)
           if (markers.length > 0) {
             const group = new L.featureGroup(markers);
-            setTimeout(() => {
-              map.fitBounds(group.getBounds().pad(0.1));
-            }, 100);
+            map.fitBounds(group.getBounds().pad(0.1));
           }
+          
+          // Show map after positioning is complete
+          setTimeout(() => {
+            // Show the map by adding class to the correct map div
+            const mapDiv = document.getElementById(mapContainerId);
+            if (mapDiv) {
+              mapDiv.classList.add('map-ready');
+            }
+          }, 400);
+          
+          // Fallback to show map after longer delay
+          setTimeout(() => {
+            const mapDiv = document.getElementById(mapContainerId);
+            if (mapDiv && !mapDiv.classList.contains('map-ready')) {
+              mapDiv.classList.add('map-ready');
+            }
+          }, 1000);
         }
         
         // Try multiple loading strategies
