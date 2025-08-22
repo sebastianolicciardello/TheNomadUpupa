@@ -7,6 +7,17 @@ publishTime: 2025-08-13T00:00:00Z
 coords:
   lat: 37.61277
   lon: 15.16559
+music:
+  url: "https://music.youtube.com/watch?v=sRq3bVRZW2g&feature=shared"
+  description:
+    en: "This song carries the same breath as what I’ve shared here.
+It speaks of finding a way to disappear from the noise, only to reappear more authentic, with one’s true voice. That is what I’ve done too—stepping away from certain spaces and returning through this blog, in my own way.
+
+The line “I’ll follow you where you go” recalls the hoopoe, migrating by instinct alone. It’s the same invitation I felt: to let myself be guided, not knowing exactly where, but trusting the direction."
+    it: "Questa canzone cattura lo stesso respiro di ciò che ho raccontato qui.
+È la storia di un modo per scomparire dal rumore e poi riapparire più autentici, con la propria voce. È quello che ho fatto scegliendo di lasciare certi spazi e tornare con questo blog, a modo mio.
+
+Il verso “I’ll follow you where you go” richiama l’upupa che migra seguendo soltanto l’istinto. Lo stesso invito che ho sentito: lasciarmi guidare, senza sapere dove, ma con fiducia nella direzione."
 locations:
   - name:
       en: "Acireale"

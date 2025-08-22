@@ -1,0 +1,138 @@
+---
+export interface Props {
+  url: string;
+  title?: string;
+}
+
+const { url, title } = Astro.props;
+
+// Extract video ID from YouTube Music URL
+function getVideoId(url: string): string | null {
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/|music\.youtube\.com\/watch\?v=)([^&\n?#]+)/,
+    /youtube\.com\/embed\/([^&\n?#]+)/,
+    /youtube\.com\/v\/([^&\n?#]+)/
+  ];
+  
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match) return match[1];
+  }
+  return null;
+}
+
+const videoId = getVideoId(url);
+if (!videoId) {
+  throw new Error(`Invalid YouTube Music URL: ${url}`);
+}
+
+const embedUrl = `https://www.youtube.com/embed/${videoId}?origin=${Astro.site?.origin || 'https://thenomadupupa.eu'}`;
+const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+---
+
+<div class="youtube-music-player my-6 not-prose">
+  <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700">
+    <!-- Header -->
+    <div class="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-red-500 to-red-600 text-white">
+      <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+      </svg>
+      <div class="flex-1 min-w-0">
+        <p class="text-sm font-medium text-white truncate">
+          {title || 'Brano YouTube Music'}
+        </p>
+        <p class="text-xs text-red-100">
+          Clicca per ascoltare
+        </p>
+      </div>
+    </div>
+    
+    <!-- Player Container -->
+    <div class="relative bg-gray-100 dark:bg-gray-900">
+      <div class="aspect-video relative">
+        <!-- Thumbnail -->
+        <img 
+          src={thumbnailUrl}
+          alt={title || 'YouTube Music thumbnail'}
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+        
+        <!-- Play overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group hover:bg-opacity-30 transition-all duration-200 cursor-pointer" 
+             data-embed-url={embedUrl}>
+          <div class="bg-red-600 hover:bg-red-700 rounded-full p-4 group-hover:scale-110 transition-all duration-200 shadow-lg">
+            <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        
+        <!-- Iframe container (hidden initially) -->
+        <div class="absolute inset-0 hidden" data-iframe-container>
+          <!-- Iframe will be inserted here -->
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="px-4 py-2 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+      <div class="flex items-center justify-between text-sm">
+        <a href={url} 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors flex items-center gap-1">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+          </svg>
+          Apri su YouTube Music
+        </a>
+        <span class="text-xs text-gray-500 dark:text-gray-500">
+          🎵
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Handle click to load iframe
+  document.addEventListener('DOMContentLoaded', () => {
+    const players = document.querySelectorAll('[data-embed-url]');
+    
+    players.forEach(player => {
+      player.addEventListener('click', () => {
+        const embedUrl = player.getAttribute('data-embed-url');
+        const container = player.nextElementSibling;
+        
+        if (embedUrl && container && container.hasAttribute('data-iframe-container')) {
+          // Create iframe
+          const iframe = document.createElement('iframe');
+          iframe.src = embedUrl;
+          iframe.width = '100%';
+          iframe.height = '100%';
+          iframe.style.border = 'none';
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          iframe.allowFullscreen = true;
+          
+          // Replace thumbnail with iframe
+          container.appendChild(iframe);
+          container.classList.remove('hidden');
+          player.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .youtube-music-player {
+    max-width: 100%;
+  }
+  
+  @media (min-width: 640px) {
+    .youtube-music-player {
+      max-width: 500px;
+    }
+  }
+</style>

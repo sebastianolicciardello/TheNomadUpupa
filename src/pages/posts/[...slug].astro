@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import GeoMap from '../../components/GeoMap.astro';
+import MusicPlayer from '../../components/MusicPlayer.astro';
 import type { Language } from '../../utils/i18n';
 import { marked } from 'marked';
 
@@ -46,7 +47,13 @@ function resolveMultilingualData(data: any, targetLang: Language) {
   Object.keys(resolved).forEach(key => {
     const value = resolved[key];
     if (typeof value === 'object' && value !== null && !Array.isArray(value) && !value.lat) {
-      if (value[targetLang]) {
+      // Special handling for music object with nested multilingual description
+      if (key === 'music' && value.description && typeof value.description === 'object') {
+        resolved[key] = {
+          ...value,
+          description: value.description[targetLang] || value.description.en || value.description
+        };
+      } else if (value[targetLang]) {
         resolved[key] = value[targetLang];
       } else if (value.en) {
         resolved[key] = value.en; // Fallback to English
@@ -240,6 +247,24 @@ if (post.isMultilingual) {
           <div set:html={processedMarkdownIt} />
         </main>
       </div>
+    )}
+
+    {/* Music Player section */}
+    {((processedDataEn?.music && processedDataEn.music.url) || (processedDataIt?.music && processedDataIt.music.url)) && (
+      <section class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 font-serif" data-lang="en">
+          🎵 Soundtrack
+        </h3>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 font-serif" data-lang="it" style="display: none;">
+          🎵 Colonna Sonora
+        </h3>
+        <div data-lang="en">
+          <MusicPlayer music={processedDataEn?.music} lang="en" />
+        </div>
+        <div data-lang="it" style="display: none;">
+          <MusicPlayer music={processedDataIt?.music} lang="it" />
+        </div>
+      </section>
     )}
 
     {/* GeoMap section */}

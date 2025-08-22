@@ -12,7 +12,8 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.3",
     "astro": "^5.12.8",
-    "marked": "^16.1.2"
+    "marked": "^16.1.2",
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",

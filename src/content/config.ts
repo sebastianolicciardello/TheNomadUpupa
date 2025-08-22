@@ -26,6 +26,10 @@ const postSchema = z.object({
     coords: z.object({ lat: z.number(), lon: z.number() }),
     isMain: z.boolean().optional()
   })).optional(),
+  music: z.object({
+    url: z.string(),
+    description: multilingualField.optional()
+  }).optional(),
   cover: z.string().optional(),
   description: multilingualField.optional(),
   lang: z.enum(['en', 'it']).optional(),

@@ -1,0 +1,63 @@
+---
+import YouTubeMusicPlayer from './YouTubeMusicPlayer.astro';
+import { processYouTubeMusicLinks } from '../utils/youtubeMusicProcessor';
+
+export interface Props {
+  content: string;
+}
+
+const { content } = Astro.props;
+
+// Process the content to replace YouTube Music links with players
+const processedContent = processYouTubeMusicLinks(content);
+---
+
+<!-- Make YouTubeMusicPlayer available in the processed content -->
+<div class="processed-content">
+  <Fragment set:html={processedContent} />
+</div>
+
+<!-- Import YouTube Music Player component styles and functionality -->
+<script>
+  // Re-run YouTube Music player initialization for dynamically added content
+  const reinitializeYouTubePlayers = () => {
+    const players = document.querySelectorAll('[data-embed-url]');
+    
+    players.forEach(player => {
+      // Skip if already initialized
+      if (player.hasAttribute('data-initialized')) return;
+      player.setAttribute('data-initialized', 'true');
+      
+      player.addEventListener('click', () => {
+        const embedUrl = player.getAttribute('data-embed-url');
+        const container = player.nextElementSibling;
+        
+        if (embedUrl && container && container.hasAttribute('data-iframe-container')) {
+          // Create iframe
+          const iframe = document.createElement('iframe');
+          iframe.src = embedUrl;
+          iframe.width = '100%';
+          iframe.height = '100%';
+          iframe.style.border = 'none';
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          iframe.allowFullscreen = true;
+          
+          // Replace thumbnail with iframe
+          container.appendChild(iframe);
+          container.classList.remove('hidden');
+          player.classList.add('hidden');
+        }
+      });
+    });
+  };
+
+  // Initialize on load
+  document.addEventListener('DOMContentLoaded', reinitializeYouTubePlayers);
+  
+  // Also initialize immediately if DOM is already loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', reinitializeYouTubePlayers);
+  } else {
+    reinitializeYouTubePlayers();
+  }
+</script>

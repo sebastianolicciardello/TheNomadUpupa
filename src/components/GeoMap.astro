@@ -153,6 +153,18 @@ const mapId = hasLocations ? `map-${Date.now()}` : '';
       }
       console.log('Leaflet loaded, initializing GeoMap...');
       
+      // Check if map is already initialized
+      const mapContainer = document.getElementById(mapId);
+      if (!mapContainer) {
+        console.log('Map container not found:', mapId);
+        return;
+      }
+      
+      if (mapContainer._leaflet_id) {
+        console.log('Map already initialized for container:', mapId);
+        return;
+      }
+      
       // Determine locations to display
       const locationsToShow = locations && locations.length > 0 ? locations : 
                               coords ? [{name: 'Location', coords: coords, isMain: true}] : [];
@@ -161,9 +173,11 @@ const mapId = hasLocations ? `map-${Date.now()}` : '';
       
       // Initialize the map centered on the main location or first location
       const mainLocation = locationsToShow.find(loc => loc.isMain) || locationsToShow[0];
-      const map = L.map(mapId, {
-        zoomControl: false
-      }).setView([mainLocation.coords.lat, mainLocation.coords.lon], 15);
+      
+      try {
+        const map = L.map(mapId, {
+          zoomControl: false
+        }).setView([mainLocation.coords.lat, mainLocation.coords.lon], 15);
       
       // Add zoom control in top left for desktop, bottom left for mobile
       const isMobile = window.innerWidth <= 640;
@@ -271,16 +285,31 @@ const mapId = hasLocations ? `map-${Date.now()}` : '';
         originalUpdateMapTheme();
         updateMarkers();
       };
+      
+      } catch (error) {
+        console.error('Error initializing map:', error);
+        // If map initialization fails, try to clean up and retry once
+        if (mapContainer._leaflet_id) {
+          delete mapContainer._leaflet_id;
+        }
+      }
     }
     
-    // Try multiple loading strategies
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initializeGeoMap);
-    } else {
+    // Try multiple loading strategies with protection against multiple calls
+    let geoMapInitialized = false;
+    function safeInitializeGeoMap() {
+      if (geoMapInitialized) return;
+      geoMapInitialized = true;
       initializeGeoMap();
     }
     
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', safeInitializeGeoMap);
+    } else {
+      safeInitializeGeoMap();
+    }
+    
     // Fallback
-    window.addEventListener('load', initializeGeoMap);
+    window.addEventListener('load', safeInitializeGeoMap);
   </script>
 ) : null}

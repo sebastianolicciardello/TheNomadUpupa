@@ -1,13 +1,15 @@
 ---
 import Layout from './Layout.astro';
 import GeoMap from '../components/GeoMap.astro';
+import MusicPlayer from '../components/MusicPlayer.astro';
 import { t, type Language } from '../utils/i18n';
 
-const { title, eventTime, publishTime, coords, locations, cover, lang } = Astro.props;
+const { title, eventTime, publishTime, coords, locations, music, cover, lang } = Astro.props;
 const currentLang = lang || 'en';
 const hasCoords = coords && coords.lat && coords.lon;
 const hasLocations = locations && locations.length > 0;
 const hasAnyLocation = hasCoords || hasLocations;
+const hasMusic = music && music.url;
 
 const backText = currentLang === 'it' ? 'Torna all\'archivio' : 'Back to archive';
 const eventText = currentLang === 'it' ? 'Evento:' : 'Event:';
@@ -15,6 +17,7 @@ const publishedText = currentLang === 'it' ? 'Pubblicato:' : 'Published:';
 const placesText = currentLang === 'it' 
   ? (hasLocations && locations.length > 1 ? 'Luoghi Visitati' : 'Dove Sono Stato')
   : (hasLocations && locations.length > 1 ? 'Places I\'ve Been' : 'Where I\'ve Been');
+const musicText = currentLang === 'it' ? 'Canzone che Mi Ha Ispirato' : 'Song That Inspired Me';
 const backUrl = '/blog/'; // Same URL for both languages
 const locale = currentLang === 'it' ? 'it-IT' : 'en-US';
 ---
@@ -84,6 +87,15 @@ const locale = currentLang === 'it' ? 'it-IT' : 'en-US';
         <div class="rounded-lg overflow-hidden shadow-lg">
           <GeoMap coords={coords} locations={locations} />
         </div>
+      </section>
+    )}
+    
+    {hasMusic && (
+      <section class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 font-serif">
+          🎵 {musicText}
+        </h3>
+        <MusicPlayer music={music} lang={currentLang} />
       </section>
     )}
   </article>

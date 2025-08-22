@@ -7,6 +7,11 @@ publishTime: 2025-08-21T00:00:00Z
 coords:
   lat: 38.79299
   lon: 15.21447
+music:
+  url: "https://music.youtube.com/watch?v=2FRVoa1L3LI&feature=shared"
+  description:
+    en: "It is in tune with my experience of those days: the need to create pauses of silence to listen to myself again."
+    it: "È in sintonia con la mia esperienza di quei giorni: il bisogno di creare pause di silenzio per tornare ad ascoltarmi."
 locations:
   - name:
       en: "Stromboli"
