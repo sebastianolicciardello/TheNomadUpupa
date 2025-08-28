@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Stili solo per le immagini nel contenuto prose (markdown) */
+.prose img {
+  border-radius: 0.5rem !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  margin: 1rem auto !important;
+  display: block !important;
+  max-height: 450px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
