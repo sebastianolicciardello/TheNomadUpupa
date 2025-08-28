@@ -21,19 +21,19 @@ locations:
       lon: 14.9533
     isMain: true
   - name:
-      en: "Geophysical Observatory"
+      en: "Osservatorio GeoFisico"
       it: "Osservatorio GeoFisico"
     coords:
       lat: 38.445758
       lon: 14.948248
   - name:
-      en: "Warm Waters Beach"
+      en: "Spiaggia delle acque calde"
       it: "Spiaggia delle acque calde"
     coords:
       lat: 38.417880
       lon: 14.959398
   - name:
-      en: "Black Sand Beach"
+      en: "Spiaggia delle sabbie nere"
       it: "Spiaggia delle sabbie nere"
     coords:
       lat: 38.419586
