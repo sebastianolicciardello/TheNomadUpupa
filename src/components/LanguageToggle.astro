@@ -32,8 +32,12 @@ const alternateLang = getAlternateLanguage(currentLang);
         if (newLang) {
           // Save language preference
           localStorage.setItem('language-preference', newLang);
-          // Reload page to apply new language
-          window.location.reload();
+          // Update content without reloading
+          if (window.updateLanguageContent) {
+            window.updateLanguageContent(newLang);
+          } else {
+            window.location.reload();
+          }
         }
       });
     });

@@ -70,6 +70,8 @@ export const translations = {
     'connect.telegram': 'Telegram',
     'connect.channel': 'Channel',
     'connect.instagram': 'Instagram',
+    'settings.language': 'Language',
+    'settings.theme': 'Theme',
   },
   it: {
     'nav.home': 'Casa',
@@ -96,6 +98,8 @@ export const translations = {
     'connect.telegram': 'Telegram',
     'connect.channel': 'Canale',
     'connect.instagram': 'Instagram',
+    'settings.language': 'Lingua',
+    'settings.theme': 'Tema',
   }
 } as const;
 

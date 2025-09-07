@@ -15,7 +15,7 @@ const alternateLang = getAlternateLanguage(currentLang);
 ---
 
 <!doctype html>
-<html lang={currentLang} class="scroll-smooth">
+<html lang={currentLang} class="scroll-smooth" style="visibility: hidden;" data-lang-loading="true">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -26,6 +26,27 @@ const alternateLang = getAlternateLanguage(currentLang);
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
 		<title>{pageTitle}</title>
+		<style>
+			/* Pre-hide wrong language content to prevent flash */
+			html[data-initial-lang="it"] [data-lang="en"] { display: none !important; }
+			html[data-initial-lang="en"] [data-lang="it"] { display: none !important; }
+			/* Show correct language content immediately */
+			html[data-initial-lang="it"] [data-lang="it"] { display: block !important; }
+			html[data-initial-lang="en"] [data-lang="en"] { display: block !important; }
+		</style>
+		<script>
+			// Pre-load language detection to prevent flash - execute immediately
+			(function() {
+				const savedLang = localStorage.getItem('language-preference');
+				if (savedLang && (savedLang === 'it' || savedLang === 'en')) {
+					document.documentElement.setAttribute('data-initial-lang', savedLang);
+				} else {
+					const browserLang = navigator.language.toLowerCase();
+					const detectedLang = browserLang.startsWith('it') ? 'it' : 'en';
+					document.documentElement.setAttribute('data-initial-lang', detectedLang);
+				}
+			})();
+		</script>
 	</head>
 	<body class="bg-warm-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans antialiased min-h-screen transition-colors duration-200">
 		<nav class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
@@ -49,7 +70,8 @@ const alternateLang = getAlternateLanguage(currentLang);
 						</span>
 						<button id="lang-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Switch language">
 							<span class="text-sm font-medium" id="lang-button-text">
-								EN
+								<span data-lang="en">IT</span>
+								<span data-lang="it" style="display: none;">EN</span>
 							</span>
 						</button>
 						<button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Toggle theme">
@@ -95,15 +117,22 @@ const alternateLang = getAlternateLanguage(currentLang);
 						<!-- Language and Theme toggles -->
 						<div class="px-3 py-2 space-y-3">
 							<div class="flex items-center justify-between">
-								<span class="text-sm text-gray-600 dark:text-gray-400">Language</span>
+								<span class="text-sm text-gray-600 dark:text-gray-400">
+									<span data-lang="en">{t('settings.language', 'en')}</span>
+									<span data-lang="it" style="display: none;">{t('settings.language', 'it')}</span>
+								</span>
 								<button id="lang-toggle-mobile" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Switch language">
 									<span class="text-sm font-medium" id="lang-button-text-mobile">
-										EN
+										<span data-lang="en">IT</span>
+										<span data-lang="it" style="display: none;">EN</span>
 									</span>
 								</button>
 							</div>
 							<div class="flex items-center justify-between">
-								<span class="text-sm text-gray-600 dark:text-gray-400">Theme</span>
+								<span class="text-sm text-gray-600 dark:text-gray-400">
+									<span data-lang="en">{t('settings.theme', 'en')}</span>
+									<span data-lang="it" style="display: none;">{t('settings.theme', 'it')}</span>
+								</span>
 								<button id="theme-toggle-mobile" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Toggle theme">
 									<svg id="theme-toggle-light-icon-mobile" class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
 										<path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
@@ -175,21 +204,10 @@ const alternateLang = getAlternateLanguage(currentLang);
 			}
 		}, 100);
 		
-		// Update language buttons
-		const langButtonText = document.getElementById('lang-button-text');
-		const langButtonTextMobile = document.getElementById('lang-button-text-mobile');
-		const newLang = lang === 'en' ? 'IT' : 'EN';
-		
-		if (langButtonText) {
-			langButtonText.textContent = newLang;
-		}
-		if (langButtonTextMobile) {
-			langButtonTextMobile.textContent = newLang;
-		}
-		
 		// Update document attributes
 		document.documentElement.setAttribute('lang', lang);
 		document.documentElement.setAttribute('data-language', lang);
+		document.documentElement.setAttribute('data-initial-lang', lang);
 	}
 	
 	function setLanguage(lang) {
@@ -197,25 +215,31 @@ const alternateLang = getAlternateLanguage(currentLang);
 		updateLanguageContent(lang);
 	}
 	
+	// Expose functions globally for other components
+	window.updateLanguageContent = updateLanguageContent;
+	window.getCurrentLanguage = getCurrentLanguage;
+	window.setLanguage = setLanguage;
+	
 	// Initialize language system when DOM is ready
 	document.addEventListener('DOMContentLoaded', () => {
 		const currentLang = getCurrentLanguage();
 		updateLanguageContent(currentLang);
-	});
-	// Language toggle functionality
-	const langToggle = document.getElementById('lang-toggle');
-	const langToggleMobile = document.getElementById('lang-toggle-mobile');
-	
-	langToggle?.addEventListener('click', () => {
-		const currentLang = getCurrentLanguage();
-		const newLang = currentLang === 'en' ? 'it' : 'en';
-		setLanguage(newLang);
-	});
-	
-	langToggleMobile?.addEventListener('click', () => {
-		const currentLang = getCurrentLanguage();
-		const newLang = currentLang === 'en' ? 'it' : 'en';
-		setLanguage(newLang);
+		// Show page after language is set
+		document.documentElement.style.visibility = 'visible';
+		document.documentElement.removeAttribute('data-lang-loading');
+		
+		// Language toggle functionality - moved inside DOMContentLoaded
+		const langToggle = document.getElementById('lang-toggle');
+		const langToggleMobile = document.getElementById('lang-toggle-mobile');
+		
+		function handleLanguageToggle() {
+			const currentLang = getCurrentLanguage();
+			const newLang = currentLang === 'en' ? 'it' : 'en';
+			setLanguage(newLang);
+		}
+		
+		langToggle?.addEventListener('click', handleLanguageToggle);
+		langToggleMobile?.addEventListener('click', handleLanguageToggle);
 	});
 
 	// Theme toggle functionality
