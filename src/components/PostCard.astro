@@ -11,6 +11,8 @@ const postUrl = `/posts/${post.slug.replace('it/', '').replace('en/', '')}/`;
 
 const locale = lang === 'it' ? 'it-IT' : 'en-US';
 const readMoreText = lang === 'it' ? 'Leggi di più' : 'Read more';
+const eventLabel = lang === 'it' ? 'Evento:' : 'Event:';
+const publishLabel = lang === 'it' ? 'Pubblicato:' : 'Published:';
 ---
 
 <article class="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
@@ -34,13 +36,30 @@ const readMoreText = lang === 'it' ? 'Leggi di più' : 'Read more';
             {post.data.title}
           </a>
         </h3>
-        <time class="text-sm text-gray-500 dark:text-gray-400 mb-3 block">
-          {new Date(post.data.eventTime).toLocaleDateString(locale, {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
-        </time>
+        <div class="text-sm text-gray-500 dark:text-gray-400 mb-3 space-y-1">
+          <div>
+            <span class="font-medium">{eventLabel}</span>
+            <time datetime={post.data.eventTime.toISOString()}>
+              {new Date(post.data.eventTime).toLocaleDateString(locale, {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+            </time>
+          </div>
+          {post.data.publishTime && (
+            <div>
+              <span class="font-medium">{publishLabel}</span>
+              <time datetime={post.data.publishTime.toISOString()}>
+                {new Date(post.data.publishTime).toLocaleDateString(locale, {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </time>
+            </div>
+          )}
+        </div>
       </div>
     </>
   ) : (
@@ -58,14 +77,29 @@ const readMoreText = lang === 'it' ? 'Leggi di più' : 'Read more';
         </div>
       )}
       <div class={`p-6 ${post.data.cover ? 'md:w-2/3' : 'w-full'}`}>
-        <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-3">
-          <time datetime={post.data.eventTime.toISOString()}>
-            {post.data.eventTime.toLocaleDateString(locale, {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            })}
-          </time>
+        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-3">
+          <div>
+            <span class="font-medium">{eventLabel}</span>
+            <time datetime={post.data.eventTime.toISOString()}>
+              {new Date(post.data.eventTime).toLocaleDateString(locale, {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+            </time>
+          </div>
+          {post.data.publishTime && (
+            <div>
+              <span class="font-medium">{publishLabel}</span>
+              <time datetime={post.data.publishTime.toISOString()}>
+                {new Date(post.data.publishTime).toLocaleDateString(locale, {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </time>
+            </div>
+          )}
         </div>
         
         <h2 class="text-xl md:text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-3">
