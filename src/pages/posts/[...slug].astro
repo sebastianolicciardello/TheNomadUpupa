@@ -271,10 +271,10 @@ if (post.isMultilingual) {
     {((processedDataEn?.coords || processedDataEn?.locations) || (processedDataIt?.coords || processedDataIt?.locations)) && (
       <section class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
         <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 font-serif" data-lang="en">
-          📍 Places I've Been
+          📍 Places I've Explored
         </h3>
         <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 font-serif" data-lang="it" style="display: none;">
-          📍 Luoghi Visitati
+          📍 Luoghi Esplorati
         </h3>
         <div class="rounded-lg overflow-hidden shadow-lg">
           <GeoMap coords={processedDataEn?.coords || processedDataIt?.coords} locations={processedDataEn?.locations || processedDataIt?.locations} />
