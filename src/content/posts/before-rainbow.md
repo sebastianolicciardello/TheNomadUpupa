@@ -39,8 +39,7 @@ locations:
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1760282394/photo_2025-01-01_10.54.05_cwlneh.jpg
 description:
   en: "The month when the fear of change paralyzed me, teaching me that recognizing your fears is already the beginning of the journey."
-  it: "Il mese in cui la paura del cambiamento mi ha paralizzato, insegnandomi che riconoscere le proprie paure è già l'inizio del viaggio.
-"
+  it: "Il mese in cui la paura del cambiamento mi ha paralizzato, insegnandomi che riconoscere le proprie paure è già l'inizio del viaggio."
 translationKey: "before-rainbow"
 ---
 
