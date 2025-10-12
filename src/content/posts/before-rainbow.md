@@ -2,7 +2,7 @@
 title:
   en: "Before the rainbow"
   it: "Prima dell'Arcobaleno"
-eventTime: 2025-12-18T00:00:00Z
+eventTime: 2024-12-18T00:00:00Z
 publishTime: 2025-10-12
 coords:
   lat: 0
