@@ -10,24 +10,34 @@ coords:
 music:
   url: "https://music.youtube.com/watch?v=R3uXuwo5rOc&si=xwI3vEOw5xM3Bfhd"
   description:
-    en: "The song talks about a heart that has been frozen for a long time and suddenly begins to thaw. And it hurts. It hurts so much that you want to turn back, to remain numb rather than feel. That's exactly what was happening to me: it wasn't just anxiety or fear of the future, it was the pain of a change occurring inside me, melting away all the certainties I had clung to.
+    en: >
+      The song talks about a heart that has been frozen for a long time and suddenly begins to thaw. And it hurts. It hurts so much that you want to turn back, to remain numb rather than feel. That's exactly what was happening to me: it wasn't just anxiety or fear of the future, it was the pain of a change occurring inside me, melting away all the certainties I had clung to.
 
-For years I had built this image of myself as an organized, rational person who has everything under control. And then, that December, I found myself trembling, not sleeping, seeing black figures in the night. I had to surrender to the idea that maybe I wasn't as strong as I thought. Or rather: I learned that admitting fear doesn't make you weak, it makes you human.
 
-But the part that struck me most is toward the end, when it sings that she'll keep going forward even if the place she ends up isn't "over the rainbow." And that's okay. In December I was desperately trying to imagine "where I'll end up," seeking that perfect certainty that would make me feel safe. But perhaps the truth is that there is no "over the rainbow" where everything is resolved and perfect. There's only continuing to walk, one step at a time, even when your heart hurts.
+      For years I had built this image of myself as an organized, rational person who has everything under control. And then, that December, I found myself trembling, not sleeping, seeing black figures in the night. I had to surrender to the idea that maybe I wasn't as strong as I thought. Or rather: I learned that admitting fear doesn't make you weak, it makes you human.
 
-And to anyone finding themselves living similar feelings over a difficult choice to make, I say:
 
-Tatakae! (Fight!) for your freedom."
-    it: "La canzone parla di un cuore che è stato congelato per tanto tempo e che improvvisamente inizia a scongelarsi. E fa male. Fa così male che viene voglia di tornare indietro, di rimanere intorpiditi piuttosto che sentire. È esattamente quello che mi stava succedendo: non era solo ansia o paura del futuro, era il dolore di un cambiamento che stava avvenendo dentro di me, che stava sciogliendo tutte le certezze a cui mi ero aggrappato.
+      But the part that struck me most is toward the end, when it sings that she'll keep going forward even if the place she ends up isn't "over the rainbow." And that's okay. In December I was desperately trying to imagine "where I'll end up," seeking that perfect certainty that would make me feel safe. But perhaps the truth is that there is no "over the rainbow" where everything is resolved and perfect. There's only continuing to walk, one step at a time, even when your heart hurts.
 
-Per anni mi ero costruito questa immagine di persona organizzata, razionale, che ha tutto sotto controllo. E poi, in quel dicembre, mi sono ritrovato a tremare, a non dormire, a vedere figure nere nella notte. Mi sono dovuto arrendere all'idea che forse non ero così forte come credevo. O meglio: ho imparato che ammettere la paura non ti rende debole, ti rende umano. 
 
-Ma la parte che mi ha colpito di più è verso la fine, quando canta che continuerà ad andare avanti anche se il posto dove arriverà non sarà "oltre l'arcobaleno". E va bene così. A dicembre cercavo disperatamente di immaginare il "dove arriverò", cercavo quella certezza perfetta che mi avrebbe fatto sentire al sicuro. Ma forse la verità è che non esiste un "oltre l'arcobaleno" dove tutto è risolto e perfetto. Esiste solo il continuare a camminare, un passo dopo l'altro, anche quando il cuore fa male. 
+      And to anyone finding themselves living similar feelings over a difficult choice to make, I say:
 
-E a chiunque si trovi a vivere sensazioni simili per una scelta difficile da compiere, dico: 
 
-Tatakae! ( Combatti! ) per la tua libertà."
+      Tatakae! (Fight!) for your freedom.
+    it: >
+      La canzone parla di un cuore che è stato congelato per tanto tempo e che improvvisamente inizia a scongelarsi. E fa male. Fa così male che viene voglia di tornare indietro, di rimanere intorpiditi piuttosto che sentire. È esattamente quello che mi stava succedendo: non era solo ansia o paura del futuro, era il dolore di un cambiamento che stava avvenendo dentro di me, che stava sciogliendo tutte le certezze a cui mi ero aggrappato.
+
+
+      Per anni mi ero costruito questa immagine di persona organizzata, razionale, che ha tutto sotto controllo. E poi, in quel dicembre, mi sono ritrovato a tremare, a non dormire, a vedere figure nere nella notte. Mi sono dovuto arrendere all'idea che forse non ero così forte come credevo. O meglio: ho imparato che ammettere la paura non ti rende debole, ti rende umano.
+
+
+      Ma la parte che mi ha colpito di più è verso la fine, quando canta che continuerà ad andare avanti anche se il posto dove arriverà non sarà "oltre l'arcobaleno". E va bene così. A dicembre cercavo disperatamente di immaginare il "dove arriverò", cercavo quella certezza perfetta che mi avrebbe fatto sentire al sicuro. Ma forse la verità è che non esiste un "oltre l'arcobaleno" dove tutto è risolto e perfetto. Esiste solo il continuare a camminare, un passo dopo l'altro, anche quando il cuore fa male.
+
+
+      E a chiunque si trovi a vivere sensazioni simili per una scelta difficile da compiere, dico:
+
+
+      Tatakae! ( Combatti! ) per la tua libertà.
 locations:
   - name:
       en: "Sentiero Monte Spagnolo"
