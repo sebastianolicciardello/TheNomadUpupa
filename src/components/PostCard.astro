@@ -2,10 +2,9 @@
 export interface Props {
   post: any;
   lang?: 'en' | 'it';
-  compact?: boolean;
 }
 
-const { post, lang = 'en', compact = false } = Astro.props;
+const { post, lang = 'en' } = Astro.props;
 
 const postUrl = `/posts/${post.slug.replace('it/', '').replace('en/', '')}/`;
 
@@ -15,28 +14,28 @@ const eventLabel = lang === 'it' ? 'Evento:' : 'Event:';
 const publishLabel = lang === 'it' ? 'Pubblicato:' : 'Published:';
 ---
 
-<article class="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
-  {compact ? (
-    <!-- Compact grid layout for homepage -->
-    <>
-      {post.data.cover && (
-        <div class="aspect-video overflow-hidden">
-          <a href={postUrl}>
-            <img 
-              src={post.data.cover} 
-              alt={`Cover for ${post.data.title}`}
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
-            />
-          </a>
-        </div>
-      )}
-      <div class="p-6">
-        <h3 class="text-lg font-serif font-semibold text-gray-900 dark:text-gray-100 mb-2">
+<article class="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+  <!-- Horizontal compact layout for all cards -->
+  <div class="flex overflow-hidden rounded-lg">
+    {post.data.cover && (
+      <div class="w-48 h-48 flex-shrink-0 overflow-hidden rounded-lg">
+        <a href={postUrl}>
+          <img
+            src={post.data.cover}
+            alt={`Cover for ${post.data.title}`}
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-200 rounded-lg"
+          />
+        </a>
+      </div>
+    )}
+    <div class={`p-4 md:p-6 ${post.data.cover ? 'flex-1' : 'w-full'} flex flex-col justify-between`}>
+      <div>
+        <h3 class="text-lg md:text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-2">
           <a href={postUrl} class="hover:text-warm-600 dark:hover:text-warm-400 transition-colors">
             {post.data.title}
           </a>
         </h3>
-        <div class="text-sm text-gray-500 dark:text-gray-400 mb-3 space-y-1">
+        <div class="text-sm text-gray-500 dark:text-gray-400 space-y-1">
           <div>
             <span class="font-medium">{eventLabel}</span>
             <time datetime={post.data.eventTime.toISOString()}>
@@ -59,70 +58,8 @@ const publishLabel = lang === 'it' ? 'Pubblicato:' : 'Published:';
               </time>
             </div>
           )}
-        </div>
-      </div>
-    </>
-  ) : (
-    <!-- Full blog list layout -->
-    <div class="md:flex">
-      {post.data.cover && (
-        <div class="md:w-1/3">
-          <a href={postUrl}>
-            <img 
-              src={post.data.cover} 
-              alt={`Cover for ${post.data.title}`}
-              class="w-full h-48 md:h-full object-cover hover:scale-105 transition-transform duration-200"
-            />
-          </a>
-        </div>
-      )}
-      <div class={`p-6 ${post.data.cover ? 'md:w-2/3' : 'w-full'}`}>
-        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-3">
-          <div>
-            <span class="font-medium">{eventLabel}</span>
-            <time datetime={post.data.eventTime.toISOString()}>
-              {new Date(post.data.eventTime).toLocaleDateString(locale, {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-              })}
-            </time>
-          </div>
-          {post.data.publishTime && (
-            <div>
-              <span class="font-medium">{publishLabel}</span>
-              <time datetime={post.data.publishTime.toISOString()}>
-                {new Date(post.data.publishTime).toLocaleDateString(locale, {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}
-              </time>
-            </div>
-          )}
-        </div>
-        
-        <h2 class="text-xl md:text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-3">
-          <a 
-            href={postUrl} 
-            class="hover:text-warm-600 dark:hover:text-warm-400 transition-colors"
-          >
-            {post.data.title}
-          </a>
-        </h2>
-        
-        <div class="flex items-center justify-between">
-          <a 
-            href={postUrl}
-            class="inline-flex items-center text-warm-600 dark:text-warm-400 hover:text-warm-700 dark:hover:text-warm-300 transition-colors font-medium"
-          >
-            {readMoreText}
-            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
         </div>
       </div>
     </div>
-  )}
+  </div>
 </article>

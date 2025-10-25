@@ -166,11 +166,12 @@ if (post.isMultilingual) {
             </div>
           </div>
           {processedDataEn.cover && (
-            <div class="mt-6">
-              <img 
-                src={processedDataEn.cover} 
-                alt={`Cover image for ${processedDataEn.title}`} 
-                class="w-full max-h-96 object-cover rounded-lg shadow-md"
+            <div class="mt-6 flex justify-center">
+              <img
+                src={processedDataEn.cover}
+                alt={`Cover image for ${processedDataEn.title}`}
+                class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                style="max-height: 600px;"
               />
             </div>
           )}
@@ -226,11 +227,12 @@ if (post.isMultilingual) {
             </div>
           </div>
           {processedDataIt.cover && (
-            <div class="mt-6">
-              <img 
-                src={processedDataIt.cover} 
-                alt={`Immagine di copertina per ${processedDataIt.title}`} 
-                class="w-full max-h-96 object-cover rounded-lg shadow-md"
+            <div class="mt-6 flex justify-center">
+              <img
+                src={processedDataIt.cover}
+                alt={`Immagine di copertina per ${processedDataIt.title}`}
+                class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                style="max-height: 600px;"
               />
             </div>
           )}

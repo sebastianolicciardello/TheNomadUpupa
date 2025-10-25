@@ -191,7 +191,7 @@ const sortedPostsIt = processedPostsIt.sort((a, b) =>
       const newOrder = currentOrder === 'newest' ? 'oldest' : 'newest';
 
       // Get all post cards
-      const postsContainer = postsList.querySelector('.space-y-8');
+      const postsContainer = postsList.querySelector('.space-y-6');
       if (!postsContainer) return;
 
       const posts = Array.from(postsContainer.children);

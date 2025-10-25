@@ -15,9 +15,9 @@ const {
 ---
 
 {posts.length > 0 ? (
-  <div class="space-y-8">
+  <div class="space-y-6">
     {posts.map((post) => (
-      <PostCard post={post} lang={lang} compact={false} />
+      <PostCard post={post} lang={lang} />
     ))}
   </div>
 ) : (
