@@ -21,11 +21,11 @@ const {
 ---
 
 {posts.length > 0 && (
-  <section class="mb-16">
-    <h2 class="text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-8">
+  <section class="mb-12 sm:mb-16">
+    <h2 class="text-xl sm:text-2xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-4 sm:mb-8">
       {title}
     </h2>
-    <div class="space-y-6">
+    <div class="space-y-3 sm:space-y-4 md:space-y-6">
       {posts.map((post) => (
         <PostCard post={post} lang={lang} />
       ))}

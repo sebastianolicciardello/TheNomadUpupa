@@ -15,10 +15,10 @@ const publishLabel = lang === 'it' ? 'Pubblicato:' : 'Published:';
 ---
 
 <article class="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
-  <!-- Horizontal compact layout for all cards -->
+  <!-- Horizontal compact layout for all screens -->
   <div class="flex overflow-hidden rounded-lg">
     {post.data.cover && (
-      <div class="w-48 h-48 flex-shrink-0 overflow-hidden rounded-lg">
+      <div class="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 flex-shrink-0 overflow-hidden rounded-lg">
         <a href={postUrl}>
           <img
             src={post.data.cover}
@@ -28,31 +28,31 @@ const publishLabel = lang === 'it' ? 'Pubblicato:' : 'Published:';
         </a>
       </div>
     )}
-    <div class={`p-4 md:p-6 ${post.data.cover ? 'flex-1' : 'w-full'} flex flex-col justify-between`}>
+    <div class={`p-3 sm:p-4 md:p-5 ${post.data.cover ? 'flex-1' : 'w-full'} flex flex-col justify-between`}>
       <div>
-        <h3 class="text-lg md:text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-2">
+        <h3 class="text-base sm:text-lg md:text-xl font-serif font-semibold text-gray-900 dark:text-gray-100 mb-1 sm:mb-2 line-clamp-2">
           <a href={postUrl} class="hover:text-warm-600 dark:hover:text-warm-400 transition-colors">
             {post.data.title}
           </a>
         </h3>
-        <div class="text-sm text-gray-500 dark:text-gray-400 space-y-1">
+        <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 space-y-0.5 sm:space-y-1">
           <div>
             <span class="font-medium">{eventLabel}</span>
             <time datetime={post.data.eventTime.toISOString()}>
               {new Date(post.data.eventTime).toLocaleDateString(locale, {
                 year: 'numeric',
-                month: 'long',
+                month: 'short',
                 day: 'numeric'
               })}
             </time>
           </div>
           {post.data.publishTime && (
-            <div>
+            <div class="hidden sm:block">
               <span class="font-medium">{publishLabel}</span>
               <time datetime={post.data.publishTime.toISOString()}>
                 {new Date(post.data.publishTime).toLocaleDateString(locale, {
                   year: 'numeric',
-                  month: 'long',
+                  month: 'short',
                   day: 'numeric'
                 })}
               </time>
