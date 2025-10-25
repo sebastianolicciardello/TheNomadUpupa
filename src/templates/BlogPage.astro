@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import PostsList from '../components/PostsList.astro';
+import ReadingGuide from '../components/ReadingGuide.astro';
 import { getCollection } from 'astro:content';
 import { t, type Language } from '../utils/i18n';
 
@@ -98,10 +99,13 @@ const sortedPostsIt = processedPostsIt.sort((a, b) =>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- English Version -->
     <div data-lang="en">
-      <PageHeader 
+      <PageHeader
         title={t('blog.title', 'en')}
         description={t('blog.description', 'en')}
       />
+
+      <!-- Reading Guide -->
+      <ReadingGuide lang="en" />
 
       <PostsList 
         posts={sortedPostsEn}
@@ -112,10 +116,13 @@ const sortedPostsIt = processedPostsIt.sort((a, b) =>
 
     <!-- Italian Version -->
     <div data-lang="it" style="display: none;">
-      <PageHeader 
+      <PageHeader
         title={t('blog.title', 'it')}
         description={t('blog.description', 'it')}
       />
+
+      <!-- Reading Guide -->
+      <ReadingGuide lang="it" />
 
       <PostsList 
         posts={sortedPostsIt}

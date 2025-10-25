@@ -1,0 +1,72 @@
+---
+import { t, type Language } from '../utils/i18n';
+
+export interface Props {
+  lang?: Language;
+}
+
+const { lang = 'en' } = Astro.props;
+---
+
+<div class="reading-guide-container mb-8 p-8 bg-warm-100 dark:bg-warm-900/20 border-2 border-warm-600 dark:border-warm-500 rounded-xl shadow-lg transition-opacity duration-300">
+  <div class="text-center">
+    <h3 class="font-serif font-bold text-2xl text-gray-900 dark:text-gray-100 mb-4">
+      {t('posts.readingGuide.title', lang)}
+    </h3>
+    <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
+      {t('posts.readingGuide.description', lang)}
+    </p>
+    <button
+      class="reading-guide-dismiss inline-flex items-center px-6 py-3 bg-warm-600 dark:bg-warm-700 text-white rounded-lg hover:bg-warm-700 dark:hover:bg-warm-600 transition-colors duration-200 font-medium text-base"
+      type="button"
+    >
+      {t('posts.readingGuide.dismiss', lang)}
+    </button>
+  </div>
+</div>
+
+<script>
+  (function() {
+    function initGuide() {
+      const guides = document.querySelectorAll('.reading-guide-container');
+      const dismissed = localStorage.getItem('reading-guide-dismissed');
+
+      guides.forEach(function(guide) {
+        // Hide if already dismissed
+        if (dismissed === 'true') {
+          guide.style.display = 'none';
+          return;
+        }
+
+        // Show the guide
+        guide.style.display = 'block';
+
+        // Find the button within this specific guide
+        const button = guide.querySelector('.reading-guide-dismiss');
+        if (button && !button.hasAttribute('data-initialized')) {
+          button.setAttribute('data-initialized', 'true');
+          button.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            localStorage.setItem('reading-guide-dismissed', 'true');
+
+            // Hide all guides
+            document.querySelectorAll('.reading-guide-container').forEach(function(g) {
+              g.style.opacity = '0';
+              setTimeout(function() {
+                g.style.display = 'none';
+              }, 300);
+            });
+          });
+        }
+      });
+    }
+
+    // Run on load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initGuide);
+    } else {
+      initGuide();
+    }
+  })();
+</script>

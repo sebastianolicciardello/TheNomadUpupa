@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/HeroSection.astro';
 import PostsGrid from '../components/PostsGrid.astro';
 import DiscoverSection from '../components/DiscoverSection.astro';
+import ReadingGuide from '../components/ReadingGuide.astro';
 import { getCollection } from 'astro:content';
 import { t, type Language } from '../utils/i18n';
 
@@ -81,10 +82,13 @@ const recentPostsIt = processedPostsIt
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Hero Section - English -->
     <div data-lang="en">
-      <HeroSection 
+      <HeroSection
         title={t('hero.title', 'en')}
         description={t('hero.description', 'en')}
       />
+
+      <!-- Reading Guide -->
+      <ReadingGuide lang="en" />
 
       <!-- Recent Posts -->
       <PostsGrid 
@@ -109,10 +113,13 @@ const recentPostsIt = processedPostsIt
 
     <!-- Hero Section - Italian -->
     <div data-lang="it" style="display: none;">
-      <HeroSection 
+      <HeroSection
         title={t('hero.title', 'it')}
         description={t('hero.description', 'it')}
       />
+
+      <!-- Reading Guide -->
+      <ReadingGuide lang="it" />
 
       <!-- Recent Posts -->
       <PostsGrid 
