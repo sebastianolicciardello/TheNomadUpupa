@@ -107,11 +107,33 @@ const sortedPostsIt = processedPostsIt.sort((a, b) =>
       <!-- Reading Guide -->
       <ReadingGuide lang="en" />
 
-      <PostsList 
-        posts={sortedPostsEn}
-        lang="en"
-        emptyMessage={t('blog.empty', 'en')}
-      />
+      <!-- Sort Button -->
+      <div class="mb-6 flex justify-end">
+        <button
+          id="sortButton-en"
+          class="inline-flex items-center gap-3 px-4 py-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 shadow-sm"
+          data-order="newest"
+          title={t('blog.sort.switchTo.oldest', 'en')}
+        >
+          <span class="text-sm font-medium" data-current-state>{t('blog.sort.newest', 'en')}</span>
+          <div class="flex items-center gap-1 text-gray-400 dark:text-gray-500">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12M8 12h12M8 17h12M3 7h.01M3 12h.01M3 17h.01"></path>
+            </svg>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+        </button>
+      </div>
+
+      <div id="postsList-en">
+        <PostsList
+          posts={sortedPostsEn}
+          lang="en"
+          emptyMessage={t('blog.empty', 'en')}
+        />
+      </div>
     </div>
 
     <!-- Italian Version -->
@@ -124,11 +146,96 @@ const sortedPostsIt = processedPostsIt.sort((a, b) =>
       <!-- Reading Guide -->
       <ReadingGuide lang="it" />
 
-      <PostsList 
-        posts={sortedPostsIt}
-        lang="it"
-        emptyMessage={t('blog.empty', 'it')}
-      />
+      <!-- Sort Button -->
+      <div class="mb-6 flex justify-end">
+        <button
+          id="sortButton-it"
+          class="inline-flex items-center gap-3 px-4 py-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 shadow-sm"
+          data-order="newest"
+          title={t('blog.sort.switchTo.oldest', 'it')}
+        >
+          <span class="text-sm font-medium" data-current-state>{t('blog.sort.newest', 'it')}</span>
+          <div class="flex items-center gap-1 text-gray-400 dark:text-gray-500">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12M8 12h12M8 17h12M3 7h.01M3 12h.01M3 17h.01"></path>
+            </svg>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+        </button>
+      </div>
+
+      <div id="postsList-it">
+        <PostsList
+          posts={sortedPostsIt}
+          lang="it"
+          emptyMessage={t('blog.empty', 'it')}
+        />
+      </div>
     </div>
   </div>
 </Layout>
+
+<script>
+  import { t } from '../utils/i18n';
+
+  function setupSortButton(lang: 'en' | 'it') {
+    const button = document.getElementById(`sortButton-${lang}`);
+    const postsList = document.getElementById(`postsList-${lang}`);
+
+    if (!button || !postsList) return;
+
+    button.addEventListener('click', () => {
+      const currentOrder = button.getAttribute('data-order');
+      const newOrder = currentOrder === 'newest' ? 'oldest' : 'newest';
+
+      // Get all post cards
+      const postsContainer = postsList.querySelector('.space-y-8');
+      if (!postsContainer) return;
+
+      const posts = Array.from(postsContainer.children);
+
+      // Reverse the order
+      posts.reverse();
+
+      // Clear and re-append in new order
+      postsContainer.innerHTML = '';
+      posts.forEach(post => postsContainer.appendChild(post));
+
+      // Update button state
+      button.setAttribute('data-order', newOrder);
+
+      // Update current state text
+      const stateSpan = button.querySelector('[data-current-state]');
+      if (stateSpan) {
+        stateSpan.textContent = newOrder === 'newest'
+          ? t('blog.sort.newest', lang)
+          : t('blog.sort.oldest', lang);
+      }
+
+      // Update title (tooltip)
+      button.setAttribute('title', newOrder === 'newest'
+        ? t('blog.sort.switchTo.oldest', lang)
+        : t('blog.sort.switchTo.newest', lang)
+      );
+
+      // Update icon direction
+      const icon = button.querySelector('[data-icon]');
+      if (icon) {
+        const path = icon.querySelector('path');
+        if (path) {
+          // Down arrow for newest (descending), up arrow for oldest (ascending)
+          path.setAttribute('d', newOrder === 'newest'
+            ? 'M19 9l-7 7-7-7'  // Down arrow
+            : 'M5 15l7-7 7 7'   // Up arrow
+          );
+        }
+      }
+    });
+  }
+
+  // Setup for both languages
+  setupSortButton('en');
+  setupSortButton('it');
+</script>
