@@ -7,8 +7,10 @@ const mapId = hasLocations ? `map-${Date.now()}` : '';
   <div class="relative w-full h-80 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
     <div id={mapId} class="w-full h-full"></div>
   </div>
-  
+
+  <!-- @ts-ignore - Astro directive not recognized by TypeScript -->
   <link rel="stylesheet" href="/libs/leaflet/leaflet.css" is:inline />
+  <!-- @ts-ignore - Astro directive not recognized by TypeScript -->
   <script src="/libs/leaflet/leaflet.js" is:inline></script>
   
   <style>

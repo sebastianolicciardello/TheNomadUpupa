@@ -14,10 +14,17 @@ if (hasMusic) {
   }
 }
 
-const description = hasMusic && music.description ? 
-  (typeof music.description === 'string' 
+const description = hasMusic && music.description ?
+  (typeof music.description === 'string'
     ? music.description  // Already processed by resolveMultilingualData
     : (currentLang === 'it' ? music.description.it : music.description.en)) : null;
+
+// Convert line breaks to HTML paragraphs for better formatting
+const formattedDescription = description ?
+  description.split('\n\n')
+    .filter((p: string) => p.trim())
+    .map((p: string) => `<p>${p.trim()}</p>`)
+    .join('') : null;
 ---
 
 {hasMusic && videoId ? (
@@ -52,10 +59,11 @@ const description = hasMusic && music.description ?
       </div>
     </div>
     
-    {description && (
-      <p class="text-sm text-gray-600 dark:text-gray-400 text-center mt-2 italic max-w-md mx-auto">
-        {description}
-      </p>
+    {formattedDescription && (
+      <div class="prose prose-lg prose-gray dark:prose-invert max-w-none mt-4
+                  prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed
+                  prose-a:text-warm-600 dark:prose-a:text-warm-400 prose-a:no-underline hover:prose-a:underline"
+           set:html={formattedDescription} />
     )}
   </div>
 
