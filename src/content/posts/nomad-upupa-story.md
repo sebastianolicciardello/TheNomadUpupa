@@ -11,7 +11,7 @@ music:
   url: "https://music.youtube.com/watch?v=sRq3bVRZW2g&feature=shared"
   description:
     en: "This song carries the same breath as what I’ve shared here.
-It speaks of finding a way to disappear from the noise, only to reappear more authentic, with one’s true voice. That is what I’ve done too—stepping away from certain spaces and returning through this blog, in my own way.
+It speaks of finding a way to disappear from the noise, only to reappear more authentic, with one's true voice. That is what I've done too. Stepping away from certain spaces and returning through this blog, in my own way.
 
 The line “I’ll follow you where you go” recalls the hoopoe, migrating by instinct alone. It’s the same invitation I felt: to let myself be guided, not knowing exactly where, but trusting the direction."
     it: "Questa canzone cattura lo stesso respiro di ciò che ho raccontato qui.
@@ -54,17 +54,17 @@ translationKey: "nomad-upupa-story"
 <!-- it -->
 C'è qualcosa di strano nel modo in cui gli animali entrano nella nostra vita quando ne abbiamo più bisogno. 
 
-Tra aprile e novembre 2024, stavo attraversando uno di quei periodi in cui tutto sembra rimesso in discussione. Le domande scomode si aggrovigliavano nella mente – quelle che preferisci evitare ma che alla fine devi affrontare. Dove sto andando? Cosa voglio davvero? Le scelte che sto facendo sono quelle giuste?
+Tra aprile e novembre 2024, stavo attraversando uno di quei periodi in cui tutto sembra rimesso in discussione. Le domande scomode si aggrovigliavano nella mente: quelle che preferisci evitare ma che alla fine devi affrontare. Dove sto andando? Cosa voglio davvero? Le scelte che sto facendo sono quelle giuste?
 
 È proprio in quei momenti di tormento interiore che l'upupa ha iniziato a comparire. 
 
-Prima all'alba, nel giardino di casa in Sicilia. Poi durante le passeggiate al mare, quando il sole calava sull'orizzonte. E ancora in montagna, sempre negli istanti di maggiore riflessione. Non era mai casuale – sembrava che questo uccello dal volo ondulato sapesse esattamente quando mostrarsi.
+Prima all'alba, nel giardino di casa in Sicilia. Poi durante le passeggiate al mare, quando il sole calava sull'orizzonte. E ancora in montagna, sempre negli istanti di maggiore riflessione. Non era mai casuale. Sembrava che questo uccello dal volo ondulato sapesse esattamente quando mostrarsi.
 
-L'upupa è un animale curioso. Migra per migliaia di chilometri, attraversando continenti guidata da un istinto che non mette mai in dubbio. Non si perde in ragionamenti infiniti sulla direzione da prendere – semplicemente vola. Eppure il suo movimento non è mai frenetico: ondula nell'aria con un ritmo tutto suo, come se danzasse con il vento invece di combatterlo.
+L'upupa è un animale curioso. Migra per migliaia di chilometri, attraversando continenti guidata da un istinto che non mette mai in dubbio. Non si perde in ragionamenti infiniti sulla direzione da prendere. Semplicemente vola. Eppure il suo movimento non è mai frenetico: ondula nell'aria con un ritmo tutto suo, come se danzasse con il vento invece di combatterlo.
 
 ![Morning light through branches](https://res.cloudinary.com/digfarmqt/image/upload/v1755067791/IMG_20250813_081430_648_2_poer6y.jpg)
 
-Guardandola, riconoscevo qualcosa che in me stava cambiando. Per molto tempo sono stato una persona estremamente razionale, uno che aveva bisogno di analizzare ogni aspetto prima di prendere una decisione. Ogni scelta doveva essere soppesata, calcolata, giustificata. Ma nel tempo, grazie alle giuste influenze e alle esperienze vissute, ho iniziato a fidarmi anche della mia parte istintiva – quella che sa senza sapere perché, che sente la direzione giusta prima ancora che la mente riesca a spiegarla.
+Guardandola, riconoscevo qualcosa che in me stava cambiando. Per molto tempo sono stato una persona estremamente razionale, uno che aveva bisogno di analizzare ogni aspetto prima di prendere una decisione. Ogni scelta doveva essere soppesata, calcolata, giustificata. Ma nel tempo, grazie alle giuste influenze e alle esperienze vissute, ho iniziato a fidarmi anche della mia parte istintiva, quella che sa senza sapere perché, che sente la direzione giusta prima ancora che la mente riesca a spiegarla.
 
 L'upupa incarnava perfettamente questo equilibrio che stavo cercando. Vola e basta, senza pensarci. Non ha bisogno di pianificare ogni battito d'ala o di razionalizzare la sua rotta. Segue qualcosa di più profondo della logica.
 
@@ -76,7 +76,7 @@ L'upupa, inoltre, è legata in molte culture alla trasformazione e alla saggezza
 
 ![Golden hour silhouette](https://res.cloudinary.com/digfarmqt/image/upload/v1755067790/IMG_20250813_081503_092_2_hsxxkc.jpg)
 
-Mesi dopo, ripensando a quel periodo, mi sembra evidente che quei voli fossero una specie di risposta silenziosa dell'universo. Come se mi stesse dicendo: "Smetti di tormentarti. Fidati del movimento. Il nomadismo non è solo fisico – è anche mentale, spirituale."
+Mesi dopo, ripensando a quel periodo, mi sembra evidente che quei voli fossero una specie di risposta silenziosa dell'universo. Come se mi stesse dicendo: "Smetti di tormentarti. Fidati del movimento. Il nomadismo non è solo fisico, è anche mentale, spirituale."
 
 Ecco perché ho scelto "Nomad Upupa" per questo spazio. Perché credo nel viaggiare, sia attraverso i luoghi che attraverso i pensieri. Nel cercare stimoli nuovi per scoprire parti di me che non conoscevo. Nel fidarmi dell'istinto di movimento, anche quando la meta non è chiara.
 
@@ -91,17 +91,17 @@ E forse, condividendo queste riflessioni dopo che hanno avuto tempo di sedimenta
 <!-- en -->
 There's something strange about how animals enter our lives when we need them most. 
 
-Between April and November 2024, I was going through one of those periods when everything feels called into question. Uncomfortable questions crowded my mind—the kind you'd rather avoid but eventually have to face. Where am I going? What do I really want? Are the choices I'm making the right ones?
+Between April and November 2024, I was going through one of those periods when everything feels called into question. Uncomfortable questions crowded my mind: the kind you'd rather avoid but eventually have to face. Where am I going? What do I really want? Are the choices I'm making the right ones?
 
 It was precisely during those moments of inner turmoil that the hoopoe began to appear.
 
-First at dawn, in the garden at home in Sicily. Then during walks by the sea, when the sun was setting on the horizon. And again in the mountains, always in moments of deepest reflection. It was never random—it seemed this bird with its undulating flight knew exactly when to show itself.
+First at dawn, in the garden at home in Sicily. Then during walks by the sea, when the sun was setting on the horizon. And again in the mountains, always in moments of deepest reflection. It was never random. It seemed this bird with its undulating flight knew exactly when to show itself.
 
-The hoopoe is a curious creature. It migrates thousands of kilometers, crossing continents guided by an instinct it never questions. It doesn't get lost in endless reasoning about which direction to take—it simply flies. Yet its movement is never frantic: it undulates through the air with its own rhythm, as if dancing with the wind instead of fighting it.
+The hoopoe is a curious creature. It migrates thousands of kilometers, crossing continents guided by an instinct it never questions. It doesn't get lost in endless reasoning about which direction to take. It simply flies. Yet its movement is never frantic: it undulates through the air with its own rhythm, as if dancing with the wind instead of fighting it.
 
 ![Morning light through branches](https://res.cloudinary.com/digfarmqt/image/upload/v1755067791/IMG_20250813_081430_648_2_poer6y.jpg)
 
-Watching it, I recognized something that was changing in me. For a long time, I was an extremely rational person, someone who needed to analyze every aspect before making a decision. Every choice had to be weighed, calculated, justified. But over time, thanks to the right influences and lived experiences, I began to trust my instinctive side too—the part that knows without knowing why, that feels the right direction before the mind can explain it.
+Watching it, I recognized something that was changing in me. For a long time, I was an extremely rational person, someone who needed to analyze every aspect before making a decision. Every choice had to be weighed, calculated, justified. But over time, thanks to the right influences and lived experiences, I began to trust my instinctive side too, the part that knows without knowing why, that feels the right direction before the mind can explain it.
 
 The hoopoe perfectly embodied this balance I was seeking. It just flies, without thinking. It doesn't need to plan every wingbeat or rationalize its route. It follows something deeper than logic.
 
@@ -113,7 +113,7 @@ The hoopoe is also linked to transformation and wisdom in many cultures. In anci
 
 ![Golden hour silhouette](https://res.cloudinary.com/digfarmqt/image/upload/v1755067790/IMG_20250813_081503_092_2_hsxxkc.jpg)
 
-Months later, thinking back to that period, it seems obvious that those flights were a kind of silent response from the universe. As if it were telling me: "Stop tormenting yourself. Trust the movement. Nomadism isn't just physical—it's also mental, spiritual."
+Months later, thinking back to that period, it seems obvious that those flights were a kind of silent response from the universe. As if it were telling me: "Stop tormenting yourself. Trust the movement. Nomadism isn't just physical, it's also mental, spiritual."
 
 That's why I chose "Nomad Upupa" for this space. Because I believe in traveling, both through places and through thoughts. In seeking new stimuli to discover parts of myself I didn't know. In trusting the instinct for movement, even when the destination isn't clear.
 

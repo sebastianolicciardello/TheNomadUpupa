@@ -62,7 +62,7 @@ Ci sono viaggi che pianifichi per mesi e altri che ti spaventano fino all'ultimo
 
 Ottobre 2024: due settimane nelle Eolie. Primo viaggio in solitaria, prima volta a lavorare da remoto senza rete di supporto, prima esperienza in ostello. Un accumulo di "prime volte" che aveva trasformato l'eccitazione in una lista infinita di paure.
 
-Immaginavo tutti i possibili imprevisti che potessero capitare, questa volta senza nessuno accanto per affrontarli. C'era poi quella pressione sociale tutta italiana—il giudizio silenzioso di chi ti vede viaggiare da solo e pensa che tu sia asociale o strano. Perché in Italia, si sa, si deve sempre viaggiare con qualcuno. E se non lo fai, qualcosa non va.
+Immaginavo tutti i possibili imprevisti che potessero capitare, questa volta senza nessuno accanto per affrontarli. C'era poi quella pressione sociale tutta italiana: il giudizio silenzioso di chi ti vede viaggiare da solo e pensa che tu sia asociale o strano. Perché in Italia, si sa, si deve sempre viaggiare con qualcuno. E se non lo fai, qualcosa non va.
 
 Ma forse la paura più grande era quella di rimanere solo con i miei pensieri. Di non riuscire a socializzare con gli altri viaggiatori. Di scoprire che, tolti tutti i rumori di fondo della vita quotidiana, non sarei riuscito a sopportare il silenzio della mia stessa mente.
 
@@ -94,7 +94,7 @@ La rivelazione completa arrivò durante i trekking a Stromboli, dove l'unico sti
 
 ![Il vulcano Stromboli in eruzione](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241014_160555_tigr_3_ftbcy7.jpg)
 
-Nelle lunghe camminate solitarie iniziai a identificare problemi della mia vita che non sapevo nemmeno di avere. Ragionavo su come risolverli, ma soprattutto—e questo fu la scoperta più preziosa—mi rendevo conto di cosa avevo davvero raggiunto nella vita, del percorso che avevo svolto, degli errori e dei successi.
+Nelle lunghe camminate solitarie iniziai a identificare problemi della mia vita che non sapevo nemmeno di avere. Ragionavo su come risolverli, ma soprattutto (e questo fu la scoperta più preziosa) mi rendevo conto di cosa avevo davvero raggiunto nella vita, del percorso che avevo svolto, degli errori e dei successi.
 
 ![Tramonto alle Eolie](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241013_185907_tigr_2_y1hgkd.jpg)
 
@@ -112,20 +112,20 @@ Quel viaggio alle Eolie, che avevo iniziato con così tante paure, mi ha insegna
 
 E forse, in un'epoca di connessione costante, questa è diventata la forma più rivoluzionaria di viaggio: quello verso l'interno, nei territori silenziosi di noi stessi che abbiamo dimenticato di esplorare.
 
-*Queste sono le riflessioni che emergono dalla prima settimana di quel viaggio nelle Eolie di ottobre 2024—partendo da Milazzo con il trekking verso Capo Milazzo, fino ai sentieri vulcanici di Stromboli. Le foto di questo viaggio catturano non solo i paesaggi delle Eolie, ma anche quei momenti di solitudine che oggi riconosco come i più preziosi—tramonti vissuti senza la fretta di condividerli, sentieri percorsi al ritmo dei propri pensieri, eruzioni vulcaniche contemplate nel silenzio più totale.*
+*Queste sono le riflessioni che emergono dalla prima settimana di quel viaggio nelle Eolie di ottobre 2024, partendo da Milazzo con il trekking verso Capo Milazzo, fino ai sentieri vulcanici di Stromboli. Le foto di questo viaggio catturano non solo i paesaggi delle Eolie, ma anche quei momenti di solitudine che oggi riconosco come i più preziosi: tramonti vissuti senza la fretta di condividerli, sentieri percorsi al ritmo dei propri pensieri, eruzioni vulcaniche contemplate nel silenzio più totale.*
 
 <!-- en -->
 Some trips you plan for months, others frighten you until the very last day. My first solo journey was definitely the second kind.
 
 October 2024: two weeks in the Aeolian Islands. First solo trip, first time working remotely without any support network, first hostel experience. An accumulation of "firsts" that had transformed excitement into an endless list of fears.
 
-I imagined every possible mishap that could happen, this time with no one beside me to face them. Then there was that distinctly Italian social pressure—the silent judgment of those who see you traveling alone and think you're antisocial or strange. Because in Italy, you know, you're supposed to always travel with someone. And if you don't, something must be wrong.
+I imagined every possible mishap that could happen, this time with no one beside me to face them. Then there was that distinctly Italian social pressure: the silent judgment of those who see you traveling alone and think you're antisocial or strange. Because in Italy, you know, you're supposed to always travel with someone. And if you don't, something must be wrong.
 
 But perhaps the greatest fear was being left alone with my thoughts. Not being able to socialize with other travelers. Discovering that, once you remove all the background noise of daily life, I wouldn't be able to bear the silence of my own mind.
 
 ### The first day's lesson
 
-On the first day, I dedicated myself to a rather long trek to Capo Milazzo. A series of beginner mistakes that make me smile today: arriving too early for the hostel check-in, instead of better organizing my timing or finding a way to store my luggage, I set off with everything on my back. And above all—never, ever do a long hike in new shoes. Ideally, I should have planned my arrival better to avoid that unnecessary strain. I arrived exhausted, with only one thought: sleep.
+On the first day, I dedicated myself to a rather long trek to Capo Milazzo. A series of beginner mistakes that make me smile today: arriving too early for the hostel check-in, instead of better organizing my timing or finding a way to store my luggage, I set off with everything on my back. And above all, never, ever do a long hike in new shoes. Ideally, I should have planned my arrival better to avoid that unnecessary strain. I arrived exhausted, with only one thought: sleep.
 
 ![View from the trek to Capo Milazzo](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241012_150931_tigr_3_wqqgdu.jpg)
 
@@ -151,7 +151,7 @@ The complete revelation came during the treks on Stromboli, where the only exter
 
 ![Stromboli volcano erupting](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241014_160555_tigr_3_ftbcy7.jpg)
 
-During those long solitary walks, I began to identify problems in my life that I didn't even know I had. I reasoned about how to solve them, but most importantly—and this was the most precious discovery—I became aware of what I had truly achieved in life, the journey I had taken, the mistakes and successes.
+During those long solitary walks, I began to identify problems in my life that I didn't even know I had. I reasoned about how to solve them, but most importantly (and this was the most precious discovery) I became aware of what I had truly achieved in life, the journey I had taken, the mistakes and successes.
 
 ![Sunset in the Aeolian Islands](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241013_185907_tigr_2_y1hgkd.jpg)
 
@@ -169,4 +169,4 @@ That trip to the Aeolian Islands, which I had begun with so many fears, taught m
 
 And perhaps, in an age of constant connection, this has become the most revolutionary form of travel: the journey inward, into the silent territories of ourselves that we have forgotten to explore.
 
-*These are the reflections that emerge from the first week of that October 2024 journey to the Aeolian Islands—starting from Milazzo with the trek to Capo Milazzo, up to the volcanic trails of Stromboli. The photos from this trip capture not only the landscapes of the Aeolian Islands, but also those moments of solitude that I now recognize as the most precious—sunsets experienced without the rush to share them, trails walked at the rhythm of one's own thoughts, volcanic eruptions contemplated in complete silence.*
+*These are the reflections that emerge from the first week of that October 2024 journey to the Aeolian Islands, starting from Milazzo with the trek to Capo Milazzo, up to the volcanic trails of Stromboli. The photos from this trip capture not only the landscapes of the Aeolian Islands, but also those moments of solitude that I now recognize as the most precious: sunsets experienced without the rush to share them, trails walked at the rhythm of one's own thoughts, volcanic eruptions contemplated in complete silence.*

@@ -12,13 +12,13 @@ export const translations: Translations = {
     'hero.title': 'The Nomad Upupa',
     'hero.description': `Moments don't ask to be shared while they're happening.
 
-They ask to be lived — fully, quietly, truthfully.
+They ask to be lived: fully, quietly, truthfully.
 
 This journal exists to hold the echoes of those moments, once they've settled into meaning.
 
 It is a space for reflections that surface not in real-time, but in real depth.
 
-Here, I share stories, places, and thoughts — after time has allowed them to take root.`,
+Here, I share stories, places, and thoughts after time has allowed them to take root.`,
     'posts.recent': 'Recent Reflections',
     'posts.viewAll': 'View all posts',
     'discover.title': 'Discover More',
@@ -51,7 +51,7 @@ Here, I share stories, places, and thoughts — after time has allowed them to t
     'hero.title': 'The Nomad Upupa',
     'hero.description': `I momenti non chiedono di essere condivisi subito.
 
-Chiedono di essere vissuti — davvero, fino in fondo, senza fretta.
+Chiedono di essere vissuti: davvero, fino in fondo, senza fretta.
 
 Questo diario nasce per raccogliere le esperienze quando si sono sedimentate, quando diventano storie, comprensioni, emozioni che restano.
 
