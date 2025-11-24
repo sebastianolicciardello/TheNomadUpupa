@@ -44,12 +44,12 @@ Dunque, nonostante applicassi il minimalismo da tempo, applicai il magico potere
 Un solo zaino era capace di contenere tutto ciò di materiale che mi era necessario.
 Senza quel video trovato molto casualmente (siamo sicuri sia casuale? O l'universo tramava già qualcosa?) probabilmente non sarei mai arrivato a questo punto, o almeno non in così pochi anni. 
 
-Prima accumulavo oggetti di qualsiasi tipo, da gadget tecnologici a manga. Non voglio criticare chi li possiede – anzi, chi ne trae una grande gioia deve possederli. Ma io ero arrivato al punto in cui non ne ricavavo alcuna gioia. Possedevo e basta. Erano un peso fisico, di spazio, economico e soprattutto di responsabilità.
+Prima accumulavo oggetti di qualsiasi tipo, da gadget tecnologici a manga. Non voglio criticare chi li possiede, anzi, chi ne trae una grande gioia deve possederli. Ma io ero arrivato al punto in cui non ne ricavavo alcuna gioia. Possedevo e basta. Erano un peso fisico, di spazio, economico e soprattutto di responsabilità.
 
 Perché ogni oggetto che possediamo ce ne rende responsabili, su come mantenerlo. L'oggetto non ha solo un peso economico e di spazio, ha un peso enorme mentale dovuto al tempo necessario per mantenerlo nel tempo. I soldi possiamo accumularli, il tempo no. Lui scorre inesorabilmente senza mai tornare indietro.
 
 ## La Questione dei Vestiti
-È stato molto difficile per me sbarazzarmi della maggior parte dei vestiti. Non perché mi piaccia esprimere la mia personalità con essi – anzi, non mi crea alcuna gioia. Per me i vestiti devono essere semplici e comodi. Quindi ho tenuto solo vestiti con colori neutri, facili da abbinare tra loro.
+È stato molto difficile per me sbarazzarmi della maggior parte dei vestiti. Non perché mi piaccia esprimere la mia personalità con essi, anzi, non mi crea alcuna gioia. Per me i vestiti devono essere semplici e comodi. Quindi ho tenuto solo vestiti con colori neutri, facili da abbinare tra loro.
 Purtroppo la società e la paura del giudizio degli altri ci porta a pensare che se vestiamo sempre con gli stessi vestiti, gli altri penseranno che siamo dei pezzenti, senza vestiti. In realtà è molto meglio avere pochi vestiti ma di qualità. Elimina lo stress del "cosa mettersi", evita lo shopping compulsivo e i capi durano più nel tempo se di qualità. 
 E in realtà le persone non pensano che tu sia pezzente se vesti sempre gli stessi vestiti. 
 
@@ -91,12 +91,12 @@ So, although I had been applying minimalism for some time, I applied the magical
 A single backpack was capable of containing everything material that I needed.
 Without that video found very casually (are we sure it was casual? Or was the universe already plotting something?) I probably would never have gotten to this point, or at least not in so few years.
 
-Before, I accumulated objects of any kind, from tech gadgets to manga. I don't want to criticize those who own them – on the contrary, those who get great joy from them should own them. But I had reached the point where I got no joy from them. I just owned them. They were a physical weight, a weight of space, an economic weight, and especially a weight of responsibility.
+Before, I accumulated objects of any kind, from tech gadgets to manga. I don't want to criticize those who own them, on the contrary, those who get great joy from them should own them. But I had reached the point where I got no joy from them. I just owned them. They were a physical weight, a weight of space, an economic weight, and especially a weight of responsibility.
 
 Because every object we own makes us responsible for it, for how to maintain it. The object doesn't just have an economic and space weight, it has an enormous mental weight due to the time needed to maintain it over time. We can accumulate money, but not time. Time flows inexorably, never returning.
 
 ## The Question of Clothes
-It was very difficult for me to get rid of most of my clothes. Not because I like expressing my personality with them – actually, it doesn't give me any joy. For me, clothes must be simple and comfortable. So I kept only clothes in neutral colors, easy to match with each other.
+It was very difficult for me to get rid of most of my clothes. Not because I like expressing my personality with them, actually, it doesn't give me any joy. For me, clothes must be simple and comfortable. So I kept only clothes in neutral colors, easy to match with each other.
 Unfortunately, society and the fear of others' judgment leads us to think that if we always wear the same clothes, others will think we're penniless, without clothes. In reality, it's much better to have few clothes but quality ones. It eliminates the stress of "what to wear," avoids compulsive shopping, and quality garments last longer.
 And in reality, people don't think you're penniless if you always wear the same clothes.
 

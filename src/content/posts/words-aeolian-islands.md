@@ -60,7 +60,7 @@ translationKey: "words-aeolian-islands"
 <!-- it -->
 Dopo il silenzio quasi monastico di Stromboli, Lipari mi accolse con la sua vivacità di ottobre. Le vie del centro erano animate da passi e voci, le spiagge vicine al porto conservavano ancora quel tepore che invitava alle passeggiate. Era piacevole svegliarmi presto e camminare tra le strade che si risvegliavano, sentire dalle finestre aperte il chiacchiericcio delle vecchiette dai balconi, quel pettegolezzo genuino che è la colonna sonora dei borghi siciliani.
 
-Cinque giorni di lavoro da remoto, dalle nove alle sei. La paura più grande—quella della connessione internet, svanì nel momento in cui verificai la velocità della rete. I miei calcoli sulla distanza delle antenne 4G e 5G si rivelarono corretti, e per la prima volta in quel viaggio potei rilassarmi completamente su questo aspetto pratico.
+Cinque giorni di lavoro da remoto, dalle nove alle sei. La paura più grande, quella della connessione internet, svanì nel momento in cui verificai la velocità della rete. I miei calcoli sulla distanza delle antenne 4G e 5G si rivelarono corretti, e per la prima volta in quel viaggio potei rilassarmi completamente su questo aspetto pratico.
 
 ### Quando l'isolamento insegna la connessione
 
@@ -85,7 +85,7 @@ Quella sera e nei giorni seguenti lavorai su circa sessanta persone, del present
 
 Ancora oggi qualche lettera rimane incompleta. Non so se si possa mai arrivare ad avere totalmente zero emozioni negative verso tutte le persone che in qualche modo attraversano la nostra vita. Ma fare questo esercizio, soprattutto durante i viaggi solitari, mi risulta incredibilmente utile per riordinare le priorità, fare pace con il passato, e capire chi voglio davvero essere nel futuro.
 
-Ero rimasto ore in quel punto a strapiombo, con il paesaggio incredibile davanti. Mentre iniziava a fare buio e mi preparavo a tornare verso l'osservatorio, un ragazzo tedesco mi si avvicinò. In un inglese cordiale mi spiegò che mi aveva osservato per ore mentre guardavo il tramonto e il panorama, colpito dal mio rimanere immobile lì, sullo strapiombo. Tanto da farmi una foto—quella che ho usato come copertina di questo post, che gli ricordava "Il viandante sul mare di nebbia" di Caspar David Friedrich.
+Ero rimasto ore in quel punto a strapiombo, con il paesaggio incredibile davanti. Mentre iniziava a fare buio e mi preparavo a tornare verso l'osservatorio, un ragazzo tedesco mi si avvicinò. In un inglese cordiale mi spiegò che mi aveva osservato per ore mentre guardavo il tramonto e il panorama, colpito dal mio rimanere immobile lì, sullo strapiombo. Tanto da farmi una foto (quella che ho usato come copertina di questo post) che gli ricordava "Il viandante sul mare di nebbia" di Caspar David Friedrich.
 
 Apprezzai ricevere quella foto per messaggio e chiacchierare dei rispettivi viaggi. Mi fece strano parlare per quasi due ore con un completo estraneo, dopo dieci giorni di totale solitudine. Una delle paure che avevo prima di partire era proprio quella di non riuscire a comunicare facilmente in inglese con altri viaggiatori, ma mi resi conto con piacevole sorpresa che alla fine è solo questione di pratica e la necessità di comunicare supera qualsiasi timidezza linguistica.
 
