@@ -108,7 +108,7 @@ export const translations = {
     'discover.description': 'Esplora il viaggio attraverso storie e mappe',
     'discover.map': 'Vedi Mappa',
     'discover.about': 'Chi Sono',
-    'connect.title': 'Connessioni',
+    'connect.title': 'Contatti',
     'connect.telegram': 'Telegram',
     'connect.channel': 'Canale',
     'connect.instagram': 'Instagram',
