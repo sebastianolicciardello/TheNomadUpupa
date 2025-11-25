@@ -1,8 +1,9 @@
 ---
-title: 
+title:
   en: "The Words No One Will Hear"
   it: "Le parole che nessuno sentirà"
-eventTime: 2024-10-20T00:00:00Z
+eventStartTime: 2024-10-15T00:00:00Z
+eventEndTime: 2024-10-20T00:00:00Z
 publishTime: 2025-08-28T00:00:00Z
 coords:
   lat: 38.4675

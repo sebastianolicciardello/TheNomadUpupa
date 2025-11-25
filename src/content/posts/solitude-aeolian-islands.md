@@ -1,8 +1,9 @@
 ---
-title: 
+title:
   en: "The solitude I didn't know I was seeking"
   it: "La solitudine che non sapevo di cercare"
-eventTime: 2024-10-15T00:00:00Z
+eventStartTime: 2024-10-11T00:00:00Z
+eventEndTime: 2024-10-15T00:00:00Z
 publishTime: 2025-08-21T00:00:00Z
 coords:
   lat: 38.79299

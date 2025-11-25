@@ -5,6 +5,7 @@ import GeoMap from '../../components/GeoMap.astro';
 import MusicPlayer from '../../components/MusicPlayer.astro';
 import type { Language } from '../../utils/i18n';
 import { marked } from 'marked';
+import { formatDateRange } from '../../utils/dateUtils';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts');
@@ -146,21 +147,17 @@ if (post.isMultilingual) {
           <div class="flex flex-col gap-2 text-sm text-gray-600 dark:text-gray-400">
             <div class="flex items-center gap-2">
               <span class="text-gray-900 dark:text-gray-100 font-medium">Event:</span>
-              <time datetime={processedDataEn.eventTime.toISOString()} class="font-medium">
-                {processedDataEn.eventTime.toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
-                })}
+              <time datetime={processedDataEn.eventStartTime.toISOString()} class="font-medium">
+                {formatDateRange(processedDataEn.eventStartTime, processedDataEn.eventEndTime, 'en-US')}
               </time>
             </div>
             <div class="flex items-center gap-2">
               <span class="text-gray-900 dark:text-gray-100 font-medium">Published:</span>
               <time datetime={processedDataEn.publishTime.toISOString()}>
-                {processedDataEn.publishTime.toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
+                {processedDataEn.publishTime.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
                 })}
               </time>
             </div>
@@ -207,21 +204,17 @@ if (post.isMultilingual) {
           <div class="flex flex-col gap-2 text-sm text-gray-600 dark:text-gray-400">
             <div class="flex items-center gap-2">
               <span class="text-gray-900 dark:text-gray-100 font-medium">Evento:</span>
-              <time datetime={processedDataIt.eventTime.toISOString()} class="font-medium">
-                {processedDataIt.eventTime.toLocaleDateString('it-IT', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
-                })}
+              <time datetime={processedDataIt.eventStartTime.toISOString()} class="font-medium">
+                {formatDateRange(processedDataIt.eventStartTime, processedDataIt.eventEndTime, 'it-IT')}
               </time>
             </div>
             <div class="flex items-center gap-2">
               <span class="text-gray-900 dark:text-gray-100 font-medium">Pubblicato:</span>
               <time datetime={processedDataIt.publishTime.toISOString()}>
-                {processedDataIt.publishTime.toLocaleDateString('it-IT', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
+                {processedDataIt.publishTime.toLocaleDateString('it-IT', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
                 })}
               </time>
             </div>

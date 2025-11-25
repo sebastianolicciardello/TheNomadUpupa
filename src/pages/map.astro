@@ -60,7 +60,7 @@ const postsWithCoordsEn = processedPostsEn
     }
     return { ...post, mainCoords };
   })
-  .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime());
+  .sort((a, b) => new Date(b.data.publishTime).getTime() - new Date(a.data.publishTime).getTime());
 
 const postsWithCoordsIt = processedPostsIt
   .filter(post => {
@@ -78,7 +78,7 @@ const postsWithCoordsIt = processedPostsIt
     }
     return { ...post, mainCoords };
   })
-  .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime());
+  .sort((a, b) => new Date(b.data.publishTime).getTime() - new Date(a.data.publishTime).getTime());
 
 const postsWithCoords = postsWithCoordsEn
   .filter(post => {
@@ -98,7 +98,7 @@ const postsWithCoords = postsWithCoordsEn
     }
     return { ...post, mainCoords };
   })
-  .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime());
+  .sort((a, b) => new Date(b.data.publishTime).getTime() - new Date(a.data.publishTime).getTime());
 ---
 
 <Layout>
@@ -405,7 +405,8 @@ const postsWithCoords = postsWithCoordsEn
             title: post.data.title,
             slug: post.slug.replace('en/', '').replace('it/', ''),
             coords: post.mainCoords,
-            date: post.data.eventTime,
+            dateStart: post.data.eventStartTime,
+            dateEnd: post.data.eventEndTime,
             cover: post.data.cover
           }));
 
@@ -413,7 +414,8 @@ const postsWithCoords = postsWithCoordsEn
             title: post.data.title,
             slug: post.slug.replace('en/', '').replace('it/', ''),
             coords: post.mainCoords,
-            date: post.data.eventTime,
+            dateStart: post.data.eventStartTime,
+            dateEnd: post.data.eventEndTime,
             cover: post.data.cover
           }));
 
@@ -457,6 +459,57 @@ const postsWithCoords = postsWithCoordsEn
         }
 
         function setupMapContent(map, posts, lang) {
+          // Helper function to format date ranges
+          function formatDateRange(startDate, endDate, locale) {
+            const start = new Date(startDate);
+            const end = new Date(endDate);
+
+            const sameMonth = start.getMonth() === end.getMonth() && start.getFullYear() === end.getFullYear();
+
+            if (sameMonth) {
+              const day1 = start.getDate();
+              const day2 = end.getDate();
+
+              if (day1 === day2) {
+                return start.toLocaleDateString(locale, {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric'
+                });
+              }
+
+              const month = start.toLocaleDateString(locale, { month: 'long' });
+              const year = start.getFullYear();
+              return `${day1}-${day2} ${month} ${year}`;
+            } else {
+              const startStr = start.toLocaleDateString(locale, {
+                day: 'numeric',
+                month: 'long'
+              });
+              const endStr = end.toLocaleDateString(locale, {
+                day: 'numeric',
+                month: 'long'
+              });
+              const year = end.getFullYear();
+
+              if (start.getFullYear() === end.getFullYear()) {
+                return `${startStr} - ${endStr} ${year}`;
+              } else {
+                const startWithYear = start.toLocaleDateString(locale, {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric'
+                });
+                const endWithYear = end.toLocaleDateString(locale, {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric'
+                });
+                return `${startWithYear} - ${endWithYear}`;
+              }
+            }
+          }
+
           // Get the correct map container ID
           const mapContainerId = lang === 'en' ? 'global-map-en' : 'global-map-it';
           // Add zoom control
@@ -478,19 +531,20 @@ const postsWithCoords = postsWithCoordsEn
             const isDark = document.documentElement.classList.contains('dark');
             const icon = isDark ? darkIcon : lightIcon;
             const marker = L.marker([post.coords.lat, post.coords.lon], { icon: icon }).addTo(map);
-            
+
             const dateLocale = lang === 'it' ? 'it-IT' : 'en-US';
             const readMoreText = lang === 'it' ? 'Leggi di più →' : 'Read more →';
-            
+            const dateRangeStr = formatDateRange(post.dateStart, post.dateEnd, dateLocale);
+
             const popupContent = `
               <div class="p-1 sm:p-2 w-full">
                 ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-16 sm:h-20 object-cover rounded mb-1 sm:mb-2">` : ''}
                 <h3 class="font-semibold text-xs sm:text-sm mb-1 leading-tight">${post.title}</h3>
-                <p class="text-xs text-gray-600 mb-1 sm:mb-2">${new Date(post.date).toLocaleDateString(dateLocale)}</p>
+                <p class="text-xs text-gray-600 mb-1 sm:mb-2">${dateRangeStr}</p>
                 <a href="/posts/${post.slug}/" class="inline-block text-xs text-blue-600 hover:text-blue-800 font-medium">${readMoreText}</a>
               </div>
             `;
-            
+
             marker.bindPopup(popupContent);
             markers.push(marker);
           });

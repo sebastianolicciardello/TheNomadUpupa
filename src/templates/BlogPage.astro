@@ -86,12 +86,12 @@ const processedPostsIt = allPosts.flatMap(post => {
   return [];
 });
 
-const sortedPostsEn = processedPostsEn.sort((a, b) => 
-  b.data.eventTime.getTime() - a.data.eventTime.getTime()
+const sortedPostsEn = processedPostsEn.sort((a, b) =>
+  b.data.publishTime.getTime() - a.data.publishTime.getTime()
 );
 
-const sortedPostsIt = processedPostsIt.sort((a, b) => 
-  b.data.eventTime.getTime() - a.data.eventTime.getTime()
+const sortedPostsIt = processedPostsIt.sort((a, b) =>
+  b.data.publishTime.getTime() - a.data.publishTime.getTime()
 );
 ---
 

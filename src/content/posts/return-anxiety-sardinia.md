@@ -1,8 +1,9 @@
 ---
-title: 
+title:
   en: "The Return Anxiety"
   it: "L'Ansia di Ritorno"
-eventTime: 2024-11-24T00:00:00Z
+eventStartTime: 2024-11-18T00:00:00Z
+eventEndTime: 2024-11-24T00:00:00Z
 publishTime: 2025-09-17T00:00:00Z
 coords:
   lat: 39.31186

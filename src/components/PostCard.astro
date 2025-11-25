@@ -1,4 +1,6 @@
 ---
+import { formatDateRangeCompact } from '../utils/dateUtils';
+
 export interface Props {
   post: any;
   lang?: 'en' | 'it';
@@ -12,6 +14,8 @@ const locale = lang === 'it' ? 'it-IT' : 'en-US';
 const readMoreText = lang === 'it' ? 'Leggi di più' : 'Read more';
 const eventLabel = lang === 'it' ? 'Evento:' : 'Event:';
 const publishLabel = lang === 'it' ? 'Pubblicato:' : 'Published:';
+
+const eventDateRange = formatDateRangeCompact(post.data.eventStartTime, post.data.eventEndTime, locale);
 ---
 
 <article class="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
@@ -38,12 +42,8 @@ const publishLabel = lang === 'it' ? 'Pubblicato:' : 'Published:';
         <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 space-y-0.5 sm:space-y-1">
           <div>
             <span class="font-medium">{eventLabel}</span>
-            <time datetime={post.data.eventTime.toISOString()}>
-              {new Date(post.data.eventTime).toLocaleDateString(locale, {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric'
-              })}
+            <time datetime={post.data.eventStartTime.toISOString()}>
+              {eventDateRange}
             </time>
           </div>
           {post.data.publishTime && (

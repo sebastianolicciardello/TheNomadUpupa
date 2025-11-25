@@ -1,8 +1,9 @@
 ---
-title: 
+title:
   en: "Why \"Nomad Upupa\""
   it: "Perché \"Nomad Upupa\""
-eventTime: 2024-09-30T00:00:00Z
+eventStartTime: 2024-04-01T00:00:00Z
+eventEndTime: 2024-11-30T00:00:00Z
 publishTime: 2025-08-13T00:00:00Z
 coords:
   lat: 37.61277

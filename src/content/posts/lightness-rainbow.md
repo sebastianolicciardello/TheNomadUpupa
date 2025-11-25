@@ -2,9 +2,9 @@
 title:
   en: "Following the Lightness of the Rainbow"
   it: "Seguendo la Leggerezza dell'Arcobaleno"
-eventTime: 2024-12-31T00:00:00Z
-publishTime: 2025-10-25
-
+eventStartTime: 2024-12-20T00:00:00Z
+eventEndTime: 2024-12-31T00:00:00Z
+publishTime: 2025-10-25T00:00:00Z
 music:
   url: "https://music.youtube.com/watch?v=bfpvJhe20QU&si=fg3Lct-w-ehp0UQh"
   description:

@@ -1,8 +1,9 @@
 ---
-title: 
+title:
   en: "Return to Origins"
   it: "Ritorno alle Origini"
-eventTime: 2024-11-14T00:00:00Z
+eventStartTime: 2024-11-11T00:00:00Z
+eventEndTime: 2024-11-17T00:00:00Z
 publishTime: 2025-09-07T00:00:00Z
 coords:
   lat: 39.381

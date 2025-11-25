@@ -69,11 +69,11 @@ const processedPostsIt = allPosts.map(post => {
 });
 
 const recentPostsEn = processedPostsEn
-  .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime())
+  .sort((a, b) => new Date(b.data.publishTime).getTime() - new Date(a.data.publishTime).getTime())
   .slice(0, 3);
 
 const recentPostsIt = processedPostsIt
-  .sort((a, b) => new Date(b.data.eventTime).getTime() - new Date(a.data.eventTime).getTime())
+  .sort((a, b) => new Date(b.data.publishTime).getTime() - new Date(a.data.publishTime).getTime())
   .slice(0, 3);
 ---
 
