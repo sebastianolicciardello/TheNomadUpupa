@@ -54,6 +54,8 @@ Fu stancante ma soddisfacente. Ovviamente non arrivai troppo vicino, sarebbe sta
 
 ![Colata lavica dell'Etna](https://res.cloudinary.com/digfarmqt/image/upload/v1765984016/5882171150728021224_jorhcj.jpg)
 ![Colata lavica dell'Etna](https://res.cloudinary.com/digfarmqt/image/upload/v1765984016/5882171150728021228_i7cdyl.jpg)
+![Colata lavica dell'Etna](https://res.cloudinary.com/digfarmqt/image/upload/v1765984020/5882171150728021232_hmvaq3.jpg)
+![Colata lavica dell'Etna](https://res.cloudinary.com/digfarmqt/image/upload/v1765984017/5882171150728021229_njgl33.jpg)
 
 Partii con solo bagaglio a mano e arrivai senza problemi a Torino. Fui positivamente colpito dall'efficienza dei mezzi pubblici abituato al sud Italia…
 
@@ -120,6 +122,8 @@ It was tiring but satisfying. Obviously I didn't get too close, it would have be
 
 ![Etna lava flow](https://res.cloudinary.com/digfarmqt/image/upload/v1765984016/5882171150728021224_jorhcj.jpg)
 ![Etna lava flow](https://res.cloudinary.com/digfarmqt/image/upload/v1765984016/5882171150728021228_i7cdyl.jpg)
+![Etna lava flow](https://res.cloudinary.com/digfarmqt/image/upload/v1765984020/5882171150728021232_hmvaq3.jpg)
+![Etna lava flow](https://res.cloudinary.com/digfarmqt/image/upload/v1765984017/5882171150728021229_njgl33.jpg)
 
 I left with only carry-on luggage and arrived in Turin without problems. I was positively impressed by the efficiency of public transport, being used to southern Italy...
 
