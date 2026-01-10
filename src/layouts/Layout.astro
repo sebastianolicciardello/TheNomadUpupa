@@ -48,8 +48,8 @@ const alternateLang = getAlternateLanguage(currentLang);
 			})();
 		</script>
 	</head>
-	<body class="bg-warm-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans antialiased min-h-screen transition-colors duration-200">
-		<nav class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
+	<body class="bg-warm-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-sans antialiased min-h-screen transition-colors duration-200">
+		<nav class="bg-white dark:bg-zinc-900 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
 			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="flex justify-between items-center h-16">
 					<a href="/" class="text-xl font-semibold text-gray-900 dark:text-gray-100 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">
@@ -98,7 +98,7 @@ const alternateLang = getAlternateLanguage(currentLang);
 				</div>
 
 				<!-- Mobile Menu -->
-				<div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+				<div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-zinc-900">
 					<div class="px-2 pt-2 pb-3 space-y-1">
 						<span data-lang="en">
 							<a href="/blog/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.archive', 'en')}</a>
@@ -150,7 +150,7 @@ const alternateLang = getAlternateLanguage(currentLang);
 		<main class="flex-1">
 			<slot />
 		</main>
-		<footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-16">
+		<footer class="bg-white dark:bg-zinc-900 border-t border-gray-200 dark:border-gray-700 mt-16">
 			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 				<div class="text-center text-gray-500 dark:text-gray-400 text-sm">
 					<p data-lang="en">&copy; {t('footer.copyright', 'en')}</p>

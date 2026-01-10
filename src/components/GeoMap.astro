@@ -4,7 +4,7 @@ const hasLocations = (locations && locations.length > 0) || coords;
 const mapId = hasLocations ? `map-${Date.now()}` : '';
 ---
 {hasLocations ? (
-  <div class="relative w-full h-80 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+  <div class="relative w-full h-80 bg-gray-100 dark:bg-zinc-900 rounded-lg overflow-hidden shadow-lg">
     <div id={mapId} class="w-full h-full"></div>
   </div>
 
