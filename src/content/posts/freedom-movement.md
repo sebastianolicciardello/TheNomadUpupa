@@ -49,8 +49,6 @@ translationKey: "freedom-movement"
 ---
 
 <!-- it -->
-# Libertà in Movimento
-
 Il 12 marzo partecipai alla conferenza su Flutter, la tecnologia che stavo studiando e approfondendo. L'evento fu molto piacevole, pieno di entusiasmo e sviluppatori da tutta Europa.
 
 Mi resi conto che questa tecnologia mi dava un grande entusiasmo per la possibilità di creare incredibili applicazioni partendo da un'idea interessante. Ma allo stesso tempo mi resi conto sempre di più di voler evitare grandi realtà, aziende e corporate. Non fanno per me. Ho bisogno di creatività, di piccole realtà dove poter fare davvero la differenza.
