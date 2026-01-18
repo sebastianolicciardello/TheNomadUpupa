@@ -6,8 +6,8 @@ eventStartTime: 2025-03-20T00:00:00Z
 eventEndTime: 2025-03-30T23:59:59Z
 publishTime: 2026-01-17T00:00:00Z
 coords:
-  lat: 45.116177
-  lon: 7.742615
+  lat: 45.033304
+  lon: 6.886089
 music:
   url: "https://music.youtube.com/watch?v=0azwu4irFkk"
   description:
@@ -26,7 +26,6 @@ locations:
     coords:
       lat: 45.116177
       lon: 7.742615
-    isMain: true
   - name:
       en: "Salice d'Ulzio"
       it: "Salice d'Ulzio"
@@ -39,6 +38,7 @@ locations:
     coords:
       lat: 45.033304
       lon: 6.886089
+    isMain: true
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1768683688/PXL_20250329_170234278_iwljcx.jpg
 description:
   en: "Exploring Turin and its vegan restaurants, then a crazy adventure dancing on a frozen lake in the Alps with my friend Anna."
