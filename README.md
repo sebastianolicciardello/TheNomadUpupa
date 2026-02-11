@@ -50,3 +50,26 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Calendar availability page (`/calendar`)
+
+The page uses a Google Calendar embed (monthly view) to indicate possible availability for walks, excursions, chats, and video calls. The embed language automatically follows the site language (EN/IT).
+
+Default calendar currently configured:
+
+```text
+669bc5c8244754c72baadb665cc21b5c71f3f6d007220664d9f213d4055480d1@group.calendar.google.com
+```
+
+Optional public env variables:
+
+```bash
+PUBLIC_GOOGLE_CALENDAR_ID="your_calendar_id@group.calendar.google.com"
+PUBLIC_GOOGLE_CALENDAR_TIMEZONE="Europe/Rome"
+PUBLIC_GOOGLE_CALENDAR_HEIGHT="800"
+```
+
+Notes:
+- The Google Calendar must be set to public visibility.
+- To mark availability, create events only in the slots/days when you are available.
+- Weekends may be uncertain due to volunteer activity with hiking guides.

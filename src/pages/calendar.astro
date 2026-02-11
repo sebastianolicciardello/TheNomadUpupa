@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const GOOGLE_CALENDAR_ID = import.meta.env.PUBLIC_GOOGLE_CALENDAR_ID
+  ?? '669bc5c8244754c72baadb665cc21b5c71f3f6d007220664d9f213d4055480d1@group.calendar.google.com';
+
+const CALENDAR_TIMEZONE = import.meta.env.PUBLIC_GOOGLE_CALENDAR_TIMEZONE ?? 'Europe/Rome';
+const CALENDAR_HEIGHT = import.meta.env.PUBLIC_GOOGLE_CALENDAR_HEIGHT ?? '800';
+
+const embedParams = new URLSearchParams({
+  src: GOOGLE_CALENDAR_ID,
+  ctz: CALENDAR_TIMEZONE,
+  mode: 'MONTH',
+  showTitle: '0',
+  showPrint: '0',
+  showTabs: '0',
+  showCalendars: '0',
+  showTz: '0',
+  wkst: '2',
+  hl: 'en'
+});
+
+const embedUrl = `https://calendar.google.com/calendar/embed?${embedParams.toString()}`;
+---
+
+<Layout title="Calendar | The Nomad Upupa">
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <header class="mb-8">
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-gray-100" data-lang="en">
+        Availability calendar
+      </h1>
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-gray-100" data-lang="it" style="display: none;">
+        Calendario disponibilità
+      </h1>
+      <p class="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed" data-lang="en">
+        This calendar shows my possible availability for walks, excursions, chats, and video calls.
+      </p>
+      <p class="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed" data-lang="it" style="display: none;">
+        Questo calendario indica la mia possibile disponibilità per passeggiate, escursioni, chiacchierate e videochiamate.
+      </p>
+      <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 leading-relaxed" data-lang="en">
+        Weekends may be uncertain due to my volunteer activity with hiking guides.
+      </p>
+      <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 leading-relaxed" data-lang="it" style="display: none;">
+        I weekend possono essere incerti a causa della mia attività di volontariato con le guide escursionistiche.
+      </p>
+    </header>
+
+    <div class="rounded-2xl border border-warm-200/70 dark:border-warm-900/50 bg-white/90 dark:bg-zinc-900/90 shadow-sm overflow-hidden">
+      <div class="px-5 py-4 border-b border-warm-200/70 dark:border-warm-900/50 bg-warm-50/80 dark:bg-zinc-900">
+        <p class="text-sm font-medium text-warm-900 dark:text-warm-200" data-lang="en">Live availability</p>
+        <p class="text-sm font-medium text-warm-900 dark:text-warm-200" data-lang="it" style="display: none;">Disponibilità live</p>
+      </div>
+
+      <iframe
+        id="availability-calendar"
+        src={embedUrl}
+        class="w-full bg-white"
+        style={`height: ${CALENDAR_HEIGHT}px; border: 0;`}
+        title="Google Calendar availability"
+        loading="lazy"
+        data-calendar-id={GOOGLE_CALENDAR_ID}
+        data-timezone={CALENDAR_TIMEZONE}
+      ></iframe>
+    </div>
+
+  </section>
+
+  <script is:inline>
+    function calendarLang() {
+      const lang = document.documentElement.getAttribute('lang')
+        || document.documentElement.getAttribute('data-language')
+        || localStorage.getItem('language-preference')
+        || 'en';
+      return lang.startsWith('it') ? 'it' : 'en';
+    }
+
+    function buildEmbedUrl(calendarId, timezone, lang) {
+      const params = new URLSearchParams({
+        src: calendarId,
+        ctz: timezone,
+        mode: 'MONTH',
+        showTitle: '0',
+        showPrint: '0',
+        showTabs: '0',
+        showCalendars: '0',
+        showTz: '0',
+        wkst: '2',
+        hl: lang
+      });
+      return `https://calendar.google.com/calendar/embed?${params.toString()}`;
+    }
+
+    function syncCalendarLanguage() {
+      const iframe = document.getElementById('availability-calendar');
+      if (!iframe) return;
+
+      const lang = calendarLang();
+      const nextSrc = buildEmbedUrl(iframe.dataset.calendarId || '', iframe.dataset.timezone || 'Europe/Rome', lang);
+      if (iframe.getAttribute('src') !== nextSrc) {
+        iframe.setAttribute('src', nextSrc);
+      }
+    }
+
+    syncCalendarLanguage();
+
+    const observer = new MutationObserver(() => syncCalendarLanguage());
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['lang', 'data-language', 'data-initial-lang']
+    });
+
+    window.addEventListener('storage', (event) => {
+      if (event.key === 'language-preference') {
+        syncCalendarLanguage();
+      }
+    });
+  </script>
+</Layout>
