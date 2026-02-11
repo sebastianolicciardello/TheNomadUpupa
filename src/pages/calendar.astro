@@ -47,9 +47,24 @@ const embedUrl = `https://calendar.google.com/calendar/embed?${embedParams.toStr
     </header>
 
     <div class="rounded-2xl border border-warm-200/70 dark:border-warm-900/50 bg-white/90 dark:bg-zinc-900/90 shadow-sm overflow-hidden">
-      <div class="px-5 py-4 border-b border-warm-200/70 dark:border-warm-900/50 bg-warm-50/80 dark:bg-zinc-900">
+      <div class="px-5 py-4 border-b border-warm-200/70 dark:border-warm-900/50 bg-warm-50/80 dark:bg-zinc-900 space-y-3">
         <p class="text-sm font-medium text-warm-900 dark:text-warm-200" data-lang="en">Live availability</p>
         <p class="text-sm font-medium text-warm-900 dark:text-warm-200" data-lang="it" style="display: none;">Disponibilità live</p>
+
+        <div class="flex flex-wrap gap-2" role="group" aria-label="Calendar view selector">
+          <button type="button" class="calendar-view-btn is-active" data-view="MONTH">
+            <span data-lang="en">Month</span>
+            <span data-lang="it" style="display: none;">Mese</span>
+          </button>
+          <button type="button" class="calendar-view-btn" data-view="WEEK" data-range-days="0">
+            <span data-lang="en">Week</span>
+            <span data-lang="it" style="display: none;">Settimana</span>
+          </button>
+          <button type="button" class="calendar-view-btn" data-view="AGENDA" data-range-days="1">
+            <span data-lang="en">Day timeline</span>
+            <span data-lang="it" style="display: none;">Giorno timeline</span>
+          </button>
+        </div>
       </div>
 
       <iframe
@@ -61,6 +76,8 @@ const embedUrl = `https://calendar.google.com/calendar/embed?${embedParams.toStr
         loading="lazy"
         data-calendar-id={GOOGLE_CALENDAR_ID}
         data-timezone={CALENDAR_TIMEZONE}
+        data-view="MONTH"
+        data-range-days="0"
       ></iframe>
     </div>
 
@@ -70,6 +87,46 @@ const embedUrl = `https://calendar.google.com/calendar/embed?${embedParams.toStr
     /* Google Calendar embed has no native dark mode; emulate to match site theme */
     html.dark #availability-calendar {
       filter: invert(0.93) hue-rotate(180deg) saturate(0.85) contrast(0.95);
+    }
+
+    .calendar-view-btn {
+      border: 1px solid rgb(227 196 157 / 0.7);
+      background-color: rgb(255 255 255 / 0.75);
+      color: rgb(120 53 15);
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-weight: 500;
+      padding: 0.35rem 0.75rem;
+      transition: all 0.2s ease;
+    }
+
+    .calendar-view-btn:hover {
+      border-color: rgb(217 119 6 / 0.5);
+      color: rgb(146 64 14);
+    }
+
+    .calendar-view-btn.is-active {
+      background-color: rgb(120 53 15);
+      border-color: rgb(120 53 15);
+      color: rgb(255 255 255);
+    }
+
+    html.dark .calendar-view-btn {
+      background-color: rgb(39 39 42 / 0.75);
+      border-color: rgb(82 82 91);
+      color: rgb(254 243 199);
+    }
+
+    html.dark .calendar-view-btn:hover {
+      border-color: rgb(251 191 36 / 0.55);
+      color: rgb(254 215 170);
+    }
+
+    html.dark .calendar-view-btn.is-active {
+      background-color: rgb(251 191 36);
+      border-color: rgb(251 191 36);
+      color: rgb(28 25 23);
     }
   </style>
 
@@ -82,11 +139,23 @@ const embedUrl = `https://calendar.google.com/calendar/embed?${embedParams.toStr
       return lang.startsWith('it') ? 'it' : 'en';
     }
 
-    function buildEmbedUrl(calendarId, timezone, lang) {
+    function formatDateRange(days) {
+      const parsedDays = Number(days || 0);
+      if (!Number.isFinite(parsedDays) || parsedDays <= 0) return '';
+
+      const start = new Date();
+      const end = new Date(start);
+      end.setDate(start.getDate() + parsedDays);
+
+      const toYmd = (value) => `${value.getFullYear()}${String(value.getMonth() + 1).padStart(2, '0')}${String(value.getDate()).padStart(2, '0')}`;
+      return `${toYmd(start)}/${toYmd(end)}`;
+    }
+
+    function buildEmbedUrl(calendarId, timezone, lang, view, rangeDays) {
       const params = new URLSearchParams({
         src: calendarId,
         ctz: timezone,
-        mode: 'MONTH',
+        mode: view,
         showTitle: '0',
         showPrint: '0',
         showTabs: '0',
@@ -95,6 +164,12 @@ const embedUrl = `https://calendar.google.com/calendar/embed?${embedParams.toStr
         wkst: '2',
         hl: lang
       });
+
+      const dateRange = formatDateRange(rangeDays);
+      if (dateRange) {
+        params.set('dates', dateRange);
+      }
+
       return `https://calendar.google.com/calendar/embed?${params.toString()}`;
     }
 
@@ -103,11 +178,35 @@ const embedUrl = `https://calendar.google.com/calendar/embed?${embedParams.toStr
       if (!iframe) return;
 
       const lang = calendarLang();
-      const nextSrc = buildEmbedUrl(iframe.dataset.calendarId || '', iframe.dataset.timezone || 'Europe/Rome', lang);
+      const currentView = iframe.dataset.view || 'MONTH';
+      const rangeDays = iframe.dataset.rangeDays || '0';
+      const nextSrc = buildEmbedUrl(iframe.dataset.calendarId || '', iframe.dataset.timezone || 'Europe/Rome', lang, currentView, rangeDays);
       if (iframe.getAttribute('src') !== nextSrc) {
         iframe.setAttribute('src', nextSrc);
       }
     }
+
+    function setCalendarView(view, rangeDays = '0') {
+      const iframe = document.getElementById('availability-calendar');
+      if (!iframe || !view) return;
+
+      iframe.dataset.view = view;
+      iframe.dataset.rangeDays = rangeDays;
+
+      document.querySelectorAll('.calendar-view-btn').forEach((button) => {
+        const sameView = button.dataset.view === view;
+        const sameRange = (button.dataset.rangeDays || '0') === String(rangeDays || '0');
+        button.classList.toggle('is-active', sameView && sameRange);
+      });
+
+      syncCalendarLanguage();
+    }
+
+    document.querySelectorAll('.calendar-view-btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        setCalendarView(button.dataset.view || 'MONTH', button.dataset.rangeDays || '0');
+      });
+    });
 
     syncCalendarLanguage();
 
