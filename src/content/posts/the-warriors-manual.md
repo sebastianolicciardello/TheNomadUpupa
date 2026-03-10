@@ -90,6 +90,9 @@ locations:
       lat: 39.987761
       lon: 15.720646
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1772915462/photo_5_2025-09-18_10-07-13_p8cx8l.jpg
+coverCaption:
+  en: "Me at sunset overlooking Maratea"
+  it: "Io al tramonto con vista su Maratea"
 description:
   it: "Dopo aver raggiunto l'obiettivo di diventare nomade digitale, una collaborazione inattesa con una startup, un libro-oracolo e i tramonti di Maratea hanno trasformato quei giorni in un periodo di gratitudine, scelte coraggiose e meraviglia."
   en: "After reaching my goal of becoming a digital nomad, an unexpected startup collaboration, an oracle-like book, and the sunsets of Maratea turned those days into a season of gratitude, courageous choices, and wonder."
@@ -109,7 +112,7 @@ Dopo qualche giorno ho avuto l'opportunità di confrontarmi con una startup che 
 
 La notizia è stata molto improvvisa per me. Avendo sempre lavorato come dipendente, non ero abituato a lavori da libero professionista. Avevo molti dubbi a riguardo.
 
-![Io lavorando per la startup sull'amaca](https://res.cloudinary.com/digfarmqt/image/upload/v1772915430/photo_23_2025-09-18_10-07-13_pe4fte.jpg)
+![Lavorando per la startup sull'amaca](https://res.cloudinary.com/digfarmqt/image/upload/v1772915430/photo_23_2025-09-18_10-07-13_pe4fte.jpg)
 ![Lavorando per la startup al tramonto](https://res.cloudinary.com/digfarmqt/image/upload/v1772915430/photo_16_2025-09-18_10-07-13_ugtoyw.jpg)
 
 ## Il Manuale del Guerriero della Luce
@@ -153,12 +156,12 @@ Un compleanno inizialmente in solitaria, senza poter muovermi da casa, è divent
 ![Grotta delle meraviglie](https://res.cloudinary.com/digfarmqt/image/upload/v1772915449/photo_92_2025-09-18_10-06-24_alzzoc.jpg)
 ![Spiaggia nera marina di Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915448/photo_82_2025-09-18_10-06-24_vwen6g.jpg)
 ![Sentieri marina di Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915438/photo_71_2025-09-18_10-06-49_aul1hd.jpg)
-![Vista marina di Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915430/photo_9_2025-09-18_10-06-49_sxur9u.jpg)
+![Punto panoramico marina di Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915430/photo_9_2025-09-18_10-06-49_sxur9u.jpg)
 ![Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915461/photo_4_2025-09-18_10-07-13_re5vne.jpg)
 ![Vista città Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915460/photo_1_2025-09-18_10-07-13_vhrubx.jpg)
 ![Tramonto Maratea con salame al cioccolato fatto da me](https://res.cloudinary.com/digfarmqt/image/upload/v1772915440/photo_80_2025-09-18_10-06-49_cgv3p0.jpg)
 ![Tramonto Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915440/photo_79_2025-09-18_10-06-49_vzr5bc.jpg)
-![Io che salgo la scalinata del cristo di Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915439/photo_73_2025-09-18_10-06-49_q8arap.jpg)
+![Salendo la scalinata del Cristo di Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915439/photo_73_2025-09-18_10-06-49_q8arap.jpg)
 ![Cristo redentore Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915431/photo_52_2025-09-18_10-06-49_aprs7l.jpg)
 
 <!-- en -->
@@ -174,7 +177,7 @@ A few days later, I had the chance to connect with a startup that was working on
 
 The news came very suddenly. Having always worked as an employee, I wasn't used to freelance work. I had a lot of doubts about it.
 
-![Me working for the startup on a hammock](https://res.cloudinary.com/digfarmqt/image/upload/v1772915430/photo_23_2025-09-18_10-07-13_pe4fte.jpg)
+![Working for the startup on a hammock](https://res.cloudinary.com/digfarmqt/image/upload/v1772915430/photo_23_2025-09-18_10-07-13_pe4fte.jpg)
 ![Working for the startup at sunset](https://res.cloudinary.com/digfarmqt/image/upload/v1772915430/photo_16_2025-09-18_10-07-13_ugtoyw.jpg)
 
 ## The Manual of the Warrior of the Light
@@ -218,10 +221,10 @@ A birthday that had started as a solo affair, with no way to leave the house, su
 ![Grotta delle meraviglie](https://res.cloudinary.com/digfarmqt/image/upload/v1772915449/photo_92_2025-09-18_10-06-24_alzzoc.jpg)
 ![Spiaggia Nera Marina di Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915448/photo_82_2025-09-18_10-06-24_vwen6g.jpg)
 ![Marina di Maratea trails](https://res.cloudinary.com/digfarmqt/image/upload/v1772915438/photo_71_2025-09-18_10-06-49_aul1hd.jpg)
-![Marina di Maratea view](https://res.cloudinary.com/digfarmqt/image/upload/v1772915430/photo_9_2025-09-18_10-06-49_sxur9u.jpg)
+![Marina di Maratea panoramic viewpoint](https://res.cloudinary.com/digfarmqt/image/upload/v1772915430/photo_9_2025-09-18_10-06-49_sxur9u.jpg)
 ![Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915461/photo_4_2025-09-18_10-07-13_re5vne.jpg)
 ![Maratea city view](https://res.cloudinary.com/digfarmqt/image/upload/v1772915460/photo_1_2025-09-18_10-07-13_vhrubx.jpg)
 ![Maratea sunset with homemade chocolate salami](https://res.cloudinary.com/digfarmqt/image/upload/v1772915440/photo_80_2025-09-18_10-06-49_cgv3p0.jpg)
 ![Maratea sunset](https://res.cloudinary.com/digfarmqt/image/upload/v1772915440/photo_79_2025-09-18_10-06-49_vzr5bc.jpg)
-![Me climbing the staircase to the Cristo di Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915439/photo_73_2025-09-18_10-06-49_q8arap.jpg)
+![Climbing the staircase to the Cristo di Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915439/photo_73_2025-09-18_10-06-49_q8arap.jpg)
 ![Cristo redentore Maratea](https://res.cloudinary.com/digfarmqt/image/upload/v1772915431/photo_52_2025-09-18_10-06-49_aprs7l.jpg)

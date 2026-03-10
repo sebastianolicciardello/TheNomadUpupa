@@ -19,6 +19,9 @@ locations:
       lon: 15.48064
     isMain: true
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1761411931/photo_2025-01-01_10.54.49_zvf9fp.jpg
+coverCaption:
+  en: "Valle dei Mulini Waterfall"
+  it: "Cascata Valle dei Mulini"
 description:
   en: "Between limiting thoughts and useless objects, I discovered that breaking chains doesn't just mean lightening the backpack, but freeing space in the mind."
   it: "Tra pensieri limitanti e oggetti inutili, ho scoperto che spezzare le catene non significa solo alleggerire lo zaino, ma liberare spazio nella mente."

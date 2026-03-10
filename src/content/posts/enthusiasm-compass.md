@@ -28,6 +28,9 @@ locations:
       lon: 15.190079
     isMain: true
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1764102485/IMG_20251123_150246_995_oewalu.jpg
+coverCaption:
+  en: "Cliffs of Stazzo"
+  it: "Scogliera di Stazzo"
 description:
   en: "How a series of coincidences and growing enthusiasm led to the decision to spend the first month as a digital nomad in Turin, following the inner compass instead of logical expectations."
   it: "Come una serie di coincidenze e un entusiasmo crescente abbiano portato alla decisione di passare il primo mese da nomade digitale a Torino, seguendo la bussola interiore invece delle aspettative logiche."
@@ -170,4 +173,4 @@ Turin. One month. My first real leap.
 
 The universe had plotted enough. Now it was up to me.
 
-![Scogliera di Stazzo](https://res.cloudinary.com/digfarmqt/image/upload/v1764102484/IMG_20251123_151248_947_iyfckj.jpg)
+![Cliffs of Stazzo](https://res.cloudinary.com/digfarmqt/image/upload/v1764102484/IMG_20251123_151248_947_iyfckj.jpg)

@@ -52,6 +52,9 @@ locations:
       lat: 38.396669
       lon: 14.987721
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1756365753/2024-10-22_09.52.42_2_gegimd.jpg
+coverCaption:
+  en: "The photo taken by the German"
+  it: "La foto scattata dal tedesco"
 description:
   en: "After the solitude of Stromboli, Lipari becomes a place of reflection and rediscovered connections, where unsent letters help process the past and understand who we want to become"
   it: "Dopo la solitudine di Stromboli, Lipari diventa un luogo di riflessione e connessioni ritrovate, dove le lettere mai spedite aiutano a elaborare il passato e capire chi vogliamo diventare"
@@ -71,7 +74,7 @@ L'appartamento che avevo scelto era perfetto per lavorare: silenzioso, funzional
 
 Invece, sbagliando approccio nella scelta dell'alloggio, continuai il mio viaggio in solitudine. Ma anche questa volta la solitudine aveva qualcosa da mostrarmi.
 
-![Vista dal trekking verso l'osservatorio](https://res.cloudinary.com/digfarmqt/image/upload/v1756365753/IMG_20241015_180728_tigr_2_njc5sq.jpg)
+![Vista sulle eolie](https://res.cloudinary.com/digfarmqt/image/upload/v1756365753/IMG_20241015_180728_tigr_2_njc5sq.jpg)
 
 
 ### Le parole che non dirò mai
@@ -117,7 +120,7 @@ It's one of the most valuable lessons of solo travel: when you need solitude, so
 
 Instead, making the wrong approach in choosing accommodation, I continued my journey in solitude. But also this time solitude had something to show me.
 
-![View from the trek to the observatory](https://res.cloudinary.com/digfarmqt/image/upload/v1756365753/IMG_20241015_180728_tigr_2_njc5sq.jpg)
+![View of the Aeolian Islands](https://res.cloudinary.com/digfarmqt/image/upload/v1756365753/IMG_20241015_180728_tigr_2_njc5sq.jpg)
 
 ### The words I'll never say
 

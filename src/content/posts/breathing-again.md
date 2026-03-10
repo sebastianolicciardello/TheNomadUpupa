@@ -40,6 +40,9 @@ music:
     en: "\"I'll leave tonight to save my mind\" - this phrase perfectly captures what January and February were for me.\n\nIt wasn't just a walk, but a necessary act to save my mind.\n\nCrossing ancient roads, climbing rocks, meditating in the forest: each step was a way out of the fog.\n\n\"My paradise is their hell\" - for me, spending hours walking is paradise, for those in their comfort zone it might seem like hell.\n\nI was preparing my wings, not theirs"
     it: "\"I'll leave tonight to save my mind\" - questa frase racchiude esattamente cosa sono stati gennaio e febbraio per me.\n\nNon era solo una passeggiata, ma un atto necessario per salvare la mente.\n\nAttraversare strade antiche, arrampicarmi sugli scogli, meditare nel bosco: ogni passo era un modo per uscire dalla nebbia.\n\n\"My paradise is their hell\" - per me stare ore a camminare è paradiso, per chi è nella zona di comfort potrebbe sembrare un inferno.\n\nStavo preparando le mie ali, non le loro"
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1764102485/IMG_20251123_151137_818_lnnf8d.jpg
+coverCaption:
+  en: "Yoga session on Etna"
+  it: "Sessione di yoga sull'Etna"
 description:
   en: "After December's weight, January and February became a journey back to breathing through nature, walking, and reconnection with the essential"
   it: "Dopo il peso di dicembre, gennaio e febbraio sono diventati un viaggio per tornare a respirare attraverso la natura, il cammino e la riconnessione con l'essenziale"
@@ -65,7 +68,7 @@ E poi c'erano loro: i cormorani. Li ho sempre trovati affascinanti, ma in quel p
 
 Dopo essermi arrampicato in diversi scogli di pietra lavica, attività che adoro sin da piccolo, mi sedevo su uno di questi ad osservarli. E in qualche modo, vedere esseri così perfettamente in equilibrio con il loro ambiente mi aiutava a credere che forse anch'io avrei trovato il mio.
 
-![Scogli di pietra lavica](https://res.cloudinary.com/digfarmqt/image/upload/v1764102485/IMG_20251123_151330_994_kh0eeh.jpg)
+![Raggiunta la torre della Garitta](https://res.cloudinary.com/digfarmqt/image/upload/v1764102485/IMG_20251123_151330_994_kh0eeh.jpg)
 
 ### Yoga sull'Etna
 
@@ -73,7 +76,7 @@ Poi c'è stata l'esperienza dello yoga sull'Etna. Meditazione nel bosco, con l'e
 
 Non so come spiegarlo senza sembrare retorico, ma quella giornata mi ha riportato a me stesso. La connessione con la natura, il respiro sincronizzato con il movimento, il silenzio nella mia mente durante la meditazione che amplificava ogni pensiero fino a renderlo così chiaro da non poterlo più ignorare.
 
-![Esplorazione della grotta](https://res.cloudinary.com/digfarmqt/image/upload/v1764102485/IMG_20251123_151224_078_yuxjoc.jpg)
+![Esplorazione della grotta di Schandlish](https://res.cloudinary.com/digfarmqt/image/upload/v1764102485/IMG_20251123_151224_078_yuxjoc.jpg)
 
 Era questo che mi mancava. Non le risposte, non la certezza. Ma questa connessione. Con i luoghi. Con il mio corpo. Con la parte di me che sa, anche quando la mente non capisce ancora.
 
@@ -114,7 +117,7 @@ And then there were them: the cormorants. I've always found them fascinating, bu
 
 After climbing on various lava stone rocks, an activity I've loved since I was a child, I would sit on one of them to observe them. And somehow, seeing beings so perfectly in balance with their environment helped me believe that maybe I too would find mine.
 
-![Lava stone rocks](https://res.cloudinary.com/digfarmqt/image/upload/v1764102485/IMG_20251123_151330_994_kh0eeh.jpg)
+![Reached the Garitta tower](https://res.cloudinary.com/digfarmqt/image/upload/v1764102485/IMG_20251123_151330_994_kh0eeh.jpg)
 
 ### Yoga on Etna
 
@@ -122,7 +125,7 @@ Then there was the yoga experience on Etna. Meditation in the forest, with the e
 
 I don't know how to explain it without sounding rhetorical, but that day brought me back to myself. The connection with nature, the breath synchronized with movement, the silence in my mind during meditation that amplified every thought until it became so clear I could no longer ignore it.
 
-![Cave exploration](https://res.cloudinary.com/digfarmqt/image/upload/v1764102485/IMG_20251123_151224_078_yuxjoc.jpg)
+![Exploration of Schandlish Cave](https://res.cloudinary.com/digfarmqt/image/upload/v1764102485/IMG_20251123_151224_078_yuxjoc.jpg)
 
 This was what I was missing. Not the answers, not certainty. But this connection. With places. With my body. With the part of me that knows, even when the mind doesn't understand yet.
 

@@ -7,6 +7,9 @@ eventEndTime: 2025-03-20T23:59:59Z
 publishTime: 2025-12-17T10:00:00Z
 lang: it
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1765984018/5882171150728021240_tck1ot.jpg
+coverCaption:
+  en: "Etna lava flow"
+  it: "Colata lavica dell'Etna"
 coords:
   lat: 37.72751
   lon: 14.96466
@@ -101,8 +104,8 @@ E nonostante tutto, continuai a godermi le passeggiate nei parchi in riva al fiu
 
 ![Passeggiate nei parchi](https://res.cloudinary.com/digfarmqt/image/upload/v1765984021/IMG_20251209_211825_079_ims46z.jpg)
 
-![Tempo con la mia amica](https://res.cloudinary.com/digfarmqt/image/upload/v1765984027/IMG_20251209_212344_465_vxowh5.jpg)
-![Tempo con la mia amica](https://res.cloudinary.com/digfarmqt/image/upload/v1765984023/IMG_20251209_212224_730_lypzdq.jpg)
+![Con Anna a Torino](https://res.cloudinary.com/digfarmqt/image/upload/v1765984027/IMG_20251209_212344_465_vxowh5.jpg)
+![Con Anna a Torino](https://res.cloudinary.com/digfarmqt/image/upload/v1765984023/IMG_20251209_212224_730_lypzdq.jpg)
 
 Forse l'avventura vera non è solo viaggiare ed esplorare luoghi nuovi. È scoprire che riesci a cavartela anche quando tutto va storto. E che quando succede, quando la tecnologia ti abbandona o i piani cambiano, non è la fine del mondo. È solo l'inizio di una storia diversa da raccontare.
 
@@ -169,8 +172,8 @@ And despite everything, I continued to enjoy the walks in the riverside parks, t
 
 ![Walks in the parks](https://res.cloudinary.com/digfarmqt/image/upload/v1765984021/IMG_20251209_211825_079_ims46z.jpg)
 
-![Time with my friend](https://res.cloudinary.com/digfarmqt/image/upload/v1765984027/IMG_20251209_212344_465_vxowh5.jpg)
-![Time with my friend](https://res.cloudinary.com/digfarmqt/image/upload/v1765984023/IMG_20251209_212224_730_lypzdq.jpg)
+![With Anna in Turin](https://res.cloudinary.com/digfarmqt/image/upload/v1765984027/IMG_20251209_212344_465_vxowh5.jpg)
+![With Anna in Turin](https://res.cloudinary.com/digfarmqt/image/upload/v1765984023/IMG_20251209_212224_730_lypzdq.jpg)
 
 Perhaps the real adventure isn't just traveling and exploring new places. It's discovering that you can manage even when everything goes wrong. And that when it happens, when technology abandons you or plans change, it's not the end of the world. It's just the beginning of a different story to tell.
 

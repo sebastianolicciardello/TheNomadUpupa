@@ -32,6 +32,7 @@ const postSchema = z.object({
     description: multilingualField.optional()
   }).optional(),
   cover: z.string().optional(),
+  coverCaption: multilingualField.optional(),
   description: multilingualField.optional(),
   lang: z.enum(['en', 'it']).optional(),
   translationKey: z.string().optional(),

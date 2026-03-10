@@ -42,6 +42,9 @@ locations:
       lat: 45.7997
       lon: 8.4156
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1768066740/IMG_20250330_150905_171_mougaj.jpg
+coverCaption:
+  en: "Exploring the lakes of Avigliana"
+  it: "Esplorando i laghi di Avigliana"
 description:
   en: "The first steps into digital nomad life in March, from conferences to nature and the camper experience that sealed the conviction."
   it: "I primi passi nella vita da nomade digitale a marzo, dalle conferenze alla natura e l'esperienza in camper che suggellò la convinzione."
@@ -79,11 +82,11 @@ Quando si riprese completamente, Giuppi mi propose di andare con il suo camper a
 
 Fu incredibile poter lavorare in qualsiasi luogo con Starlink. Per strada o in riva al lago. Poter fare una pausa dal lavoro passeggiando lungo il lago invece delle pause caffè da ufficio. La differenza non era solo nel paesaggio, era nella sensazione di vivere mentre lavoravo, non di vivere nonostante il lavoro.
 
-![Camper 1](https://res.cloudinary.com/digfarmqt/image/upload/v1768066740/clipboard_2026-01-10_17-44_iy7694.jpg)
+![Lavorando in camper](https://res.cloudinary.com/digfarmqt/image/upload/v1768066740/clipboard_2026-01-10_17-44_iy7694.jpg)
 
-![Camper 2](https://res.cloudinary.com/digfarmqt/image/upload/v1768066738/IMG_20250330_150811_713_sq8bns.jpg)
+![Lavorando in camper davanti al lago](https://res.cloudinary.com/digfarmqt/image/upload/v1768066738/IMG_20250330_150811_713_sq8bns.jpg)
 
-![Camper 3](https://res.cloudinary.com/digfarmqt/image/upload/v1768066963/photo_2026-01-10_18-41-31_zbhlkr.jpg)
+![Pizza con Giuppi nel camper](https://res.cloudinary.com/digfarmqt/image/upload/v1768066963/photo_2026-01-10_18-41-31_zbhlkr.jpg)
 
 Fu inoltre molto utile lo scambio di pensieri e consigli sull'ambito lavorativo, sul nomadismo digitale e sulla crescita personale. Giuppi aveva già vissuto tutto quello che io stavo iniziando a scoprire. Ogni sua parola era esperienza concreta, non teoria.
 
@@ -124,11 +127,11 @@ When he fully recovered, Giuppi proposed to go with his camper van to Lake Orta.
 
 It was incredible to be able to work anywhere with Starlink. On the road or by the lake. Being able to take a break from work by walking along the lake instead of office coffee breaks. The difference wasn't just in the landscape, it was in the feeling of living while working, not living despite work.
 
-![Camper 1](https://res.cloudinary.com/digfarmqt/image/upload/v1768066740/clipboard_2026-01-10_17-44_iy7694.jpg)
+![Working in the camper van](https://res.cloudinary.com/digfarmqt/image/upload/v1768066740/clipboard_2026-01-10_17-44_iy7694.jpg)
 
-![Camper 2](https://res.cloudinary.com/digfarmqt/image/upload/v1768066738/IMG_20250330_150811_713_sq8bns.jpg)
+![Working in the camper van by the lake](https://res.cloudinary.com/digfarmqt/image/upload/v1768066738/IMG_20250330_150811_713_sq8bns.jpg)
 
-![Camper 3](https://res.cloudinary.com/digfarmqt/image/upload/v1768066963/photo_2026-01-10_18-41-31_zbhlkr.jpg)
+![Pizza with Giuppi in the camper van](https://res.cloudinary.com/digfarmqt/image/upload/v1768066963/photo_2026-01-10_18-41-31_zbhlkr.jpg)
 
 It was also very useful to exchange thoughts and advice on work, digital nomadism, and personal growth. Giuppi had already lived through everything I was starting to discover. Every word of his was concrete experience, not theory.
 

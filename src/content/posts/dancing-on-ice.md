@@ -40,6 +40,9 @@ locations:
       lon: 6.886089
     isMain: true
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1768683688/PXL_20250329_170234278_iwljcx.jpg
+coverCaption:
+  en: "View of the French Alps at sunset"
+  it: "Vista sulle alpi francesi al tramonto"
 description:
   en: "Exploring Turin and its vegan restaurants, then a crazy adventure dancing on a frozen lake in the Alps with my friend Anna."
   it: "Esplorando Torino e i suoi ristoranti vegani, poi una folle avventura ballando su un lago ghiacciato nelle Alpi con la mia amica Anna."
@@ -51,7 +54,7 @@ Ho continuato la scoperta di Torino e dei suoi infiniti ristoranti vegani e/o et
 
 ## Finalmente le Alpi
 
-![Vista montagne](https://res.cloudinary.com/digfarmqt/image/upload/v1768683686/IMG_20250329_152746872_izipzh.jpg)
+![Vista sulle alpi francesi](https://res.cloudinary.com/digfarmqt/image/upload/v1768683686/IMG_20250329_152746872_izipzh.jpg)
 
 Prima del mio ritorno in Sicilia, con Anna siamo riusciti ad organizzarci per andare finalmente sulle Alpi! Treno in direzione Salice d'Ulzio!
 
@@ -80,7 +83,7 @@ I continued discovering Turin and its endless vegan and/or ethnic restaurants to
 
 ## Finally the Alps
 
-![Mountain view](https://res.cloudinary.com/digfarmqt/image/upload/v1768683686/IMG_20250329_152746872_izipzh.jpg)
+![View of the French Alps](https://res.cloudinary.com/digfarmqt/image/upload/v1768683686/IMG_20250329_152746872_izipzh.jpg)
 
 Before my return to Sicily, Anna and I managed to organize ourselves to finally go to the Alps! Train heading to Salice d'Ulzio!
 

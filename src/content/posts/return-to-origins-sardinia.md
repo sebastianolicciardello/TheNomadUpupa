@@ -82,6 +82,9 @@ locations:
       lat: 39.710051
       lon: 8.456124
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1757240004/PXL_20241113_164556995_3_kkblcu.jpg
+coverCaption:
+  en: "The van parked near the sea"
+  it: "Il van parcheggiato vicino al mare"
 description:
   en: "When the van becomes a bridge between childhood memories and the revolutionary act of choosing patience over speed."
   it: "Quando il van diventa un ponte tra i ricordi d'infanzia e l'atto rivoluzionario di scegliere la pazienza alla velocità."

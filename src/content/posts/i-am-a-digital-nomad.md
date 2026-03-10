@@ -24,6 +24,9 @@ locations:
       lon: 15.814621
     isMain: true
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1772122813/photo_46_2025-09-18_10-05-59_1_rsxtb3.jpg
+coverCaption:
+  en: "Campsite beach in Diamante at sunset"
+  it: "Spiaggia del campeggio a Diamante al tramonto"
 description:
   en: "On a beach in Diamante, during a sunset by Cirella Island, a mantra repeated for over a year finally became reality: I realized I had truly become a digital nomad."
   it: "Su una spiaggia di Diamante, durante un tramonto accanto all'isola di Cirella, un mantra ripetuto per oltre un anno è diventato realtà: mi sono reso conto di essere davvero diventato un nomade digitale."
@@ -98,4 +101,4 @@ Sometimes the circle closes exactly where it needs to close. And when it happens
 
 The child I was and the man I had become met on that beach. And finally, they were the same person.
 
-![Spiaggia del campeggio](https://res.cloudinary.com/digfarmqt/image/upload/v1772122813/photo_31_2025-09-18_10-05-59_qegmst.jpg)
+![Campsite beach in Diamante at sunset](https://res.cloudinary.com/digfarmqt/image/upload/v1772122813/photo_31_2025-09-18_10-05-59_qegmst.jpg)

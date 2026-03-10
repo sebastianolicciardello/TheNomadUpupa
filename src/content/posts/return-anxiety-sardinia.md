@@ -82,6 +82,9 @@ locations:
       lat: 39.33394
       lon: 8.40051
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1758093428/IMG_20241123_165221_tigr_yxhxru.jpg
+coverCaption:
+  en: "The cliffs of Nebida"
+  it: "Le scogliere di Nebida"
 description:
   en: "A trek in Nebida made me discover return anxiety and the awareness that real growth always happens outside the comfort zone."
   it: "Un trekking a Nebida mi ha fatto scoprire l'ansia di ritorno e la consapevolezza che la vera crescita accade sempre fuori dalla zona di comfort."

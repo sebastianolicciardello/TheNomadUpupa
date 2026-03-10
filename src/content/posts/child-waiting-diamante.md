@@ -64,6 +64,9 @@ locations:
       lat: 39.690652
       lon: 15.814621
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1771006808/photo_4_2025-09-18_10-05-59_rgs3uq.jpg
+coverCaption:
+  en: "Sea view from the Messina strait ferry"
+  it: "Vista mare dal traghetto dello stretto di Messina"
 description:
   en: "A return to Diamante after fifteen years, where memories of family camper trips, sunsets over Cirella island, and a new full-time nomad departure come together in an emotional homecoming."
   it: "Un ritorno a Diamante dopo quindici anni, dove i ricordi dei viaggi in camper in famiglia, i tramonti sull'isola di Cirella e una nuova partenza da nomade full time si intrecciano in un ritorno a casa emotivo."
@@ -99,7 +102,7 @@ Ma l'aspetto che più mi ha colpito era il suono in contemporanea delle cascate 
 
 La vera padrona di casa è la gatta, una bellissima bengala, che proprio mentre sto scrivendo questo post è accucciata sopra le mie gambe e mi guarda con i suoi occhioni da ghepardo color smeraldo.
 
-![Gatta](https://res.cloudinary.com/digfarmqt/image/upload/v1771006809/photo_59_2025-09-18_10-05-59_lfutro.jpg)
+![La gatta](https://res.cloudinary.com/digfarmqt/image/upload/v1771006809/photo_59_2025-09-18_10-05-59_lfutro.jpg)
 
 ## Il Ritorno alla Spiaggia
 
@@ -107,7 +110,7 @@ Appena possibile mi sono avviato in spiaggia, per una lunga passeggiata alla ric
 
 Sapevo che ogni sera quello sarebbe diventato un rituale. Mi sentivo benissimo, finalmente felice, in connessione con quel bambino interiore in me che aveva aspettato troppi anni per ritornare su quella spiaggia.
 
-![Campeggio](https://res.cloudinary.com/digfarmqt/image/upload/v1771006809/photo_12_2025-09-18_10-05-59_tl9d4o.jpg)
+![Il campeggio](https://res.cloudinary.com/digfarmqt/image/upload/v1771006809/photo_12_2025-09-18_10-05-59_tl9d4o.jpg)
 
 ![Vista dalla spiaggia](https://res.cloudinary.com/digfarmqt/image/upload/v1771006808/photo_2_2025-09-18_10-05-59_zwocih.jpg)
 
@@ -142,7 +145,7 @@ What struck me the most, though, was the simultaneous sound of the river's water
 
 The true lady of the house is the cat, a beautiful Bengal, who, as I write this post, is curled up on my legs and looking at me with her emerald, cheetah-like eyes.
 
-![Cat](https://res.cloudinary.com/digfarmqt/image/upload/v1771006809/photo_59_2025-09-18_10-05-59_lfutro.jpg)
+![The cat](https://res.cloudinary.com/digfarmqt/image/upload/v1771006809/photo_59_2025-09-18_10-05-59_lfutro.jpg)
 
 ## Returning to the Beach
 
@@ -150,7 +153,7 @@ As soon as I could, I headed to the beach for a long walk in search of the camps
 
 I knew that every evening it would become a ritual. I felt so good, finally happy and connected to that inner child within me who had waited far too many years to return to that beach.
 
-![Campsite](https://res.cloudinary.com/digfarmqt/image/upload/v1771006809/photo_12_2025-09-18_10-05-59_tl9d4o.jpg)
+![The campsite](https://res.cloudinary.com/digfarmqt/image/upload/v1771006809/photo_12_2025-09-18_10-05-59_tl9d4o.jpg)
 
 ![View from the beach](https://res.cloudinary.com/digfarmqt/image/upload/v1771006808/photo_2_2025-09-18_10-05-59_zwocih.jpg)
 

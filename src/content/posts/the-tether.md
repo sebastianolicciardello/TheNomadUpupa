@@ -34,6 +34,9 @@ locations:
       lat: 37.78217
       lon: 15.04183
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1769675349/IMG_20260118_094051_325_lcenpv.jpg
+coverCaption:
+  en: "Exploring the streams caused by melting snow"
+  it: "Esplorando i torrenti dovuti allo scioglimento della neve"
 description:
   en: "Coming home after a month in Turin wasn't easy. Not because of nostalgia for the city, but because of the weight of other people's eyes and the struggle to close an important relationship that was holding me back."
   it: "Tornare a casa dopo un mese a Torino non è stato semplice. Non per la nostalgia della città, ma per il peso degli sguardi degli altri e la fatica di chiudere una relazione importante che mi tratteneva."
@@ -63,7 +66,7 @@ Molte affermazioni che sembrano oggettive sono solo preferenze personali mascher
 
 Come scrive Sivers: "Quasi nulla di ciò che dicono le persone è vero; le idee devono essere utili, non necessariamente vere."
 
-![Vista intermedia](https://res.cloudinary.com/digfarmqt/image/upload/v1769675349/IMG_20260118_094230_544_vqazt4.jpg)
+![Rocca Musarra](https://res.cloudinary.com/digfarmqt/image/upload/v1769675349/IMG_20260118_094230_544_vqazt4.jpg)
 
 ## Quando una relazione non regge il cambiamento
 
@@ -77,7 +80,7 @@ E una volta tornato, ho dovuto chiudere quella relazione.
 
 Non è stato facile. Ho sofferto molto per quella scelta. E sono convinto che l'altra persona ne abbia sofferto molto di più. Ma a volte devi scegliere tra far soffrire qualcuno che ami o soffocare te stesso. E nessuna delle due opzioni è giusta, ma una è necessaria.
 
-![Torrente Quarantore](https://res.cloudinary.com/digfarmqt/image/upload/v1769675349/IMG_20260118_094259_754_hzwexb.jpg)
+![Crateri vicino la rocca](https://res.cloudinary.com/digfarmqt/image/upload/v1769675349/IMG_20260118_094259_754_hzwexb.jpg)
 
 <!-- en -->
 Coming home after a month in Turin wasn't easy. Not because of nostalgia for the city or the places I'd left behind, but because of something more subtle and heavy: the weight of other people's eyes.
@@ -102,7 +105,7 @@ Many statements that seem objective are just personal preferences in disguise. "
 
 As Sivers writes: "Almost nothing people say is true; ideas need to be useful, not necessarily true."
 
-![Middle view](https://res.cloudinary.com/digfarmqt/image/upload/v1769675349/IMG_20260118_094230_544_vqazt4.jpg)
+![Rocca Musarra](https://res.cloudinary.com/digfarmqt/image/upload/v1769675349/IMG_20260118_094230_544_vqazt4.jpg)
 
 ## When a relationship can't withstand change
 
@@ -116,4 +119,4 @@ And once I returned, I had to end that relationship.
 
 It wasn't easy. I suffered a lot for that choice. And I'm convinced the other person suffered much more. But sometimes you have to choose between hurting someone you love or suffocating yourself. And neither option is right, but one is necessary.
 
-![Torrente Quarantore](https://res.cloudinary.com/digfarmqt/image/upload/v1769675349/IMG_20260118_094259_754_hzwexb.jpg)
+![Craters near the rock](https://res.cloudinary.com/digfarmqt/image/upload/v1769675349/IMG_20260118_094259_754_hzwexb.jpg)

@@ -4,8 +4,26 @@ import Layout from '../../layouts/Layout.astro';
 import GeoMap from '../../components/GeoMap.astro';
 import MusicPlayer from '../../components/MusicPlayer.astro';
 import type { Language } from '../../utils/i18n';
-import { marked } from 'marked';
+import { Marked } from 'marked';
 import { formatDateRange } from '../../utils/dateUtils';
+
+const customMarked = new Marked();
+customMarked.use({
+  renderer: {
+    image(token) {
+      const caption = token.title || token.text;
+      const imgHtml = `<img src="${token.href}" alt="${token.text || ''}" ${token.title ? `title="${token.title}"` : ''} class="max-w-full h-auto object-contain rounded-lg shadow-md" style="max-height: 800px; margin: 0 auto; display: block; margin-bottom: 0 !important;" loading="lazy" />`;
+      
+      if (caption) {
+        return `<figure style="display: flex; flex-direction: column; align-items: center; width: 100%; margin: 2rem auto;">
+  ${imgHtml}
+  <figcaption style="margin-top: 6px; font-size: 0.875rem; text-align: center; color: #6b7280; font-style: italic;">${caption}</figcaption>
+</figure>`;
+      }
+      return `<figure style="display: flex; justify-content: center; width: 100%; margin: 2rem auto;">${imgHtml}</figure>`;
+    }
+  }
+});
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts');
@@ -102,12 +120,12 @@ if (post.isMultilingual) {
   // Process for English
   processedDataEn = resolveMultilingualData(post.data, 'en');
   processedDataEn.lang = 'en';
-  processedMarkdownEn = marked(extractLanguageContent(rawContent, 'en'));
+  processedMarkdownEn = customMarked.parse(extractLanguageContent(rawContent, 'en'));
   
   // Process for Italian  
   processedDataIt = resolveMultilingualData(post.data, 'it');
   processedDataIt.lang = 'it';
-  processedMarkdownIt = marked(extractLanguageContent(rawContent, 'it'));
+  processedMarkdownIt = customMarked.parse(extractLanguageContent(rawContent, 'it'));
 } else {
   // Regular single-language content
   const rendered = await post.render();
@@ -115,13 +133,13 @@ if (post.isMultilingual) {
   if (post.lang === 'it') {
     processedDataIt = resolveMultilingualData(post.data, 'it');
     processedDataIt.lang = 'it';
-    processedMarkdownIt = marked(post.body);
+    processedMarkdownIt = customMarked.parse(post.body);
     processedDataEn = null;
     processedMarkdownEn = null;
   } else {
     processedDataEn = resolveMultilingualData(post.data, 'en');
     processedDataEn.lang = 'en';
-    processedMarkdownEn = marked(post.body);
+    processedMarkdownEn = customMarked.parse(post.body);
     processedDataIt = null;
     processedMarkdownIt = null;
   }
@@ -163,14 +181,19 @@ if (post.isMultilingual) {
             </div>
           </div>
           {processedDataEn.cover && (
-            <div class="mt-6 flex justify-center">
+            <figure class="mt-6 flex flex-col items-center">
               <img
                 src={processedDataEn.cover}
-                alt={`Cover image for ${processedDataEn.title}`}
+                alt={processedDataEn.coverCaption || `Cover image for ${processedDataEn.title}`}
                 class="max-w-full h-auto object-contain rounded-lg shadow-md"
                 style="max-height: 600px;"
               />
-            </div>
+              {processedDataEn.coverCaption && (
+                <figcaption style="margin-top: 6px; font-size: 0.875rem; text-align: center; color: #6b7280; font-style: italic;">
+                  {processedDataEn.coverCaption}
+                </figcaption>
+              )}
+            </figure>
           )}
         </header>
         
@@ -220,14 +243,19 @@ if (post.isMultilingual) {
             </div>
           </div>
           {processedDataIt.cover && (
-            <div class="mt-6 flex justify-center">
+            <figure class="mt-6 flex flex-col items-center">
               <img
                 src={processedDataIt.cover}
-                alt={`Immagine di copertina per ${processedDataIt.title}`}
+                alt={processedDataIt.coverCaption || `Immagine di copertina per ${processedDataIt.title}`}
                 class="max-w-full h-auto object-contain rounded-lg shadow-md"
                 style="max-height: 600px;"
               />
-            </div>
+              {processedDataIt.coverCaption && (
+                <figcaption style="margin-top: 6px; font-size: 0.875rem; text-align: center; color: #6b7280; font-style: italic;">
+                  {processedDataIt.coverCaption}
+                </figcaption>
+              )}
+            </figure>
           )}
         </header>
         

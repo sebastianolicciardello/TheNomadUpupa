@@ -52,6 +52,9 @@ locations:
       lat: 38.807485
       lon: 15.213457
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241013_175049_tigr_2_ycef9m.jpg
+coverCaption:
+  en: "The 'Sciara' of Stromboli"
+  it: "La sciara di Stromboli"
 description:
   en: "The story of my first solo journey to the Aeolian Islands and the discovery of solitude as a revolutionary practice in an age of constant connection."
   it: "La storia del mio primo viaggio da solo alle Eolie e la scoperta della solitudine come pratica rivoluzionaria in un'epoca di connessione costante."
@@ -79,7 +82,7 @@ Peccato, perché gli altri viaggiatori in ostello sembravano davvero simpatici e
 
 Furono i primi due giorni di lunghi trekking in totale solitudine a farmi rendere conto di qualcosa di importante. Prima di quel viaggio, come penso molti al giorno d'oggi, stavo passando anni della mia vita senza mai sperimentare lunghi momenti di totale assenza di stimoli esterni.
 
-![Sentiero solitario nelle Eolie](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241012_113638_tigr_2_krtkgm.jpg)
+![Sentiero per raggiungere la piscina di venere a Milazzo](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241012_113638_tigr_2_krtkgm.jpg)
 
 Siamo abituati ad ascoltare musica mentre laviamo i piatti, camminiamo o corriamo. A guardare una serie TV mentre pranziamo. A tenere la TV accesa per farci compagnia. Ad andare in trekking con gli amici chiacchierando per tutta l'escursione. Ma soprattutto, a riempire ogni buco di noia con lo smartphone.
 
@@ -87,17 +90,17 @@ Tutti questi stimoli ci hanno portato a una vera e propria deprivazione di solit
 
 Solo mesi dopo, leggendo "Minimalismo Digitale" di Cal Newport, avrei trovato le parole giuste per quello che stavo sperimentando. Newport definisce la solitudine come "libertà da qualsiasi influenza di altre menti." Allora non avevo ancora letto quelle parole, ma stavo già iniziando a sperimentarne il significato sui sentieri delle Eolie.
 
-![Paesaggio contemplativo durante il trekking](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241012_114415_tigr_2_dotvue.jpg)
+![Piscina di venere](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241012_114415_tigr_2_dotvue.jpg)
 
 ### Stromboli: l'epifania nel fuoco
 
 La rivelazione completa arrivò durante i trekking a Stromboli, dove l'unico stimolo esterno era la potenza pura della natura: le eruzioni del vulcano che tagliavano il silenzio con la loro forza primordiale. Lì, camminando per ore con solo il ritmo dei miei passi e il respiro della terra sotto i piedi, capii cosa mi ero perso in tutti quegli anni di rumore costante.
 
-![Il vulcano Stromboli in eruzione](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241014_160555_tigr_3_ftbcy7.jpg)
+![Spiaggia di sabbia vulcanica a Stromboli](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241014_160555_tigr_3_ftbcy7.jpg)
 
 Nelle lunghe camminate solitarie iniziai a identificare problemi della mia vita che non sapevo nemmeno di avere. Ragionavo su come risolverli, ma soprattutto (e questo fu la scoperta più preziosa) mi rendevo conto di cosa avevo davvero raggiunto nella vita, del percorso che avevo svolto, degli errori e dei successi.
 
-![Tramonto alle Eolie](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241013_185907_tigr_2_y1hgkd.jpg)
+![Stromboli in eruzione](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241013_185907_tigr_2_y1hgkd.jpg)
 
 Alcune volte piangevo, di tristezza o di felicità, magari davanti a un tramonto che nessuno stava condividendo con me sui social. Erano momenti di pura unione con me stesso, un'unione che avevo dimenticato di praticare.
 
@@ -105,7 +108,7 @@ Alcune volte piangevo, di tristezza o di felicità, magari davanti a un tramonto
 
 Oggi, mesi dopo quel viaggio, mi rendo conto di quanto sia diventata importante per me questa pratica della solitudine. È diventata un'abitudine: cucinare, lavare i piatti, mangiare e camminare senza alcuna influenza da schermi, libri o podcast. Le lunghe camminate solitarie sono diventate tra i momenti più significativi delle mie giornate.
 
-![Vista panoramica dalle alture di Stromboli](https://res.cloudinary.com/digfarmqt/image/upload/v1755762114/IMG_20241013_163744_tigr_4_mp8fpy.jpg)
+![Dentro la Grotta di Eolo](https://res.cloudinary.com/digfarmqt/image/upload/v1755762114/IMG_20241013_163744_tigr_4_mp8fpy.jpg)
 
 Non è antisocialità o misantropia. È piuttosto il riconoscimento che, per poter davvero incontrare gli altri, devi prima aver imparato a stare con te stesso. Per poter offrire qualcosa di autentico al mondo, devi aver ascoltato cosa hai da dire quando nessun altro sta parlando.
 
@@ -136,7 +139,7 @@ Too bad, because the other travelers at the hostel seemed really nice and I woul
 
 It was those first two days of long treks in complete solitude that made me realize something important. Before that trip, like many people today I think, I was spending years of my life without ever experiencing long moments of total absence of external stimuli.
 
-![Solitary path in the Aeolian Islands](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241012_113638_tigr_2_krtkgm.jpg)
+![Path to reach the Pool of Venus in Milazzo](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241012_113638_tigr_2_krtkgm.jpg)
 
 We're used to listening to music while washing dishes, walking, or running. Watching a TV series while eating lunch. Keeping the TV on for company. Going hiking with friends chatting throughout the entire excursion. But most of all, filling every moment of boredom with our smartphones.
 
@@ -144,17 +147,17 @@ All these stimuli have led us to a true deprivation of solitude.
 
 Only months later, reading Cal Newport's "Digital Minimalism," would I find the right words for what I was experiencing. Newport defines solitude as "freedom from input from other minds." I hadn't read those words yet, but I was already beginning to experience their meaning on the trails of the Aeolian Islands.
 
-![Contemplative landscape during trekking](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241012_114415_tigr_2_dotvue.jpg)
+![Pool of Venus](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241012_114415_tigr_2_dotvue.jpg)
 
 ### Stromboli: epiphany in fire
 
 The complete revelation came during the treks on Stromboli, where the only external stimulus was the pure power of nature: volcanic eruptions cutting through silence with their primordial force. There, walking for hours with only the rhythm of my steps and the breathing of the earth beneath my feet, I understood what I had missed in all those years of constant noise.
 
-![Stromboli volcano erupting](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241014_160555_tigr_3_ftbcy7.jpg)
+![Volcanic sand beach in Stromboli](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241014_160555_tigr_3_ftbcy7.jpg)
 
 During those long solitary walks, I began to identify problems in my life that I didn't even know I had. I reasoned about how to solve them, but most importantly (and this was the most precious discovery) I became aware of what I had truly achieved in life, the journey I had taken, the mistakes and successes.
 
-![Sunset in the Aeolian Islands](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241013_185907_tigr_2_y1hgkd.jpg)
+![Stromboli erupting](https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241013_185907_tigr_2_y1hgkd.jpg)
 
 Sometimes I cried, from sadness or happiness, perhaps in front of a sunset that no one was sharing with me on social media. These were moments of pure union with myself, a union I had forgotten how to practice.
 
@@ -162,7 +165,7 @@ Sometimes I cried, from sadness or happiness, perhaps in front of a sunset that 
 
 Today, months after that trip, I realize how important this practice of solitude has become for me. It's become a habit: cooking, washing dishes, eating, and walking without any influence from screens, books, or podcasts. Long solitary walks have become among the most meaningful moments of my days.
 
-![Panoramic view from Stromboli heights](https://res.cloudinary.com/digfarmqt/image/upload/v1755762114/IMG_20241013_163744_tigr_4_mp8fpy.jpg)
+![Inside Eolus Cave](https://res.cloudinary.com/digfarmqt/image/upload/v1755762114/IMG_20241013_163744_tigr_4_mp8fpy.jpg)
 
 It's not antisociality or misanthropy. Rather, it's the recognition that to truly meet others, you must first learn to be with yourself. To offer something authentic to the world, you must have listened to what you have to say when no one else is speaking.
 
