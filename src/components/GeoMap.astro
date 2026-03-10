@@ -150,18 +150,19 @@ const mapId = hasLocations ? `map-${Date.now()}` : '';
     }
   </style>
   
-  <script define:vars={{ coords, locations, mapId }}>
+  <script define:vars={{ coords, locations, mapId, STADIA_API_KEY: import.meta.env.PUBLIC_STADIA_API_KEY }}>
     // We'll define the tile provider here to avoid issues with SSR/client-side script loading
     function createTileLayers() {
       const isRetina = L.Browser.retina;
       const r = isRetina ? '@2x' : '';
+      const authParam = STADIA_API_KEY ? `?api_key=${STADIA_API_KEY}` : '';
       
-      const lightTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+      const lightTiles = L.tileLayer(`https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png${authParam}`, {
         maxZoom: 20,
         attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       });
       
-      const darkTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+      const darkTiles = L.tileLayer(`https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png${authParam}`, {
         maxZoom: 20,
         attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       });

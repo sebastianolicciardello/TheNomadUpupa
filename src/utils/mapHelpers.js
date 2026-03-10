@@ -92,14 +92,17 @@ export function getCurrentIcon(lightIcon, darkIcon) {
 }
 
 export function createTileLayers() {
+  const apiKey = import.meta.env.PUBLIC_STADIA_API_KEY || '';
+  const authParam = apiKey ? `?api_key=${apiKey}` : '';
+
   // Stadia Maps Outdoors is detailed and colorful
-  const lightTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+  const lightTiles = L.tileLayer(`https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png${authParam}`, {
     maxZoom: 20,
     attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   });
 
   // We use the same detailed provider for dark theme, but will apply CSS filters
-  const darkTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+  const darkTiles = L.tileLayer(`https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png${authParam}`, {
     maxZoom: 20,
     attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   });

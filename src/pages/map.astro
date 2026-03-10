@@ -310,7 +310,7 @@ const postsWithCoords = postsWithCoordsEn
         }
       </style>
       
-      <script define:vars={{ postsWithCoordsEn, postsWithCoordsIt }}>
+      <script define:vars={{ postsWithCoordsEn, postsWithCoordsIt, STADIA_API_KEY: import.meta.env.PUBLIC_STADIA_API_KEY }}>
         // Shared helper functions (inlined for Astro compatibility)
         function createMapIcons() {
           const lightIcon = L.divIcon({
@@ -351,12 +351,14 @@ const postsWithCoords = postsWithCoordsEn
         }
 
         function createTileLayers() {
-          const lightTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+          const authParam = STADIA_API_KEY ? `?api_key=${STADIA_API_KEY}` : '';
+          
+          const lightTiles = L.tileLayer(`https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png${authParam}`, {
             maxZoom: 20,
             attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           });
           
-          const darkTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+          const darkTiles = L.tileLayer(`https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png${authParam}`, {
             maxZoom: 20,
             attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           });
