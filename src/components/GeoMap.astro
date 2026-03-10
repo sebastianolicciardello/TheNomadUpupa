@@ -139,13 +139,36 @@ const mapId = hasLocations ? `map-${Date.now()}` : '';
       z-index: 1 !important;
     }
     
-    /* Lighten dark theme tiles */
-    .dark .leaflet-tile {
-      filter: brightness(1.3) contrast(0.9) !important;
+    /* Hide attribution */
+    .leaflet-control-attribution {
+      display: none !important;
+    }
+    
+    /* Fix z-index to not overlap navbar */
+    .leaflet-container {
+      z-index: 1 !important;
     }
   </style>
   
-  <script define:vars={{ coords, locations, mapId }} is:inline>
+  <script define:vars={{ coords, locations, mapId }}>
+    // We'll define the tile provider here to avoid issues with SSR/client-side script loading
+    function createTileLayers() {
+      const isRetina = L.Browser.retina;
+      const r = isRetina ? '@2x' : '';
+      
+      const lightTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+        maxZoom: 20,
+        attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      });
+      
+      const darkTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+        maxZoom: 20,
+        attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      });
+      
+      return { lightTiles, darkTiles };
+    }
+
     function initializeGeoMap() {
       console.log('Attempting to initialize GeoMap...', typeof L);
       if (typeof L === 'undefined') {
@@ -188,13 +211,7 @@ const mapId = hasLocations ? `map-${Date.now()}` : '';
       }).addTo(map);
       
       // Light and dark tile layers
-      const lightTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
-      });
-      
-      const darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
-      });
+      const { lightTiles, darkTiles } = createTileLayers();
       
       // Function to update map theme
       function updateMapTheme() {
@@ -242,10 +259,10 @@ const mapId = hasLocations ? `map-${Date.now()}` : '';
           <div style="
             width: 18px; 
             height: 18px; 
-            background: #e5e7eb; 
-            border: 2px solid #374151; 
+            background: #dc2626; 
+            border: 2px solid white; 
             border-radius: 50%; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
           ">
           </div>
         `,

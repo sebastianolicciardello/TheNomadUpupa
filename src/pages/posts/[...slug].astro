@@ -17,7 +17,7 @@ customMarked.use({
       if (caption) {
         return `<figure style="display: flex; flex-direction: column; align-items: center; width: 100%; margin: 2rem auto;">
   ${imgHtml}
-  <figcaption style="margin-top: 6px; font-size: 0.875rem; text-align: center; color: #6b7280; font-style: italic;">${caption}</figcaption>
+  <figcaption class="image-caption">${caption}</figcaption>
 </figure>`;
       }
       return `<figure style="display: flex; justify-content: center; width: 100%; margin: 2rem auto;">${imgHtml}</figure>`;
@@ -189,7 +189,7 @@ if (post.isMultilingual) {
                 style="max-height: 600px;"
               />
               {processedDataEn.coverCaption && (
-                <figcaption style="margin-top: 6px; font-size: 0.875rem; text-align: center; color: #6b7280; font-style: italic;">
+                <figcaption class="image-caption">
                   {processedDataEn.coverCaption}
                 </figcaption>
               )}
@@ -251,7 +251,7 @@ if (post.isMultilingual) {
                 style="max-height: 600px;"
               />
               {processedDataIt.coverCaption && (
-                <figcaption style="margin-top: 6px; font-size: 0.875rem; text-align: center; color: #6b7280; font-style: italic;">
+                <figcaption class="image-caption">
                   {processedDataIt.coverCaption}
                 </figcaption>
               )}

@@ -3,7 +3,7 @@
 export function createPopupContent(post, lang = 'en') {
   const readMoreText = lang === 'it' ? 'Leggi di più →' : 'Read more →';
   const postUrl = `/posts/${post.slug}/`;
-  
+
   return `
     <div class="p-1 sm:p-2 w-full">
       ${post.cover ? `<img src="${post.cover}" alt="${post.title}" class="w-full h-16 sm:h-20 object-cover rounded mb-1 sm:mb-2">` : ''}
@@ -34,17 +34,17 @@ export function setupMapTheme(map, lightTiles, darkTiles) {
       lightTiles.addTo(map);
     }
   }
-  
+
   // Set initial theme
   updateMapTheme();
-  
+
   // Listen for theme changes
   const observer = new MutationObserver(updateMapTheme);
   observer.observe(document.documentElement, {
     attributes: true,
     attributeFilter: ['class']
   });
-  
+
   return updateMapTheme;
 }
 
@@ -72,10 +72,10 @@ export function createMapIcons() {
       <div style="
         width: 18px; 
         height: 18px; 
-        background: #e5e7eb; 
-        border: 2px solid #374151; 
+        background: #dc2626; 
+        border: 2px solid #ffffff; 
         border-radius: 50%; 
-        box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5);
       ">
       </div>
     `,
@@ -92,13 +92,17 @@ export function getCurrentIcon(lightIcon, darkIcon) {
 }
 
 export function createTileLayers() {
-  const lightTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
+  // Stadia Maps Outdoors is detailed and colorful
+  const lightTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+    maxZoom: 20,
+    attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   });
-  
-  const darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
+
+  // We use the same detailed provider for dark theme, but will apply CSS filters
+  const darkTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+    maxZoom: 20,
+    attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   });
-  
+
   return { lightTiles, darkTiles };
 }

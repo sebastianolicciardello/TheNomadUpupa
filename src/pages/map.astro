@@ -160,20 +160,29 @@ const postsWithCoords = postsWithCoordsEn
         
         /* Dark theme popup styles */
         .dark .leaflet-popup-content-wrapper {
-          background: #374151 !important;
-          color: #f3f4f6 !important;
+          background: #1e293b !important;
+          color: #f1f5f9 !important;
+          border: 1px solid #334155 !important;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+          border-radius: 12px !important;
         }
         
         .dark .leaflet-popup-tip {
-          background: #374151 !important;
+          background: #1e293b !important;
+          border: 1px solid #334155 !important;
         }
         
         .dark .leaflet-popup-close-button {
-          color: #f3f4f6 !important;
+          color: #cbd5e1 !important;
         }
         
-        .dark .leaflet-popup-close-button:hover {
-          color: #d1d5db !important;
+        .dark .leaflet-popup-content a {
+          color: #93c5fd !important;
+          font-weight: 600 !important;
+        }
+        
+        .dark .leaflet-popup-content a:hover {
+          color: #bfdbfe !important;
         }
         
         /* Improve text contrast in popups */
@@ -287,16 +296,6 @@ const postsWithCoords = postsWithCoordsEn
           z-index: 1 !important;
         }
         
-        /* Lighten dark theme tiles */
-        .dark .leaflet-tile {
-          filter: brightness(1.4) contrast(0.8) saturate(0.9) !important;
-        }
-        
-        /* Also apply filter to the entire map container in dark mode */
-        .dark #global-map {
-          filter: brightness(1.1) !important;
-        }
-        
         /* Hide entire map div initially to prevent flash of wrong position */
         #global-map-en,
         #global-map-it {
@@ -334,15 +333,15 @@ const postsWithCoords = postsWithCoordsEn
           const darkIcon = L.divIcon({
             className: 'custom-marker dark-marker',
             html: `
-              <div style="
-                width: 18px; 
-                height: 18px; 
-                background: #e5e7eb; 
-                border: 2px solid #374151; 
-                border-radius: 50%; 
-                box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-              ">
-              </div>
+                <div style="
+                  width: 18px; 
+                  height: 18px; 
+                  background: #dc2626; 
+                  border: 2px solid #ffffff; 
+                  border-radius: 50%; 
+                  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+                ">
+                </div>
             `,
             iconSize: [18, 18],
             iconAnchor: [9, 9]
@@ -352,12 +351,14 @@ const postsWithCoords = postsWithCoordsEn
         }
 
         function createTileLayers() {
-          const lightTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
+          const lightTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+            maxZoom: 20,
+            attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           });
           
-          const darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
+          const darkTiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+            maxZoom: 20,
+            attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           });
           
           return { lightTiles, darkTiles };
