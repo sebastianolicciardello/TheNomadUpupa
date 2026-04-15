@@ -3,7 +3,7 @@ title:
   en: "Between Railways and Roads Toward Freedom"
   it: "Tra rotaie e strade verso la libertà"
 eventStartTime: 2025-06-01T00:00:00Z
-eventEndTime: 2025-06-14T23:59:59Z
+eventEndTime: 2025-06-21T23:59:59Z
 publishTime: 2026-04-15T00:00:00Z
 coords:
   lat: 39.87389
@@ -60,15 +60,15 @@ translationKey: "railways-roads-freedom"
 ---
 
 <!-- it -->
-Le ultime settimane a Diamante sono state un continuo alternarsi di spiaggia, escursioni con amici e momenti con la fantastica gatta bengala della casa. Ma il momento piu emozionante e stato l'arrivo di mia sorella per un fine settimana insieme.
+Le ultime settimane a Diamante sono state un continuo alternarsi di spiaggia, escursioni con amici e momenti con la fantastica gatta bengala della casa. Ma il momento più emozionante è stato l'arrivo di mia sorella per un fine settimana insieme.
 
 ![Spiaggia di Diamante](https://res.cloudinary.com/digfarmqt/image/upload/v1776279185/PXL_20250531_201231692_jd5uve.jpg "La solita spiaggia di Diamante")
 
 ![La gatta bengala della casa](https://res.cloudinary.com/digfarmqt/image/upload/v1776279185/PXL_20250603_160813804_cerhq8.jpg "La gatta bengala della casa")
 
-Condividere con lei "la nostra Diamante", quella dei ricordi d'infanzia, ed esplorare insieme le grotte dell'Isola di Dino e stato incredibile. Fare il bagno in quelle grotte, con i pipistrelli che volavano sul soffitto, l'acqua di un blu metallico fantastico e pesci veramente grandi che nuotavano tranquilli in quelle acque cosi profonde. Un'esperienza che portero sempre con me.
+Condividere con lei "la nostra Diamante", quella dei ricordi d'infanzia, ed esplorare insieme le grotte dell'Isola di Dino è stato incredibile. Fare il bagno in quelle grotte, con i pipistrelli che volavano sul soffitto, l'acqua di un blu metallico fantastico e pesci veramente grandi che nuotavano tranquilli in quelle acque così profonde. Un'esperienza che porterò sempre con me.
 
-Tra i punti che mi sono rimasti piu impressi ci sono stati anche l'Arco di Enea e soprattutto la Grotta Azzurra, con quella luce quasi irreale che sembrava cambiare consistenza all'acqua.
+Tra i punti che mi sono rimasti più impressi ci sono stati anche l'Arco di Enea e soprattutto la Grotta Azzurra, con quella luce quasi irreale che sembrava cambiare consistenza all'acqua.
 
 ![Isola di Dino](https://res.cloudinary.com/digfarmqt/image/upload/v1776279181/IMG-20250614-WA0042_q0vuuj.jpg "Isola di Dino")
 
@@ -86,51 +86,51 @@ Finalmente pronto a lasciare Diamante, mi sono preparato alla partenza. Mi aspet
 
 Che sono diventate 26 a causa di numerosi ritardi e guasti alla linea in zona Milano.
 
-E li, bloccato per ore, esausto, dipendente da mezzi pubblici che non dipendevano da me, ho capito una cosa: avevo bisogno di un van.
+E lì, bloccato per ore, esausto, dipendente da mezzi pubblici che non dipendevano da me, ho capito una cosa: avevo bisogno di un van.
 
-Nelle settimane precedenti ci avevo pensato. L'idea di comprare un furgone da camperizzare era li, nella mia testa, ma ero ansioso. Sarebbe stato il mio primo acquisto grosso nella vita. E non sapevo nulla di meccanica o automobili.
+Nelle settimane precedenti ci avevo pensato. L'idea di comprare un furgone da camperizzare era lì, nella mia testa, ma ero ansioso. Sarebbe stato il mio primo acquisto grosso nella vita. E non sapevo nulla di meccanica o automobili.
 
-Ma quella brutta esperienza con il treno, e la limitatezza della mia liberta nel muovermi per fare escursioni durante i mesi in Calabria, mi hanno convinto pienamente.
+Ma quella brutta esperienza con il treno, e la limitatezza della mia libertà nel muovermi per fare escursioni durante i mesi in Calabria, mi hanno convinto pienamente.
 
-Oggi non tornerei piu indietro.
+Oggi non tornerei più indietro.
 
 ## A Vigevano per l'acquisto
 
 Mi sono diretto a Vigevano, provincia di Pavia, dove avrei acquistato il van. Ho passato settimane a informarmi, a leggere forum, a chiedere consigli. Non mi ero mai interessato di meccanica, ma in qualche modo sono riuscito a prepararmi per bene.
 
-Il soggiorno a Vigevano e stato anche piacevole: una cittadina tranquilla, elegante, che mi ha accolto in un momento cosi importante.
+Il soggiorno a Vigevano è stato anche piacevole: una cittadina tranquilla, elegante, che mi ha accolto in un momento così importante.
 
 ![Vigevano](https://res.cloudinary.com/digfarmqt/image/upload/v1776279193/PXL_20250615_202242078_htry1n.jpg "Vigevano")
 
-Non e stato tutto semplicissimo: ho avuto qualche problema con l'assicurazione e con il pagamento del van, a causa di intoppi con la banca. Ma proprio in quei momenti ho trovato un'umanita che non mi aspettavo.
+Non è stato tutto semplicissimo: ho avuto qualche problema con l'assicurazione e con il pagamento del van, a causa di intoppi con la banca. Ma proprio in quei momenti ho trovato un'umanità che non mi aspettavo.
 
-Il venditore, le signore dell'assicurazione e anche alcune persone del posto mi hanno aiutato in maniera impeccabile, con disponibilita e gentilezza sincere.
+Il venditore, le signore dell'assicurazione e anche alcune persone del posto mi hanno aiutato in maniera impeccabile, con disponibilità e gentilezza sincere.
 
-E stata una piccola conferma personale: non e sempre vero che al nord siano freddi o poco accoglienti con chi viene dal sud. A Vigevano ho trovato esattamente il contrario.
+È stata una piccola conferma personale: non è sempre vero che al nord siano freddi o poco accoglienti con chi viene dal sud. A Vigevano ho trovato esattamente il contrario.
 
-E alla fine, tutto e andato secondo i piani.
+E alla fine, tutto è andato secondo i piani.
 
-Si tratta di un piccolo van che in realta non sarebbe l'ideale da camperizzare, proprio per le sue dimensioni ridotte. Ma per il mio utilizzo si e rivelato perfetto: molto agile per raggiungere sentieri di montagna, facile da guidare, economico.
+Si tratta di un piccolo van che in realtà non sarebbe l'ideale da camperizzare, proprio per le sue dimensioni ridotte. Ma per il mio utilizzo si è rivelato perfetto: molto agile per raggiungere sentieri di montagna, facile da guidare, economico.
 
 Tuttora lo utilizzo senza problemi. E sono molto felice di questa scelta.
 
 ## Il primo giorno indimenticabile
 
-Fu traumatico, pero, il primo giorno.
+Fu traumatico, però, il primo giorno.
 
 Ero abituato a guidare solo macchine molto piccole. E non guidavo da almeno cinque o sei mesi. Mi sono ritrovato a guidare un furgoncino, senza specchietto retrovisore, senza sensori di parcheggio.
 
 E ho deciso, brillantemente, che il primo giorno sarei andato a trovare degli amici ad Alessandria.
 
-Ritrovarmi in una citta comunque non piccolissima, con un mezzo che ancora non conoscevo, non e stato semplice. Ma la parte migliore doveva ancora arrivare.
+Ritrovarmi in una città comunque non piccolissima, con un mezzo che ancora non conoscevo, non è stato semplice. Ma la parte migliore doveva ancora arrivare.
 
-Non ho visto un cartello che indicava che in una certa piazza non si poteva parcheggiare perche il giorno dopo ci sarebbe stato il mercato. Ho parcheggiato li.
+Non ho visto un cartello che indicava che in una certa piazza non si poteva parcheggiare perché il giorno dopo ci sarebbe stato il mercato. Ho parcheggiato lì.
 
 Il carro attrezzi ha preso il mio van e lo ha portato via.
 
-Avevo il van da meno di 24 ore. E gia era stato ritirato dal carro attrezzi. Con tanto di bella multa.
+Avevo il van da meno di 24 ore. E già era stato ritirato dal carro attrezzi. Con tanto di bella multa.
 
-Fortunatamente, con l'aiuto di un amico, sono riuscito a recuperarlo in poco tempo, grazie Matteo. Ma quel momento, chiamare il deposito, spiegare la situazione, andare a ritirare un furgone che avevo comprato il giorno prima, e stato surreale.
+Fortunatamente, con l'aiuto di un amico, sono riuscito a recuperarlo in poco tempo, grazie Matteo. Ma quel momento, chiamare il deposito, spiegare la situazione, andare a ritirare un furgone che avevo comprato il giorno prima, è stato surreale.
 
 ## Verso la prossima meta
 
