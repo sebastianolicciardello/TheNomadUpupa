@@ -9,7 +9,7 @@ coords:
   lat: 39.87389
   lon: 15.77500
 music:
-  url: "https://music.youtube.com/watch?v=2ua2az10rco"
+  url: "https://music.youtube.com/watch?v=4RBinI0h9EE"
   description:
     en: |
       “Sailing” feels like the transition between being carried by routes you don’t control, and finally choosing your own direction.
