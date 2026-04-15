@@ -40,9 +40,7 @@ music:
 
       Tatakae! ( Combatti! ) per la tua libertà.
 locations:
-  - name:
-      en: "Sentiero Monte Spagnolo"
-      it: "Sentiero Monte Spagnolo"
+  - name: "Sentiero Monte Spagnolo"
     coords:
       lat: 37.82957
       lon: 14.95382

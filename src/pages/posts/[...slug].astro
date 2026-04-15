@@ -77,17 +77,6 @@ function resolveMultilingualData(data: any, targetLang: Language) {
       } else if (value.en) {
         resolved[key] = value.en; // Fallback to English
       }
-    } else if (Array.isArray(value)) {
-      resolved[key] = value.map((item: any) => {
-        if (item.name && typeof item.name === 'object') {
-          if (item.name[targetLang]) {
-            return { ...item, name: item.name[targetLang] };
-          } else if (item.name.en) {
-            return { ...item, name: item.name.en };
-          }
-        }
-        return item;
-      });
     }
   });
   return resolved;

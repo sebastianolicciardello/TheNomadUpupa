@@ -14,16 +14,12 @@ coords:
   lat: 37.72751
   lon: 14.96466
 locations:
-  - name:
-      en: "Pista Altomontana"
-      it: "Pista Altomontana"
+  - name: "Pista Altomontana"
     coords:
       lat: 37.72751
       lon: 14.96466
     isMain: true
-  - name:
-      en: "Parco Pietro Colletta"
-      it: "Parco Pietro Colletta"
+  - name: "Parco Pietro Colletta"
     coords:
       lat: 45.07765
       lon: 7.72192

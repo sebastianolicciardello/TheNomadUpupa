@@ -14,40 +14,28 @@ music:
     en: "Apart but still together perfectly describes my realization: the people who matter don't worry about distance, but only that you're happy"
     it: "Separati ma ancora insieme descrive perfettamente la mia realizzazione: le persone che contano non si preoccupano della lontananza, ma solo che tu sia felice"
 locations:
-  - name:
-      en: "Lipari"
-      it: "Lipari"
+  - name: "Lipari"
     coords:
       lat: 38.4675
       lon: 14.9533
     isMain: true
-  - name:
-      en: "Osservatorio GeoFisico"
-      it: "Osservatorio GeoFisico"
+  - name: "Osservatorio GeoFisico"
     coords:
       lat: 38.445758
       lon: 14.948248
-  - name:
-      en: "Spiaggia delle acque calde"
-      it: "Spiaggia delle acque calde"
+  - name: "Spiaggia delle acque calde"
     coords:
       lat: 38.417880
       lon: 14.959398
-  - name:
-      en: "Spiaggia delle sabbie nere"
-      it: "Spiaggia delle sabbie nere"
+  - name: "Spiaggia delle sabbie nere"
     coords:
       lat: 38.419586
       lon: 14.956501
-  - name:
-      en: "Vulcano"
-      it: "Vulcano"
+  - name: "Vulcano"
     coords:
       lat: 38.40439
       lon: 14.96175
-  - name:
-      en: "Capo Grillo"
-      it: "Capo Grillo"
+  - name: "Capo Grillo"
     coords:
       lat: 38.396669
       lon: 14.987721

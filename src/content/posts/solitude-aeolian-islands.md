@@ -14,40 +14,28 @@ music:
     en: "It is in tune with my experience of those days: the need to create pauses of silence to listen to myself again."
     it: "È in sintonia con la mia esperienza di quei giorni: il bisogno di creare pause di silenzio per tornare ad ascoltarmi."
 locations:
-  - name:
-      en: "Stromboli"
-      it: "Stromboli"
+  - name: "Stromboli"
     coords:
       lat: 38.80407
       lon: 15.23734
     isMain: true
-  - name:
-      en: "Milazzo"
-      it: "Milazzo"
+  - name: "Milazzo"
     coords:
       lat: 38.22071
       lon: 15.24125
-  - name:
-      en: "Capo Milazzo"
-      it: "Capo Milazzo"
+  - name: "Capo Milazzo"
     coords:
       lat: 38.269808
       lon: 15.230922
-  - name:
-      en: "Piscina di Venere"
-      it: "Piscina di Venere"
+  - name: "Piscina di Venere"
     coords:
       lat: 38.269079
       lon: 15.224639
-  - name:
-      en: "Grotta di Eolo"
-      it: "Grotta di Eolo"
+  - name: "Grotta di Eolo"
     coords:
       lat: 38.809905
       lon: 15.229918
-  - name:
-      en: "Sciara di fuoco"
-      it: "Sciara di fuoco"
+  - name: "Sciara di fuoco"
     coords:
       lat: 38.807485
       lon: 15.213457

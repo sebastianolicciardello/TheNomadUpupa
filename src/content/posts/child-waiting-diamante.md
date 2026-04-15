@@ -44,22 +44,16 @@ music:
 
       È una canzone che parla di libertà ritrovata. Di quella sensazione delicata ma potentissima di tornare a casa dentro se stessi.
 locations:
-  - name:
-      en: "Diamante"
-      it: "Diamante"
+  - name: "Diamante"
     coords:
       lat: 39.67755
       lon: 15.82065
     isMain: true
-  - name:
-      en: "Stretto di Messina"
-      it: "Stretto di Messina"
+  - name: "Stretto di Messina"
     coords:
       lat: 38.2106
       lon: 15.5998
-  - name:
-      en: "Spiaggia del campeggio"
-      it: "Spiaggia del campeggio"
+  - name: "Spiaggia del campeggio"
     coords:
       lat: 39.690652
       lon: 15.814621

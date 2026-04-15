@@ -28,16 +28,12 @@ music:
 
       Mi ero sempre chiesto cosa stesse succedendo, perché sentissi questa irrequietezza. La risposta era semplice: stavo cercando il mio posto. Non dentro il sistema, ma fuori. Non nonostante il lavoro, ma vivendo mentre lavoravo. Ricerca che continua ancora adesso mentre scrivo il post a quasi un anno di distanza. Probabilmente continuerà sempre.
 locations:
-  - name:
-      en: "Avigliana"
-      it: "Avigliana"
+  - name: "Avigliana"
     coords:
       lat: 45.0769
       lon: 7.3973
     isMain: true
-  - name:
-      en: "Lake Orta"
-      it: "Lago d'Orta"
+  - name: "Lago d'Orta"
     coords:
       lat: 45.7997
       lon: 8.4156

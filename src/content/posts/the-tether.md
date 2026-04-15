@@ -20,16 +20,12 @@ music:
 
       Mi teneva ancorato a una vita che non mi stava più bene. Non per cattiveria, non per volontà. Semplicemente perché era diventata il simbolo di tutto ciò che non potevo più essere.
 locations:
-  - name:
-      en: "Rocca Musarra"
-      it: "Rocca Musarra"
+  - name: "Rocca Musarra"
     coords:
       lat: 37.740322
       lon: 15.056061
     isMain: true
-  - name:
-      en: "Torrente Quarantore"
-      it: "Torrente Quarantore"
+  - name: "Torrente Quarantore"
     coords:
       lat: 37.78217
       lon: 15.04183

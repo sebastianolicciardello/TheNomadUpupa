@@ -20,9 +20,7 @@ music:
       
       Questa frase rappresenta il lasciare indietro le tradizioni e i percorsi imposti per seguire qualcosa di nuovo. Le campane della chiesa simboleggiano il dovere, il percorso canonico di casa, famiglia, carriera stabile. Quando smetti di sentirle, è perché sei troppo innamorato di chi stai diventando.
 locations:
-  - name:
-      en: "Scogliera di Stazzo"
-      it: "Scogliera di Stazzo"
+  - name: "Scogliera di Stazzo"
     coords:
       lat: 37.646564
       lon: 15.190079

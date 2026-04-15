@@ -16,9 +16,7 @@ music:
     it: |
       Questa melodia mi ha accompagnato nella scrittura di questo post. Non c'è un motivo specifico: ascoltarla mi riporta esattamente alle sensazioni provate su quella spiaggia, un senso profondo di soddisfazione e pace ritrovata.
 locations:
-  - name:
-      en: "Spiaggia del campeggio"
-      it: "Spiaggia del campeggio"
+  - name: "Spiaggia del campeggio"
     coords:
       lat: 39.690652
       lon: 15.814621

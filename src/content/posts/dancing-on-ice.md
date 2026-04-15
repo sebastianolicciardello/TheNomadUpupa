@@ -20,21 +20,15 @@ music:
 
       A volte le canzoni diventano colonne sonore non perché abbiano un significato profondo, ma perché erano lì, nel momento giusto, quando stavi vivendo qualcosa di indimenticabile.
 locations:
-  - name:
-      en: "Turin"
-      it: "Torino"
+  - name: "Torino"
     coords:
       lat: 45.116177
       lon: 7.742615
-  - name:
-      en: "Salice d'Ulzio"
-      it: "Salice d'Ulzio"
+  - name: "Salice d'Ulzio"
     coords:
       lat: 45.0274864
       lon: 6.8596781
-  - name:
-      en: "Lake Laune"
-      it: "Lago Laune"
+  - name: "Lago Laune"
     coords:
       lat: 45.033304
       lon: 6.886089

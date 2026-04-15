@@ -9,28 +9,20 @@ coords:
   lat: 37.832177
   lon: 14.981213
 locations:
-  - name:
-      en: "Rifugio Saletti"
-      it: "Rifugio Saletti"
+  - name: "Rifugio Saletti"
     coords:
       lat: 37.832177
       lon: 14.981213
     isMain: true
-  - name:
-      en: "Schandlish Cave"
-      it: "Grotta di Schandlish"
+  - name: "Grotta di Schandlish"
     coords:
       lat: 37.834192
       lon: 14.990026
-  - name:
-      en: "Garitta dello Scalo Pennisi"
-      it: "Garitta dello Scalo Pennisi"
+  - name: "Garitta dello Scalo Pennisi"
     coords:
       lat: 37.640153
       lon: 15.184336
-  - name:
-      en: "Pozzillo Cliff"
-      it: "Scogliera Pozzillo"
+  - name: "Scogliera Pozzillo"
     coords:
       lat: 37.656288
       lon: 15.199579

@@ -8,14 +8,6 @@ const multilingualField = z.union([
   })
 ]);
 
-const multilingualLocationField = z.union([
-  z.string(),
-  z.object({
-    en: z.string(),
-    it: z.string()
-  })
-]);
-
 const postSchema = z.object({
   title: multilingualField,
   eventStartTime: z.date(),
@@ -23,7 +15,7 @@ const postSchema = z.object({
   publishTime: z.date(),
   coords: z.object({ lat: z.number(), lon: z.number() }).optional(),
   locations: z.array(z.object({
-    name: multilingualLocationField,
+    name: z.string(),
     coords: z.object({ lat: z.number(), lon: z.number() }),
     isMain: z.boolean().optional()
   })).optional(),

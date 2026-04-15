@@ -20,28 +20,20 @@ The line “I’ll follow you where you go” recalls the hoopoe, migrating by i
 
 Il verso “I’ll follow you where you go” richiama l’upupa che migra seguendo soltanto l’istinto. Lo stesso invito che ho sentito: lasciarmi guidare, senza sapere dove, ma con fiducia nella direzione."
 locations:
-  - name:
-      en: "Acireale"
-      it: "Acireale"
+  - name: "Acireale"
     coords:
       lat: 37.61277
       lon: 15.16559
     isMain: true
-  - name:
-      en: "Guardia, Acireale"
-      it: "Guardia, Acireale"
+  - name: "Guardia, Acireale"
     coords:
       lat: 37.66410
       lon: 15.16482
-  - name:
-      en: "Praiola, Carruba"
-      it: "Praiola, Carruba"
+  - name: "Praiola, Carruba"
     coords:
       lat: 37.67866
       lon: 15.19950
-  - name:
-      en: "Schiena dell'Asino, Etna"
-      it: "Schiena dell'Asino, Etna"
+  - name: "Schiena dell'Asino, Etna"
     coords:
       lat: 37.70708
       lon: 15.02835
