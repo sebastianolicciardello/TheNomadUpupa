@@ -130,7 +130,7 @@ Il carro attrezzi ha preso il mio van e lo ha portato via.
 
 Avevo il van da meno di 24 ore. E già era stato ritirato dal carro attrezzi. Con tanto di bella multa.
 
-Fortunatamente, con l'aiuto di un amico, sono riuscito a recuperarlo in poco tempo, grazie Matteo. Ma quel momento, chiamare il deposito, spiegare la situazione, andare a ritirare un furgone che avevo comprato il giorno prima, è stato surreale.
+Fortunatamente, con l'aiuto di un amico, sono riuscito a recuperarlo in poco tempo. Grazie, Matteo! Ma quel momento, chiamare il deposito, spiegare la situazione, andare a ritirare un furgone che avevo comprato il giorno prima, è stato surreale.
 
 ## Verso la prossima meta
 
@@ -211,7 +211,7 @@ The tow truck took my van and drove it away.
 
 I had owned the van for less than 24 hours, and it had already been towed away, complete with a nice fine.
 
-Fortunately, with the help of a friend, I managed to recover it quickly, thanks Matteo. But that moment, calling the impound lot, explaining the situation, and going to pick up a van I had bought the day before, felt surreal.
+Fortunately, with the help of a friend, I managed to recover it quickly. Thanks, Matteo! But that moment, calling the impound lot, explaining the situation, and going to pick up a van I had bought the day before, felt surreal.
 
 ## Towards the Next Destination
 
