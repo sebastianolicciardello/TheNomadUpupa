@@ -3,7 +3,7 @@ title:
   en: "Between Railways and Roads Toward Freedom"
   it: "Tra rotaie e strade verso la libertà"
 eventStartTime: 2025-06-01T00:00:00Z
-eventEndTime: 2025-06-21T23:59:59Z
+eventEndTime: 2025-06-19T12:00:00Z
 publishTime: 2026-04-15T00:00:00Z
 coords:
   lat: 39.87389
