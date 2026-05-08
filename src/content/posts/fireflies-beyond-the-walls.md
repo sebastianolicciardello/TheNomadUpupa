@@ -176,6 +176,8 @@ Scegliere dove vivere. Scegliere come lavorare. Scegliere quando fermarsi a guar
 
 A Nomaglio, tra il bosco, le lucciole, i simboli nascosti e le conversazioni con Flavia, ho capito una cosa: la libertà non è smettere di lavorare. È smettere di lasciarsi definire dal lavoro. È fermarsi, in silenzio, e accorgersi che, da qualche parte, esistono ancora le lucciole.
 
+È anche in quel mese che è nata l'idea di The Nomad Upupa: uno spazio per raccogliere esperienze, pensieri e frammenti di vita lontano dalla logica dei social "in tempo reale". Un modo per tornare sulle cose con più calma, lasciarle respirare, dare senso a ciò che vivo e non lasciarlo scorrere via. Forse, in fondo, un altro tentativo di uscire da certe barricate invisibili.
+
 <!-- en -->
 I arrived in Nomaglio with my van. Waiting for me was Flavia, the owner of the house, my housemate for the next few weeks.
 
@@ -284,3 +286,5 @@ And that this different way is not an unreachable utopia. It is a choice. Small,
 Choosing where to live. Choosing how to work. Choosing when to stop and watch fireflies instead of running toward the next deadline.
 
 In Nomaglio, between the forest, the fireflies, the hidden symbols, and conversations with Flavia, I realized one thing: freedom is not stopping work. It is not letting work define you. It is pausing in silence and realizing that, somewhere, fireflies still exist.
+
+It was also during that month that the idea of The Nomad Upupa was born: a space to collect experiences, thoughts, and fragments of life away from the logic of social media in real time. A way to return to things with more calm, let them breathe, give meaning to what I live, and not let it simply slip away. Maybe, deep down, it was another attempt to step outside certain invisible barricades.
