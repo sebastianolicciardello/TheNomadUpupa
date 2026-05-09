@@ -106,7 +106,6 @@ Lo spettacolo delle lucciole mi ha aspettato anche nei laghi vicino Ivrea, con u
 
 Con la gente del luogo, amici di Flavia, e con lei stessa, abbiamo fatto escursioni fantastiche in montagna, in paesini veramente molto caratteristici della Valle d'Aosta. Ho potuto anche assaggiare un gelato di quelle che chiamo "mucche felici" e ho mangiato volentieri la polenta nei vari rifugi di montagna.
 
-![Lago Miserin con Flavia e amici](https://res.cloudinary.com/digfarmqt/image/upload/v1778264925/PXL_20250705_121341503_lab1qq.jpg)
 
 ![Lago Miserin](https://res.cloudinary.com/digfarmqt/image/upload/v1778264927/PXL_20250705_120754912_hnglcc.jpg)
 
@@ -217,7 +216,6 @@ The fireflies also appeared by the lakes near Ivrea, with a fantastic view of th
 
 With local people, Flavia's friends, and Flavia herself, we went on amazing hikes in the mountains, through very characteristic villages in the Aosta Valley. I also got to taste ice cream from what I call "happy cows," and I happily ate polenta in various mountain refuges.
 
-![Lago Miserin with Flavia and friends](https://res.cloudinary.com/digfarmqt/image/upload/v1778264925/PXL_20250705_121341503_lab1qq.jpg)
 
 ![Lago Miserin](https://res.cloudinary.com/digfarmqt/image/upload/v1778264927/PXL_20250705_120754912_hnglcc.jpg)
 
