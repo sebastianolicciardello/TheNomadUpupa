@@ -68,21 +68,21 @@ translationKey: "fireflies-beyond-the-walls"
 ---
 
 <!-- it -->
-Sono arrivato a Nomaglio con il mio van. Ad aspettarmi c'era Flavia, la proprietaria della casa, la mia coinquilina per le prossime settimane.
+Sono arrivato a Nomaglio con il mio van. Ad aspettarmi c'era la proprietaria della casa, la mia coinquilina per le prossime settimane.
 
-La casa si trovava nel centro del borgo, un posto particolare, con lo stile tipico dei paesini montani. Ma la parte più bella era il terreno di Flavia, posizionato poco sopra la Via Francigena: si raggiungeva attraversando un bosco e si affacciava sulla vallata di Ivrea.
+La casa si trovava nel centro del borgo, un posto particolare, con lo stile tipico dei paesini montani. Ma la parte più bella era il suo terreno, posizionato poco sopra la Via Francigena: si raggiungeva attraversando un bosco e si affacciava sulla vallata di Ivrea.
 
-![La vallata vista dal terreno di Flavia](https://res.cloudinary.com/digfarmqt/image/upload/v1778264833/PXL_20250622_203641426_zoywas.jpg)
+![La vallata vista dal terreno](https://res.cloudinary.com/digfarmqt/image/upload/v1778264833/PXL_20250622_203641426_zoywas.jpg)
 
-![Il terreno di Flavia](https://res.cloudinary.com/digfarmqt/image/upload/v1778264920/PXL_20250623_213835855_rl9dka.jpg)
+![Il terreno sopra la Via Francigena](https://res.cloudinary.com/digfarmqt/image/upload/v1778264920/PXL_20250623_213835855_rl9dka.jpg)
 
 ## I Primi Giorni
 
 I primi giorni sono stati un po' complicati per capire come gestire internet. Dovevo appendere il telefono in punti precisi della casa per riuscire ad avere una connessione stabile. Ma dopo essermi stabilizzato con il lavoro, ho potuto iniziare a godermi veramente quel fantastico luogo.
 
-Flavia è una donna fantastica, molto simpatica e amante della natura. Ogni sera mi faceva compagnia nel suo terreno e io l'aiutavo a mantenerlo curato. Era un modo perfetto per staccare dal lavoro al computer e riconnettermi alla terra.
+La mia coinquilina era una donna fantastica, molto simpatica e amante della natura. Ogni sera mi faceva compagnia nel suo terreno e io l'aiutavo a mantenerlo curato. Era un modo perfetto per staccare dal lavoro al computer e riconnettermi alla terra.
 
-![Aiutando a sistemare il terreno di Flavia](https://res.cloudinary.com/digfarmqt/image/upload/v1778264923/PXL_20250708_203806539_akazmx.jpg)
+![Aiutando a sistemare il terreno](https://res.cloudinary.com/digfarmqt/image/upload/v1778264923/PXL_20250708_203806539_akazmx.jpg)
 
 ## La Discoteca delle Fate
 
@@ -104,8 +104,7 @@ Lo spettacolo delle lucciole mi ha aspettato anche nei laghi vicino Ivrea, con u
 
 ## Le Montagne
 
-Con la gente del luogo, amici di Flavia, e con lei stessa, abbiamo fatto escursioni fantastiche in montagna, in paesini veramente molto caratteristici della Valle d'Aosta. Ho potuto anche assaggiare un gelato di quelle che chiamo "mucche felici" e ho mangiato volentieri la polenta nei vari rifugi di montagna.
-
+Con la mia coinquilina, alcuni suoi amici e persone del luogo abbiamo fatto escursioni fantastiche in montagna, in paesini veramente molto caratteristici della Valle d'Aosta. Ho potuto anche assaggiare un gelato di quelle che chiamo "mucche felici" e ho mangiato volentieri la polenta nei vari rifugi di montagna.
 
 ![Lago Miserin](https://res.cloudinary.com/digfarmqt/image/upload/v1778264927/PXL_20250705_120754912_hnglcc.jpg)
 
@@ -127,7 +126,7 @@ Per un fine settimana mi è venuta a trovare la mia amica Anna, con cui ho potut
 
 ## Simboli Nascosti
 
-Con Flavia c'è stata la possibilità di approfondire tematiche come l'esoterismo e la massoneria, di cui non mi ero mai interessato. Flavia me le ha presentate direttamente, mostrandomi alcuni simboli presenti in vari edifici, chiese e libri.
+Con la mia coinquilina c'è stata la possibilità di approfondire tematiche come l'esoterismo e la massoneria, di cui non mi ero mai interessato. Me le ha presentate direttamente, mostrandomi alcuni simboli presenti in vari edifici, chiese e libri.
 
 È stato impressionante vedere come in uno di questi paesi la facciata di una chiesa riempita di demoni e del giudizio universale si trovasse proprio davanti a un parco giochi per bambini.
 
@@ -137,11 +136,11 @@ Inoltre ho iniziato a percepire sensazioni particolari camminando, come se il mi
 
 So che molti magari non crederanno a queste cose. Non ci credevo nemmeno io in quel momento, e non so neanche ora se crederci. Ma erano semplicemente sensazioni che provavo, vibrazioni nei piedi camminando, che mi avvertivano se un luogo aveva energia positiva o negativa.
 
-E la cosa impressionante era constatare con Flavia che in luoghi sconosciuti a entrambi trovavamo segni che confermavano la mia supposizione sull'energia del luogo.
+E la cosa impressionante era constatare insieme che in luoghi sconosciuti a entrambi trovavamo segni che confermavano la mia supposizione sull'energia del luogo.
 
 ## Il Cimitero Celtico
 
-Fu veramente quasi ipnotica la sensazione che ho avuto in un sentiero di montagna con un muretto di pietre. Lì restai immobile, non riuscivo a muovere il piede destro, come se una calamita, una grande pietra gialla, lo tenesse fermo. Mentre Flavia parlava di non ricordo più cosa, notò che ero immobile e non continuavo a camminare. Le spiegai le sensazioni che stavo provando.
+Fu veramente quasi ipnotica la sensazione che ho avuto in un sentiero di montagna con un muretto di pietre. Lì restai immobile, non riuscivo a muovere il piede destro, come se una calamita, una grande pietra gialla, lo tenesse fermo. Mentre lei parlava di non ricordo più cosa, notò che ero immobile e non continuavo a camminare. Le spiegai le sensazioni che stavo provando.
 
 ![Il sentiero nei boschi di Nomaglio, nella zona del cimitero celtico](https://res.cloudinary.com/digfarmqt/image/upload/v1778264934/PXL_20250713_144408775_gzaqjl.jpg)
 
@@ -155,7 +154,7 @@ Non voglio fare il complottista, ma è stato veramente particolare approcciarmi 
 
 ## La Ruota del Criceto
 
-Questa consapevolezza mi ha fatto riflettere molto sulla schiavitù moderna. Ciò che Flavia chiama "la ruota del criceto".
+Questa consapevolezza mi ha fatto riflettere molto sulla schiavitù moderna. Ciò che lei chiama "la ruota del criceto".
 
 Spesso viviamo per il lavoro. Un lavoro necessario per la casa, per le bollette, per soddisfare bisogni primari e non. Che ci porta a vivere ogni giorno lavorando per l'arricchimento di qualcun altro, aspettando quelle due o tre settimane di ferie per "vivere veramente". Ma che poi, nella maggior parte dei casi, si consumano in una normale vacanza turistica in cui non si apprezzano veramente i luoghi che si visitano per quello che sono.
 
@@ -173,26 +172,26 @@ E che quel modo diverso non è un'utopia irraggiungibile. È una scelta. Piccola
 
 Scegliere dove vivere. Scegliere come lavorare. Scegliere quando fermarsi a guardare le lucciole invece di correre verso la prossima deadline.
 
-A Nomaglio, tra il bosco, le lucciole, i simboli nascosti e le conversazioni con Flavia, ho capito una cosa: la libertà non è smettere di lavorare. È smettere di lasciarsi definire dal lavoro. È fermarsi, in silenzio, e accorgersi che, da qualche parte, esistono ancora le lucciole.
+A Nomaglio, tra il bosco, le lucciole, i simboli nascosti e quelle conversazioni, ho capito una cosa: la libertà non è smettere di lavorare. È smettere di lasciarsi definire dal lavoro. È fermarsi, in silenzio, e accorgersi che, da qualche parte, esistono ancora le lucciole.
 
 È anche in quel mese che è nata l'idea di The Nomad Upupa: uno spazio per raccogliere esperienze, pensieri e frammenti di vita lontano dalla logica dei social "in tempo reale". Un modo per tornare sulle cose con più calma, lasciarle respirare, dare senso a ciò che vivo e non lasciarlo scorrere via. Forse, in fondo, un altro tentativo di uscire da certe barricate invisibili.
 
 <!-- en -->
-I arrived in Nomaglio with my van. Waiting for me was Flavia, the owner of the house, my housemate for the next few weeks.
+I arrived in Nomaglio with my van. Waiting for me was the owner of the house, my housemate for the next few weeks.
 
-The house was in the center of the village, a special place with the typical style of mountain towns. But the most beautiful part was Flavia's land, located just above the Via Francigena. It could be reached by crossing a forest and overlooked the Ivrea valley.
+The house was in the center of the village, a special place with the typical style of mountain towns. But the most beautiful part was her land, located just above the Via Francigena. It could be reached by crossing a forest and overlooked the Ivrea valley.
 
-![The valley seen from Flavia's land](https://res.cloudinary.com/digfarmqt/image/upload/v1778264833/PXL_20250622_203641426_zoywas.jpg)
+![The valley seen from the land](https://res.cloudinary.com/digfarmqt/image/upload/v1778264833/PXL_20250622_203641426_zoywas.jpg)
 
-![Flavia's land](https://res.cloudinary.com/digfarmqt/image/upload/v1778264920/PXL_20250623_213835855_rl9dka.jpg)
+![The land above the Via Francigena](https://res.cloudinary.com/digfarmqt/image/upload/v1778264920/PXL_20250623_213835855_rl9dka.jpg)
 
 ## The First Days
 
 The first days were a bit complicated while figuring out how to manage the internet. I had to hang my phone in specific spots around the house to get a stable connection. But once I settled into work, I could really start enjoying that amazing place.
 
-Flavia is an amazing woman, very friendly and deeply connected to nature. Every evening she kept me company on her land, and I helped her take care of it. It was a perfect way to disconnect from the computer work and reconnect with the earth.
+My housemate was an amazing woman, very friendly and deeply connected to nature. Every evening she kept me company on her land, and I helped her take care of it. It was a perfect way to disconnect from the computer work and reconnect with the earth.
 
-![Helping take care of Flavia's land](https://res.cloudinary.com/digfarmqt/image/upload/v1778264923/PXL_20250708_203806539_akazmx.jpg)
+![Helping take care of the land](https://res.cloudinary.com/digfarmqt/image/upload/v1778264923/PXL_20250708_203806539_akazmx.jpg)
 
 ## The Fairy Disco
 
@@ -214,8 +213,7 @@ The fireflies also appeared by the lakes near Ivrea, with a fantastic view of th
 
 ## The Mountains
 
-With local people, Flavia's friends, and Flavia herself, we went on amazing hikes in the mountains, through very characteristic villages in the Aosta Valley. I also got to taste ice cream from what I call "happy cows," and I happily ate polenta in various mountain refuges.
-
+With my housemate, some of her friends, and local people, we went on amazing hikes in the mountains, through very characteristic villages in the Aosta Valley. I also got to taste ice cream from what I call "happy cows," and I happily ate polenta in various mountain refuges.
 
 ![Lago Miserin](https://res.cloudinary.com/digfarmqt/image/upload/v1778264927/PXL_20250705_120754912_hnglcc.jpg)
 
@@ -237,7 +235,7 @@ For a weekend, my friend Anna came to visit me, and I was able to share these am
 
 ## Hidden Symbols
 
-With Flavia, I had the chance to explore topics like esotericism and Freemasonry, something I had never been interested in before. She introduced them to me directly, showing me symbols found in various buildings, churches, and books.
+With my housemate, I had the chance to explore topics like esotericism and Freemasonry, something I had never been interested in before. She introduced them to me directly, showing me symbols found in various buildings, churches, and books.
 
 It was striking to see how, in one of these villages, the facade of a church filled with demons and scenes of the Last Judgment stood right in front of a children's playground.
 
@@ -247,11 +245,11 @@ I also began to notice unusual sensations while walking, as if my body reacted d
 
 I know many people may not believe these things. I didn't believe them either at the time, and I'm not even sure now. They were simply sensations I felt, vibrations in my feet while walking, that seemed to warn me whether a place had positive or negative energy.
 
-And what was striking was realizing, together with Flavia, that in places unknown to both of us, we would find signs that seemed to confirm my intuition about the energy of a place.
+And what was striking was realizing, together, that in places unknown to both of us, we would find signs that seemed to confirm my intuition about the energy of a place.
 
 ## The Celtic Cemetery
 
-The sensation I had on a mountain path with a stone wall was almost hypnotic. I stood completely still: I couldn't move my right foot, as if a magnet, a large yellow stone, was holding it in place. While Flavia was talking, I no longer remember about what, she noticed I had stopped moving. I explained what I was feeling.
+The sensation I had on a mountain path with a stone wall was almost hypnotic. I stood completely still: I couldn't move my right foot, as if a magnet, a large yellow stone, was holding it in place. While she was talking, I no longer remember about what, she noticed I had stopped moving. I explained what I was feeling.
 
 ![The trail in the woods of Nomaglio, near the Celtic cemetery area](https://res.cloudinary.com/digfarmqt/image/upload/v1778264934/PXL_20250713_144408775_gzaqjl.jpg)
 
@@ -265,7 +263,7 @@ I don't want to sound conspiratorial, but it was truly striking to approach all 
 
 ## The Hamster Wheel
 
-This awareness made me reflect deeply on modern slavery, what Flavia calls "the hamster wheel."
+This awareness made me reflect deeply on modern slavery, what she calls "the hamster wheel."
 
 We often live for work. Work that is necessary for housing, bills, and both basic and non-basic needs. A cycle that makes us live every day working for someone else's enrichment, waiting for those two or three weeks of vacation to "really live." But most of the time, those weeks become ordinary tourist trips where we don't truly experience the places we visit for what they are.
 
@@ -283,6 +281,6 @@ And that this different way is not an unreachable utopia. It is a choice. Small,
 
 Choosing where to live. Choosing how to work. Choosing when to stop and watch fireflies instead of running toward the next deadline.
 
-In Nomaglio, between the forest, the fireflies, the hidden symbols, and conversations with Flavia, I realized one thing: freedom is not stopping work. It is not letting work define you. It is pausing in silence and realizing that, somewhere, fireflies still exist.
+In Nomaglio, between the forest, the fireflies, the hidden symbols, and those conversations, I realized one thing: freedom is not stopping work. It is not letting work define you. It is pausing in silence and realizing that, somewhere, fireflies still exist.
 
 It was also during that month that the idea of The Nomad Upupa was born: a space to collect experiences, thoughts, and fragments of life away from the logic of social media in real time. A way to return to things with more calm, let them breathe, give meaning to what I live, and not let it simply slip away. Maybe, deep down, it was another attempt to step outside certain invisible barricades.
