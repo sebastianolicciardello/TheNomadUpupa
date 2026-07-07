@@ -34,7 +34,7 @@ translationKey: "i-am-a-digital-nomad"
 <!-- it -->
 È diventato subito un rituale passeggiare in quella spiaggia ogni sera al tramonto, dopo aver finito di lavorare.
 
-## Il Mantra
+## Il mantra
 
 Da ormai più di due anni avevo preso l'abitudine di ripetere nella mia mente, sottovoce o ad alta voce (quando possibile), un mantra mentre facevo lunghe passeggiate. Mi ha sempre aiutato a orientare le mie azioni verso un certo obiettivo o, per chi ci crede, a orientare l'universo nel farmi raggiungere quell'obiettivo.
 
@@ -42,7 +42,7 @@ Ho addirittura dedicato quasi un anno o più a "incantare" alcune pietre con cer
 
 I mantra che usavo consistevano in frasi di autoprogrammazione mentale: frasi in cui si ripete il proprio nome, cognome e un'azione, sostantivo o aggettivo che vogliamo raggiungere in futuro. La frase deve essere al presente per avere una maggiore forza, non deve avere negazioni e deve farci sentire veramente felici mentre la diciamo, immaginando di esserci già arrivati.
 
-## Il Momento
+## Il momento
 
 Un giorno, passeggiando su quella spiaggia, con un tramonto incredibile accanto all'isola di Cirella, continuavo a ripetere il mantra che ormai mi accompagnava da almeno un anno.
 
@@ -54,7 +54,7 @@ Mi sono reso conto, davanti a quello spettacolo della natura che aveva accompagn
 
 Le sensazioni di immensa gioia, soddisfazione e incredulità che mi hanno raggiunto in un istante sono state difficili da contenere. Sono scoppiato in lacrime di felicità. La mia gratitudine per l'universo è stata immensa.
 
-## Il Cerchio si Chiude
+## Il cerchio si chiude
 
 Quella spiaggia mi aveva visto bambino, libero e felice, senza sapere cosa sarebbe venuto dopo. E quella stessa spiaggia mi vedeva adesso, adulto, di nuovo libero, di nuovo felice. Ma questa volta con la consapevolezza di averlo scelto.
 
@@ -69,7 +69,7 @@ Il bambino che ero e l'uomo che sono diventato si sono incontrati su quella spia
 <!-- en -->
 It immediately became a ritual to walk on that beach every evening at sunset, after finishing work.
 
-## The Mantra
+## The mantra
 
 For over two years, I had gotten into the habit of repeating a mantra in my mind, under my breath, or out loud (when possible) while taking long walks. It always helped me direct my actions toward a certain goal or, for those who believe, to direct the universe to help me reach that goal.
 
@@ -77,7 +77,7 @@ I even dedicated almost a year or more to "enchanting" some stones with certain 
 
 The mantras I used were mental self-programming sentences: phrases in which you repeat your name, surname, and an action, noun, or adjective you want to achieve in the future. The sentence must be in the present tense to have more power, must contain no negations, and must make us feel truly happy while saying it, imagining we have already reached that state.
 
-## The Moment
+## The moment
 
 One day, walking on that beach, with an incredible sunset next to Cirella Island, I kept repeating the mantra that had been accompanying me for at least a year.
 
@@ -89,7 +89,7 @@ I realized, in front of that spectacle of nature that had accompanied the best m
 
 The feelings of immense joy, satisfaction, and disbelief that reached me in an instant were difficult to contain. I burst into tears of happiness. My gratitude to the universe was immense.
 
-## The Circle Closes
+## The circle closes
 
 That beach had seen me as a child, free and happy, without knowing what would come next. And that same beach was seeing me now, an adult, free again, happy again. But this time with the awareness that I had chosen it.
 

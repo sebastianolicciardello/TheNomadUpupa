@@ -74,7 +74,7 @@ La ricerca è stata ardua: trovare un posto non troppo costoso, facilmente raggi
 
 L'obiettivo era rimanere fuori dalla Sicilia ma comunque nel Sud Italia, per godermi maggio in tutto il suo splendore.
 
-## Il Segno del Destino
+## Il segno del destino
 
 E poi è successo qualcosa di incredibile. Un segno del destino.
 
@@ -86,7 +86,7 @@ Diamante, in Calabria, provincia di Cosenza, è la città dei murales e del pepe
 
 Come si può immaginare, ho confermato subito la prenotazione per la casa. Non andavo a Diamante da circa 15 anni. Ero super emozionato all'idea!
 
-## La Partenza
+## La partenza
 
 È arrivato il giorno della partenza. Non avevo molte cose da portare, ormai entrava tutto in due zaini. Sono salito sul treno ed è iniziata la prima esperienza da nomade che ormai possiamo dire full time.
 
@@ -98,7 +98,7 @@ La vera padrona di casa è la gatta, una bellissima bengala, che proprio mentre 
 
 ![La gatta](https://res.cloudinary.com/digfarmqt/image/upload/v1771006809/photo_59_2025-09-18_10-05-59_lfutro.jpg)
 
-## Il Ritorno alla Spiaggia
+## Il ritorno alla spiaggia
 
 Appena possibile mi sono avviato in spiaggia, per una lunga passeggiata alla ricerca di quel campeggio di cui avevo da sempre una tremenda nostalgia. Finalmente trovato, sempre pieno di camper, sembrava più grande e anche con nuovi bungalow. Ho preso il mio telo e mi sono messo in quella porzione di spiaggia. Dopo quindici anni potevo di nuovo assistere allo spettacolo del tramonto sull'isola.
 

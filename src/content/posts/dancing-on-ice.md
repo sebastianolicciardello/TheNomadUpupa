@@ -1,7 +1,7 @@
 ---
 title:
   en: "Dancing on Ice"
-  it: "Ballare sul Ghiaccio"
+  it: "Ballare sul ghiaccio"
 eventStartTime: 2025-03-20T00:00:00Z
 eventEndTime: 2025-03-30T23:59:59Z
 publishTime: 2026-01-17T00:00:00Z

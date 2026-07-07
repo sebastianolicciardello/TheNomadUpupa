@@ -51,7 +51,7 @@ Mi sono diretto verso la Valle d'Aosta. Era la prima volta con il van in montagn
 
 Dovevo raggiungere un paesino chiamato Introd, dove Giuppi aveva organizzato il primo ritiro nomade. Salivo lungo strade strette, curve, pendenze. Ma il van si comportava bene. Anzi, meglio che in città. Mi stavo abituando.
 
-## Gli Chalet
+## Gli chalet
 
 Ad aspettarmi c'era una serie di chalet che avrei condiviso con gli altri partecipanti. Molto carini, immersi in un grande giardino pieno di alberi. E una fantastica casa sull'albero che avremmo potuto usare per le nostre attività.
 
@@ -107,7 +107,7 @@ Mi ha fatto vedere diversi punti di vista nel mondo lavorativo, ma anche modi di
 
 Tutto ciò ha aumentato in me la voglia di cambiamento e miglioramento.
 
-## La Casa sull'Albero
+## La casa sull'albero
 
 Ma la chiacchierata più significativa è stata quella nella casa sull'albero.
 
@@ -117,7 +117,7 @@ Non ricordo nemmeno più tutti i dettagli di cosa abbiamo detto. Ricordo solo ch
 
 Quella chiacchierata mi ha dato molti spunti. E forse, senza nemmeno rendermene conto in quel momento, ha piantato i semi di alcune decisioni che avrei preso nei mesi successivi.
 
-## Gli Ultimi Giorni
+## Gli ultimi giorni
 
 C'è stato spazio anche per una bella grigliata, dove abbiamo continuato a chiacchierare e a divertirci.
 
@@ -134,7 +134,7 @@ I headed toward Valle d'Aosta. It was my first time taking the van into the moun
 
 I had to reach a small village called Introd, where Giuppi had organized the first nomad retreat. I drove up narrow roads, bends, and steep climbs. But the van handled it well. Actually, better than in the city. I was getting used to it.
 
-## The Chalets
+## The chalets
 
 Waiting for me was a group of chalets I would share with the other participants. They were beautiful, surrounded by a large garden full of trees. And there was also a fantastic treehouse we could use for our activities.
 
@@ -146,7 +146,7 @@ We were mostly software developers. Some of them worked at the garden tables, mo
 
 In the evening we all went out for dinner together. The conversations kept going: experiences, questions, curiosities. Everyone had a different story, a different path. But we were all there for the same reason.
 
-## Meditation and Mountains
+## Meditation and mountains
 
 Right after waking up, in the morning, we would go in front of the tipi tent to meditate with Giuppi. Those were very important moments to pause and reconnect with ourselves.
 
@@ -170,7 +170,7 @@ In the evening we stayed nearby, in a mountain hut. We had dinner together, with
 
 ![The chalets near the mountain hut](https://res.cloudinary.com/digfarmqt/image/upload/v1776972879/PXL_20250620_183423093_dmrnti.jpg)
 
-## The Unconference
+## The unconference
 
 On Saturday there was the Unconference: the "non-conference." Everyone could propose a topic, an area, or any question they wanted to bring, and then we would talk about it together.
 
@@ -190,7 +190,7 @@ It showed me different perspectives on working life, but also completely differe
 
 All of this increased my desire for change and improvement.
 
-## The Treehouse
+## The treehouse
 
 But the most meaningful conversation was the one in the treehouse.
 
@@ -200,7 +200,7 @@ I do not even remember all the details of what we said anymore. I only remember 
 
 That conversation gave me many insights. And maybe, without even realizing it in that moment, it planted the seeds of some decisions I would make in the following months.
 
-## The Last Days
+## The last days
 
 There was also room for a nice barbecue, where we kept talking and having fun.
 

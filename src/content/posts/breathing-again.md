@@ -1,7 +1,7 @@
 ---
 title:
   en: "Learning to Breathe Again"
-  it: "Ritornare a Respirare"
+  it: "Ritornare a respirare"
 eventStartTime: 2025-01-01T00:00:00Z
 eventEndTime: 2025-02-28T23:59:59Z
 publishTime: 2025-11-25T00:00:00Z
@@ -48,7 +48,7 @@ Non è una metafora. Sentivo letteralmente il bisogno fisico di respirare meglio
 
 Così, anche senza un mezzo per spostarmi facilmente, ho iniziato a camminare. Ore, se necessario. Pur di stare fuori, pur di muovermi, pur di lasciare che il corpo facesse quello che la mente ancora faticava a fare: andare avanti.
 
-### Il Mare e i Mini Draghi
+### Il mare e i mini draghi
 
 Il mare era a quasi un'ora a piedi da casa. Un'ora che diventava un rituale, un passaggio. Ogni passo mi allontanava un po' di più dai pensieri che mi avevano tenuto sveglio per settimane.
 
@@ -97,7 +97,7 @@ It's not a metaphor. I literally felt the physical need to breathe better, to fi
 
 So, even without a vehicle to move around easily, I started walking. Hours, if necessary. Just to be outside, to move, to let my body do what my mind still struggled to do: move forward.
 
-### The Sea and the Mini Dragons
+### The sea and the mini dragons
 
 The sea was almost an hour's walk from home. An hour that became a ritual, a passage. Each step distanced me a little more from the thoughts that had kept me awake for weeks.
 
@@ -123,7 +123,7 @@ This was what I was missing. Not the answers, not certainty. But this connection
 
 ![Hiking on Etna](https://res.cloudinary.com/digfarmqt/image/upload/v1764102485/IMG_20251123_151243_461_ujhegs.jpg)
 
-### Breaking Out of the Winter Mood
+### Breaking out of the winter mood
 
 December had been a month buried under the weight of thoughts. January and February had to be different. I couldn't afford to remain trapped in that depressive mood that winter brings, that sense of emotional hibernation that makes you believe everything can wait until spring.
 

@@ -1,7 +1,7 @@
 ---
 title:
   en: "Return to Origins"
-  it: "Ritorno alle Origini"
+  it: "Ritorno alle origini"
 eventStartTime: 2024-11-11T00:00:00Z
 eventEndTime: 2024-11-17T00:00:00Z
 publishTime: 2025-09-07T00:00:00Z
@@ -78,7 +78,7 @@ E poi, tradimento culinario: dopo il giro, corsa a mangiare l'açaí brasiliano.
 
 ![Açai a Cagliari](https://res.cloudinary.com/digfarmqt/image/upload/v1757240004/PXL_20241111_112311049_2_tlckq7.jpg)
 
-## Il Van e la Memoria dell'Infanzia
+## Il van e la memoria dell'infanzia
 
 Poi arriva il momento: salire sul van noleggiato. Non l'avrei guidato io, ero terrorizzato al solo pensiero. Oggi, guidando un van ogni giorno, rimpiango di non averlo nemmeno provato. La possibilità di guidarlo a novembre, senza il caos dell'alta stagione, con quei panorami mozzafiato e quella tranquillità assoluta...
 
@@ -88,7 +88,7 @@ Ritornare a questa consapevolezza che avevo perso è stato incredibile. Mi sento
 
 ![Tramonto riflesso dal van](https://res.cloudinary.com/digfarmqt/image/upload/v1757240005/PXL_20241117_161826674.MP_2_qmwxiq.jpg)
 
-## La Sardegna Nascosta
+## La Sardegna nascosta
 
 In famiglia, in camper, non eravamo mai stati in Sardegna, nonostante avessimo visto praticamente tutta l'Italia. Scoprii una bellezza incredibile, soprattutto nei luoghi meno turistici. Oltre alle famose spiagge da cartolina, la Sardegna ha un entroterra straordinario: una fauna fantastica, cervi che ti svegliano di notte con i loro richiami che rimbombano nel silenzio notturno intorno al van.
 
@@ -98,7 +98,7 @@ Le montagne vicino a Iglesias, non altissime ma piene di vegetazione e panorami 
 
 ![Io nelle montagne della Sardegna sud ovest](https://res.cloudinary.com/digfarmqt/image/upload/v1757240004/PXL_20241115_145727464_3_gymlw0.jpg)
 
-## L'Invito alla Lentezza
+## L'invito alla lentezza
 
 C'è una lezione che questo viaggio mi ha ricordato con forza: il movimento lento non è solo un modo di viaggiare, è un modo di vivere. Quando ti muovi in van, in auto, in bici o a piedi, il viaggio stesso diventa la destinazione. Ogni chilometro ha un senso, ogni sosta è una scelta, ogni panorama è un regalo che ti sei meritato attraverso la pazienza.
 
@@ -121,7 +121,7 @@ And then, culinary betrayal: after the ride, rushing to eat Brazilian açaí. In
 
 ![Açai in Cagliari](https://res.cloudinary.com/digfarmqt/image/upload/v1757240004/PXL_20241111_112311049_2_tlckq7.jpg)
 
-## The Van and Childhood Memory
+## The van and childhood memory
 
 Then comes the moment: getting into the rented van. I wouldn't be driving it, I was terrified at the mere thought. Today, driving a van every day, I regret not even trying it. The possibility of driving it in November, without the chaos of high season, with those breathtaking landscapes and that absolute tranquility...
 
@@ -131,7 +131,7 @@ Returning to this awareness I had lost was incredible. I feel truly fortunate an
 
 ![Sunset reflected from the van](https://res.cloudinary.com/digfarmqt/image/upload/v1757240005/PXL_20241117_161826674.MP_2_qmwxiq.jpg)
 
-## Hidden Sardinia
+## Hidden sardinia
 
 As a family, in the camper, we had never been to Sardinia, despite having seen practically all of Italy. I discovered incredible beauty, especially in the less touristy places. Beyond the famous postcard beaches, Sardinia has an extraordinary hinterland: fantastic wildlife, deer that wake you up at night with their calls echoing in the nocturnal silence around the van.
 
@@ -141,7 +141,7 @@ The mountains near Iglesias, not very high but full of vegetation and breathtaki
 
 ![Me in the mountains of southwest Sardinia](https://res.cloudinary.com/digfarmqt/image/upload/v1757240004/PXL_20241115_145727464_3_gymlw0.jpg)
 
-## An Invitation to Slowness
+## An invitation to slowness
 
 There's a lesson this journey reminded me of forcefully: slow movement is not just a way of traveling, it's a way of living. When you move by van, car, bike or on foot, the journey itself becomes the destination. Every kilometer has meaning, every stop is a choice, every view is a gift you've earned through patience.
 

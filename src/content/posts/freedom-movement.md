@@ -1,7 +1,7 @@
 ---
 title:
   en: "Freedom in Movement"
-  it: "Libertà in Movimento"
+  it: "Libertà in movimento"
 eventStartTime: 2025-03-12T00:00:00Z
 eventEndTime: 2025-03-18T22:59:59Z
 publishTime: 2026-01-10T00:00:00Z

@@ -1,7 +1,7 @@
 ---
 title:
   en: "The Return Anxiety"
-  it: "L'Ansia di Ritorno"
+  it: "L'ansia di ritorno"
 eventStartTime: 2024-11-18T00:00:00Z
 eventEndTime: 2024-11-24T00:00:00Z
 publishTime: 2025-09-17T00:00:00Z
@@ -76,7 +76,7 @@ Una settimana di lavoro da remoto dove ogni pausa diventava un'escursione. La ca
 
 ![Tunnel](https://res.cloudinary.com/digfarmqt/image/upload/v1758093429/IMG_20241123_083812_tigr_wtev92.jpg)
 
-## Il Cammino verso Pan di Zucchero
+## Il cammino verso Pan di Zucchero
 
 Arrivato finalmente il sabato, potei dedicarmi al trekking che aspettavo da mesi: un tratto del Cammino di Santa Barbara, fino ad arrivare davanti all'isolotto di Pan di Zucchero. Tra i 30 e i 40 chilometri, ma la parte più impegnativa fu la scalata del promontorio. Letteralmente una parete da arrampicata che fortunatamente aveva, nella sua parte più esterna, un sentiero di alcuni chilometri con ben 600 metri di dislivello e diversi punti a strapiombo sul mare.
 
@@ -88,7 +88,7 @@ Fu un'esperienza indimenticabile. In certi momenti sentivo di stare portando il 
 
 ![Pan di Zucchero](https://res.cloudinary.com/digfarmqt/image/upload/v1758093428/IMG_20241123_132404_tigr_u0f0fx.jpg)
 
-## Quando la Mente Si Apre
+## Quando la mente si apre
 
 Come accade in tutti i lunghi trekking in natura da solo, la mente inizia a far emergere domande scomode e parti di noi che non pensavamo di avere. Passai l'intero pomeriggio di ritorno immerso in uno dei tramonti più belli che abbia mai visto in vita mia, ma con il continuo pensiero di rifiuto verso il ritorno a casa, alla solita routine, nel solito posto.
 
@@ -100,7 +100,7 @@ Non fraintendetemi: non odio le routine. Anzi, adoro le routine, soprattutto que
 
 ![Tramonto dal porto](https://res.cloudinary.com/digfarmqt/image/upload/v1758093428/IMG_20241123_100758_tigr_m2pxdb.jpg)
 
-## Il Peso delle Etichette
+## Il peso delle etichette
 
 Inizialmente fu un pensare convulso tra eccitamento per questa nuova consapevolezza, confusione su come poter realizzare una vita del genere, e paura delle sfide e delle critiche della società. In quel momento mi sentii più vicino alla figura del nomade digitale, anche se non amo dare etichette, soprattutto a me stesso.
 
@@ -119,7 +119,7 @@ A week of remote work where every break became an excursion. The house was just 
 
 ![Tunnel](https://res.cloudinary.com/digfarmqt/image/upload/v1758093429/IMG_20241123_083812_tigr_wtev92.jpg)
 
-## The Path to Pan di Zucchero
+## The path to Pan di Zucchero
 
 When Saturday finally arrived, I could dedicate myself to the trek I had been waiting for months: a section of the Santa Barbara Trail, until reaching the Pan di Zucchero islet. Between 30 and 40 kilometers, but the most challenging part was climbing the promontory. Literally a climbing wall that fortunately had, on its outer part, a trail of several kilometers with a good 600 meters of elevation gain and several points perched over the sea.
 
@@ -143,7 +143,7 @@ Don't misunderstand me: I don't hate routines. On the contrary, I love routines,
 
 ![Sunset from the port](https://res.cloudinary.com/digfarmqt/image/upload/v1758093428/IMG_20241123_100758_tigr_m2pxdb.jpg)
 
-## The Weight of Labels
+## The weight of labels
 
 Initially it was a convulsive thinking between excitement for this new awareness, confusion about how to realize such a life, and fear of society's challenges and criticisms. At that moment I felt closer to the figure of the digital nomad, even though I don't like giving labels, especially to myself.
 

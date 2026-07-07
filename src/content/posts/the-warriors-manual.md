@@ -1,7 +1,7 @@
 ---
 title:
   en: "The Warrior's Manual"
-  it: "Il Manuale del Guerriero"
+  it: "Il manuale del guerriero"
 eventStartTime: 2025-05-08T00:00:00Z
 eventEndTime: 2025-05-18T23:59:59Z
 publishTime: 2026-03-05T00:00:00Z
@@ -115,7 +115,7 @@ La notizia è stata molto improvvisa per me. Avendo sempre lavorato come dipende
 ![Lavorando per la startup sull'amaca](https://res.cloudinary.com/digfarmqt/image/upload/v1772915430/photo_23_2025-09-18_10-07-13_pe4fte.jpg)
 ![Lavorando per la startup al tramonto](https://res.cloudinary.com/digfarmqt/image/upload/v1772915430/photo_16_2025-09-18_10-07-13_ugtoyw.jpg)
 
-## Il Manuale del Guerriero della Luce
+## Il manuale del guerriero della luce
 
 Il proprietario della casa, mio coinquilino, vedendomi sempre pensieroso in quei giorni, mi ha mostrato un libro: "Il manuale del guerriero della luce" di Paulo Coelho.
 
@@ -129,7 +129,7 @@ Penso ci possa essere una ragione scientifica nella sua efficacia. Probabilmente
 
 Devo dire che spesso fa questo effetto: stupore, incredibile meraviglia ed epifania.
 
-## La Prima Volta
+## La prima volta
 
 Mai però si è ripetuta la sensazione incredibile della prima volta che ho consultato il libro.
 
@@ -139,7 +139,7 @@ Avevo i brividi mentre la leggeva. Ogni frase, ogni parola sembravano dette da q
 
 Questa scoperta è stata un vero regalo prezioso. Mi ha aiutato a prendere le giuste scelte e procedere con serenità in questa esperienza di collaborazione con la startup.
 
-## Godersi il Momento
+## Godersi il momento
 
 Come avevo detto, volevo anche godermi l'obiettivo raggiunto. Ho dedicato i fine settimana a fantastiche escursioni, dove ho creato anche nuove amicizie.
 
@@ -171,7 +171,7 @@ No. I chose to savor and enjoy the result instead.
 
 I kept up my walks and hikes in the surrounding area, with an immense sense of gratitude. I was convinced that life would show me the next goal when I was ready, not a moment sooner.
 
-## The Unexpected Opportunity
+## The unexpected opportunity
 
 A few days later, I had the chance to connect with a startup that was working on an interesting app, and they asked whether I'd like to collaborate with them.
 
@@ -180,7 +180,7 @@ The news came very suddenly. Having always worked as an employee, I wasn't used 
 ![Working for the startup on a hammock](https://res.cloudinary.com/digfarmqt/image/upload/v1772915430/photo_23_2025-09-18_10-07-13_pe4fte.jpg)
 ![Working for the startup at sunset](https://res.cloudinary.com/digfarmqt/image/upload/v1772915430/photo_16_2025-09-18_10-07-13_ugtoyw.jpg)
 
-## The Manual of the Warrior of the Light
+## The manual of the warrior of the light
 
 The owner of the house, my housemate, noticing that I'd been lost in thought those days, showed me a book: "Manual of the Warrior of the Light" by Paulo Coelho.
 
@@ -194,7 +194,7 @@ I think there may be a scientific reason behind its effectiveness. Coelho probab
 
 I have to say it often creates exactly that effect: astonishment, incredible wonder, and epiphany.
 
-## The First Time
+## The first time
 
 Yet nothing has ever come close to that incredible feeling of the very first time I consulted the book.
 
@@ -204,7 +204,7 @@ I had chills as he read. Every sentence, every word seemed spoken by someone who
 
 This discovery was a truly precious gift. It helped me make the right choices and move forward with peace of mind into this collaboration with the startup.
 
-## Savoring the Moment
+## Savoring the moment
 
 As I said, I also wanted to enjoy the goal I had reached. I dedicated my weekends to fantastic hikes, where I also formed new friendships.
 

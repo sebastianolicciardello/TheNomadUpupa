@@ -1,7 +1,7 @@
 ---
 title:
   en: "Before the rainbow"
-  it: "Prima dell'Arcobaleno"
+  it: "Prima dell'arcobaleno"
 eventStartTime: 2024-12-01T00:00:00Z
 eventEndTime: 2024-12-18T00:00:00Z
 publishTime: 2025-10-12T00:00:00Z

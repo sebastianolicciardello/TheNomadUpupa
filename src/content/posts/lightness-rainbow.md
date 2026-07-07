@@ -1,7 +1,7 @@
 ---
 title:
   en: "Following the Lightness of the Rainbow"
-  it: "Seguendo la Leggerezza dell'Arcobaleno"
+  it: "Seguendo la leggerezza dell'arcobaleno"
 eventStartTime: 2024-12-20T00:00:00Z
 eventEndTime: 2024-12-31T00:00:00Z
 publishTime: 2025-10-25T00:00:00Z
@@ -34,13 +34,13 @@ Analizzai con attenzione la mia situazione per capire cosa potevo fare per prova
 
 Nel mentre mi resi conto quanto fosse necessario applicare in maniera più estrema tutto ciò che avevo appreso riguardo al minimalismo. Era necessario per alleggerire il bagaglio in viaggio, ma soprattutto la mente.
 
-## La Scoperta del Minimalismo
+## La scoperta del minimalismo
 Ho vissuto una vita piena di insoddisfazione dal 2017 fino al marzo 2023, quando scoprii quasi per caso il minimalismo. Cercavo su YouTube consigli su come smettere di procrastinare lo studio per degli esami universitari. Trovai il canale "Spazio Grigio" di Irina Potinga. 
 Ovviamente, invece di smettere di procrastinare grazie al suo bellissimo video, mi misi a vedere tutti i video presenti sul suo canale! Assorbii così un'incredibile quantità di riflessioni veramente utili. Non sono verità assolute, attenzione, ma se approfondite dentro di noi possono portare a veri cambiamenti in positivo, prendendo ciò che risulta affine con la nostra persona.
 
 Da quel giorno ho iniziato a cambiare profondamente come persona. Ho allineato le mie azioni e i miei pensieri sempre di più verso ciò che sentivo di essere e volevo diventare, piuttosto che verso ciò che la società voleva diventassi.
 
-## Il Decluttering Estremo
+## Il decluttering estremo
 Dunque, nonostante applicassi il minimalismo da tempo, applicai il magico potere del decluttering in maniera ancora più intensa. Eliminai tutto ciò che non era più in linea con la mia persona. In maniera molto estrema, restai solo con l'essenziale. A tal punto che tutto ciò che possedevo (escluso qualche vestito invernale ingombrante) entrava adesso in un grande zaino. 
 Un solo zaino era capace di contenere tutto ciò di materiale che mi era necessario.
 Senza quel video trovato molto casualmente (siamo sicuri sia casuale? O l'universo tramava già qualcosa?) probabilmente non sarei mai arrivato a questo punto, o almeno non in così pochi anni. 
@@ -49,7 +49,7 @@ Prima accumulavo oggetti di qualsiasi tipo, da gadget tecnologici a manga. Non v
 
 Perché ogni oggetto che possediamo ce ne rende responsabili, su come mantenerlo. L'oggetto non ha solo un peso economico e di spazio, ha un peso enorme mentale dovuto al tempo necessario per mantenerlo nel tempo. I soldi possiamo accumularli, il tempo no. Lui scorre inesorabilmente senza mai tornare indietro.
 
-## La Questione dei Vestiti
+## La questione dei vestiti
 È stato molto difficile per me sbarazzarmi della maggior parte dei vestiti. Non perché mi piaccia esprimere la mia personalità con essi, anzi, non mi crea alcuna gioia. Per me i vestiti devono essere semplici e comodi. Quindi ho tenuto solo vestiti con colori neutri, facili da abbinare tra loro.
 Purtroppo la società e la paura del giudizio degli altri ci porta a pensare che se vestiamo sempre con gli stessi vestiti, gli altri penseranno che siamo dei pezzenti, senza vestiti. In realtà è molto meglio avere pochi vestiti ma di qualità. Elimina lo stress del "cosa mettersi", evita lo shopping compulsivo e i capi durano più nel tempo se di qualità. 
 E in realtà le persone non pensano che tu sia pezzente se vesti sempre gli stessi vestiti. 
@@ -67,7 +67,7 @@ Quando tutto è importante, nulla è veramente importante.
 
 Importante è stato anche eliminare dalla mia mente i giudizi limitanti delle persone su di me e soprattutto i giudizi che io davo agli altri. Ciò che ciascuno dice rispecchia ciò che ha dentro: i suoi giudizi sono i suoi limiti e le sue frustrazioni.
 
-## Il Peso Invisibile
+## Il peso invisibile
 Ho scoperto che il decluttering non riguarda solo gli oggetti. Riguarda tutto ciò che portiamo con noi: aspettative, paure, giudizi, relazioni che non ci nutrono più. Ogni volta che lasciavo andare qualcosa, sentivo di respirare un po' meglio. Come se avessi liberato spazio non solo nello zaino, ma nella testa.
 
 Adesso, quando guardo quel grande zaino che contiene tutto ciò che possiedo, non vedo mancanza. Vedo libertà. Vedo la possibilità di muovermi senza essere trascinato giù dal peso di cose che non mi servono più.
@@ -81,13 +81,13 @@ I carefully analyzed my situation to understand what I could do to try to have o
 
 Meanwhile, I realized how necessary it was to apply everything I had learned about minimalism in a more extreme way. It was necessary to lighten the luggage while traveling, but especially the mind.
 
-## Discovering Minimalism
+## Discovering minimalism
 I lived a life full of dissatisfaction from 2017 until March 2023, when I discovered minimalism almost by chance. I was looking on YouTube for advice on how to stop procrastinating studying for university exams. I found the "Spazio Grigio" channel by Irina Potinga.
 Obviously, instead of stopping procrastinating thanks to her beautiful video, I started watching all the videos on her channel! I absorbed an incredible amount of truly useful reflections. They're not absolute truths, mind you, but if explored within ourselves they can lead to real positive changes, taking what feels aligned with who we are.
 
 From that day I began to change profoundly as a person. I aligned my actions and thoughts more and more toward what I felt I was and wanted to become, rather than toward what society wanted me to become.
 
-## Extreme Decluttering
+## Extreme decluttering
 So, although I had been applying minimalism for some time, I applied the magical power of decluttering in an even more intense way. I eliminated everything that was no longer aligned with who I was. In a very extreme way, I kept only the essential. To the point that everything I owned (excluding some bulky winter clothes) now fit in one large backpack.
 A single backpack was capable of containing everything material that I needed.
 Without that video found very casually (are we sure it was casual? Or was the universe already plotting something?) I probably would never have gotten to this point, or at least not in so few years.
@@ -96,7 +96,7 @@ Before, I accumulated objects of any kind, from tech gadgets to manga. I don't w
 
 Because every object we own makes us responsible for it, for how to maintain it. The object doesn't just have an economic and space weight, it has an enormous mental weight due to the time needed to maintain it over time. We can accumulate money, but not time. Time flows inexorably, never returning.
 
-## The Question of Clothes
+## The question of clothes
 It was very difficult for me to get rid of most of my clothes. Not because I like expressing my personality with them, actually, it doesn't give me any joy. For me, clothes must be simple and comfortable. So I kept only clothes in neutral colors, easy to match with each other.
 Unfortunately, society and the fear of others' judgment leads us to think that if we always wear the same clothes, others will think we're penniless, without clothes. In reality, it's much better to have few clothes but quality ones. It eliminates the stress of "what to wear," avoids compulsive shopping, and quality garments last longer.
 And in reality, people don't think you're penniless if you always wear the same clothes.
@@ -105,7 +105,7 @@ A person who dresses simply radiates confidence to others, because they don't ne
 
 Maybe some people get joy from expressing their personality through what they wear, that's fine. What's important is being aware of what you buy, avoiding excessive consumerism and fast fashion when possible.
 
-## Beyond Objects
+## Beyond objects
 After clothes, I moved on to electronic gadgets and other personal objects. The list was endless. For each object, calmly, I decided whether to sell it, give it away, or throw it away if no longer in acceptable condition.
 The joy of seeing friends grateful for the gift and especially seeing objects no longer used come back to life was incredible.
 
@@ -114,7 +114,7 @@ When everything is important, nothing is truly important.
 
 It was also important to eliminate from my mind the limiting judgments of people about me and especially the judgments I gave to others. What each person says reflects what they have inside: their judgments are their limits and their frustrations.
 
-## The Invisible Weight
+## The invisible weight
 I discovered that decluttering isn't just about objects. It's about everything we carry with us: expectations, fears, judgments, relationships that no longer nourish us. Every time I let something go, I felt I could breathe a little better. As if I had freed up space not just in the backpack, but in my head.
 
 Now, when I look at that large backpack containing everything I own, I don't see lack. I see freedom. I see the possibility of moving without being dragged down by the weight of things I no longer need.

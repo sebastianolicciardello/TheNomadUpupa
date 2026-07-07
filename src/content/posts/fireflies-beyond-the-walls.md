@@ -1,7 +1,7 @@
 ---
 title:
   en: "The Fireflies Beyond the Walls"
-  it: "Le Lucciole Oltre le Mura"
+  it: "Le lucciole oltre le mura"
 eventStartTime: 2025-06-22T00:00:00Z
 eventEndTime: 2025-07-25T12:00:00Z
 publishTime: 2026-05-08T00:00:00Z
@@ -76,7 +76,7 @@ La casa si trovava nel centro del borgo, un posto particolare, con lo stile tipi
 
 ![Il terreno sopra la Via Francigena](https://res.cloudinary.com/digfarmqt/image/upload/v1778264920/PXL_20250623_213835855_rl9dka.jpg)
 
-## I Primi Giorni
+## I primi giorni
 
 I primi giorni sono stati un po' complicati per capire come gestire internet. Dovevo appendere il telefono in punti precisi della casa per riuscire ad avere una connessione stabile. Ma dopo essermi stabilizzato con il lavoro, ho potuto iniziare a godermi veramente quel fantastico luogo.
 
@@ -84,7 +84,7 @@ La mia coinquilina era una donna fantastica, molto simpatica e amante della natu
 
 ![Aiutando a sistemare il terreno](https://res.cloudinary.com/digfarmqt/image/upload/v1778264923/PXL_20250708_203806539_akazmx.jpg)
 
-## La Discoteca delle Fate
+## La discoteca delle fate
 
 Ogni giorno, tornando alla casa dal bosco, mi aspettavano le lucciole.
 
@@ -102,7 +102,7 @@ Lo spettacolo delle lucciole mi ha aspettato anche nei laghi vicino Ivrea, con u
 
 ![Bagno alle Guje di Garavot](https://res.cloudinary.com/digfarmqt/image/upload/v1778264931/PXL_20250722_194327293_p80gpo.jpg)
 
-## Le Montagne
+## Le montagne
 
 Con la mia coinquilina, alcuni suoi amici e persone del luogo abbiamo fatto escursioni fantastiche in montagna, in paesini veramente molto caratteristici della Valle d'Aosta. Ho potuto anche assaggiare un gelato di quelle che chiamo "mucche felici" e ho mangiato volentieri la polenta nei vari rifugi di montagna.
 
@@ -124,7 +124,7 @@ Per un fine settimana mi è venuta a trovare la mia amica Anna, con cui ho potut
 
 ![Il materasso posizionato nel van ancora vuoto](https://res.cloudinary.com/digfarmqt/image/upload/v1778264783/IMG-20250709-WA0003_ljxyka.jpg)
 
-## Simboli Nascosti
+## Simboli nascosti
 
 Con la mia coinquilina c'è stata la possibilità di approfondire tematiche come l'esoterismo e la massoneria, di cui non mi ero mai interessato. Me le ha presentate direttamente, mostrandomi alcuni simboli presenti in vari edifici, chiese e libri.
 
@@ -138,7 +138,7 @@ So che molti magari non crederanno a queste cose. Non ci credevo nemmeno io in q
 
 E la cosa impressionante era constatare insieme che in luoghi sconosciuti a entrambi trovavamo segni che confermavano la mia supposizione sull'energia del luogo.
 
-## Il Cimitero Celtico
+## Il cimitero celtico
 
 Fu veramente quasi ipnotica la sensazione che ho avuto in un sentiero di montagna con un muretto di pietre. Lì restai immobile, non riuscivo a muovere il piede destro, come se una calamita, una grande pietra gialla, lo tenesse fermo. Mentre lei parlava di non ricordo più cosa, notò che ero immobile e non continuavo a camminare. Le spiegai le sensazioni che stavo provando.
 
@@ -152,7 +152,7 @@ Lì vicino si trovava una chiesa nel bosco, senza un particolare sentiero per ra
 
 Non voglio fare il complottista, ma è stato veramente particolare approcciarmi a tutto ciò e avere la consapevolezza che ci sono sistemi che non conosciamo, che forse ci controllano, ci comandano. Non saprei. Ma sarebbe utile averne almeno la consapevolezza che possono esistere.
 
-## La Ruota del Criceto
+## La ruota del criceto
 
 Questa consapevolezza mi ha fatto riflettere molto sulla schiavitù moderna. Ciò che lei chiama "la ruota del criceto".
 
@@ -160,7 +160,7 @@ Spesso viviamo per il lavoro. Un lavoro necessario per la casa, per le bollette,
 
 Questa riflessione mi ha dato una forte consapevolezza che ancora oggi porto con me. E che sto cercando, giorno per giorno, di trasformare in azione.
 
-## Uscire dal Sistema
+## Uscire dal sistema
 
 Non sto cercando di uscire dal sistema completamente, radicalmente. Non è questo il punto.
 
@@ -185,7 +185,7 @@ The house was in the center of the village, a special place with the typical sty
 
 ![The land above the Via Francigena](https://res.cloudinary.com/digfarmqt/image/upload/v1778264920/PXL_20250623_213835855_rl9dka.jpg)
 
-## The First Days
+## The first days
 
 The first days were a bit complicated while figuring out how to manage the internet. I had to hang my phone in specific spots around the house to get a stable connection. But once I settled into work, I could really start enjoying that amazing place.
 
@@ -193,7 +193,7 @@ My housemate was an amazing woman, very friendly and deeply connected to nature.
 
 ![Helping take care of the land](https://res.cloudinary.com/digfarmqt/image/upload/v1778264923/PXL_20250708_203806539_akazmx.jpg)
 
-## The Fairy Disco
+## The fairy disco
 
 Every day, walking back to the house through the forest, fireflies were waiting for me.
 
@@ -211,7 +211,7 @@ The fireflies also appeared by the lakes near Ivrea, with a fantastic view of th
 
 ![Swimming at Guje di Garavot](https://res.cloudinary.com/digfarmqt/image/upload/v1778264931/PXL_20250722_194327293_p80gpo.jpg)
 
-## The Mountains
+## The mountains
 
 With my housemate, some of her friends, and local people, we went on amazing hikes in the mountains, through very characteristic villages in the Aosta Valley. I also got to taste ice cream from what I call "happy cows," and I happily ate polenta in various mountain refuges.
 
@@ -233,7 +233,7 @@ For a weekend, my friend Anna came to visit me, and I was able to share these am
 
 ![The mattress placed inside the still-empty van](https://res.cloudinary.com/digfarmqt/image/upload/v1778264783/IMG-20250709-WA0003_ljxyka.jpg)
 
-## Hidden Symbols
+## Hidden symbols
 
 With my housemate, I had the chance to explore topics like esotericism and Freemasonry, something I had never been interested in before. She introduced them to me directly, showing me symbols found in various buildings, churches, and books.
 
@@ -247,7 +247,7 @@ I know many people may not believe these things. I didn't believe them either at
 
 And what was striking was realizing, together, that in places unknown to both of us, we would find signs that seemed to confirm my intuition about the energy of a place.
 
-## The Celtic Cemetery
+## The celtic cemetery
 
 The sensation I had on a mountain path with a stone wall was almost hypnotic. I stood completely still: I couldn't move my right foot, as if a magnet, a large yellow stone, was holding it in place. While she was talking, I no longer remember about what, she noticed I had stopped moving. I explained what I was feeling.
 
@@ -261,7 +261,7 @@ Nearby there was a church in the forest, without any proper path leading to it. 
 
 I don't want to sound conspiratorial, but it was truly striking to approach all of this and become aware that there are systems we don't understand, systems that may control or guide us in ways we don't fully see. I don't know. But it feels important at least to be aware that they might exist.
 
-## The Hamster Wheel
+## The hamster wheel
 
 This awareness made me reflect deeply on modern slavery, what she calls "the hamster wheel."
 
@@ -269,7 +269,7 @@ We often live for work. Work that is necessary for housing, bills, and both basi
 
 This reflection gave me a strong awareness that I still carry with me today, and that I am trying, day by day, to turn into action.
 
-## Stepping Outside the System
+## Stepping outside the system
 
 I'm not trying to escape the system completely or radically. That's not the point.
 

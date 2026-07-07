@@ -1,7 +1,7 @@
 ---
 title: 
   en: "Between Lava and Asphalt"
-  it: "Tra Lava e Asfalto"
+  it: "Tra lava e asfalto"
 eventStartTime: 2025-02-17T00:00:00Z
 eventEndTime: 2025-03-20T23:59:59Z
 publishTime: 2025-12-17T10:00:00Z
@@ -45,7 +45,7 @@ A febbraio 2025 ci fu un'intensissima attività vulcanica dell'Etna con l'apertu
 
 Non avevo mai visto la colata lavica da vicino. Era il momento.
 
-## Il Regalo dell'Etna
+## Il regalo dell'Etna
 
 Nonostante non avessi per nulla le scarpe adatte, decisi di andarci. Il sentiero era molto lungo, ricoperto di neve. Ad un certo punto si camminava sulla colata lavica antica spenta, accanto a quella nuova semispenta. Probabilmente abbastanza pericoloso e sconsigliato senza una guida vulcanologica. Ma volevo vederla.
 
@@ -58,7 +58,7 @@ Fu stancante ma soddisfacente. Ovviamente non arrivai troppo vicino, sarebbe sta
 
 Partii con solo bagaglio a mano e arrivai senza problemi a Torino. Fui positivamente colpito dall'efficienza dei mezzi pubblici abituato al sud Italia…
 
-## Ostello: La Prova
+## Ostello: la prova
 
 Decisi di portare la mia esperienza di nomade digitale già ai limiti, per mettermi alla prova. Avrei alloggiato e lavorato per un mese da un ostello.
 
@@ -76,7 +76,7 @@ Nel tempo libero facevo lunghe passeggiate nei parchi e andavo a trovare la mia 
 
 Si sarebbe subito rivelata verità. Ma non come ci si potrebbe aspettare…
 
-## Quando la Tecnologia Ti Tradisce
+## Quando la tecnologia ti tradisce
 
 Un giorno notai riavvii continui del mio telefono, quello che faceva da hotspot tutti i giorni permettendomi di lavorare. Comprai il giorno stesso uno smartphone per risolvere il problema.
 
@@ -88,7 +88,7 @@ Niente app di navigazione. Niente possibilità di chiamare nessuno. E soprattutt
 
 Quindi questa era l'avventura? Orientarmi in una grande città sconosciuta, completamente disconnesso?
 
-## La Città Senza Mappa
+## La città senza mappa
 
 In qualche modo, a piedi, leggendo i cartelli delle linee degli autobus, riuscii a raggiungere dopo molte ore l'ostello. Presi il portafoglio e comprai un altro smartphone per "sopravvivere".
 
@@ -144,7 +144,7 @@ In my free time, I took long walks in the parks and went to visit my friend Anna
 
 It would soon prove true. But not as you might expect...
 
-## When Technology Betrays You
+## When technology betrays you
 
 One day I noticed continuous reboots of my phone, the one that served as a hotspot every day allowing me to work. I bought a new smartphone that same day to solve the problem.
 
@@ -156,7 +156,7 @@ No navigation app. No way to call anyone. And most importantly: no money. I didn
 
 So this was the adventure? Finding my way in a large unknown city, completely disconnected?
 
-## The City Without a Map
+## The city without a map
 
 Somehow, on foot, reading the bus line signs, I managed to reach the hostel after many hours. I got my wallet and bought another smartphone to "survive."
 

@@ -1,7 +1,7 @@
 ---
 title:
   en: "When Enthusiasm Becomes the Compass"
-  it: "Quando l'Entusiasmo Diventa la Bussola"
+  it: "Quando l'entusiasmo diventa la bussola"
 eventStartTime: 2025-01-01T00:00:00Z
 eventEndTime: 2025-03-01T00:00:00Z
 publishTime: 2025-12-01T00:00:00Z
@@ -88,7 +88,7 @@ A furia di aspettare tempi migliori, rischi di essere costretto dal destino ad a
 
 Renditi conto che sei vivo. Sei vivo. E sei qui per vivere la tua vita.
 
-## La Domanda Scomoda
+## La domanda scomoda
 
 "Se dovessi morire oggi, quanti rimpianti avrei?"
 
@@ -135,7 +135,7 @@ But the other big coincidence was this: besides Giuppi, the other figures who ha
 
 It was clear. Turin was the right place to spend my first month away.
 
-## Following Enthusiasm
+## Following enthusiasm
 
 There's one thing I learned during this period: when you feel enthusiasm for something, follow it. Even if it doesn't make logical sense. Even if it involves risks and challenges. Even if it takes you to a city you've always avoided instead of the nature you love.
 
@@ -143,7 +143,7 @@ Enthusiasm is the signal that you're on the right path. It's the way your body a
 
 Maybe the choices we make won't bring us more enthusiasm in the future. That's okay. It's life. We evolve, we change direction. Accepting this is fundamental to being at peace. It's not about finding the perfect choice that will last forever. It's about making the right choice for who you are now.
 
-## Starting to Live
+## Starting to live
 
 Some time ago I read a question that stuck with me: "Do you really want to wait for something bad to happen to you before you start living?"
 
@@ -157,7 +157,7 @@ By waiting for better times, you risk being forced by destiny to act hastily in 
 
 Realize that you're alive. You're alive. And you're here to live your life.
 
-## The Uncomfortable Question
+## The uncomfortable question
 
 "If I died today, how many regrets would I have?"
 

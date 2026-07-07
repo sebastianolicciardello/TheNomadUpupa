@@ -1,7 +1,7 @@
 ---
 title:
   en: "The Tether"
-  it: "Il Tether"
+  it: "Il tether"
 eventStartTime: 2025-03-30T00:00:00Z
 eventEndTime: 2025-04-20T23:59:59Z
 publishTime: 2026-01-29T00:00:00Z

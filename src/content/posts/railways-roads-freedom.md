@@ -80,7 +80,7 @@ Tra i punti che mi sono rimasti più impressi ci sono stati anche l'Arco di Enea
 
 ![Arco di Enea](https://res.cloudinary.com/digfarmqt/image/upload/v1776279186/IMG_20250608_204426_191_onpbi6.jpg "Arco di Enea")
 
-## La Decisione
+## La decisione
 
 Finalmente pronto a lasciare Diamante, mi sono preparato alla partenza. Mi aspettavano 18 ore di treno.
 
@@ -161,7 +161,7 @@ Among the places that stayed with me the most were also Arco di Enea and, above 
 
 ![Arco di Enea](https://res.cloudinary.com/digfarmqt/image/upload/v1776279186/IMG_20250608_204426_191_onpbi6.jpg "Arco di Enea")
 
-## The Decision
+## The decision
 
 Finally ready to leave Diamante, I prepared for departure. I was expecting 18 hours of train travel.
 
@@ -175,7 +175,7 @@ But that bad experience on the train, and the limitations on my freedom to move 
 
 Today, I would not go back.
 
-## In Vigevano for the Purchase
+## In Vigevano for the purchase
 
 I headed to Vigevano, in the province of Pavia, where I would buy the van. I spent weeks gathering information, reading forums, and asking for advice. I had never been interested in mechanics, but somehow I managed to prepare myself quite well.
 
@@ -195,7 +195,7 @@ It is a small van that, in reality, is not ideal for camper conversion because o
 
 I still use it without any issues. And I am very happy with this choice.
 
-## The Unforgettable First Day
+## The unforgettable first day
 
 It was traumatic, though, the first day.
 
@@ -213,7 +213,7 @@ I had owned the van for less than 24 hours, and it had already been towed away, 
 
 Fortunately, with the help of a friend, I managed to recover it quickly. Thanks, Matteo! But that moment, calling the impound lot, explaining the situation, and going to pick up a van I had bought the day before, felt surreal.
 
-## Towards the Next Destination
+## Towards the next destination
 
 After this "unforgettable" experience, I was finally able to head toward the next destination: the Aosta Valley.
 
