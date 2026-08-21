@@ -5,9 +5,6 @@ title:
 eventStartTime: 2025-03-30T00:00:00Z
 eventEndTime: 2025-04-20T23:59:59Z
 publishTime: 2026-01-29T00:00:00Z
-coords:
-  lat: 37.740322
-  lon: 15.056061
 music:
   url: "https://music.youtube.com/watch?v=JY_TCI6ZiQU"
   description:
@@ -19,16 +16,6 @@ music:
       La canzone parla di provare ad andare avanti ma sentire sempre qualcosa che ti tira indietro. A Torino avevo sentito quella libertà. Avevo visto cosa significava vivere senza le aspettative degli altri, senza il peso del passato. Ma ogni volta che pensavo a tornare, sentivo quel legame tirarmi.
 
       Mi teneva ancorato a una vita che non mi stava più bene. Non per cattiveria, non per volontà. Semplicemente perché era diventata il simbolo di tutto ciò che non potevo più essere.
-locations:
-  - name: "Rocca Musarra"
-    coords:
-      lat: 37.740322
-      lon: 15.056061
-    isMain: true
-  - name: "Torrente Quarantore"
-    coords:
-      lat: 37.78217
-      lon: 15.04183
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1769675349/IMG_20260118_094051_325_lcenpv.jpg
 coverCaption:
   en: "Exploring the streams caused by melting snow"

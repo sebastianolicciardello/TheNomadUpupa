@@ -5,9 +5,6 @@ title:
 eventStartTime: 2025-03-20T00:00:00Z
 eventEndTime: 2025-03-30T23:59:59Z
 publishTime: 2026-01-17T00:00:00Z
-coords:
-  lat: 45.033304
-  lon: 6.886089
 music:
   url: "https://music.youtube.com/watch?v=0azwu4irFkk"
   description:
@@ -19,20 +16,6 @@ music:
       Questa canzone non ha un motivo particolare. Era semplicemente la canzone che stavamo ascoltando mentre ballavamo sul lago ghiacciato. E adesso, ogni volta che la sento, mi riporta lì: ai 2000 metri, all'aquila gigante, al momento esatto in cui il mio piede è sprofondato nell'acqua gelata.
 
       A volte le canzoni diventano colonne sonore non perché abbiano un significato profondo, ma perché erano lì, nel momento giusto, quando stavi vivendo qualcosa di indimenticabile.
-locations:
-  - name: "Torino"
-    coords:
-      lat: 45.116177
-      lon: 7.742615
-  - name: "Salice d'Ulzio"
-    coords:
-      lat: 45.0274864
-      lon: 6.8596781
-  - name: "Lago Laune"
-    coords:
-      lat: 45.033304
-      lon: 6.886089
-    isMain: true
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1768683688/PXL_20250329_170234278_iwljcx.jpg
 coverCaption:
   en: "View of the French Alps at sunset"

@@ -5,9 +5,6 @@ title:
 eventStartTime: 2025-01-01T00:00:00Z
 eventEndTime: 2025-03-01T00:00:00Z
 publishTime: 2025-12-01T00:00:00Z
-coords:
-  lat: 37.646564
-  lon: 15.190079
 music:
   url: "https://music.youtube.com/watch?v=bU-FvH92Kp8&si=y_zQkZnVp_fJK3ZX"
   description:
@@ -19,12 +16,6 @@ music:
       "I don't hear those church bells chime anymore, 'cause I'm in love with this."
       
       Questa frase rappresenta il lasciare indietro le tradizioni e i percorsi imposti per seguire qualcosa di nuovo. Le campane della chiesa simboleggiano il dovere, il percorso canonico di casa, famiglia, carriera stabile. Quando smetti di sentirle, è perché sei troppo innamorato di chi stai diventando.
-locations:
-  - name: "Scogliera di Stazzo"
-    coords:
-      lat: 37.646564
-      lon: 15.190079
-    isMain: true
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1764102485/IMG_20251123_150246_995_oewalu.jpg
 coverCaption:
   en: "Cliffs of Stazzo"

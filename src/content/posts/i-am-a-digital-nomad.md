@@ -5,9 +5,6 @@ title:
 eventStartTime: 2025-05-07T00:00:00Z
 eventEndTime: 2025-05-07T23:59:59Z
 publishTime: 2026-02-26T00:00:00Z
-coords:
-  lat: 39.690652
-  lon: 15.814621
 music:
   url: "https://music.youtube.com/watch?v=47RK0qI2DiI&si=lXJnu9FiIXJ4UxnJ"
   description:
@@ -15,12 +12,6 @@ music:
       This melody accompanied me while writing this post. There is no specific reason: listening to it brings back exactly what I felt on that beach, a deep sense of satisfaction and rediscovered peace.
     it: |
       Questa melodia mi ha accompagnato nella scrittura di questo post. Non c'è un motivo specifico: ascoltarla mi riporta esattamente alle sensazioni provate su quella spiaggia, un senso profondo di soddisfazione e pace ritrovata.
-locations:
-  - name: "Spiaggia del campeggio"
-    coords:
-      lat: 39.690652
-      lon: 15.814621
-    isMain: true
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1772122813/photo_46_2025-09-18_10-05-59_1_rsxtb3.jpg
 coverCaption:
   en: "Campsite beach in Diamante at sunset"

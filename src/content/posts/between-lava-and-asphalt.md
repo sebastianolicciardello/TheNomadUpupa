@@ -10,19 +10,6 @@ cover: https://res.cloudinary.com/digfarmqt/image/upload/v1765984018/58821711507
 coverCaption:
   en: "Etna lava flow"
   it: "Colata lavica dell'Etna"
-coords:
-  lat: 37.72751
-  lon: 14.96466
-locations:
-  - name: "Pista Altomontana"
-    coords:
-      lat: 37.72751
-      lon: 14.96466
-    isMain: true
-  - name: "Parco Pietro Colletta"
-    coords:
-      lat: 45.07765
-      lon: 7.72192
 music:
   url: "https://music.youtube.com/watch?v=sRntPU_s-gI"
   description:

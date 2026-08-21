@@ -22,8 +22,7 @@ Here, I share stories, places, and thoughts after time has allowed them to take 
     'posts.recent': 'Recent Reflections',
     'posts.viewAll': 'View all posts',
     'discover.title': 'Discover More',
-    'discover.description': 'Discover the places I\'ve visited, or learn more about the journey behind these words.',
-    'discover.map': 'Journey Map',
+    'discover.description': 'Explore the journey through stories and reflections.',
     'discover.about': 'About Me',
     
     // Blog
@@ -38,13 +37,6 @@ Here, I share stories, places, and thoughts after time has allowed them to take 
     'connect.telegram': 'Telegram',
     'connect.channel': 'Channel',
     'connect.instagram': 'Instagram',
-    
-    // Map
-    'map.title': 'Places Map',
-    'map.description': 'An emotional geography of the places that have marked my journey.',
-    'map.places': 'Reflection Places',
-    'map.empty': 'No georeferenced places yet. The first journeys will arrive soon.',
-    'map.readMore': 'Read more →',
   },
   it: {
     // Homepage
@@ -59,8 +51,7 @@ Questo diario nasce per raccogliere le esperienze quando si sono sedimentate, qu
     'posts.recent': 'Riflessioni Recenti',
     'posts.viewAll': 'Visualizza tutti i post',
     'discover.title': 'Scopri di Più',
-    'discover.description': 'Esplora i luoghi che ho visitato, o impara di più sul viaggio dietro queste parole.',
-    'discover.map': 'Mappa del Viaggio',
+    'discover.description': 'Esplora il viaggio attraverso storie e riflessioni.',
     'discover.about': 'Chi Sono',
     
     // Blog
@@ -75,13 +66,6 @@ Questo diario nasce per raccogliere le esperienze quando si sono sedimentate, qu
     'connect.telegram': 'Telegram',
     'connect.channel': 'Canale',
     'connect.instagram': 'Instagram',
-    
-    // Map
-    'map.title': 'Mappa dei Luoghi',
-    'map.description': 'Una geografia emotiva dei luoghi che hanno segnato il mio viaggio.',
-    'map.places': 'Luoghi di Riflessione',
-    'map.empty': 'Ancora nessun luogo georeferenziato. I primi viaggi arriveranno presto.',
-    'map.readMore': 'Leggi di più →',
   }
 };
 

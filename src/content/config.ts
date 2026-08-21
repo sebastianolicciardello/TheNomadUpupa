@@ -13,12 +13,6 @@ const postSchema = z.object({
   eventStartTime: z.date(),
   eventEndTime: z.date(),
   publishTime: z.date(),
-  coords: z.object({ lat: z.number(), lon: z.number() }).optional(),
-  locations: z.array(z.object({
-    name: z.string(),
-    coords: z.object({ lat: z.number(), lon: z.number() }),
-    isMain: z.boolean().optional()
-  })).optional(),
   music: z.object({
     url: z.string(),
     description: multilingualField.optional()

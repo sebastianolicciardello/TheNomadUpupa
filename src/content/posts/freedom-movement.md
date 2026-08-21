@@ -5,9 +5,6 @@ title:
 eventStartTime: 2025-03-12T00:00:00Z
 eventEndTime: 2025-03-18T22:59:59Z
 publishTime: 2026-01-10T00:00:00Z
-coords:
-  lat: 45.0769
-  lon: 7.3973
 music:
   url: "https://music.youtube.com/watch?v=B6GdsRIbTSk"
   description:
@@ -27,16 +24,6 @@ music:
       "What's going on?"
 
       Mi ero sempre chiesto cosa stesse succedendo, perché sentissi questa irrequietezza. La risposta era semplice: stavo cercando il mio posto. Non dentro il sistema, ma fuori. Non nonostante il lavoro, ma vivendo mentre lavoravo. Ricerca che continua ancora adesso mentre scrivo il post a quasi un anno di distanza. Probabilmente continuerà sempre.
-locations:
-  - name: "Avigliana"
-    coords:
-      lat: 45.0769
-      lon: 7.3973
-    isMain: true
-  - name: "Lago d'Orta"
-    coords:
-      lat: 45.7997
-      lon: 8.4156
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1768066740/IMG_20250330_150905_171_mougaj.jpg
 coverCaption:
   en: "Exploring the lakes of Avigliana"

@@ -5,43 +5,6 @@ title:
 eventStartTime: 2025-06-22T00:00:00Z
 eventEndTime: 2025-07-25T12:00:00Z
 publishTime: 2026-05-08T00:00:00Z
-coords:
-  lat: 45.5371
-  lon: 7.8614
-locations:
-  - name: "Nomaglio"
-    coords:
-      lat: 45.5371
-      lon: 7.8614
-    isMain: true
-  - name: "Lago Pistono"
-    coords:
-      lat: 45.4937
-      lon: 7.8737
-  - name: "Chemp"
-    coords:
-      lat: 45.62685
-      lon: 7.81806
-  - name: "Lago Sirio"
-    coords:
-      lat: 45.486191
-      lon: 7.883806
-  - name: "Guje di Garavot"
-    coords:
-      lat: 45.4736
-      lon: 7.7788
-  - name: "Bosco di Nomaglio"
-    coords:
-      lat: 45.54021
-      lon: 7.86134
-  - name: "Lago Miserin"
-    coords:
-      lat: 45.599861
-      lon: 7.522
-  - name: "Issime"
-    coords:
-      lat: 45.68546
-      lon: 7.85411
 music:
   url: "https://music.youtube.com/watch?v=ZJBLC6CZbFQ"
   description:

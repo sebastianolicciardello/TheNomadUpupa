@@ -29,13 +29,3 @@ html.dark .image-caption {
   color: #9ca3af;
   /* Gray 400 - much more readable in dark mode */
 }
-
-/* Vibrant dark mode for detailed map tiles (Stadia Outdoors) */
-html.dark .leaflet-tile {
-  filter: invert(100%) hue-rotate(180deg) brightness(120%) contrast(90%) saturate(110%) !important;
-}
-
-/* Also apply to the background of the map container to avoid white flashes */
-html.dark .leaflet-container {
-  background: #111827 !important;
-}

@@ -5,60 +5,11 @@ title:
 eventStartTime: 2024-11-18T00:00:00Z
 eventEndTime: 2024-11-24T00:00:00Z
 publishTime: 2025-09-17T00:00:00Z
-coords:
-  lat: 39.31186
-  lon: 8.43733
 music:
   url: "https://music.youtube.com/watch?v=ahFr5xO-Gr8&feature=shared"
   description:
     en: "I dedicate this to my November 2024 self and to all young people facing difficult uncertainties in life. \"Haengro\" by Jung Daehyun speaks exactly about what I experienced on that Nebida promontory: these are the words I would have wanted to hear during that convulsive thinking, when I was torn between excitement and confusion. To stop asking too many questions about the world and the future, and return to chasing the pure dreams of childhood. As the song says, \"you can't know the world's answer,\" but we can always get back up and believe in our wild dreams, those we had as children without conditioning. I used to listen to Jung Daehyun when I was a teenager, and discovering this new song of his just while writing about that transformation experienced in Sardinia seemed perfect. It became the ideal soundtrack for telling that moment when I understood I had to leave the footprints of my unique step, even if someone will say I was wrong. I deeply thank him for creating this Japanese anime opening for my current life! 🎵🎶"
     it: "La dedico al me stesso di quel novembre 2024 e a tutti i giovani che si trovano davanti a difficili incertezze nella vita. \"Haengro\" di Jung Daehyun parla esattamente di quello che ho vissuto su quel promontorio di Nebida: sono le frasi che avrei voluto sentirmi dire durante quel pensare convulso, quando mi dibattevo tra eccitamento e confusione. Smettere di porsi troppe domande sul mondo e sul futuro, e tornare a inseguire i sogni puri dell'infanzia. Come dice il brano, \"non si può conoscere la risposta del mondo,\" ma possiamo sempre rialzarci e credere nei nostri sogni selvaggi, quelli che avevamo da piccoli senza condizionamenti. Ascoltavo Jung Daehyun quando ero adolescente, e scoprire questa sua nuova canzone proprio mentre scrivevo di quella trasformazione vissuta in Sardegna è sembrato perfetto. È diventata la colonna sonora ideale per raccontare quel momento in cui ho capito di dover lasciare le impronte del mio passo unico, anche se qualcuno dirà che ho sbagliato. Lo ringrazio profondamente per aver creato questa opening da anime giapponese per la mia attuale vita! 🎵🎶"
-locations:
-  - name: "Nebida"
-    coords:
-      lat: 39.31186
-      lon: 8.43733
-    isMain: true
-  - name: "Belvedere"
-    coords:
-      lat: 39.310241
-      lon: 8.434651
-  - name: "Tunnel"
-    coords:
-      lat: 39.308514
-      lon: 8.434719
-  - name: "Portu Banda"
-    coords:
-      lat: 39.318454
-      lon: 8.426857
-  - name: "Portu Ferru"
-    coords:
-      lat: 39.321662
-      lon: 8.421283
-  - name: "Porto Corallo"
-    coords:
-      lat: 39.324629
-      lon: 8.418607
-  - name: "Laveria Lamarmora"
-    coords:
-      lat: 39.309721
-      lon: 8.432500
-  - name: "Porto di Masua"
-    coords:
-      lat: 39.333268
-      lon: 8.419763
-  - name: "Scala di Ferro"
-    coords:
-      lat: 39.33929
-      lon: 8.41370
-  - name: "Monte Nai"
-    coords:
-      lat: 39.33984
-      lon: 8.40488
-  - name: "Pan di Zucchero"
-    coords:
-      lat: 39.33394
-      lon: 8.40051
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1758093428/IMG_20241123_165221_tigr_yxhxru.jpg
 coverCaption:
   en: "The cliffs of Nebida"

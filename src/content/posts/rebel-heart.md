@@ -5,9 +5,6 @@ title:
 eventStartTime: 2025-07-19T00:00:00Z
 eventEndTime: 2025-08-30T23:59:59Z
 publishTime: 2026-07-07T00:00:00Z
-coords:
-  lat: 40.57368539204714
-  lon: 15.359139086068451
 music:
   url: "https://music.youtube.com/watch?v=8LE6veTNORI"
   description:
@@ -43,37 +40,6 @@ music:
       Ma proprio come nella canzone, anche nei momenti più confusi, quello che stavo davvero cercando non era la fuga. Era ritrovare me stesso.
 
       Il cuore ribelle non è un difetto, e nemmeno una virtù. È semplicemente la parte di me che continua a chiedersi cosa significhi vivere in modo autentico, anche quando questo significa non avere ancora tutte le risposte.
-locations:
-  - name: "Santuario dell'Incoronata, Sicignano degli Alburni"
-    coords:
-      lat: 40.57368539204714
-      lon: 15.359139086068451
-    isMain: true
-  - name: "Teseo Screpolato — Colata lavica"
-    coords:
-      lat: 37.691186323892886
-      lon: 14.966081602294752
-    isMain: false
-  - name: "Piano Zucchi, Madonie"
-    coords:
-      lat: 37.90007957443175
-      lon: 13.998825231331578
-    isMain: false
-  - name: "Agrifogli Giganti"
-    coords:
-      lat: 37.89605759419681
-      lon: 14.065409503449366
-    isMain: false
-  - name: "Zipline e Salto del Diavolo"
-    coords:
-      lat: 37.91744032819651
-      lon: 14.192649814506005
-    isMain: false
-  - name: "Labirinto di Arianna"
-    coords:
-      lat: 37.8999777710725
-      lon: 14.311769653438777
-    isMain: false
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1783408817/PXL_20250727_070001417_yyfywc.jpg
 coverCaption:
   en: "Morning after the first night in the van"

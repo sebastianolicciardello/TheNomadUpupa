@@ -5,9 +5,6 @@ title:
 eventStartTime: 2025-05-08T00:00:00Z
 eventEndTime: 2025-05-18T23:59:59Z
 publishTime: 2026-03-05T00:00:00Z
-coords:
-  lat: 39.987667
-  lon: 15.720434
 music:
   url: "https://music.youtube.com/watch?v=FE0xEeh0-X0&si=0p2JG-0iuwwFK3ma"
   description:
@@ -23,72 +20,6 @@ music:
       The electronic structure of the song, that continuous loop, perfectly mirrors that period: a continuum of happiness and gratitude. As if every day were a new turn of the same wonderful loop.
       The book that guided me, the new work opportunities, the sunset over the sea from breathtaking vantage points, the people who saved my birthday. Everything seemed to spin in a perfect circle of sunshine.
       Sometimes, after reaching a goal, the most important thing isn't to rush toward the next one. It's to stop. To savor. To let the sun warm you while you wait for life to show you the next path.
-locations:
-  - name: "Cristo di Maratea"
-    coords:
-      lat: 39.987667
-      lon: 15.720434
-    isMain: true
-  - name: "Torre Crawford"
-    coords:
-      lat: 39.849203
-      lon: 15.783633
-  - name: "Fonte"
-    coords:
-      lat: 39.848511
-      lon: 15.784448
-  - name: "Ingresso Arcomagno"
-    coords:
-      lat: 39.853802
-      lon: 15.791022
-  - name: "Arcomagno"
-    coords:
-      lat: 39.854908
-      lon: 15.79181
-  - name: "Arco di Enea"
-    coords:
-      lat: 39.855705
-      lon: 15.791917
-  - name: "Grotta del prete"
-    coords:
-      lat: 39.858573
-      lon: 15.791
-  - name: "Torre Fiuzzi"
-    coords:
-      lat: 39.87178
-      lon: 15.786038
-  - name: "Madonna della grotta"
-    coords:
-      lat: 39.896761
-      lon: 15.784779
-  - name: "Marina di Maratea"
-    coords:
-      lat: 39.957617
-      lon: 15.735037
-  - name: "Cala Ficara"
-    coords:
-      lat: 39.95948
-      lon: 15.734069
-  - name: "Cala del Citro"
-    coords:
-      lat: 39.963182
-      lon: 15.732663
-  - name: "Macarro"
-    coords:
-      lat: 39.966033
-      lon: 15.73
-  - name: "Grotta delle meraviglie"
-    coords:
-      lat: 39.969985
-      lon: 15.728617
-  - name: "Spiaggia Nera"
-    coords:
-      lat: 39.971755
-      lon: 15.723009
-  - name: "Cristo redentore Maratea"
-    coords:
-      lat: 39.987761
-      lon: 15.720646
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1772915462/photo_5_2025-09-18_10-07-13_p8cx8l.jpg
 coverCaption:
   en: "Me at sunset overlooking Maratea"

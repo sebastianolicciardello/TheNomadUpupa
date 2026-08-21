@@ -60,12 +60,10 @@ const alternateLang = getAlternateLanguage(currentLang);
 					<div class="hidden md:flex items-center space-x-6">
 						<span data-lang="en">
 							<a href="/blog/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">{t('nav.archive', 'en')}</a>
-							<a href="/map/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors ml-6">{t('nav.map', 'en')}</a>
 							<a href="/about/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors ml-6">{t('nav.about', 'en')}</a>
 						</span>
 						<span data-lang="it" style="display: none;">
 							<a href="/blog/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors">{t('nav.archive', 'it')}</a>
-							<a href="/map/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors ml-6">{t('nav.map', 'it')}</a>
 							<a href="/about/" class="text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 transition-colors ml-6">{t('nav.about', 'it')}</a>
 						</span>
 						<button id="lang-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Switch language">
@@ -102,12 +100,10 @@ const alternateLang = getAlternateLanguage(currentLang);
 					<div class="px-2 pt-2 pb-3 space-y-1">
 						<span data-lang="en">
 							<a href="/blog/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.archive', 'en')}</a>
-							<a href="/map/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.map', 'en')}</a>
 							<a href="/about/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.about', 'en')}</a>
 						</span>
 						<span data-lang="it" style="display: none;">
 							<a href="/blog/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.archive', 'it')}</a>
-							<a href="/map/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.map', 'it')}</a>
 							<a href="/about/" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-warm-600 dark:hover:text-warm-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">{t('nav.about', 'it')}</a>
 						</span>
 						
@@ -193,16 +189,6 @@ const alternateLang = getAlternateLanguage(currentLang);
 		if (window.postTitles && window.postTitles[lang]) {
 			document.title = window.postTitles[lang];
 		}
-		
-		// Fix map rendering when switching languages
-		setTimeout(() => {
-			if (window.mapEn && lang === 'en') {
-				window.mapEn.invalidateSize();
-			}
-			if (window.mapIt && lang === 'it') {
-				window.mapIt.invalidateSize();
-			}
-		}, 100);
 		
 		// Update document attributes
 		document.documentElement.setAttribute('lang', lang);

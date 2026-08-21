@@ -5,23 +5,6 @@ title:
 eventStartTime: 2025-06-19T00:00:00Z
 eventEndTime: 2025-06-22T23:59:59Z
 publishTime: 2026-04-23T00:00:00Z
-coords:
-  lat: 45.6920648
-  lon: 7.1848266
-locations:
-  - name: "Introd"
-    coords:
-      lat: 45.6920648
-      lon: 7.1848266
-    isMain: true
-  - name: "Cascata di Entrelor"
-    coords:
-      lat: 45.55795
-      lon: 7.12027
-  - name: "Aosta"
-    coords:
-      lat: 45.73764
-      lon: 7.31722
 music:
   url: "https://www.youtube.com/watch?v=kXcOyYEldZY"
   description:

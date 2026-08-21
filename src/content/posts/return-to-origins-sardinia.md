@@ -5,60 +5,11 @@ title:
 eventStartTime: 2024-11-11T00:00:00Z
 eventEndTime: 2024-11-17T00:00:00Z
 publishTime: 2025-09-07T00:00:00Z
-coords:
-  lat: 39.381
-  lon: 8.674
 music:
   url: "https://music.youtube.com/watch?v=F4GZ6BbZMAU&feature=shared"
   description:
     en: "The sweet melancholy of 'When I Grow Up' by First Aid Kit perfectly reflects the feeling of this journey: not nostalgia for its own sake, but the rediscovery of who we truly are when we return to our natural rhythms."
     it: "La dolce malinconia di 'When I Grow Up' dei First Aid Kit riflette perfettamente il sentimento di questo viaggio: non nostalgia fine a se stessa, ma la riscoperta di chi siamo davvero quando torniamo ai nostri ritmi naturali."
-locations:
-  - name: "Sardegna sud ovest"
-    coords:
-      lat: 39.381
-      lon: 8.674
-    isMain: true
-  - name: "Cagliari"
-    coords:
-      lat: 39.2160
-      lon: 9.1193
-  - name: "Saline Molentargius"
-    coords:
-      lat: 39.21922
-      lon: 9.16215
-  - name: "Poetto"
-    coords:
-      lat: 39.20831
-      lon: 9.16884
-  - name: "Foresta del Marganai"
-    coords:
-      lat: 39.3829
-      lon: 8.5909
-  - name: "Nebida"
-    coords:
-      lat: 39.31187
-      lon: 8.43733
-  - name: "Laveria Lamarmora"
-    coords:
-      lat: 39.309721
-      lon: 8.432500
-  - name: "Porto di Masua"
-    coords:
-      lat: 39.333268
-      lon: 8.419763
-  - name: "Monte Sai"
-    coords:
-      lat: 39.324977
-      lon: 8.424656
-  - name: "Torre vecchia di Marceddi"
-    coords:
-      lat: 39.728710
-      lon: 8.504136
-  - name: "Pistis"
-    coords:
-      lat: 39.710051
-      lon: 8.456124
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1757240004/PXL_20241113_164556995_3_kkblcu.jpg
 coverCaption:
   en: "The van parked near the sea"

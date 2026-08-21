@@ -74,7 +74,7 @@ export function parseMultilingualMarkdown(content: string): MultilingualContent 
         if (nestedKey === 'en' || nestedKey === 'it') {
           frontmatter[currentKey][nestedKey] = parseValue(nestedValue);
         } else {
-          // Handle other nested objects (like coords, locations)
+          // Handle other nested objects (like music)
           if (!frontmatter[currentKey][nestedKey]) {
             frontmatter[currentKey][nestedKey] = parseValue(nestedValue);
           }

@@ -5,9 +5,6 @@ title:
 eventStartTime: 2025-06-01T00:00:00Z
 eventEndTime: 2025-06-19T12:00:00Z
 publishTime: 2026-04-15T00:00:00Z
-coords:
-  lat: 39.87389
-  lon: 15.77500
 music:
   url: "https://music.youtube.com/watch?v=4RBinI0h9EE"
   description:
@@ -19,36 +16,6 @@ music:
       “Sailing” rappresenta la transizione tra l’essere trasportati lungo percorsi che non controlli e il momento in cui finalmente inizi a scegliere la tua direzione.
 
       Da un lungo viaggio in treno che sembrava infinito, alla prima vera sensazione di libertà sulla strada.
-locations:
-  - name: "Isola di Dino"
-    coords:
-      lat: 39.87389
-      lon: 15.77500
-    isMain: true
-  - name: "Diamante"
-    coords:
-      lat: 39.67755
-      lon: 15.82065
-  - name: "Grotta Azzurra, Isola di Dino"
-    coords:
-      lat: 39.87220
-      lon: 15.77520
-  - name: "Arcomagno, San Nicola Arcella"
-    coords:
-      lat: 39.854908
-      lon: 15.79181
-  - name: "Arco di Enea"
-    coords:
-      lat: 39.855705
-      lon: 15.791917
-  - name: "Vigevano"
-    coords:
-      lat: 45.31667
-      lon: 8.86667
-  - name: "Alessandria"
-    coords:
-      lat: 44.91333
-      lon: 8.62000
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1776279186/IMG_20250608_202943_024_vkyazz.jpg
 coverCaption:
   en: "With my sister at Arcomagno"

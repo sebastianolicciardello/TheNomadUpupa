@@ -5,40 +5,11 @@ title:
 eventStartTime: 2024-10-15T00:00:00Z
 eventEndTime: 2024-10-20T00:00:00Z
 publishTime: 2025-08-28T00:00:00Z
-coords:
-  lat: 38.4675
-  lon: 14.9533
 music:
   url: "https://music.youtube.com/watch?v=JTiaJzcftn0&feature=shared"
   description:
     en: "Apart but still together perfectly describes my realization: the people who matter don't worry about distance, but only that you're happy"
     it: "Separati ma ancora insieme descrive perfettamente la mia realizzazione: le persone che contano non si preoccupano della lontananza, ma solo che tu sia felice"
-locations:
-  - name: "Lipari"
-    coords:
-      lat: 38.4675
-      lon: 14.9533
-    isMain: true
-  - name: "Osservatorio GeoFisico"
-    coords:
-      lat: 38.445758
-      lon: 14.948248
-  - name: "Spiaggia delle acque calde"
-    coords:
-      lat: 38.417880
-      lon: 14.959398
-  - name: "Spiaggia delle sabbie nere"
-    coords:
-      lat: 38.419586
-      lon: 14.956501
-  - name: "Vulcano"
-    coords:
-      lat: 38.40439
-      lon: 14.96175
-  - name: "Capo Grillo"
-    coords:
-      lat: 38.396669
-      lon: 14.987721
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1756365753/2024-10-22_09.52.42_2_gegimd.jpg
 coverCaption:
   en: "The photo taken by the German"

@@ -5,27 +5,6 @@ title:
 eventStartTime: 2025-01-01T00:00:00Z
 eventEndTime: 2025-02-28T23:59:59Z
 publishTime: 2025-11-25T00:00:00Z
-coords:
-  lat: 37.832177
-  lon: 14.981213
-locations:
-  - name: "Rifugio Saletti"
-    coords:
-      lat: 37.832177
-      lon: 14.981213
-    isMain: true
-  - name: "Grotta di Schandlish"
-    coords:
-      lat: 37.834192
-      lon: 14.990026
-  - name: "Garitta dello Scalo Pennisi"
-    coords:
-      lat: 37.640153
-      lon: 15.184336
-  - name: "Scogliera Pozzillo"
-    coords:
-      lat: 37.656288
-      lon: 15.199579
 music:
   url: "https://music.youtube.com/watch?v=ic0vIKby6bk&si=FW5PdnPCyDUq3tTt"
   description:

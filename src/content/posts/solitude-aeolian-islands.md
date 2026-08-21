@@ -5,40 +5,11 @@ title:
 eventStartTime: 2024-10-11T00:00:00Z
 eventEndTime: 2024-10-15T00:00:00Z
 publishTime: 2025-08-21T00:00:00Z
-coords:
-  lat: 38.79299
-  lon: 15.21447
 music:
   url: "https://music.youtube.com/watch?v=2FRVoa1L3LI&feature=shared"
   description:
     en: "It is in tune with my experience of those days: the need to create pauses of silence to listen to myself again."
     it: "È in sintonia con la mia esperienza di quei giorni: il bisogno di creare pause di silenzio per tornare ad ascoltarmi."
-locations:
-  - name: "Stromboli"
-    coords:
-      lat: 38.80407
-      lon: 15.23734
-    isMain: true
-  - name: "Milazzo"
-    coords:
-      lat: 38.22071
-      lon: 15.24125
-  - name: "Capo Milazzo"
-    coords:
-      lat: 38.269808
-      lon: 15.230922
-  - name: "Piscina di Venere"
-    coords:
-      lat: 38.269079
-      lon: 15.224639
-  - name: "Grotta di Eolo"
-    coords:
-      lat: 38.809905
-      lon: 15.229918
-  - name: "Sciara di fuoco"
-    coords:
-      lat: 38.807485
-      lon: 15.213457
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1755762115/IMG_20241013_175049_tigr_2_ycef9m.jpg
 coverCaption:
   en: "The 'Sciara' of Stromboli"

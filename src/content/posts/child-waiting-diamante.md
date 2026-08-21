@@ -5,9 +5,6 @@ title:
 eventStartTime: 2025-04-20T00:00:00Z
 eventEndTime: 2025-05-03T23:59:59Z
 publishTime: 2026-02-13T00:00:00Z
-coords:
-  lat: 39.67755
-  lon: 15.82065
 music:
   url: "https://music.youtube.com/watch?v=3gHfYxbfRBk&si=87DeozN0a47durs7"
   description:
@@ -43,20 +40,6 @@ music:
       Il passato è ancora presente, certo. I ricordi non si cancellano. Ma non pesano più come prima. Il presente diventa più luminoso, più abitabile. Si riscopre il piacere delle cose semplici, del silenzio, di una notte finalmente dormita senza pensieri che martellano.
 
       È una canzone che parla di libertà ritrovata. Di quella sensazione delicata ma potentissima di tornare a casa dentro se stessi.
-locations:
-  - name: "Diamante"
-    coords:
-      lat: 39.67755
-      lon: 15.82065
-    isMain: true
-  - name: "Stretto di Messina"
-    coords:
-      lat: 38.2106
-      lon: 15.5998
-  - name: "Spiaggia del campeggio"
-    coords:
-      lat: 39.690652
-      lon: 15.814621
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1771006808/photo_4_2025-09-18_10-05-59_rgs3uq.jpg
 coverCaption:
   en: "Sea view from the Messina strait ferry"

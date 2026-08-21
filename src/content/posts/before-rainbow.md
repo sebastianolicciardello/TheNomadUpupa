@@ -5,9 +5,6 @@ title:
 eventStartTime: 2024-12-01T00:00:00Z
 eventEndTime: 2024-12-18T00:00:00Z
 publishTime: 2025-10-12T00:00:00Z
-coords:
-  lat: 0
-  lon: 0
 music:
   url: "https://music.youtube.com/watch?v=R3uXuwo5rOc&si=xwI3vEOw5xM3Bfhd"
   description:
@@ -39,12 +36,6 @@ music:
 
 
       Tatakae! ( Combatti! ) per la tua libertà.
-locations:
-  - name: "Sentiero Monte Spagnolo"
-    coords:
-      lat: 37.82957
-      lon: 14.95382
-    isMain: true
 cover: https://res.cloudinary.com/digfarmqt/image/upload/v1760282394/photo_2025-01-01_10.54.05_cwlneh.jpg
 coverCaption:
   en: "Monte Spagnolo Path"
