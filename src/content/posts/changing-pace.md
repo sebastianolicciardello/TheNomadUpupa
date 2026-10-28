@@ -32,7 +32,7 @@ translationKey: "changing-pace"
 
 <!-- it -->
 
-A settembre è iniziato un periodo di transizione, di quelli in cui senti che qualcosa si sta muovendo nella propria testa ma non sai ancora dire cosa. Ero tornato in Sicilia da qualche mese e stavo preparando i prossimi spostamenti senza una vera fretta di partire, cosa piuttosto strana per uno che solo qualche mese prima sentiva il bisogno di cambiare posto dopo poche settimane.
+A settembre è iniziato un periodo di transizione, di quelli in cui senti che qualcosa si sta muovendo nella tua testa ma non sai ancora dire cosa. Ero tornato in Sicilia da qualche mese e stavo preparando i prossimi spostamenti senza una vera fretta di partire, cosa piuttosto strana per uno che solo qualche mese prima sentiva il bisogno di cambiare posto dopo poche settimane.
 
 ## Rivedere ciò che conosco
 
