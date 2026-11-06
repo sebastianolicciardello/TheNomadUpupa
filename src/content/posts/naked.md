@@ -92,6 +92,8 @@ Allo stesso tempo ho capito quanto valgano le connessioni autentiche, quelle in 
 
 La propria unicità non dovrebbe essere qualcosa da correggere per poter essere amati.
 
+![Alba alle antiche fornaci](https://res.cloudinary.com/digfarmqt/image/upload/f_auto,q_auto,c_limit,w_1200/v1793954802/thenomadupupa/naked/01-alba-antica-fornaci.jpg)
+
 <!-- en -->
 
 That autumn the Iblei mountains became my backyard. I walked barefoot at Vendicari, watched the sun go down behind Noto Antica, let myself drift by canoe along the Ciane river, and slept in the van in places where at dawn the only sound was the wind. Simple days that didn't need anything extraordinary to become unforgettable.
@@ -153,3 +155,5 @@ All of this has a price, and it's called solitude. If you don't wear masks, some
 At the same time I understood how much authentic connections are worth, the ones where you can be yourself without having to justify anything. That's why I think the choice is this: let yourself be accepted by those who accept you without masks, and welcome solitude when it comes, rather than changing your skin just to avoid being alone. I know very well that nowadays this is really hard for many people, and I don't want to make it sound simpler than it is.
 
 One's uniqueness shouldn't be something to correct in order to be loved.
+
+![Sunrise at the ancient furnaces](https://res.cloudinary.com/digfarmqt/image/upload/f_auto,q_auto,c_limit,w_1200/v1793954802/thenomadupupa/naked/01-alba-antica-fornaci.jpg)
