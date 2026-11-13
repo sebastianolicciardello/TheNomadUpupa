@@ -39,7 +39,6 @@ translationKey: "letting-the-river-wash-over-me"
 ---
 
 <!-- it -->
-# Farsi attraversare dal fiume
 
 Nonostante nei post precedenti avessi parlato della necessità di rimanere in Sicilia, ho deciso di tornare a Diamante. Avevo bisogno di solitudine per capire cosa fare della mia vita e per elaborare tutto ciò che avevo vissuto nei mesi precedenti. Inoltre avrei fatto un favore al proprietario della casa, prendendomi cura della sua magnifica gatta durante la sua assenza, e questo ha reso il ritorno ancora più semplice. Ho ritrovato la gatta e i tramonti, assurdi come sempre, anzi probabilmente di più in inverno rispetto all'estate, in quella che ormai chiamavo casa.
 
@@ -104,7 +103,6 @@ La differenza era solo la preparazione. Avevo sistemato finalmente il van con un
 Credo sia questo il punto, capire che il rischio non scompare mai, ma si può scegliere di prepararsi. E preparandosi si possono fare scelte che prima sembravano impossibili.
 
 <!-- en -->
-## Letting the river wash over me
 
 Even though in previous posts I had talked about the need to stay in Sicily, I decided to go back to Diamante. I needed solitude to figure out what to do with my life and to process everything I had lived through in the previous months. I would also be doing the house owner a favor, taking care of his magnificent cat during his absence, and that made going back even easier. I found the cat again, and the sunsets, as absurd as ever, even more so in winter than in summer, in what I now called home.
 
